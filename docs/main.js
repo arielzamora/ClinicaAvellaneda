@@ -1516,17 +1516,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var _index_index_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index/index.component */ "./src/app/pages/index/index.component.ts");
-/* harmony import */ var _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./examples/profilepage/profilepage.component */ "./src/app/pages/examples/profilepage/profilepage.component.ts");
-/* harmony import */ var _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./examples/registerpage/registerpage.component */ "./src/app/pages/examples/registerpage/registerpage.component.ts");
-/* harmony import */ var _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./examples/landingpage/landingpage.component */ "./src/app/pages/examples/landingpage/landingpage.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/pages/footer/footer.component.ts");
-/* harmony import */ var _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./navmenu/navmenu.component */ "./src/app/pages/navmenu/navmenu.component.ts");
-/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
-/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-bootstrap/dropdown */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/dropdown/fesm5/ngx-bootstrap-dropdown.js");
+/* harmony import */ var ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap/progressbar */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/progressbar/fesm5/ngx-bootstrap-progressbar.js");
+/* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/tooltip/fesm5/ngx-bootstrap-tooltip.js");
+/* harmony import */ var ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-bootstrap/collapse */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/collapse/fesm5/ngx-bootstrap-collapse.js");
+/* harmony import */ var ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-bootstrap/tabs */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/tabs/fesm5/ngx-bootstrap-tabs.js");
+/* harmony import */ var ngx_bootstrap_pagination__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-bootstrap/pagination */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/pagination/fesm5/ngx-bootstrap-pagination.js");
+/* harmony import */ var ngx_bootstrap_alert__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-bootstrap/alert */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/alert/fesm5/ngx-bootstrap-alert.js");
+/* harmony import */ var ngx_bootstrap_datepicker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-bootstrap/datepicker */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/datepicker/fesm5/ngx-bootstrap-datepicker.js");
+/* harmony import */ var ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ngx-bootstrap/carousel */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/carousel/fesm5/ngx-bootstrap-carousel.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var ngx_bootstrap_popover__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-bootstrap/popover */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/popover/fesm5/ngx-bootstrap-popover.js");
+/* harmony import */ var _index_index_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./index/index.component */ "./src/app/pages/index/index.component.ts");
+/* harmony import */ var _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./examples/profilepage/profilepage.component */ "./src/app/pages/examples/profilepage/profilepage.component.ts");
+/* harmony import */ var _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./examples/registerpage/registerpage.component */ "./src/app/pages/examples/registerpage/registerpage.component.ts");
+/* harmony import */ var _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./examples/landingpage/landingpage.component */ "./src/app/pages/examples/landingpage/landingpage.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/pages/footer/footer.component.ts");
+/* harmony import */ var _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./navmenu/navmenu.component */ "./src/app/pages/navmenu/navmenu.component.ts");
+/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
+/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1555,27 +1577,38 @@ var PagesModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"],
+                ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_6__["BsDropdownModule"].forRoot(),
+                ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_7__["ProgressbarModule"].forRoot(),
+                ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_8__["TooltipModule"].forRoot(),
+                ngx_bootstrap_popover__WEBPACK_IMPORTED_MODULE_16__["PopoverModule"].forRoot(),
+                ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_9__["CollapseModule"].forRoot(),
+                ngx_bootstrap_tabs__WEBPACK_IMPORTED_MODULE_10__["TabsModule"].forRoot(),
+                ngx_bootstrap_pagination__WEBPACK_IMPORTED_MODULE_11__["PaginationModule"].forRoot(),
+                ngx_bootstrap_alert__WEBPACK_IMPORTED_MODULE_12__["AlertModule"].forRoot(),
+                ngx_bootstrap_datepicker__WEBPACK_IMPORTED_MODULE_13__["BsDatepickerModule"].forRoot(),
+                ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_14__["CarouselModule"].forRoot(),
+                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_15__["ModalModule"].forRoot()
             ],
             declarations: [
-                _index_index_component__WEBPACK_IMPORTED_MODULE_6__["IndexComponent"],
-                _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_7__["ProfilepageComponent"],
-                _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_8__["RegisterpageComponent"],
-                _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_9__["LandingpageComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_11__["FooterComponent"],
-                _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_12__["NavmenuComponent"],
-                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_13__["ProfesionalesHomeComponent"],
-                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_14__["ListadoProfesionalesComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_15__["LoginComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_16__["RegistroComponent"]
+                _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
+                _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__["ProfilepageComponent"],
+                _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__["RegisterpageComponent"],
+                _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__["LandingpageComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"],
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_22__["FooterComponent"],
+                _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__["NavmenuComponent"],
+                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_24__["ProfesionalesHomeComponent"],
+                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_25__["ListadoProfesionalesComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__["RegistroComponent"]
             ],
             exports: [
-                _index_index_component__WEBPACK_IMPORTED_MODULE_6__["IndexComponent"],
-                _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_7__["ProfilepageComponent"],
-                _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_8__["RegisterpageComponent"],
-                _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_9__["LandingpageComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_16__["RegistroComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"]
+                _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
+                _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__["ProfilepageComponent"],
+                _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__["RegisterpageComponent"],
+                _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__["LandingpageComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__["RegistroComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"]
             ],
             providers: []
         })
