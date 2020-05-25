@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { paciente } from 'src/app/model/paciente';
 
 @Component({
   selector: 'app-registro',
@@ -13,18 +14,49 @@ export class RegistroComponent implements OnInit, OnDestroy  {
   focus2;
   focus3;
   focus4;
+  focus5;
+  focus6;
+  focus7;
+  focus8;
   public form: FormGroup;
+  paciente:paciente;
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       Nombre: ['', Validators.required],
       Apellido: ['', Validators.required],
+      Dni: ['', Validators.required],
       Edad: ['', Validators.required],
+      Sexo: ['', Validators.required],
+      Nacionalidad: ['', Validators.required],
       Email: ['', Validators.required],
       Password: ['', Validators.required]
     });
   }
   @HostListener("document:mousemove", ["$event"])
  
+  
+
+  ngOnInit() {
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.add("register-page");
+
+    this.onMouseMove(event);
+  }
+  ngOnDestroy() {
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.remove("register-page");
+  }
+
+  public registrarse()
+  {
+    this.paciente.nombre = this.form.get('Nombre').value;
+    this.paciente.apellido = this.form.get('Apellido').value;
+    this.paciente.edad = this.form.get('Edad').value;
+    this.paciente.usuario = this.form.get('Email').value;
+    this.paciente.password = this.form.get('Password').value;
+    this.paciente.tipo="paciente";
+
+  }
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
     var squares2 = document.getElementById("square2");
@@ -86,26 +118,5 @@ export class RegistroComponent implements OnInit, OnDestroy  {
       "deg) rotateX(" +
       posY * -0.02 +
       "deg)";
-  }
-
-  ngOnInit() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.add("register-page");
-
-    this.onMouseMove(event);
-  }
-  ngOnDestroy() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.remove("register-page");
-  }
-
-  public registrarse()
-  {
-    const nombre: string = this.form.get('Nombre').value;
-    const apellido: string = this.form.get('Apellido').value;
-    const edad: string = this.form.get('Edad').value;
-    const mail: string = this.form.get('Email').value;
-    const Password: string = this.form.get('Password').value;
-    alert('Nombre:'+nombre +'Apellido:'+apellido);
   }
 }

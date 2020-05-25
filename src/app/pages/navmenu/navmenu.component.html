@@ -4,87 +4,49 @@
   id="navbar-top"
 >
   <div class="container">
-    <div class="navbar-translate">
-      <a
-        class="navbar-brand"
-        placement="bottom"
-        [routerLink]="['/home']"
-        target="_blank"
-        tooltip="Ariel Zamora"
-      >
-        <span> Clinica Avellaneda </span>
-      </a>
-      <button
-        aria-controls="navigation-index"
-        aria-label="Toggle navigation"
-        class="navbar-toggler navbar-toggler"
-        [attr.aria-expanded]="!isCollapsed"
-        (click)="isCollapsed = !isCollapsed"
-        id="navigation"
-        type="button"
-      >
-        <span class="navbar-toggler-bar bar1"> </span>
-        <span class="navbar-toggler-bar bar2"> </span>
-        <span class="navbar-toggler-bar bar3"> </span>
-      </button>
+    <div *ngIf="estaLogueado" class="navbar-translate">
+        <h5>Bienvenido : {{usuario.nombre}} </h5>
     </div>
     <div
-      class="navbar-collapse justify-content-end"
+      class="navbar-collapse justify-content-end collapse"
       [collapse]="isCollapsed"
       id="navigation"
-    >
-      <div class="navbar-collapse-header">
-        <div class="row">
-          <div class="col-6 collapse-brand"><a> Clinica Avellaneda </a></div>
-          <div class="col-6 collapse-close text-right">
-            <button
-              aria-controls="navigation-index"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-              [attr.aria-expanded]="!isCollapsed"
-              (click)="isCollapsed = !isCollapsed"
-              id="navigation"
-              type="button"
-            >
-              <i class="tim-icons icon-simple-remove"> </i>
-            </button>
-          </div>
-        </div>
-      </div>
+    >  
       <ul class="navbar-nav">
-        <li class="dropdown nav-item" dropdown>
+        <li *appValidarRoles="['admin','profesional']" class="dropdown nav-item" dropdown>
             <a
               class="dropdown-toggle nav-link dropdown-toggle"
               data-toggle="dropdown"
               dropdownToggle
-              href="javascript:void(0)"
             >
               <i class="fa fa-cogs d-lg-none d-xl-none"> </i> Administracion
             </a>
             <div class="dropdown-menu dropdown-with-icons" *dropdownMenu>
-              <a class="dropdown-item" [routerLink]="['/register']">
+              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/profesionales']">
                 <i class="tim-icons icon-bullet-list-67"> </i> Profesionales
               </a>
-              <a class="dropdown-item" [routerLink]="['/landing']">
-                <i class="tim-icons icon-image-02"> </i> Especialidades
+              <a *appValidarRoles="['admin','profesional']" class="dropdown-item" [routerLink]="['/pacientes']">
+                <i class="tim-icons icon-bullet-list-67"> </i> Pacientes
               </a>
-              <a class="dropdown-item" [routerLink]="['/profile']">
-                <i class="tim-icons icon-single-02"> </i> Pacientes
+              <a *appValidarRoles="['admin','profesional']" class="dropdown-item" [routerLink]="['/especialidades']">
+                <i class="tim-icons icon-bullet-list-67"> </i> Especialidades
               </a>
-              <a class="dropdown-item" [routerLink]="['/home']">
+              <a *appValidarRoles="['admin','profesional']" class="dropdown-item" [routerLink]="['/turnos']">
+                <i class="tim-icons icon-pin"> </i> Turnos
+              </a>
+              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/landing']">
+                <i class="tim-icons icon-image-02"> </i> landing
+              </a>
+              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/profile']">
+                <i class="tim-icons icon-single-02"> </i> profile
+              </a>
+              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/home']">
                 <i class="tim-icons icon-single-02"> </i> Maqueta
               </a>
             </div>
           </li>
-          <li class="nav-item">
-            <a
-              class="nav-link btn btn-default d-none d-lg-block"
-              [routerLink]="['/registro']"
-            >
-              <i class="tim-icons icon-badge"> </i> Registro
-            </a>
-          </li>
-          <li class="nav-item">
+
+          <li *appValidarRoles="['paciente','admin','profesional']"  class="nav-item">
             <a
               class="nav-link btn btn-default d-none d-lg-block"
               href="javascript:void(0)"
@@ -93,11 +55,19 @@
               <i class="tim-icons icon-calendar-60"> </i> Turnos
             </a>
           </li>
+          <li *appValidarRoles="['admin','profesional']" class="nav-item">
+            <a
+              class="nav-link btn btn-default d-none d-lg-block"
+              [routerLink]="['/registro']"
+            >
+              <i class="tim-icons icon-badge"> </i> Registro Pacientes
+            </a>
+          </li>
         <!--redes sociales-->
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            href="https://twitter.com/CreativeTim"
+            href="https://twitter.com/codeutnfra?lang=es"
             placement="bottom"
             target="_blank"
             tooltip="Follow us on Twitter"
@@ -109,7 +79,7 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            href="https://www.facebook.com/CreativeTim"
+            href="https://www.facebook.com/UTNAvellaneda/"
             placement="bottom"
             target="_blank"
             tooltip="Like us on Facebook"
@@ -121,7 +91,7 @@
         <li class="nav-item p-0">
           <a
             class="nav-link"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            href="https://www.instagram.com/codeutnfra/?hl=es-la"
             placement="bottom"
             target="_blank"
             tooltip="Follow us on Instagram"
@@ -129,7 +99,23 @@
             <i class="fab fa-instagram"> </i>
             <p class="d-lg-none d-xl-none">Instagram</p>
           </a>
-        </li>      
+        </li>   
+        <li *ngIf="!estaLogueado" class="nav-item">
+          <a
+            class="nav-link btn btn-default d-none d-lg-block"
+            [routerLink]="['/login']"
+          >
+            <i class="tim-icons icon-single-02"> </i> Ingresar
+          </a>
+        </li> 
+        <li *ngIf="estaLogueado" class="nav-item">
+          <a
+            class="nav-link btn btn-default d-none d-lg-block"
+            (click)="desconectarse()"
+          >
+            <i class="tim-icons icon-button-power"> </i> Desconectarse
+          </a>
+        </li>     
       </ul>
     </div>
   </div>

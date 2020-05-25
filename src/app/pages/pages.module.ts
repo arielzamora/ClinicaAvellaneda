@@ -28,6 +28,12 @@ import { ListadoProfesionalesComponent } from './profesionales-home/listado-prof
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
+import { ValidarRolesDirective } from "./../directivas/validar-roles.directive";
+import { TurnosHomeComponent } from './turnos-home/turnos-home.component';
+import { AltaTurnoComponent } from './turnos-home/alta-turno/alta-turno.component';
+import { ListadoTurnosComponent } from './turnos-home/listado-turnos/listado-turnos.component';
+import { CalendarioComponent } from './turnos-home/calendario/calendario.component'
+
 @NgModule({
   imports: [
     CommonModule,
@@ -58,7 +64,12 @@ import { RegistroComponent } from './registro/registro.component';
     ProfesionalesHomeComponent,
     ListadoProfesionalesComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ValidarRolesDirective,
+    TurnosHomeComponent,
+    AltaTurnoComponent,
+    ListadoTurnosComponent,
+    CalendarioComponent
   ],
   exports: [
     IndexComponent,

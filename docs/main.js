@@ -309,6 +309,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/especialidades-home.component.html":
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/especialidades-home.component.html ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>especialidades-home works!</p>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/examples/landingpage/landingpage.component.html":
 /*!*************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/examples/landingpage/landingpage.component.html ***!
@@ -370,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center brand\">\n        <h1 class=\"h1-seo\">Clinica Avellaneda</h1>\n        <h3>\n         Somos una clinica en plena en la ciudad de avellaneda\n        </h3>\n      </div>\n    </div>\n  </div>\n\n  <app-footer></app-footer>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center brand\">\n        <h1 class=\"h1-seo\">Clinica Avellaneda</h1>\n        <h3>\n         Somos una clinica en la ciudad de avellaneda \n        </h3>\n      </div>\n    </div>\n  </div>\n\n  <app-footer></app-footer>\n</div>\n\n");
 
 /***/ }),
 
@@ -396,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>login works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<br>\n<div class=\"wrapper\">\n    <div class=\"page-header\">\n      <div class=\"page-header-image\"></div>\n      <div class=\"squares square1\"></div>\n      <div class=\"squares square2\"></div>\n      <div class=\"squares square3\"></div>\n      <div class=\"squares square4\"></div>\n      <div class=\"squares square5\"></div>\n      <div class=\"squares square6\"></div>\n      <div class=\"squares square7\"></div>\n      <div class=\"container\">\n        <div class=\"content-center brand col-lg-10 col-md-6\">\n          <div class=\"card card-register\">\n            <div class=\"card-header\">\n              <img\n                alt=\"Card image\"\n                class=\"card-img\"\n                src=\"assets/img/square1-red.png\"\n              />\n\n              <h3 class=\"card-title\">Ingreso</h3>\n            </div>\n            <div class=\"card-body\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Administrador\" class=\"btn btn-primary btn-icon btn-round mr-1\" (click)=\"CargarDefault('A')\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Paciente\" class=\"btn btn-succes btn-icon btn-round mr-1\" (click)=\"CargarDefault('P')\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Profesional\" class=\"btn btn-danger btn-icon btn-round mr-1\" (click)=\"CargarDefault('E')\">\n                    <i class=\"tim-icons icon-heart-2\"></i>\n                    </button>\n                </div>\n              </div>\n              <form class=\"form\" [formGroup]=\"form\">\n                <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus3 === true }\">\n                  <div class=\"input-group-prepend\">\n                    <div class=\"input-group-text\">\n                      <i class=\"tim-icons icon-email-85\"> </i>\n                    </div>\n                  </div>\n                  <input class=\"form-control\" placeholder=\"Email\" type=\"text\"\n                    (focus)=\"focus3 = true\" (blur)=\"focus3 = false\" formControlName=\"Email\"/>\n                </div>\n                <div class=\"input-group\"[ngClass]=\"{ 'input-group-focus': focus4 === true }\">\n                  <div class=\"input-group-prepend\">\n                    <div class=\"input-group-text\">\n                      <i class=\"tim-icons icon-lock-circle\"> </i>\n                    </div>\n                  </div>\n                  <input class=\"form-control\"placeholder=\"Password\"type=\"text\"\n                  (focus)=\"focus4 = true\" (blur)=\"focus4 = false\" formControlName=\"Password\"/>\n                </div>\n                <div class=\"form-check text-left\">\n                  <label class=\"form-check-label\">\n                    <input class=\"form-check-input\" type=\"checkbox\" />\n\n                    <span class=\"form-check-sign\"> </span> va el capchta\n                  </label>\n                </div>\n              </form>\n            </div>\n            <div class=\"card-footer\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <a class=\"btn btn-primary btn-round btn-lg\" (click)=\"Ingresar()\" >\n                    Ingresar\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-succes btn-round btn-lg\" [routerLink]=\"['/registro']\">\n                    Registrarse\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-danger btn-round btn-lg\" [routerLink]=\"['/bienvenida']\">\n                    Cancelar\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n</div>\n</div>\n</div>\n</div>\n");
 
 /***/ }),
 
@@ -409,7 +422,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div class=\"navbar-translate\">\n      <a\n        class=\"navbar-brand\"\n        placement=\"bottom\"\n        [routerLink]=\"['/home']\"\n        target=\"_blank\"\n        tooltip=\"Ariel Zamora\"\n      >\n        <span> Clinica Avellaneda </span>\n      </a>\n      <button\n        aria-controls=\"navigation-index\"\n        aria-label=\"Toggle navigation\"\n        class=\"navbar-toggler navbar-toggler\"\n        [attr.aria-expanded]=\"!isCollapsed\"\n        (click)=\"isCollapsed = !isCollapsed\"\n        id=\"navigation\"\n        type=\"button\"\n      >\n        <span class=\"navbar-toggler-bar bar1\"> </span>\n        <span class=\"navbar-toggler-bar bar2\"> </span>\n        <span class=\"navbar-toggler-bar bar3\"> </span>\n      </button>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >\n      <div class=\"navbar-collapse-header\">\n        <div class=\"row\">\n          <div class=\"col-6 collapse-brand\"><a> Clinica Avellaneda </a></div>\n          <div class=\"col-6 collapse-close text-right\">\n            <button\n              aria-controls=\"navigation-index\"\n              aria-label=\"Toggle navigation\"\n              class=\"navbar-toggler\"\n              [attr.aria-expanded]=\"!isCollapsed\"\n              (click)=\"isCollapsed = !isCollapsed\"\n              id=\"navigation\"\n              type=\"button\"\n            >\n              <i class=\"tim-icons icon-simple-remove\"> </i>\n            </button>\n          </div>\n        </div>\n      </div>\n      <ul class=\"navbar-nav\">\n        <li class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n              href=\"javascript:void(0)\"\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a class=\"dropdown-item\" [routerLink]=\"['/register']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a class=\"dropdown-item\" [routerLink]=\"['/landing']\">\n                <i class=\"tim-icons icon-image-02\"> </i> Especialidades\n              </a>\n              <a class=\"dropdown-item\" [routerLink]=\"['/profile']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Pacientes\n              </a>\n              <a class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro\n            </a>\n          </li>\n          <li class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              href=\"javascript:void(0)\"\n              (click)=\"scrollToDownload(target)\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Turnos\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/CreativeTim\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/CreativeTim\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/CreativeTimOfficial\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>      \n      </ul>\n    </div>\n  </div>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/landing']\">\n                <i class=\"tim-icons icon-image-02\"> </i> landing\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profile']\">\n                <i class=\"tim-icons icon-single-02\"> </i> profile\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente','admin','profesional']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              href=\"javascript:void(0)\"\n              (click)=\"scrollToDownload(target)\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"!estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            [routerLink]=\"['/login']\"\n          >\n            <i class=\"tim-icons icon-single-02\"> </i> Ingresar\n          </a>\n        </li> \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/pacientes-home.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/pacientes-home.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>pacientes-home works!</p>\n");
 
 /***/ }),
 
@@ -448,7 +474,59 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"content\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-lg-5 col-md-6 offset-lg-0 offset-md-3\">\n            <div class=\"square square-7\" id=\"square7\"></div>\n            <div class=\"square square-8\" id=\"square8\"></div>\n            <div class=\"card card-register\">\n              <div class=\"card-header\">\n                <img\n                  alt=\"Card image\"\n                  class=\"card-img\"\n                  src=\"assets/img/square1-red.png\"\n                />\n\n                <h3 class=\"card-title\">Registro</h3>\n              </div>\n              <div class=\"card-body\">\n                <form class=\"form\" [formGroup]=\"form\">\n                  <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus === true }\">\n                    <div class=\"input-group-prepend\">\n                      <div class=\"input-group-text\">\n                        <i class=\"tim-icons icon-single-02\"> </i>\n                      </div>\n                    </div>\n                    <input class=\"form-control\" placeholder=\"Nombre\"\n                      type=\"text\" (focus)=\"focus = true\" (blur)=\"focus = false\"formControlName=\"Nombre\"/>\n\n                  </div>\n                  <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus1 === true }\">\n                    <div class=\"input-group-prepend\">\n                      <div class=\"input-group-text\">\n                        <i class=\"tim-icons icon-single-02\"> </i>\n                      </div>\n                    </div>\n                    <input class=\"form-control\" placeholder=\"Apellido\"\n                      type=\"text\" (focus)=\"focus1 = true\" (blur)=\"focus1 = false\"formControlName=\"Apellido\"/>\n                  </div>\n                  <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus2 === true }\">\n                    <div class=\"input-group-prepend\">\n                      <div class=\"input-group-text\">\n                        <i class=\"tim-icons icon-single-02\"> </i>\n                      </div>\n                    </div>\n                    <input class=\"form-control\" placeholder=\"Edad\"\n                      type=\"text\" (focus)=\"focus2 = true\" (blur)=\"focus2 = false\" formControlName=\"Edad\"/>\n                  </div>\n                  <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus3 === true }\">\n                    <div class=\"input-group-prepend\">\n                      <div class=\"input-group-text\">\n                        <i class=\"tim-icons icon-email-85\"> </i>\n                      </div>\n                    </div>\n                    <input class=\"form-control\" placeholder=\"Email\" type=\"text\"\n                      (focus)=\"focus3 = true\" (blur)=\"focus3 = false\" formControlName=\"Email\"/>\n                  </div>\n                  <div class=\"input-group\"[ngClass]=\"{ 'input-group-focus': focus4 === true }\">\n                    <div class=\"input-group-prepend\">\n                      <div class=\"input-group-text\">\n                        <i class=\"tim-icons icon-lock-circle\"> </i>\n                      </div>\n                    </div>\n                    <input class=\"form-control\"placeholder=\"Password\"type=\"text\"\n                    (focus)=\"focus4 = true\" (blur)=\"focus4 = false\" formControlName=\"Password\"/>\n                  </div>\n                  <div class=\"form-check text-left\">\n                    <label class=\"form-check-label\">\n                      <input class=\"form-check-input\" type=\"checkbox\" />\n\n                      <span class=\"form-check-sign\"> </span> va el capchta\n                    </label>\n                  </div>\n                </form>\n              </div>\n              <div class=\"card-footer\">\n                <a class=\"btn btn-danger btn-round btn-lg\" (click)=\"registrarse()\" >\n                  Registrarse\n                </a>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"register-bg\"></div>\n        <div class=\"square square-1\" id=\"square1\"></div>\n        <div class=\"square square-2\" id=\"square2\"></div>\n        <div class=\"square square-3\" id=\"square3\"></div>\n        <div class=\"square square-4\" id=\"square4\"></div>\n        <div class=\"square square-5\" id=\"square5\"></div>\n        <div class=\"square square-6\" id=\"square6\"></div>\n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"content\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-lg-10 col-md-6 offset-lg-0 offset-md-3\">\n            <div class=\"square square-7\" id=\"square7\"></div>\n            <div class=\"square square-8\" id=\"square8\"></div>\n            <div class=\"card card-register\">\n              <div class=\"card-header\">\n                <img\n                  alt=\"Card image\"\n                  class=\"card-img\"\n                  src=\"assets/img/square1-red.png\"\n                />\n\n                <h3 class=\"card-title\">Registro</h3>\n              </div>\n              <div class=\"card-body\">\n                <form class=\"form\" [formGroup]=\"form\">\n                        <div class=\"row\">\n                          <div class=\"col-6\">\n                            <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus === true }\">\n                              <div class=\"input-group-prepend\">\n                                <div class=\"input-group-text\">\n                                  <i class=\"tim-icons icon-single-02\"> </i>\n                                </div>\n                              </div>\n                              <input class=\"form-control\" placeholder=\"Nombre\"\n                                type=\"text\" (focus)=\"focus = true\" (blur)=\"focus = false\"formControlName=\"Nombre\"/>          \n                            </div>\n                          </div>\n                          <div class=\"col-6\">\n                            <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus1 === true }\">\n                              <div class=\"input-group-prepend\">\n                                <div class=\"input-group-text\">\n                                  <i class=\"tim-icons icon-single-02\"> </i>\n                                </div>\n                              </div>\n                              <input class=\"form-control\" placeholder=\"Apellido\"\n                                type=\"text\" (focus)=\"focus1 = true\" (blur)=\"focus1 = false\"formControlName=\"Apellido\"/>\n                            </div>\n                          </div>\n                        </div>\n                    <div class=\"row\">\n                        <div class=\"col-6\">\n                          <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus3 === true }\">\n                            <div class=\"input-group-prepend\">\n                              <div class=\"input-group-text\">\n                                <i class=\"tim-icons icon-single-02\"> </i>\n                              </div>\n                            </div>\n                            <input class=\"form-control\" placeholder=\"Dni\"\n                              type=\"number\" (focus)=\"focus3= true\"  (blur)=\"focus3 = false\"formControlName=\"Dni\"/>\n                          </div>\n                        </div>\n                        <div class=\"col-6\">\n                          <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus4 === true }\">\n                            <div class=\"input-group-prepend\">\n                              <div class=\"input-group-text\">\n                                <i class=\"tim-icons icon-single-02\"> </i>\n                              </div>\n                            </div>\n                            <input class=\"form-control\" placeholder=\"Edad\"\n                              type=\"number\" (focus)=\"focus4 = true\" (blur)=\"focus4 = false\"formControlName=\"Edad\"/>\n                          </div>\n                        </div>\n                    </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus5 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-single-02\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\" placeholder=\"Sexo\"\n                          type=\"number\" (focus)=\"focus5 = true\" (blur)=\"focus5 = false\"formControlName=\"Sexo\"/>\n                      </div>\n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus6 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-single-02\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\" placeholder=\"Nacionalidad\"\n                          type=\"number\" (focus)=\"focus6 = true\" (blur)=\"focus6 = false\" formControlName=\"Nacionalidad\"/>\n                      </div>  \n                    </div>\n                  </div>      \n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus7 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-email-85\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\" placeholder=\"Email\" type=\"email\"\n                          (focus)=\"focus7 = true\" (blur)=\"focus7 = false\" formControlName=\"Email\"/>\n                      </div>\n                    </div>\n                    <div class=\"col-6\">              \n                      <div class=\"input-group\"[ngClass]=\"{ 'input-group-focus': focus8 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-lock-circle\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\"placeholder=\"Password\" type=\"password\"\n                        (focus)=\"focus8 = true\" (blur)=\"focus8 = false\" formControlName=\"Password\"/>\n                      </div>\n                    </div>\n                  </div>\n                </form>\n              </div>\n              <div class=\"card-footer\">\n                <a class=\"btn btn-danger btn-round btn-lg\" (click)=\"registrarse()\" >\n                  Registrarse\n                </a>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"register-bg\"></div>\n        <div class=\"square square-1\" id=\"square1\"></div>\n        <div class=\"square square-2\" id=\"square2\"></div>\n        <div class=\"square square-3\" id=\"square3\"></div>\n        <div class=\"square square-4\" id=\"square4\"></div>\n        <div class=\"square square-5\" id=\"square5\"></div>\n        <div class=\"square square-6\" id=\"square6\"></div>\n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/alta-turno/alta-turno.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/alta-turno/alta-turno.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>alta-turno works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/calendario/calendario.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/calendario/calendario.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>calendario works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html":
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>listado-turnos works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>turnos-home works!</p>\n");
 
 /***/ }),
 
@@ -744,6 +822,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/examples/landingpage/landingpage.component */ "./src/app/pages/examples/landingpage/landingpage.component.ts");
 /* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
 /* harmony import */ var _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./././guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var _guards_nologin_guard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ././guards/nologin.guard */ "./src/app/guards/nologin.guard.ts");
+/* harmony import */ var _pages_pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
+/* harmony import */ var _pages_especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
+/* harmony import */ var _pages_profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
+/* harmony import */ var _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
 
 
 
@@ -756,14 +841,40 @@ __webpack_require__.r(__webpack_exports__);
 //mios
 
 
+
+
+
+
+
+
+
 var routes = [
-    { path: "", redirectTo: "bienvenida", pathMatch: "full" },
-    { path: "bienvenida", component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"] },
+    {
+        path: "login", component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], canActivate: [_guards_nologin_guard__WEBPACK_IMPORTED_MODULE_13__["NologinGuard"]]
+    },
+    { path: "", redirectTo: "/bienvenida", pathMatch: "full" },
+    { path: "bienvenida", component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+    { path: "pacientes", component: _pages_pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_14__["PacientesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+    { path: "especialidades", component: _pages_especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_15__["EspecialidadesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+    { path: "profesionales", component: _pages_profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_16__["ProfesionalesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+    { path: "turnos", component: _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_17__["TurnosHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+    { path: "profile", component: _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_6__["ProfilepageComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+        data: { roles: ['admin'] }
+    },
+    { path: "register", component: _pages_examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_7__["RegisterpageComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+        data: { roles: ['admin'] }
+    },
+    { path: "landing", component: _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_8__["LandingpageComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+        data: { roles: ['admin'] }
+    },
+    { path: "home", component: _pages_index_index_component__WEBPACK_IMPORTED_MODULE_5__["IndexComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+        data: { roles: ['admin'] }
+    },
     { path: "registro", component: _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_10__["RegistroComponent"] },
-    { path: "profile", component: _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_6__["ProfilepageComponent"] },
-    { path: "register", component: _pages_examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_7__["RegisterpageComponent"] },
-    { path: "landing", component: _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_8__["LandingpageComponent"] },
-    { path: "home", component: _pages_index_index_component__WEBPACK_IMPORTED_MODULE_5__["IndexComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -886,8 +997,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _pages_pages_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/pages.module */ "./src/app/pages/pages.module.ts");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-auth.js");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-database.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-storage.js");
+/* harmony import */ var _pages_pages_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/pages.module */ "./src/app/pages/pages.module.ts");
+/* harmony import */ var _src_environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../src/environments/environment */ "./src/environments/environment.ts");
 
+
+
+
+
+
+
+
+
+//firestore y imagenes 
 
 
 
@@ -913,13 +1039,284 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
-                _pages_pages_module__WEBPACK_IMPORTED_MODULE_7__["PagesModule"]
+                _pages_pages_module__WEBPACK_IMPORTED_MODULE_12__["PagesModule"],
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__["AngularFirestoreModule"],
+                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_11__["AngularFireStorageModule"],
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuthModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_10__["AngularFireDatabaseModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["firebaseConfig"]),
             ],
-            providers: [],
+            providers: [
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuth"],
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__["AngularFirestore"] //
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/directivas/validar-roles.directive.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/directivas/validar-roles.directive.ts ***!
+  \*******************************************************/
+/*! exports provided: ValidarRolesDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidarRolesDirective", function() { return ValidarRolesDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var ValidarRolesDirective = /** @class */ (function () {
+    function ValidarRolesDirective(element, templateRef, viewContainer) {
+        this.element = element;
+        this.templateRef = templateRef;
+        this.viewContainer = viewContainer;
+        this.isCliente = null;
+        this.userUid = null;
+    }
+    Object.defineProperty(ValidarRolesDirective.prototype, "appValidarRoles", {
+        set: function (value) {
+            this.rolesAdmitidos = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ValidarRolesDirective.prototype.ngOnInit = function () {
+        if (this.CheckRoles()) {
+            this.viewContainer.createEmbeddedView(this.templateRef);
+        }
+        else {
+            this.viewContainer.clear();
+        }
+    };
+    ValidarRolesDirective.prototype.CheckRoles = function () {
+        var retorno = false;
+        var data = localStorage.getItem('Login');
+        if (data) {
+            this.user = JSON.parse(data); //el empleado logueado
+            if (this.rolesAdmitidos && data) {
+                var tipoUsuario_1 = this.user.tipo;
+                this.rolesAdmitidos.forEach(function (element) {
+                    if (tipoUsuario_1 === element) {
+                        retorno = true;
+                    }
+                });
+            }
+        }
+        return retorno;
+    };
+    ValidarRolesDirective.ctorParameters = function () { return [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"] }
+    ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Array])
+    ], ValidarRolesDirective.prototype, "appValidarRoles", null);
+    ValidarRolesDirective = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appValidarRoles]'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["TemplateRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]])
+    ], ValidarRolesDirective);
+    return ValidarRolesDirective;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/guards/auth.guard.ts":
+/*!**************************************!*\
+  !*** ./src/app/guards/auth.guard.ts ***!
+  \**************************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-auth.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
+
+
+
+
+var AuthGuard = /** @class */ (function () {
+    function AuthGuard(AFauth, router) {
+        this.AFauth = AFauth;
+        this.router = router;
+    }
+    AuthGuard.prototype.canActivate = function (next, state) {
+        var _this = this;
+        return this.AFauth.authState.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (auth) {
+            if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(auth)) {
+                _this.router.navigate(['/login']);
+                return false;
+            }
+            else {
+                return true;
+            }
+        }));
+    };
+    AuthGuard.ctorParameters = function () { return [
+        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    AuthGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], AuthGuard);
+    return AuthGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/guards/nologin.guard.ts":
+/*!*****************************************!*\
+  !*** ./src/app/guards/nologin.guard.ts ***!
+  \*****************************************/
+/*! exports provided: NologinGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NologinGuard", function() { return NologinGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-auth.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! util */ "./node_modules/util/util.js");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
+
+
+
+
+var NologinGuard = /** @class */ (function () {
+    function NologinGuard(AFauth, router) {
+        this.AFauth = AFauth;
+        this.router = router;
+    }
+    NologinGuard.prototype.canActivate = function (next, state) {
+        var _this = this;
+        return this.AFauth.authState.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (auth) {
+            if (Object(util__WEBPACK_IMPORTED_MODULE_4__["isNullOrUndefined"])(auth)) {
+                return true;
+            }
+            else {
+                _this.router.navigate(['/bienvenida']);
+                return false;
+            }
+        }));
+    };
+    NologinGuard.ctorParameters = function () { return [
+        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    ]; };
+    NologinGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    ], NologinGuard);
+    return NologinGuard;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/login.ts":
+/*!********************************!*\
+  !*** ./src/app/model/login.ts ***!
+  \********************************/
+/*! exports provided: login */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+var login = /** @class */ (function () {
+    function login() {
+    }
+    login.prototype.guardarIngreso = function () {
+    };
+    login.prototype.guardarSalida = function () {
+    };
+    return login;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/especialidades-home/especialidades-home.component.scss":
+/*!******************************************************************************!*\
+  !*** ./src/app/pages/especialidades-home/especialidades-home.component.scss ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2VzcGVjaWFsaWRhZGVzLWhvbWUvZXNwZWNpYWxpZGFkZXMtaG9tZS5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/especialidades-home/especialidades-home.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/pages/especialidades-home/especialidades-home.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: EspecialidadesHomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EspecialidadesHomeComponent", function() { return EspecialidadesHomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var EspecialidadesHomeComponent = /** @class */ (function () {
+    function EspecialidadesHomeComponent() {
+    }
+    EspecialidadesHomeComponent.prototype.ngOnInit = function () {
+    };
+    EspecialidadesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-especialidades-home',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./especialidades-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/especialidades-home.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./especialidades-home.component.scss */ "./src/app/pages/especialidades-home/especialidades-home.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], EspecialidadesHomeComponent);
+    return EspecialidadesHomeComponent;
 }());
 
 
@@ -1283,9 +1680,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nouislider */ "./node_modules/nouislider/distribute/nouislider.js");
-/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 var HomeComponent = /** @class */ (function () {
@@ -1294,6 +1688,9 @@ var HomeComponent = /** @class */ (function () {
         this.date = new Date();
         this.pagination = 3;
         this.pagination1 = 1;
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
     }
     HomeComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -1301,28 +1698,30 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.ngOnInit = function () {
         var body = document.getElementsByTagName("body")[0];
         body.classList.add("index-page");
-        var slider = document.getElementById("sliderRegular");
-        nouislider__WEBPACK_IMPORTED_MODULE_2___default.a.create(slider, {
-            start: 40,
-            connect: false,
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-        var slider2 = document.getElementById("sliderDouble");
-        nouislider__WEBPACK_IMPORTED_MODULE_2___default.a.create(slider2, {
-            start: [20, 60],
-            connect: true,
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
+        // var slider = document.getElementById("sliderRegular");
+        // noUiSlider.create(slider, {
+        //   start: 40,
+        //   connect: false,
+        //   range: {
+        //     min: 0,
+        //     max: 100
+        //   }
+        // });
+        // var slider2 = document.getElementById("sliderDouble");
+        // noUiSlider.create(slider2, {
+        //   start: [20, 60],
+        //   connect: true,
+        //   range: {
+        //     min: 0,
+        //     max: 100
+        //   }
+        // });
     };
     HomeComponent.prototype.ngOnDestroy = function () {
         var body = document.getElementsByTagName("body")[0];
         body.classList.remove("index-page");
+    };
+    HomeComponent.prototype.Ingresar = function () {
     };
     HomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1431,20 +1830,106 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var src_app_model_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/model/login */ "./src/app/model/login.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-storage.js");
 
+
+
+
+
+
+//import { ReCaptcha2Component } from 'ngx-captcha';
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent() {
+    function LoginComponent(fb, authService, router, fireStore) {
+        this.fb = fb;
+        this.authService = authService;
+        this.router = router;
+        this.fireStore = fireStore;
+        this.form = this.fb.group({
+            Email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            Password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
     }
-    LoginComponent.prototype.ngOnInit = function () {
+    LoginComponent.prototype.CargarDefault = function (tipo) {
+        var dataLogin = null;
+        switch (tipo) {
+            case 'A':
+                dataLogin = {
+                    Email: 'admin@admin.com',
+                    Password: '123456'
+                };
+                this.form.setValue(dataLogin);
+                break;
+            case 'P':
+                dataLogin = {
+                    Email: 'paciente@paciente.com',
+                    Password: '123456'
+                };
+                this.form.setValue(dataLogin);
+                break;
+            case 'E':
+                dataLogin = {
+                    Email: 'profesional@profesional.com',
+                    Password: '123456'
+                };
+                this.form.setValue(dataLogin);
+                break;
+        }
     };
+    LoginComponent.prototype.Ingresar = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        if (this.form.valid) {
+            localStorage.clear();
+            this.user = new src_app_model_login__WEBPACK_IMPORTED_MODULE_4__["login"]();
+            this.user.usuario = this.form.get('Email').value;
+            this.user.password = this.form.get('Password').value;
+            this.authService.Loguear(this.user)
+                .then(function (response) {
+                if (response) {
+                    _this.router.navigate(['/bienvenida']);
+                }
+            })
+                .catch(function (response) {
+                _this.error = true;
+                _this.isLogueado = false;
+                _this.errorMessage = response.message;
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    LoginComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    LoginComponent.prototype.ngOnInit = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    LoginComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    LoginComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+        { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+        { type: _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"] }
+    ]; };
     LoginComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-login',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./login.component.scss */ "./src/app/pages/login/login.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -1478,22 +1963,95 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavmenuComponent", function() { return NavmenuComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var src_app_model_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/model/login */ "./src/app/model/login.ts");
+
+
+
 
 
 var NavmenuComponent = /** @class */ (function () {
-    function NavmenuComponent() {
+    function NavmenuComponent(authService, router) {
+        this.authService = authService;
+        this.router = router;
+        this.isCollapsed = true;
     }
     NavmenuComponent.prototype.ngOnInit = function () {
     };
+    NavmenuComponent.prototype.desconectarse = function () {
+        localStorage.clear();
+        this.authService.logout();
+        this.router.navigate(['/login']);
+    };
+    NavmenuComponent.ctorParameters = function () { return [
+        { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], NavmenuComponent.prototype, "estaLogueado", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", src_app_model_login__WEBPACK_IMPORTED_MODULE_4__["login"])
+    ], NavmenuComponent.prototype, "usuario", void 0);
     NavmenuComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-navmenu',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./navmenu.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/navmenu/navmenu.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./navmenu.component.scss */ "./src/app/pages/navmenu/navmenu.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], NavmenuComponent);
     return NavmenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/pacientes-home/pacientes-home.component.scss":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/pacientes-home/pacientes-home.component.scss ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhY2llbnRlcy1ob21lL3BhY2llbnRlcy1ob21lLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/pacientes-home/pacientes-home.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/pages/pacientes-home/pacientes-home.component.ts ***!
+  \******************************************************************/
+/*! exports provided: PacientesHomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PacientesHomeComponent", function() { return PacientesHomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var PacientesHomeComponent = /** @class */ (function () {
+    function PacientesHomeComponent() {
+    }
+    PacientesHomeComponent.prototype.ngOnInit = function () {
+    };
+    PacientesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-pacientes-home',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./pacientes-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/pacientes-home.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./pacientes-home.component.scss */ "./src/app/pages/pacientes-home/pacientes-home.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], PacientesHomeComponent);
+    return PacientesHomeComponent;
 }());
 
 
@@ -1538,6 +2096,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
 /* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../directivas/validar-roles.directive */ "./src/app/directivas/validar-roles.directive.ts");
+/* harmony import */ var _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
+/* harmony import */ var _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./turnos-home/alta-turno/alta-turno.component */ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts");
+/* harmony import */ var _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./turnos-home/listado-turnos/listado-turnos.component */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts");
+/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
+
+
+
+
+
 
 
 
@@ -1600,7 +2168,12 @@ var PagesModule = /** @class */ (function () {
                 _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_24__["ProfesionalesHomeComponent"],
                 _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_25__["ListadoProfesionalesComponent"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__["RegistroComponent"]
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__["RegistroComponent"],
+                _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_28__["ValidarRolesDirective"],
+                _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_29__["TurnosHomeComponent"],
+                _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_30__["AltaTurnoComponent"],
+                _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_31__["ListadoTurnosComponent"],
+                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_32__["CalendarioComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
@@ -1750,11 +2323,31 @@ var RegistroComponent = /** @class */ (function () {
         this.form = this.fb.group({
             Nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             Apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            Dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             Edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            Sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            Nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             Email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             Password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     }
+    RegistroComponent.prototype.ngOnInit = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("register-page");
+        this.onMouseMove(event);
+    };
+    RegistroComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("register-page");
+    };
+    RegistroComponent.prototype.registrarse = function () {
+        this.paciente.nombre = this.form.get('Nombre').value;
+        this.paciente.apellido = this.form.get('Apellido').value;
+        this.paciente.edad = this.form.get('Edad').value;
+        this.paciente.usuario = this.form.get('Email').value;
+        this.paciente.password = this.form.get('Password').value;
+        this.paciente.tipo = "paciente";
+    };
     RegistroComponent.prototype.onMouseMove = function (e) {
         var squares1 = document.getElementById("square1");
         var squares2 = document.getElementById("square2");
@@ -1815,32 +2408,15 @@ var RegistroComponent = /** @class */ (function () {
                 posY * -0.02 +
                 "deg)";
     };
-    RegistroComponent.prototype.ngOnInit = function () {
-        var body = document.getElementsByTagName("body")[0];
-        body.classList.add("register-page");
-        this.onMouseMove(event);
-    };
-    RegistroComponent.prototype.ngOnDestroy = function () {
-        var body = document.getElementsByTagName("body")[0];
-        body.classList.remove("register-page");
-    };
-    RegistroComponent.prototype.registrarse = function () {
-        var nombre = this.form.get('Nombre').value;
-        var apellido = this.form.get('Apellido').value;
-        var edad = this.form.get('Edad').value;
-        var mail = this.form.get('Email').value;
-        var Password = this.form.get('Password').value;
-        alert('Nombre:' + nombre + 'Apellido:' + apellido);
-    };
     RegistroComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] }
     ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])("document:mousemove", ["$event"]),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object]),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", []),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)
-    ], RegistroComponent.prototype, "onMouseMove", null);
+    ], RegistroComponent.prototype, "ngOnInit", null);
     RegistroComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-registro',
@@ -1856,16 +2432,371 @@ var RegistroComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/alta-turno/alta-turno.component.scss ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2FsdGEtdHVybm8vYWx0YS10dXJuby5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: AltaTurnoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AltaTurnoComponent", function() { return AltaTurnoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var AltaTurnoComponent = /** @class */ (function () {
+    function AltaTurnoComponent() {
+    }
+    AltaTurnoComponent.prototype.ngOnInit = function () {
+    };
+    AltaTurnoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-alta-turno',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-turno.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/alta-turno/alta-turno.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-turno.component.scss */ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], AltaTurnoComponent);
+    return AltaTurnoComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/calendario/calendario.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/calendario/calendario.component.scss ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2NhbGVuZGFyaW8vY2FsZW5kYXJpby5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/calendario/calendario.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/turnos-home/calendario/calendario.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: CalendarioComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarioComponent", function() { return CalendarioComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var CalendarioComponent = /** @class */ (function () {
+    function CalendarioComponent() {
+    }
+    CalendarioComponent.prototype.ngOnInit = function () {
+    };
+    CalendarioComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-calendario',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./calendario.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/calendario/calendario.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./calendario.component.scss */ "./src/app/pages/turnos-home/calendario/calendario.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], CalendarioComponent);
+    return CalendarioComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss":
+/*!********************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2xpc3RhZG8tdHVybm9zL2xpc3RhZG8tdHVybm9zLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: ListadoTurnosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoTurnosComponent", function() { return ListadoTurnosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var ListadoTurnosComponent = /** @class */ (function () {
+    function ListadoTurnosComponent() {
+    }
+    ListadoTurnosComponent.prototype.ngOnInit = function () {
+    };
+    ListadoTurnosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-listado-turnos',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-turnos.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-turnos.component.scss */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], ListadoTurnosComponent);
+    return ListadoTurnosComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turnos-home.component.scss":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turnos-home.component.scss ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3R1cm5vcy1ob21lLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turnos-home.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turnos-home.component.ts ***!
+  \************************************************************/
+/*! exports provided: TurnosHomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnosHomeComponent", function() { return TurnosHomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var TurnosHomeComponent = /** @class */ (function () {
+    function TurnosHomeComponent() {
+    }
+    TurnosHomeComponent.prototype.ngOnInit = function () {
+    };
+    TurnosHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-turnos-home',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turnos-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turnos-home.component.scss */ "./src/app/pages/turnos-home/turnos-home.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], TurnosHomeComponent);
+    return TurnosHomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/auth.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/auth.service.ts ***!
+  \******************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-auth.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+
+
+
+
+
+
+
+var AuthService = /** @class */ (function () {
+    function AuthService(AFauth, afs, router) {
+        this.AFauth = AFauth;
+        this.afs = afs;
+        this.router = router;
+        this.existe = false;
+        if (!this.usuarios) {
+            this.traerTodos();
+        }
+    }
+    AuthService.prototype.traerTodos = function () {
+        var _this = this;
+        this.usuarios = new Array();
+        var users = this.afs.collection("usuarios").valueChanges();
+        users.forEach(function (user) {
+            user.forEach(function (item) {
+                _this.usuarios.push(item);
+            });
+        });
+        return this.usuarios;
+    };
+    AuthService.prototype.guardarUsuario = function (dataLogin) {
+        var _this = this;
+        this.usuarios.forEach(function (user) {
+            if ((user.email == dataLogin.usuario) && (user.contraseña == dataLogin.password) && (!_this.existe)) {
+                dataLogin.tipo = user.tipo;
+                dataLogin.nombre = user.nombre;
+                //no esta sigo
+            }
+        });
+        //obtengo la lista de usuarios y si se encuenta logeo por email y password ,sabiendo ya el tipo 
+        switch (dataLogin.tipo) {
+            case "paciente": {
+                localStorage.setItem('Login', JSON.stringify(dataLogin));
+                //statements; 
+                break;
+            }
+            case "profesional": {
+                localStorage.setItem('Login', JSON.stringify(dataLogin));
+                //statements; 
+                break;
+            }
+            default: {
+                localStorage.setItem('Login', JSON.stringify(dataLogin));
+                //statements; 
+                break;
+            }
+        }
+        //si es admin no busco nada ,solo tiene accesso total
+        //si es paciente busco toda su info 
+        //si es especialista tambien busco toda su info
+    };
+    AuthService.prototype.Loguear = function (dataLogin) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.AFauth.signInWithEmailAndPassword(dataLogin.usuario, dataLogin.password).then(function (userData) {
+                resolve(userData);
+                dataLogin.idUsario = userData.user.uid;
+                // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona 
+                _this.guardarUsuario(dataLogin);
+            }).catch(function (err) {
+                reject(err);
+            });
+        });
+    };
+    AuthService.prototype.logout = function () {
+        var _this = this;
+        this.AFauth.signOut().then(function () {
+            _this.router.navigate(['/login']);
+        });
+    };
+    AuthService.prototype.register = function (dataLogin) {
+        var _this = this;
+        return new Promise(function (resolve, rejected) {
+            _this.AFauth.createUserWithEmailAndPassword(dataLogin.usuario, dataLogin.password).then(function (user) {
+                resolve(user);
+            }).catch(function (err) { return rejected(err); });
+        });
+    };
+    //desde aca mi codigo 4
+    AuthService.prototype.registerUser = function (email, pass) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.AFauth.createUserWithEmailAndPassword(email, pass)
+                .then(function (userData) {
+                resolve(userData);
+                // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona 
+            }).catch(function (err) {
+                reject(err);
+            });
+        });
+    };
+    AuthService.prototype.loginEmailUser = function (email, pass) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.AFauth.signInWithEmailAndPassword(email, pass)
+                .then(function (userData) { return resolve(userData); }, function (err) { return reject(err); });
+        });
+    };
+    //si se registra por facebook ,le asignamos el rol de cliente 
+    AuthService.prototype.loginFacebookUser = function () {
+        return this.AFauth.signInWithPopup(new firebase_app__WEBPACK_IMPORTED_MODULE_5__["auth"].FacebookAuthProvider())
+            .then(function (credential) {
+            // this.updateUserDataCliente(credential.user);
+        });
+    };
+    //si se registra por google ,le asignamos el rol de cliente
+    AuthService.prototype.loginGoogleUser = function () {
+        return this.AFauth.signInWithPopup(new firebase_app__WEBPACK_IMPORTED_MODULE_5__["auth"].GoogleAuthProvider())
+            .then(function (credential) {
+            //this.updateUserDataCliente(credential.user);
+        });
+    };
+    AuthService.prototype.logoutUser = function () {
+        return this.AFauth.signOut();
+    };
+    AuthService.prototype.isAuth = function () {
+        return this.AFauth.authState.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (auth) { return auth; }));
+    };
+    AuthService.prototype.isUserComanda = function (userUid) {
+        // const userRef:AngularFirestoreDocument<Empleado>= this.afs.doc('Empleado/'+userUid);
+        // return userRef.valueChanges();
+    };
+    AuthService.ctorParameters = function () { return [
+        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"] },
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_6__["AngularFirestore"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+    ]; };
+    AuthService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_6__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], AuthService);
+    return AuthService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
   \*****************************************/
-/*! exports provided: environment */
+/*! exports provided: environment, firebaseConfig */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firebaseConfig", function() { return firebaseConfig; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
@@ -1874,14 +2805,16 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false
 };
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+var firebaseConfig = {
+    apiKey: "AIzaSyCul0X6DC0cO97irfKAlIQQNQNWiSR9bCE",
+    authDomain: "clinicaavellaneda-45f73.firebaseapp.com",
+    databaseURL: "https://clinicaavellaneda-45f73.firebaseio.com",
+    projectId: "clinicaavellaneda-45f73",
+    storageBucket: "clinicaavellaneda-45f73.appspot.com",
+    messagingSenderId: "795681605937",
+    appId: "1:795681605937:web:37e1168dada2478b1e8810",
+    measurementId: "G-EN8ZT7KX9S"
+};
 
 
 /***/ }),
