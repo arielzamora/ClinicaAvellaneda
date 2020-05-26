@@ -23,11 +23,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   isLogueado:boolean;
   constructor() {
 
+    this.obtenerUsuarioActual();
+
+  }
+
+  obtenerUsuarioActual()
+  {
     const data = localStorage.getItem('Login');
     this.user=JSON.parse(data);
     this.isLogueado=true;
-
   }
+
   scrollToDownload(element: any) {
     element.scrollIntoView({ behavior: "smooth" });
   }

@@ -1,1 +1,33 @@
-<p>listado-especialidades works!</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Usuario</th>
+            <th>Activa</th>
+            <th class="text-right">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let especialidad of listaEspecialidad">
+            <td class="text-center">{{especialidad.idEspecialidad}}</td>
+            <td>{{especialidad.nombre}}</td>
+            <td>{{especialidad.fechaAlta}}</td>
+            <td>{{especialidad.usuarioAlta}}</td>
+            <td>{{especialidad.activa}}</td>
+            <td class="td-actions text-right">
+                <button type="button" rel="tooltip" (click)="showMesaAlta()" class="btn btn-info btn-simple btn-icon btn-sm">
+                    <i class="tim-icons icon-single-02"></i>
+                </button>
+                <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
+                    <i class="tim-icons icon-settings-gear-63"></i>
+                </button>
+                <button type="button" rel="tooltip" class="btn btn-danger btn-simple btn-icon btn-sm">
+                    <i class="tim-icons icon-simple-remove"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

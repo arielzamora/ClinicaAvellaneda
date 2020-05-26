@@ -1,1 +1,23 @@
-<p>pacientes-home works!</p>
+
+<app-navmenu [usuario]="user" [estaLogueado]="isLogueado" ></app-navmenu>
+
+<div class="wrapper">
+  <div class="page-header header-filter">
+    <div class="squares square1"></div>
+    <div class="squares square2"></div>
+    <div class="squares square3"></div>
+    <div class="squares square4"></div>
+    <div class="squares square5"></div>
+    <div class="squares square6"></div>
+    <div class="squares square7"></div>
+    <div class="container">
+      <div class="content-center">
+        <h3>Listado de Pacientes</h3>
+        <app-listado-pacientes></app-listado-pacientes>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+

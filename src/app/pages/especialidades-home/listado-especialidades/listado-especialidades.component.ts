@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
+import { especialidad } from 'src/app/model/especialidad';
+import { AltaEspecialidadesComponent } from '../alta-especialidades/alta-especialidades.component';
 
 @Component({
   selector: 'app-listado-especialidades',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoEspecialidadesComponent implements OnInit {
 
-  constructor() { }
+  @Input() listaEspecialidad: especialidad[];
+ 
+  showModalAlta: boolean;
+  @Output() showModalOuput: EventEmitter<boolean>;
+  constructor() {
+    this.showModalOuput = new EventEmitter<boolean>();
+   }
 
   ngOnInit(): void {
   }
 
+  showMesaAlta() {
+    this.showModalAlta = true;
+    this.showModalOuput.emit(this.showModalAlta);
+  }
 }

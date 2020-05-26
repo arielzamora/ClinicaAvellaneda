@@ -309,6 +309,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.html":
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.html ***!
+  \****************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Especialidad</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n              <div class=\"form-group\">\n                <label for=\"idEspecialidad\">Id: </label>\n                <input type=\"text\" id=\"idEspecialidad\" formControlName=\"idEspecialidad\" class=\"form-control\" placeholder=\"Id Especialidad\" [ngClass]=\"{ 'is-invalid': submitted && f.idEspecialidad.errors?.required }\">\n                <div *ngIf=\"submitted && f.idEspecialidad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.idEspecialidad.errors?.required\">Debe ingresar un id para la especialidad</div>\n                </div>\n              </div>\n              <div class=\"form-group\">\n                <label for=\"nombre\">Nombre: </label>\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">\n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n              <hr>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                </div>\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                </div>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/especialidades-home.component.html":
 /*!********************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/especialidades-home.component.html ***!
@@ -318,7 +331,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>especialidades-home works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Listado de Especialidades</h3>\n        <app-listado-especialidades (showModalOuput)=\"showModalHome=$event\" [listaEspecialidad]=\"listaEspecialidad\"></app-listado-especialidades>\n      </div>\n    </div>\n  </div>\n  \n  <app-footer></app-footer>\n</div>\n<app-alta-especialidades #modalRegistro [showModalAlta]=\"showModalHome\" (closeModal)=\"showModalHome = false\" (registradoCorrectamente)=\"cargarLista()\"></app-alta-especialidades>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.html":
+/*!**********************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.html ***!
+  \**********************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Nombre</th>\n            <th>Fecha</th>\n            <th>Usuario</th>\n            <th>Activa</th>\n            <th class=\"text-right\">Acciones</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let especialidad of listaEspecialidad\">\n            <td class=\"text-center\">{{especialidad.idEspecialidad}}</td>\n            <td>{{especialidad.nombre}}</td>\n            <td>{{especialidad.fechaAlta}}</td>\n            <td>{{especialidad.usuarioAlta}}</td>\n            <td>{{especialidad.activa}}</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" (click)=\"showMesaAlta()\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
 
 /***/ }),
 
@@ -426,6 +452,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.html":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.html ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n    <div class=\"row justify-content-center align-items-center\"> \n      <div class=\"contenedor col-11 col-xl-11\">\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <th>Name</th>\n                    <th>Job Position</th>\n                    <th>Since</th>\n                    <th class=\"text-right\">Salary</th>\n                    <th class=\"text-right\">Actions</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <td class=\"text-center\">1</td>\n                    <td>Andrew Mike</td>\n                    <td>Develop</td>\n                    <td>2013</td>\n                    <td class=\"text-right\">&euro; 99,225</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>\n                <tr>\n                    <td class=\"text-center\">2</td>\n                    <td>John Doe</td>\n                    <td>Design</td>\n                    <td>2012</td>\n                    <td class=\"text-right\">&euro; 89,241</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>\n                <tr>\n                    <td class=\"text-center\">3</td>\n                    <td>Alex Mike</td>\n                    <td>Design</td>\n                    <td>2010</td>\n                    <td class=\"text-right\">&euro; 92,144</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n      </div>\n    </div>\n</div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/pacientes-home.component.html":
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/pacientes-home.component.html ***!
@@ -435,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>pacientes-home works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Listado de Pacientes</h3>\r\n        <app-listado-pacientes></app-listado-pacientes>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
@@ -448,7 +487,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>listado-profesionales works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Name</th>\n            <th>Job Position</th>\n            <th>Since</th>\n            <th class=\"text-right\">Salary</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>Andrew Mike</td>\n            <td>Develop</td>\n            <td>2013</td>\n            <td class=\"text-right\">&euro; 99,225</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">2</td>\n            <td>John Doe</td>\n            <td>Design</td>\n            <td>2012</td>\n            <td class=\"text-right\">&euro; 89,241</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">3</td>\n            <td>Alex Mike</td>\n            <td>Design</td>\n            <td>2010</td>\n            <td class=\"text-right\">&euro; 92,144</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
 
 /***/ }),
 
@@ -461,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>profesionales-home works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Profesionales :</h3>\r\n            <app-listado-profesionales></app-listado-profesionales>\r\n          </div>\r\n        </div>\r\n      </div>      \r\n      <app-footer></app-footer>\r\n     </div>");
 
 /***/ }),
 
@@ -513,7 +552,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>listado-turnos works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Name</th>\n            <th>Job Position</th>\n            <th>Since</th>\n            <th class=\"text-right\">Salary</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>Andrew Mike</td>\n            <td>Develop</td>\n            <td>2013</td>\n            <td class=\"text-right\">&euro; 99,225</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">2</td>\n            <td>John Doe</td>\n            <td>Design</td>\n            <td>2012</td>\n            <td class=\"text-right\">&euro; 89,241</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">3</td>\n            <td>Alex Mike</td>\n            <td>Design</td>\n            <td>2010</td>\n            <td class=\"text-right\">&euro; 92,144</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
 
 /***/ }),
 
@@ -526,7 +565,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>turnos-home works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Turnos :</h3>\n        <app-listado-turnos></app-listado-turnos>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>");
 
 /***/ }),
 
@@ -1276,6 +1315,136 @@ var login = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.scss":
+/*!**************************************************************************************************!*\
+  !*** ./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.scss ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".modal-dialog {\n  overflow-y: initial !important;\n}\n\n.modal-body {\n  overflow-y: auto;\n}\n\n.modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZXNwZWNpYWxpZGFkZXMtaG9tZS9hbHRhLWVzcGVjaWFsaWRhZGVzL0M6XFxBbm5ndWxhclxcYmxrLWRlc2lnbi1zeXN0ZW0tYW5ndWxhci1tYXN0ZXIvc3JjXFxhcHBcXHBhZ2VzXFxlc3BlY2lhbGlkYWRlcy1ob21lXFxhbHRhLWVzcGVjaWFsaWRhZGVzXFxhbHRhLWVzcGVjaWFsaWRhZGVzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9lc3BlY2lhbGlkYWRlcy1ob21lL2FsdGEtZXNwZWNpYWxpZGFkZXMvYWx0YS1lc3BlY2lhbGlkYWRlcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDhCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxnQkFBQTtBQ0VKOztBRENBO0VBQ0ksOEJBQUE7QUNFSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2VzcGVjaWFsaWRhZGVzLWhvbWUvYWx0YS1lc3BlY2lhbGlkYWRlcy9hbHRhLWVzcGVjaWFsaWRhZGVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1vZGFsLWRpYWxvZ3tcclxuICAgIG92ZXJmbG93LXk6IGluaXRpYWwgIWltcG9ydGFudFxyXG59XHJcbi5tb2RhbC1ib2R5e1xyXG4gICAgb3ZlcmZsb3cteTogYXV0bztcclxufSBcclxuXHJcbi5tb2RhbCB7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNik7XHJcbiAgfSIsIi5tb2RhbC1kaWFsb2cge1xuICBvdmVyZmxvdy15OiBpbml0aWFsICFpbXBvcnRhbnQ7XG59XG5cbi5tb2RhbC1ib2R5IHtcbiAgb3ZlcmZsb3cteTogYXV0bztcbn1cblxuLm1vZGFsIHtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjYpO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts":
+/*!************************************************************************************************!*\
+  !*** ./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts ***!
+  \************************************************************************************************/
+/*! exports provided: AltaEspecialidadesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AltaEspecialidadesComponent", function() { return AltaEspecialidadesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
+
+
+
+
+
+var AltaEspecialidadesComponent = /** @class */ (function () {
+    function AltaEspecialidadesComponent(fb, especialidadService) {
+        this.fb = fb;
+        this.especialidadService = especialidadService;
+        this.submitted = false;
+        this.closeModal = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.registradoCorrectamente = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    Object.defineProperty(AltaEspecialidadesComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    AltaEspecialidadesComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            idEspecialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+        });
+    };
+    AltaEspecialidadesComponent.prototype.Submit = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.especialidad.idEspecialidad = this.form.get('idEspecialidad').value;
+            this.especialidad.nombre = this.form.get('nombre').value;
+            this.especialidadService.Registrar(this.especialidad)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.registradoCorrectamente.emit();
+                    _this.cerrar();
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al registrar mesa";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al registrar mesa";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    AltaEspecialidadesComponent.prototype.cargarModal = function () {
+        //this.cargarForm();
+        //this.form.reset();
+    };
+    AltaEspecialidadesComponent.prototype.cargarForm = function () {
+        this.form = this.fb.group({
+            idEspecialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    };
+    AltaEspecialidadesComponent.prototype.cerrar = function () {
+        this.closeModal.emit();
+        this.form.reset();
+    };
+    AltaEspecialidadesComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+        { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_3__["EspecialidadService"] }
+    ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], AltaEspecialidadesComponent.prototype, "showModalAlta", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], AltaEspecialidadesComponent.prototype, "closeModal", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], AltaEspecialidadesComponent.prototype, "registradoCorrectamente", void 0);
+    AltaEspecialidadesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-alta-especialidades',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-especialidades.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-especialidades.component.scss */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_3__["EspecialidadService"]])
+    ], AltaEspecialidadesComponent);
+    return AltaEspecialidadesComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/especialidades-home/especialidades-home.component.scss":
 /*!******************************************************************************!*\
   !*** ./src/app/pages/especialidades-home/especialidades-home.component.scss ***!
@@ -1301,22 +1470,113 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EspecialidadesHomeComponent", function() { return EspecialidadesHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
+
 
 
 var EspecialidadesHomeComponent = /** @class */ (function () {
-    function EspecialidadesHomeComponent() {
+    function EspecialidadesHomeComponent(especialidadService) {
+        this.especialidadService = especialidadService;
+        this.cargarLista();
+        this.obtenerUsuarioActual();
     }
-    EspecialidadesHomeComponent.prototype.ngOnInit = function () {
+    EspecialidadesHomeComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
     };
+    EspecialidadesHomeComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.especialidadService.Listar()
+            .subscribe(function (data) {
+            _this.listaEspecialidad = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    EspecialidadesHomeComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    EspecialidadesHomeComponent.prototype.ngOnInit = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    EspecialidadesHomeComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    EspecialidadesHomeComponent.ctorParameters = function () { return [
+        { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_2__["EspecialidadService"] }
+    ]; };
     EspecialidadesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-especialidades-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./especialidades-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/especialidades-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./especialidades-home.component.scss */ "./src/app/pages/especialidades-home/especialidades-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_2__["EspecialidadService"]])
     ], EspecialidadesHomeComponent);
     return EspecialidadesHomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.scss":
+/*!********************************************************************************************************!*\
+  !*** ./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.scss ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2VzcGVjaWFsaWRhZGVzLWhvbWUvbGlzdGFkby1lc3BlY2lhbGlkYWRlcy9saXN0YWRvLWVzcGVjaWFsaWRhZGVzLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts":
+/*!******************************************************************************************************!*\
+  !*** ./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts ***!
+  \******************************************************************************************************/
+/*! exports provided: ListadoEspecialidadesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoEspecialidadesComponent", function() { return ListadoEspecialidadesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var ListadoEspecialidadesComponent = /** @class */ (function () {
+    function ListadoEspecialidadesComponent() {
+        this.showModalOuput = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    ListadoEspecialidadesComponent.prototype.ngOnInit = function () {
+    };
+    ListadoEspecialidadesComponent.prototype.showMesaAlta = function () {
+        this.showModalAlta = true;
+        this.showModalOuput.emit(this.showModalAlta);
+    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array)
+    ], ListadoEspecialidadesComponent.prototype, "listaEspecialidad", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], ListadoEspecialidadesComponent.prototype, "showModalOuput", void 0);
+    ListadoEspecialidadesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-listado-especialidades',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-especialidades.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-especialidades.component.scss */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], ListadoEspecialidadesComponent);
+    return ListadoEspecialidadesComponent;
 }());
 
 
@@ -1688,10 +1948,13 @@ var HomeComponent = /** @class */ (function () {
         this.date = new Date();
         this.pagination = 3;
         this.pagination1 = 1;
+        this.obtenerUsuarioActual();
+    }
+    HomeComponent.prototype.obtenerUsuarioActual = function () {
         var data = localStorage.getItem('Login');
         this.user = JSON.parse(data);
         this.isLogueado = true;
-    }
+    };
     HomeComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
     };
@@ -2011,6 +2274,53 @@ var NavmenuComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.scss ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhY2llbnRlcy1ob21lL2xpc3RhZG8tcGFjaWVudGVzL2xpc3RhZG8tcGFjaWVudGVzLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts ***!
+  \***************************************************************************************/
+/*! exports provided: ListadoPacientesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoPacientesComponent", function() { return ListadoPacientesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var ListadoPacientesComponent = /** @class */ (function () {
+    function ListadoPacientesComponent() {
+    }
+    ListadoPacientesComponent.prototype.ngOnInit = function () {
+    };
+    ListadoPacientesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-listado-pacientes',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-pacientes.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-pacientes.component.scss */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], ListadoPacientesComponent);
+    return ListadoPacientesComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/pacientes-home/pacientes-home.component.scss":
 /*!********************************************************************!*\
   !*** ./src/app/pages/pacientes-home/pacientes-home.component.scss ***!
@@ -2036,20 +2346,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PacientesHomeComponent", function() { return PacientesHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_paciente_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/paciente.service */ "./src/app/services/paciente.service.ts");
+
 
 
 var PacientesHomeComponent = /** @class */ (function () {
-    function PacientesHomeComponent() {
+    function PacientesHomeComponent(especialidadService) {
+        this.especialidadService = especialidadService;
+        //this.cargarLista();
+        this.obtenerUsuarioActual();
     }
-    PacientesHomeComponent.prototype.ngOnInit = function () {
+    PacientesHomeComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
     };
+    PacientesHomeComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.especialidadService.Listar()
+            .subscribe(function (data) {
+            _this.listaEspecialidad = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    PacientesHomeComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    PacientesHomeComponent.prototype.ngOnInit = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    PacientesHomeComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    PacientesHomeComponent.ctorParameters = function () { return [
+        { type: src_app_services_paciente_service__WEBPACK_IMPORTED_MODULE_2__["PacienteService"] }
+    ]; };
     PacientesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-pacientes-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./pacientes-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/pacientes-home/pacientes-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./pacientes-home.component.scss */ "./src/app/pages/pacientes-home/pacientes-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_paciente_service__WEBPACK_IMPORTED_MODULE_2__["PacienteService"]])
     ], PacientesHomeComponent);
     return PacientesHomeComponent;
 }());
@@ -2092,15 +2433,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./home/home.component */ "./src/app/pages/home/home.component.ts");
 /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/pages/footer/footer.component.ts");
 /* harmony import */ var _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./navmenu/navmenu.component */ "./src/app/pages/navmenu/navmenu.component.ts");
-/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
-/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
-/* harmony import */ var _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./../directivas/validar-roles.directive */ "./src/app/directivas/validar-roles.directive.ts");
-/* harmony import */ var _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
-/* harmony import */ var _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./turnos-home/alta-turno/alta-turno.component */ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts");
-/* harmony import */ var _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./turnos-home/listado-turnos/listado-turnos.component */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts");
-/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
+/* harmony import */ var _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../directivas/validar-roles.directive */ "./src/app/directivas/validar-roles.directive.ts");
+/* harmony import */ var _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
+/* harmony import */ var _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./turnos-home/alta-turno/alta-turno.component */ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts");
+/* harmony import */ var _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./turnos-home/listado-turnos/listado-turnos.component */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts");
+/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
+/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
+/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
+/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
+/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
+/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
+/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
+
+
+
+
+
 
 
 
@@ -2165,22 +2516,27 @@ var PagesModule = /** @class */ (function () {
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"],
                 _footer_footer_component__WEBPACK_IMPORTED_MODULE_22__["FooterComponent"],
                 _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__["NavmenuComponent"],
-                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_24__["ProfesionalesHomeComponent"],
-                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_25__["ListadoProfesionalesComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__["RegistroComponent"],
-                _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_28__["ValidarRolesDirective"],
-                _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_29__["TurnosHomeComponent"],
-                _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_30__["AltaTurnoComponent"],
-                _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_31__["ListadoTurnosComponent"],
-                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_32__["CalendarioComponent"]
+                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_29__["ProfesionalesHomeComponent"],
+                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_30__["ListadoProfesionalesComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_31__["LoginComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
+                _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__["ValidarRolesDirective"],
+                _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__["TurnosHomeComponent"],
+                _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_26__["AltaTurnoComponent"],
+                _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_27__["ListadoTurnosComponent"],
+                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_28__["CalendarioComponent"],
+                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__["PacientesHomeComponent"],
+                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__["EspecialidadesHomeComponent"],
+                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__["ListadoEspecialidadesComponent"],
+                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__["AltaEspecialidadesComponent"],
+                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__["ListadoPacientesComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
                 _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__["ProfilepageComponent"],
                 _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__["RegisterpageComponent"],
                 _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__["LandingpageComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_27__["RegistroComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"]
             ],
             providers: []
@@ -2265,20 +2621,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfesionalesHomeComponent", function() { return ProfesionalesHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+
 
 
 var ProfesionalesHomeComponent = /** @class */ (function () {
-    function ProfesionalesHomeComponent() {
+    function ProfesionalesHomeComponent(especialidadService) {
+        this.especialidadService = especialidadService;
+        //this.cargarLista();
+        this.obtenerUsuarioActual();
     }
-    ProfesionalesHomeComponent.prototype.ngOnInit = function () {
+    ProfesionalesHomeComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
     };
+    ProfesionalesHomeComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.especialidadService.Listar()
+            .subscribe(function (data) {
+            _this.listaEspecialidad = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    ProfesionalesHomeComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    ProfesionalesHomeComponent.prototype.ngOnInit = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    ProfesionalesHomeComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    ProfesionalesHomeComponent.ctorParameters = function () { return [
+        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__["ProfesionalService"] }
+    ]; };
     ProfesionalesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-profesionales-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./profesionales-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/profesionales-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./profesionales-home.component.scss */ "./src/app/pages/profesionales-home/profesionales-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__["ProfesionalService"]])
     ], ProfesionalesHomeComponent);
     return ProfesionalesHomeComponent;
 }());
@@ -2598,20 +2985,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnosHomeComponent", function() { return TurnosHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+
 
 
 var TurnosHomeComponent = /** @class */ (function () {
-    function TurnosHomeComponent() {
+    function TurnosHomeComponent(especialidadService) {
+        this.especialidadService = especialidadService;
+        //this.cargarLista();
+        this.obtenerUsuarioActual();
     }
-    TurnosHomeComponent.prototype.ngOnInit = function () {
+    TurnosHomeComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
     };
+    TurnosHomeComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.especialidadService.Listar()
+            .subscribe(function (data) {
+            _this.listaEspecialidad = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    TurnosHomeComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    TurnosHomeComponent.prototype.ngOnInit = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    TurnosHomeComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    TurnosHomeComponent.ctorParameters = function () { return [
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"] }
+    ]; };
     TurnosHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-turnos-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turnos-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turnos-home.component.scss */ "./src/app/pages/turnos-home/turnos-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"]])
     ], TurnosHomeComponent);
     return TurnosHomeComponent;
 }());
@@ -2780,6 +3198,340 @@ var AuthService = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_6__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], AuthService);
     return AuthService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/especialidad.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/services/especialidad.service.ts ***!
+  \**************************************************/
+/*! exports provided: EspecialidadService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EspecialidadService", function() { return EspecialidadService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+
+
+
+
+var EspecialidadService = /** @class */ (function () {
+    function EspecialidadService(afs) {
+        this.afs = afs;
+    }
+    EspecialidadService.prototype.Listar = function () {
+        this.especialidadColeccion = this.afs.collection('especialidades');
+        return this.especialidads = this.especialidadColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idEspecialidad = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    EspecialidadService.prototype.Obtenerespecialidad = function (codigo) {
+        this.especialidadColeccion = this.afs.collection('especialidades', function (x) { return x.where("codigo", "==", codigo); });
+        return this.especialidads = this.especialidadColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idEspecialidad = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    EspecialidadService.prototype.Registrar = function (especialidad) {
+        var _this = this;
+        this.especialidadColeccion = this.afs.collection('especialidades');
+        return new Promise(function (resolve, reject) {
+            _this.especialidadColeccion.add(especialidad).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    EspecialidadService.prototype.Eliminar = function (especialidad) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.especialidadDoc = _this.afs.doc('especialidads/' + especialidad.idEspecialidad);
+            _this.especialidadDoc.delete().then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    EspecialidadService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"] }
+    ]; };
+    EspecialidadService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
+    ], EspecialidadService);
+    return EspecialidadService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/paciente.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/paciente.service.ts ***!
+  \**********************************************/
+/*! exports provided: PacienteService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PacienteService", function() { return PacienteService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+
+
+
+
+var PacienteService = /** @class */ (function () {
+    function PacienteService(afs) {
+        this.afs = afs;
+        this.pacienteColeccion = afs.collection('pacientes');
+        this.pacientes = this.pacienteColeccion.valueChanges();
+    }
+    PacienteService.prototype.Listar = function () {
+        this.pacienteColeccion = this.afs.collection('pacientes');
+        return this.pacientes = this.pacienteColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idPaciente = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    PacienteService.prototype.Obtenerpaciente = function (codigo) {
+        this.pacienteColeccion = this.afs.collection('pacientes', function (x) { return x.where("codigo", "==", codigo); });
+        return this.pacientes = this.pacienteColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idPaciente = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    PacienteService.prototype.Registrar = function (paciente) {
+        var _this = this;
+        this.pacienteColeccion = this.afs.collection('pacientes');
+        return new Promise(function (resolve, reject) {
+            _this.pacienteColeccion.add(paciente).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    PacienteService.prototype.Eliminar = function (paciente) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.pacienteDoc = _this.afs.doc('pacientes/' + paciente.idPaciente);
+            _this.pacienteDoc.delete().then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    PacienteService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"] }
+    ]; };
+    PacienteService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
+    ], PacienteService);
+    return PacienteService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/profesional.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/profesional.service.ts ***!
+  \*************************************************/
+/*! exports provided: ProfesionalService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfesionalService", function() { return ProfesionalService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+
+
+
+
+var ProfesionalService = /** @class */ (function () {
+    function ProfesionalService(afs) {
+        this.afs = afs;
+        this.profesionalColeccion = afs.collection('profesionals');
+        this.profesionals = this.profesionalColeccion.valueChanges();
+    }
+    ProfesionalService.prototype.Listar = function () {
+        this.profesionalColeccion = this.afs.collection('profesionals');
+        return this.profesionals = this.profesionalColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idProfesional = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    ProfesionalService.prototype.Obtenerprofesional = function (codigo) {
+        this.profesionalColeccion = this.afs.collection('profesionals', function (x) { return x.where("codigo", "==", codigo); });
+        return this.profesionals = this.profesionalColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idProfesional = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    ProfesionalService.prototype.Registrar = function (profesional) {
+        var _this = this;
+        this.profesionalColeccion = this.afs.collection('profesionals');
+        return new Promise(function (resolve, reject) {
+            _this.profesionalColeccion.add(profesional).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    ProfesionalService.prototype.Eliminar = function (profesional) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.profesionalDoc = _this.afs.doc('profesionals/' + profesional.idProfesional);
+            _this.profesionalDoc.delete().then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    ProfesionalService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"] }
+    ]; };
+    ProfesionalService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
+    ], ProfesionalService);
+    return ProfesionalService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/turnos.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/turnos.service.ts ***!
+  \********************************************/
+/*! exports provided: TurnosService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnosService", function() { return TurnosService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+
+
+
+
+var TurnosService = /** @class */ (function () {
+    function TurnosService(afs) {
+        this.afs = afs;
+        this.turnoColeccion = afs.collection('turnos');
+        this.turnos = this.turnoColeccion.valueChanges();
+    }
+    TurnosService.prototype.Listar = function () {
+        this.turnoColeccion = this.afs.collection('turnos');
+        return this.turnos = this.turnoColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idTurno = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    TurnosService.prototype.Obtenerturno = function (codigo) {
+        this.turnoColeccion = this.afs.collection('turnos', function (x) { return x.where("codigo", "==", codigo); });
+        return this.turnos = this.turnoColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idTurno = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    TurnosService.prototype.Registrar = function (turno) {
+        var _this = this;
+        this.turnoColeccion = this.afs.collection('turnos');
+        return new Promise(function (resolve, reject) {
+            _this.turnoColeccion.add(turno).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    TurnosService.prototype.Eliminar = function (turno) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.turnoDoc = _this.afs.doc('turnos/' + turno.idTurno);
+            _this.turnoDoc.delete().then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    TurnosService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"] }
+    ]; };
+    TurnosService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
+    ], TurnosService);
+    return TurnosService;
 }());
 
 

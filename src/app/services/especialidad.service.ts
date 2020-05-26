@@ -17,13 +17,11 @@ export class EspecialidadService {
 
   constructor(private afs:AngularFirestore) { 
 
-    this.especialidadColeccion=afs.collection<especialidad>('especialidads');
-    this.especialidads=this.especialidadColeccion.valueChanges(); 
 
   }
 
   public Listar(): Observable<especialidad[]> {
-    this.especialidadColeccion=this.afs.collection<especialidad>('especialidads');
+    this.especialidadColeccion=this.afs.collection<especialidad>('especialidades');
     return this.especialidads=this.especialidadColeccion.snapshotChanges()
      .pipe(map(changes => {
        return changes.map(action => {
@@ -35,7 +33,7 @@ export class EspecialidadService {
   }
 
   public Obtenerespecialidad(codigo:string):Observable<especialidad[]>{
-    this.especialidadColeccion=this.afs.collection<especialidad>('especialidads',x=>x.where("codigo","==",codigo));
+    this.especialidadColeccion=this.afs.collection<especialidad>('especialidades',x=>x.where("codigo","==",codigo));
     return this.especialidads=this.especialidadColeccion.snapshotChanges()
     .pipe(map(changes => {
       return changes.map(action => {
@@ -49,7 +47,7 @@ export class EspecialidadService {
 
   public Registrar(especialidad:especialidad): Promise<any> {
 
-    this.especialidadColeccion=this.afs.collection<especialidad>('especialidads');
+    this.especialidadColeccion=this.afs.collection<especialidad>('especialidades');
     return new Promise((resolve, reject) => {
 
     this.especialidadColeccion.add(especialidad).then(result => {

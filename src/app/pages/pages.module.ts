@@ -23,16 +23,23 @@ import { LandingpageComponent } from "./examples/landingpage/landingpage.compone
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
-import { ProfesionalesHomeComponent } from './profesionales-home/profesionales-home.component';
-import { ListadoProfesionalesComponent } from './profesionales-home/listado-profesionales/listado-profesionales.component';
-import { LoginComponent } from './login/login.component';
-import { RegistroComponent } from './registro/registro.component';
+
 
 import { ValidarRolesDirective } from "./../directivas/validar-roles.directive";
 import { TurnosHomeComponent } from './turnos-home/turnos-home.component';
 import { AltaTurnoComponent } from './turnos-home/alta-turno/alta-turno.component';
 import { ListadoTurnosComponent } from './turnos-home/listado-turnos/listado-turnos.component';
 import { CalendarioComponent } from './turnos-home/calendario/calendario.component'
+import { ProfesionalesHomeComponent } from './profesionales-home/profesionales-home.component';
+import { ListadoProfesionalesComponent } from './profesionales-home/listado-profesionales/listado-profesionales.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
+import { PacientesHomeComponent } from './pacientes-home/pacientes-home.component';
+import { EspecialidadesHomeComponent } from './especialidades-home/especialidades-home.component';
+import { ListadoEspecialidadesComponent } from './especialidades-home/listado-especialidades/listado-especialidades.component';
+import{AltaEspecialidadesComponent}from './especialidades-home/alta-especialidades/alta-especialidades.component'
+import { ListadoPacientesComponent } from './pacientes-home/listado-pacientes/listado-pacientes.component';
+
 
 @NgModule({
   imports: [
@@ -69,7 +76,13 @@ import { CalendarioComponent } from './turnos-home/calendario/calendario.compone
     TurnosHomeComponent,
     AltaTurnoComponent,
     ListadoTurnosComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    PacientesHomeComponent,
+    EspecialidadesHomeComponent,
+    ListadoEspecialidadesComponent,
+    AltaEspecialidadesComponent,
+    ListadoPacientesComponent
+
   ],
   exports: [
     IndexComponent,

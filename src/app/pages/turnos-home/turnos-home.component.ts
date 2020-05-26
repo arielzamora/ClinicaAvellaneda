@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { turno } from 'src/app/model/turno';
+import { login } from 'src/app/model/login';
+import { TurnosService } from 'src/app/services/turnos.service';
 
 @Component({
   selector: 'app-turnos-home',
@@ -7,9 +10,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TurnosHomeComponent implements OnInit {
 
-  constructor() { }
+  public listaEspecialidad: turno[];
+  user:login;
+  isLogueado:boolean;
 
-  ngOnInit(): void {
+  constructor(private especialidadService:TurnosService) {
+    //this.cargarLista();
+    this.obtenerUsuarioActual();
+   }
+
+   obtenerUsuarioActual()
+   {
+     const data = localStorage.getItem('Login');
+     this.user=JSON.parse(data);
+     this.isLogueado=true;
+   }
+  public cargarLista() {
+    this.especialidadService.Listar()
+     .subscribe(
+      data => {
+        this.listaEspecialidad = data;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
+  scrollToDownload(element: any) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+  ngOnInit() {
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.add("index-page");
+
+  }
+
+  ngOnDestroy() {
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.remove("index-page");
   }
 
 }
