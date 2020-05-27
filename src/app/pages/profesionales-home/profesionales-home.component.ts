@@ -9,12 +9,13 @@ import { ProfesionalService } from 'src/app/services/profesional.service';
   styleUrls: ['./profesionales-home.component.scss']
 })
 export class ProfesionalesHomeComponent implements OnInit {
-  public listaEspecialidad: profesional[];
+  public listaProfesionales: profesional[];
   user:login;
   isLogueado:boolean;
+  showModalHome:boolean;
 
-  constructor(private especialidadService:ProfesionalService) {
-    //this.cargarLista();
+  constructor(private profesionalService:ProfesionalService) {
+    this.cargarLista();
     this.obtenerUsuarioActual();
    }
 
@@ -24,11 +25,12 @@ export class ProfesionalesHomeComponent implements OnInit {
      this.user=JSON.parse(data);
      this.isLogueado=true;
    }
+
   public cargarLista() {
-    this.especialidadService.Listar()
+    this.profesionalService.Listar()
      .subscribe(
       data => {
-        this.listaEspecialidad = data;
+        this.listaProfesionales = data;
       },
       error => {
         console.log(error);

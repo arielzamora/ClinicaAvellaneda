@@ -20,7 +20,11 @@ export class ListadoEspecialidadesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showMesaAlta() {
+  showEspecialidadAlta() {
+    this.showModalAlta = true;
+    this.showModalOuput.emit(this.showModalAlta);
+  }
+  showEspecialidadModi(especialidad:especialidad) {
     this.showModalAlta = true;
     this.showModalOuput.emit(this.showModalAlta);
   }

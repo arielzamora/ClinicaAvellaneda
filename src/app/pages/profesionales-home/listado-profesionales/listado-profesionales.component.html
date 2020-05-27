@@ -1,23 +1,36 @@
 <table class="table">
     <thead>
         <tr>
+            <th class="text-center" colspan="8">
+              <button class="float-right  btn btn-outline-danger btn-sm" type="button" (click)="showProfesionalAlta()"><i class="fas fa-user-plus"></i>Nuevo</button>
+              <!--<app-csv class="float-right csv" [data]="data" [filename]="generarNombreCsv()" [options]="options"></app-csv>
+              <button  class="float-right  btn btn-outline-primary btn-sm  mx-auto mb-4" type="button" (click)="generarPDF()" ><i class="fas fa-file"></i>Generar PDF</button>-->
+            </th>
+          </tr>
+        <tr>
             <th class="text-center">#</th>
-            <th>Name</th>
-            <th>Job Position</th>
-            <th>Since</th>
-            <th class="text-right">Salary</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+            <th>Sexo</th>
+            <th>Dni</th>
+            <th>Edad</th>
+            <th>Horario</th>
             <th class="text-right">Actions</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td class="text-center">1</td>
-            <td>Andrew Mike</td>
-            <td>Develop</td>
-            <td>2013</td>
-            <td class="text-right">&euro; 99,225</td>
+        <tr *ngFor="let profesional of listaProfesionales">
+            <td class="text-center">{{profesional.idProfesional}}</td>
+            <td>{{profesional.nombre}}</td>
+            <td>{{profesional.apellido}}</td>
+            <td>{{profesional.especialidad}}</td>
+            <td>{{profesional.sexo}}</td>
+            <td>{{profesional.dni}}</td>
+            <td>{{profesional.edad}}</td>
+            <td>{{profesional.horario}}</td>
             <td class="td-actions text-right">
-                <button type="button" rel="tooltip" class="btn btn-info btn-simple btn-icon btn-sm">
+                <button type="button" rel="tooltip" (click)="showProfesionalEdit(profesional)" class="btn btn-info btn-simple btn-icon btn-sm">
                     <i class="tim-icons icon-single-02"></i>
                 </button>
                 <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
@@ -27,42 +40,6 @@
                     <i class="tim-icons icon-simple-remove"></i>
                 </button>
             </td>
-        </tr>
-        <tr>
-            <td class="text-center">2</td>
-            <td>John Doe</td>
-            <td>Design</td>
-            <td>2012</td>
-            <td class="text-right">&euro; 89,241</td>
-            <td class="td-actions text-right">
-                <button type="button" rel="tooltip" class="btn btn-info btn-simple btn-icon btn-sm">
-                    <i class="tim-icons icon-single-02"></i>
-                </button>
-                <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
-                    <i class="tim-icons icon-settings-gear-63"></i>
-                </button>
-                <button type="button" rel="tooltip" class="btn btn-danger btn-simple btn-icon btn-sm">
-                    <i class="tim-icons icon-simple-remove"></i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center">3</td>
-            <td>Alex Mike</td>
-            <td>Design</td>
-            <td>2010</td>
-            <td class="text-right">&euro; 92,144</td>
-            <td class="td-actions text-right">
-                <button type="button" rel="tooltip" class="btn btn-info btn-simple btn-icon btn-sm">
-                    <i class="tim-icons icon-single-02"></i>
-                </button>
-                <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
-                    <i class="tim-icons icon-settings-gear-63"></i>
-                </button>
-                <button type="button" rel="tooltip" class="btn btn-danger btn-simple btn-icon btn-sm">
-                    <i class="tim-icons icon-simple-remove"></i>
-                </button>
-            </td>
-        </tr>
+        </tr>             
     </tbody>
 </table>

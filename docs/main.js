@@ -318,7 +318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Especialidad</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n              <div class=\"form-group\">\n                <label for=\"idEspecialidad\">Id: </label>\n                <input type=\"text\" id=\"idEspecialidad\" formControlName=\"idEspecialidad\" class=\"form-control\" placeholder=\"Id Especialidad\" [ngClass]=\"{ 'is-invalid': submitted && f.idEspecialidad.errors?.required }\">\n                <div *ngIf=\"submitted && f.idEspecialidad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.idEspecialidad.errors?.required\">Debe ingresar un id para la especialidad</div>\n                </div>\n              </div>\n              <div class=\"form-group\">\n                <label for=\"nombre\">Nombre: </label>\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">\n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n              <hr>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                </div>\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                </div>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Especialidad</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"idEspecialidad\" formControlName=\"idEspecialidad\" class=\"form-control\" placeholder=\"Especialidad\" [ngClass]=\"{ 'is-invalid': submitted && f.idEspecialidad.errors?.required }\">\n                <div *ngIf=\"submitted && f.idEspecialidad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.idEspecialidad.errors?.required\">Debe ingresar un id para la especialidad</div>\n                </div>\n              </div>\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n              <hr>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                </div>\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                </div>\n              </div>\n            </form>\n            </div>\n        </div>\n      </div>\n    </div>");
 
 /***/ }),
 
@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Nombre</th>\n            <th>Fecha</th>\n            <th>Usuario</th>\n            <th>Activa</th>\n            <th class=\"text-right\">Acciones</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let especialidad of listaEspecialidad\">\n            <td class=\"text-center\">{{especialidad.idEspecialidad}}</td>\n            <td>{{especialidad.nombre}}</td>\n            <td>{{especialidad.fechaAlta}}</td>\n            <td>{{especialidad.usuarioAlta}}</td>\n            <td>{{especialidad.activa}}</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" (click)=\"showMesaAlta()\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\" colspan=\"8\">\n              <button class=\"float-right  btn btn-outline-danger btn-sm\" type=\"button\" (click)=\"showEspecialidadAlta()\"><i class=\"fas fa-user-plus\"></i>Nuevo</button>\n              <!--<app-csv class=\"float-right csv\" [data]=\"data\" [filename]=\"generarNombreCsv()\" [options]=\"options\"></app-csv>\n              <button  class=\"float-right  btn btn-outline-primary btn-sm  mx-auto mb-4\" type=\"button\" (click)=\"generarPDF()\" ><i class=\"fas fa-file\"></i>Generar PDF</button>-->\n            </th>\n          </tr>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Nombre</th>\n            <th>Fecha</th>\n            <th>Usuario</th>\n            <th>Activa</th>\n            <th class=\"text-right\">Acciones</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let especialidad of listaEspecialidad\">\n            <td class=\"text-center\">{{especialidad.idEspecialidad}}</td>\n            <td>{{especialidad.nombre}}</td>\n            <td>{{especialidad.fechaAlta}}</td>\n            <td>{{especialidad.usuarioAlta}}</td>\n            <td>{{especialidad.activa}}</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" (click)=\"showEspecialidadEdit(especialidad)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
 
 /***/ }),
 
@@ -474,7 +474,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Listado de Pacientes</h3>\r\n        <app-listado-pacientes></app-listado-pacientes>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Listado de Pacientes</h3>\r\n        <app-listado-pacientes></app-listado-pacientes>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.html":
+/*!*************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.html ***!
+  \*************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Profesional</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n          <div class=\"row\">\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"idProfesional\" formControlName=\"idProfesional\" class=\"form-control\" placeholder=\"Id Profesional\" [ngClass]=\"{ 'is-invalid': submitted && f.idProfesional.errors?.required }\">\n                  <div *ngIf=\"submitted && f.idProfesional.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"username\">\n                    <div *ngIf=\"f.idProfesional.errors?.required\">Debe ingresar un id para el Profesional</div>\n                  </div>\n                </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"especialidad\" formControlName=\"especialidad\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Especialidad</option>\n                  <option >Clinica</option>\n                </select>\n                <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                </div>\n            </div>\n           </div>              \n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                </div>\n              </div>\n            </div>\n        </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Sexo</option>\n                  <option >Masculino</option>\n                  <option>Femenino</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                </div>\n            </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">      \n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Tipo Dni</option>\n                  <option >DNI</option>\n                  <option>LE</option>\n                  <option >LC</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                </div>\n            </div>             \n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"horario\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Horario</option>\n                  <option>09-14</option>\n                  <option>14-20</option>\n                  <option>12-20</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.horario.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.horario.errors?.required\">Seleccione Horario</div>\n                </div>\n            </div>\n           </div>\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                    <option selected value=\"\">Nacionalidad</option>\n                    <option >Argentina</option>\n                    <option> Venezuela</option>\n                    <option> Colombia</option>\n                    <option >Brasil</option>\n                    <option>Mexico</option>\n                  </select>\n                  <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                  </div>\n              </div>\n            </div>\n          </div>\n            <div class=\"row\">\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n            </div>\n              <hr>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                </div>\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                </div>\n              </div>\n            </form>\n        </div>\n        </div>\n      </div>\n    </div>\n");
 
 /***/ }),
 
@@ -487,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Name</th>\n            <th>Job Position</th>\n            <th>Since</th>\n            <th class=\"text-right\">Salary</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>Andrew Mike</td>\n            <td>Develop</td>\n            <td>2013</td>\n            <td class=\"text-right\">&euro; 99,225</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">2</td>\n            <td>John Doe</td>\n            <td>Design</td>\n            <td>2012</td>\n            <td class=\"text-right\">&euro; 89,241</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">3</td>\n            <td>Alex Mike</td>\n            <td>Design</td>\n            <td>2010</td>\n            <td class=\"text-right\">&euro; 92,144</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\" colspan=\"8\">\n              <button class=\"float-right  btn btn-outline-danger btn-sm\" type=\"button\" (click)=\"showProfesionalAlta()\"><i class=\"fas fa-user-plus\"></i>Nuevo</button>\n              <!--<app-csv class=\"float-right csv\" [data]=\"data\" [filename]=\"generarNombreCsv()\" [options]=\"options\"></app-csv>\n              <button  class=\"float-right  btn btn-outline-primary btn-sm  mx-auto mb-4\" type=\"button\" (click)=\"generarPDF()\" ><i class=\"fas fa-file\"></i>Generar PDF</button>-->\n            </th>\n          </tr>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Nombre</th>\n            <th>Apellido</th>\n            <th>Especialidad</th>\n            <th>Sexo</th>\n            <th>Dni</th>\n            <th>Edad</th>\n            <th>Horario</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let profesional of listaProfesionales\">\n            <td class=\"text-center\">{{profesional.idProfesional}}</td>\n            <td>{{profesional.nombre}}</td>\n            <td>{{profesional.apellido}}</td>\n            <td>{{profesional.especialidad}}</td>\n            <td>{{profesional.sexo}}</td>\n            <td>{{profesional.dni}}</td>\n            <td>{{profesional.edad}}</td>\n            <td>{{profesional.horario}}</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" (click)=\"showProfesionalEdit(profesional)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>             \n    </tbody>\n</table>\n");
 
 /***/ }),
 
@@ -500,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Profesionales :</h3>\r\n            <app-listado-profesionales></app-listado-profesionales>\r\n          </div>\r\n        </div>\r\n      </div>      \r\n      <app-footer></app-footer>\r\n     </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Profesionales :</h3>\r\n            <app-listado-profesionales (showModalOuput)=\"showModalHome=$event\" [listaProfesionales]=\"listaProfesionales\"></app-listado-profesionales>\r\n          </div>\r\n        </div>\r\n      </div>      \r\n      <app-footer></app-footer>\r\n     </div>\r\n     <app-alta-profesionales #modalRegistro [showModalAlta]=\"showModalHome\" (closeModal)=\"showModalHome = false\" (registradoCorrectamente)=\"cargarLista()\"></app-alta-profesionales>");
 
 /***/ }),
 
@@ -1324,7 +1337,7 @@ var login = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".modal-dialog {\n  overflow-y: initial !important;\n}\n\n.modal-body {\n  overflow-y: auto;\n}\n\n.modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZXNwZWNpYWxpZGFkZXMtaG9tZS9hbHRhLWVzcGVjaWFsaWRhZGVzL0M6XFxBbm5ndWxhclxcYmxrLWRlc2lnbi1zeXN0ZW0tYW5ndWxhci1tYXN0ZXIvc3JjXFxhcHBcXHBhZ2VzXFxlc3BlY2lhbGlkYWRlcy1ob21lXFxhbHRhLWVzcGVjaWFsaWRhZGVzXFxhbHRhLWVzcGVjaWFsaWRhZGVzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9lc3BlY2lhbGlkYWRlcy1ob21lL2FsdGEtZXNwZWNpYWxpZGFkZXMvYWx0YS1lc3BlY2lhbGlkYWRlcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDhCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxnQkFBQTtBQ0VKOztBRENBO0VBQ0ksOEJBQUE7QUNFSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2VzcGVjaWFsaWRhZGVzLWhvbWUvYWx0YS1lc3BlY2lhbGlkYWRlcy9hbHRhLWVzcGVjaWFsaWRhZGVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1vZGFsLWRpYWxvZ3tcclxuICAgIG92ZXJmbG93LXk6IGluaXRpYWwgIWltcG9ydGFudFxyXG59XHJcbi5tb2RhbC1ib2R5e1xyXG4gICAgb3ZlcmZsb3cteTogYXV0bztcclxufSBcclxuXHJcbi5tb2RhbCB7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNik7XHJcbiAgfSIsIi5tb2RhbC1kaWFsb2cge1xuICBvdmVyZmxvdy15OiBpbml0aWFsICFpbXBvcnRhbnQ7XG59XG5cbi5tb2RhbC1ib2R5IHtcbiAgb3ZlcmZsb3cteTogYXV0bztcbn1cblxuLm1vZGFsIHtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjYpO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZXNwZWNpYWxpZGFkZXMtaG9tZS9hbHRhLWVzcGVjaWFsaWRhZGVzL0M6XFxBbm5ndWxhclxcYmxrLWRlc2lnbi1zeXN0ZW0tYW5ndWxhci1tYXN0ZXIvc3JjXFxhcHBcXHBhZ2VzXFxlc3BlY2lhbGlkYWRlcy1ob21lXFxhbHRhLWVzcGVjaWFsaWRhZGVzXFxhbHRhLWVzcGVjaWFsaWRhZGVzLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9wYWdlcy9lc3BlY2lhbGlkYWRlcy1ob21lL2FsdGEtZXNwZWNpYWxpZGFkZXMvYWx0YS1lc3BlY2lhbGlkYWRlcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLDhCQUFBO0FDREoiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9lc3BlY2lhbGlkYWRlcy1ob21lL2FsdGEtZXNwZWNpYWxpZGFkZXMvYWx0YS1lc3BlY2lhbGlkYWRlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxuLm1vZGFsIHtcclxuICAgIGJhY2tncm91bmQ6IHJnYmEoMCwwLDAsMC42KTtcclxuICB9IiwiLm1vZGFsIHtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjYpO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -1556,7 +1569,11 @@ var ListadoEspecialidadesComponent = /** @class */ (function () {
     }
     ListadoEspecialidadesComponent.prototype.ngOnInit = function () {
     };
-    ListadoEspecialidadesComponent.prototype.showMesaAlta = function () {
+    ListadoEspecialidadesComponent.prototype.showEspecialidadAlta = function () {
+        this.showModalAlta = true;
+        this.showModalOuput.emit(this.showModalAlta);
+    };
+    ListadoEspecialidadesComponent.prototype.showEspecialidadModi = function (especialidad) {
         this.showModalAlta = true;
         this.showModalOuput.emit(this.showModalAlta);
     };
@@ -2330,7 +2347,7 @@ var ListadoPacientesComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhY2llbnRlcy1ob21lL3BhY2llbnRlcy1ob21lLmNvbXBvbmVudC5zY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcGFjaWVudGVzLWhvbWUvQzpcXEFubmd1bGFyXFxibGstZGVzaWduLXN5c3RlbS1hbmd1bGFyLW1hc3Rlci9zcmNcXGFwcFxccGFnZXNcXHBhY2llbnRlcy1ob21lXFxwYWNpZW50ZXMtaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvcGFjaWVudGVzLWhvbWUvcGFjaWVudGVzLWhvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSw4QkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvcGFjaWVudGVzLWhvbWUvcGFjaWVudGVzLWhvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubW9kYWwge1xyXG4gICAgYmFja2dyb3VuZDogcmdiYSgwLDAsMCwwLjYpO1xyXG4gIH0iLCIubW9kYWwge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNik7XG59Il19 */");
 
 /***/ }),
 
@@ -2440,13 +2457,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
 /* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
 /* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
-/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
-/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
-/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
-/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
-/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
+/* harmony import */ var _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./profesionales-home/alta-profesionales/alta-profesionales.component */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
+/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
+/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
+/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
+/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
+
 
 
 
@@ -2518,31 +2537,179 @@ var PagesModule = /** @class */ (function () {
                 _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__["NavmenuComponent"],
                 _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_29__["ProfesionalesHomeComponent"],
                 _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_30__["ListadoProfesionalesComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_31__["LoginComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_32__["LoginComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_33__["RegistroComponent"],
                 _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__["ValidarRolesDirective"],
                 _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__["TurnosHomeComponent"],
                 _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_26__["AltaTurnoComponent"],
                 _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_27__["ListadoTurnosComponent"],
                 _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_28__["CalendarioComponent"],
-                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__["PacientesHomeComponent"],
-                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__["EspecialidadesHomeComponent"],
-                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__["ListadoEspecialidadesComponent"],
-                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__["AltaEspecialidadesComponent"],
-                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__["ListadoPacientesComponent"]
+                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_34__["PacientesHomeComponent"],
+                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_35__["EspecialidadesHomeComponent"],
+                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_36__["ListadoEspecialidadesComponent"],
+                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_37__["AltaEspecialidadesComponent"],
+                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_38__["ListadoPacientesComponent"],
+                _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_31__["AltaProfesionalesComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
                 _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__["ProfilepageComponent"],
                 _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__["RegisterpageComponent"],
                 _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__["LandingpageComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_33__["RegistroComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"]
             ],
             providers: []
         })
     ], PagesModule);
     return PagesModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.scss":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.scss ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-dialog {\n  max-width: 700px;\n}\n\n.modal-content {\n  width: 700px;\n}\n\nselect.form-control {\n  background-color: #1f2251;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcHJvZmVzaW9uYWxlcy1ob21lL2FsdGEtcHJvZmVzaW9uYWxlcy9DOlxcQW5uZ3VsYXJcXGJsay1kZXNpZ24tc3lzdGVtLWFuZ3VsYXItbWFzdGVyL3NyY1xcYXBwXFxwYWdlc1xccHJvZmVzaW9uYWxlcy1ob21lXFxhbHRhLXByb2Zlc2lvbmFsZXNcXGFsdGEtcHJvZmVzaW9uYWxlcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvcHJvZmVzaW9uYWxlcy1ob21lL2FsdGEtcHJvZmVzaW9uYWxlcy9hbHRhLXByb2Zlc2lvbmFsZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSw4QkFBQTtBQ0NKOztBRENFO0VBQ0UsZ0JBQUE7QUNFSjs7QURBRTtFQUNFLFlBQUE7QUNHSjs7QURERTtFQUNJLHlCQUFBO0FDSU4iLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9wcm9mZXNpb25hbGVzLWhvbWUvYWx0YS1wcm9mZXNpb25hbGVzL2FsdGEtcHJvZmVzaW9uYWxlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tb2RhbCB7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNik7XHJcbiAgfVxyXG4gIC5tb2RhbC1kaWFsb2d7XHJcbiAgICBtYXgtd2lkdGg6IDcwMHB4O1xyXG4gIH1cclxuICAubW9kYWwtY29udGVudHtcclxuICAgIHdpZHRoOiA3MDBweDtcclxuICB9XHJcbiAgc2VsZWN0LmZvcm0tY29udHJvbCB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IzFmMjI1MTs7XHJcblxyXG4gIH0iLCIubW9kYWwge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNik7XG59XG5cbi5tb2RhbC1kaWFsb2cge1xuICBtYXgtd2lkdGg6IDcwMHB4O1xufVxuXG4ubW9kYWwtY29udGVudCB7XG4gIHdpZHRoOiA3MDBweDtcbn1cblxuc2VsZWN0LmZvcm0tY29udHJvbCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxZjIyNTE7XG59Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts ***!
+  \*********************************************************************************************/
+/*! exports provided: AltaProfesionalesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AltaProfesionalesComponent", function() { return AltaProfesionalesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+
+
+
+
+var AltaProfesionalesComponent = /** @class */ (function () {
+    function AltaProfesionalesComponent(fb, profesionalService) {
+        this.fb = fb;
+        this.profesionalService = profesionalService;
+        this.submitted = false;
+        this.closeModal = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.registradoCorrectamente = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    Object.defineProperty(AltaProfesionalesComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    AltaProfesionalesComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            horario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    };
+    AltaProfesionalesComponent.prototype.Submit = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.profesional.idProfesional = this.form.get('idprofesional').value;
+            this.profesional.nombre = this.form.get('nombre').value;
+            this.profesional.apellido = this.form.get('apellido').value;
+            this.profesional.tipo = this.form.get('dni').value;
+            this.profesional.dni = this.form.get('dni').value;
+            this.profesional.sexo = this.form.get('sexo').value;
+            this.profesional.edad = this.form.get('edad').value;
+            this.profesional.especialidad = this.form.get('especialidad').value;
+            this.profesional.nacionalidad = this.form.get('nacionalidad').value;
+            this.profesionalService.Registrar(this.profesional)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.registradoCorrectamente.emit();
+                    _this.cerrar();
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al registrar el profesional";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al registrar el profesional";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    AltaProfesionalesComponent.prototype.cargarForm = function () {
+        this.form = this.fb.group({
+            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+        });
+    };
+    AltaProfesionalesComponent.prototype.cerrar = function () {
+        this.closeModal.emit();
+        this.form.reset();
+    };
+    AltaProfesionalesComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_3__["ProfesionalService"] }
+    ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
+    ], AltaProfesionalesComponent.prototype, "showModalAlta", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], AltaProfesionalesComponent.prototype, "closeModal", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], AltaProfesionalesComponent.prototype, "registradoCorrectamente", void 0);
+    AltaProfesionalesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-alta-profesionales',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-profesionales.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-profesionales.component.scss */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_3__["ProfesionalService"]])
+    ], AltaProfesionalesComponent);
+    return AltaProfesionalesComponent;
 }());
 
 
@@ -2578,9 +2745,26 @@ __webpack_require__.r(__webpack_exports__);
 
 var ListadoProfesionalesComponent = /** @class */ (function () {
     function ListadoProfesionalesComponent() {
+        this.showModalOuput = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     ListadoProfesionalesComponent.prototype.ngOnInit = function () {
     };
+    ListadoProfesionalesComponent.prototype.showProfesionalAlta = function () {
+        this.showModalAlta = true;
+        this.showModalOuput.emit(this.showModalAlta);
+    };
+    ListadoProfesionalesComponent.prototype.showProfesionalModi = function (profe) {
+        this.showModalAlta = true;
+        this.showModalOuput.emit(this.showModalAlta);
+    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array)
+    ], ListadoProfesionalesComponent.prototype, "listaEspecialidad", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], ListadoProfesionalesComponent.prototype, "showModalOuput", void 0);
     ListadoProfesionalesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-listado-profesionales',
@@ -2626,9 +2810,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ProfesionalesHomeComponent = /** @class */ (function () {
-    function ProfesionalesHomeComponent(especialidadService) {
-        this.especialidadService = especialidadService;
-        //this.cargarLista();
+    function ProfesionalesHomeComponent(profesionalService) {
+        this.profesionalService = profesionalService;
+        this.cargarLista();
         this.obtenerUsuarioActual();
     }
     ProfesionalesHomeComponent.prototype.obtenerUsuarioActual = function () {
@@ -2638,9 +2822,9 @@ var ProfesionalesHomeComponent = /** @class */ (function () {
     };
     ProfesionalesHomeComponent.prototype.cargarLista = function () {
         var _this = this;
-        this.especialidadService.Listar()
+        this.profesionalService.Listar()
             .subscribe(function (data) {
-            _this.listaEspecialidad = data;
+            _this.listaProfesionales = data;
         }, function (error) {
             console.log(error);
         });
@@ -3411,14 +3595,14 @@ var ProfesionalService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
                 var data = action.payload.doc.data();
-                data.idProfesional = action.payload.doc.id;
+                data.id = action.payload.doc.id;
                 return data;
             });
         }));
     };
     ProfesionalService.prototype.Registrar = function (profesional) {
         var _this = this;
-        this.profesionalColeccion = this.afs.collection('profesionals');
+        this.profesionalColeccion = this.afs.collection('profesionales');
         return new Promise(function (resolve, reject) {
             _this.profesionalColeccion.add(profesional).then(function (result) {
                 resolve(true);
@@ -3430,7 +3614,7 @@ var ProfesionalService = /** @class */ (function () {
     ProfesionalService.prototype.Eliminar = function (profesional) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            _this.profesionalDoc = _this.afs.doc('profesionals/' + profesional.idProfesional);
+            _this.profesionalDoc = _this.afs.doc('profesionales/' + profesional.id);
             _this.profesionalDoc.delete().then(function (result) {
                 resolve(true);
             }).catch(function (err) {

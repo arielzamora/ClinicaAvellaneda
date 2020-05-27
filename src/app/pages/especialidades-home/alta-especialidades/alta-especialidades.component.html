@@ -1,5 +1,5 @@
-<div class="modal" [ngStyle]="{'display': showModalAlta ? 'block' : 'none'} " >
-    <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal modal-black" [ngStyle]="{'display': showModalAlta ? 'block' : 'none'} " >
+    <div class="modal-dialog ">
       <div class="modal-content">
         <div class="modal-header">
           <p class="modal-title" id="exampleModalAlta">Alta de Especialidad</p>
@@ -10,16 +10,14 @@
         <div class="modal-body">
             <form [formGroup]="form" (keyup.enter)="Submit()">
               <div class="form-group">
-                <label for="idEspecialidad">Id: </label>
-                <input type="text" id="idEspecialidad" formControlName="idEspecialidad" class="form-control" placeholder="Id Especialidad" [ngClass]="{ 'is-invalid': submitted && f.idEspecialidad.errors?.required }">
+                <input type="text" id="idEspecialidad" formControlName="idEspecialidad" class="form-control" placeholder="Especialidad" [ngClass]="{ 'is-invalid': submitted && f.idEspecialidad.errors?.required }">
                 <div *ngIf="submitted && f.idEspecialidad.errors?.required" class="invalid-feedback"
                   autocomplete="username">
                   <div *ngIf="f.idEspecialidad.errors?.required">Debe ingresar un id para la especialidad</div>
                 </div>
               </div>
               <div class="form-group">
-                <label for="nombre">Nombre: </label>
-                <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors?.required }">
+                <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors?.required }">               
                 <div *ngIf="submitted && f.nombre.errors?.required" class="invalid-feedback"
                   autocomplete="username">
                   <div *ngIf="f.nombre.errors?.required">Debe ingresar un nombre.</div>
@@ -38,7 +36,7 @@
                 </div>
               </div>
             </form>
-          </div>
+            </div>
         </div>
       </div>
     </div>

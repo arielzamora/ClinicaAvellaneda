@@ -12,9 +12,10 @@
     <div class="container">
       <div class="content-center">
         <h3>Profesionales :</h3>
-            <app-listado-profesionales></app-listado-profesionales>
+            <app-listado-profesionales (showModalOuput)="showModalHome=$event" [listaProfesionales]="listaProfesionales"></app-listado-profesionales>
           </div>
         </div>
       </div>      
       <app-footer></app-footer>
      </div>
+     <app-alta-profesionales #modalRegistro [showModalAlta]="showModalHome" (closeModal)="showModalHome = false" (registradoCorrectamente)="cargarLista()"></app-alta-profesionales>

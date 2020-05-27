@@ -32,6 +32,8 @@ import { ListadoTurnosComponent } from './turnos-home/listado-turnos/listado-tur
 import { CalendarioComponent } from './turnos-home/calendario/calendario.component'
 import { ProfesionalesHomeComponent } from './profesionales-home/profesionales-home.component';
 import { ListadoProfesionalesComponent } from './profesionales-home/listado-profesionales/listado-profesionales.component';
+import { AltaProfesionalesComponent } from './profesionales-home/alta-profesionales/alta-profesionales.component';
+
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { PacientesHomeComponent } from './pacientes-home/pacientes-home.component';
@@ -81,7 +83,8 @@ import { ListadoPacientesComponent } from './pacientes-home/listado-pacientes/li
     EspecialidadesHomeComponent,
     ListadoEspecialidadesComponent,
     AltaEspecialidadesComponent,
-    ListadoPacientesComponent
+    ListadoPacientesComponent,
+    AltaProfesionalesComponent
 
   ],
   exports: [

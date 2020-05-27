@@ -41,7 +41,7 @@ export class ProfesionalService {
     .pipe(map(changes => {
       return changes.map(action => {
         const data = action.payload.doc.data() as profesional;
-        data.idProfesional = action.payload.doc.id;
+        data.id = action.payload.doc.id;
         return data;
       });
     }));
@@ -50,7 +50,7 @@ export class ProfesionalService {
 
   public Registrar(profesional:profesional): Promise<any> {
 
-    this.profesionalColeccion=this.afs.collection<profesional>('profesionals');
+    this.profesionalColeccion=this.afs.collection<profesional>('profesionales');
     return new Promise((resolve, reject) => {
 
     this.profesionalColeccion.add(profesional).then(result => {
@@ -64,7 +64,7 @@ export class ProfesionalService {
 
   public Eliminar(profesional: profesional): Promise<Object> {
        return new Promise((resolve, reject) => {
-       this.profesionalDoc=this.afs.doc<profesional>('profesionals/'+profesional.idProfesional); 
+       this.profesionalDoc=this.afs.doc<profesional>('profesionales/'+profesional.id); 
        this.profesionalDoc.delete().then(result => {
          resolve(true);
          }).catch(err => {

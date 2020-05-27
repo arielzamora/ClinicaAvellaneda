@@ -24,6 +24,7 @@ export class AltaEspecialidadesComponent implements OnInit {
   public errorMessage: string;
   public error: boolean;
   public success: boolean;
+  focus:any;
 
   constructor(private fb: FormBuilder, private especialidadService:EspecialidadService) {
 
