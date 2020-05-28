@@ -100,14 +100,6 @@
             <p class="d-lg-none d-xl-none">Instagram</p>
           </a>
         </li>   
-        <li *ngIf="!estaLogueado" class="nav-item">
-          <a
-            class="nav-link btn btn-default d-none d-lg-block"
-            [routerLink]="['/login']"
-          >
-            <i class="tim-icons icon-single-02"> </i> Ingresar
-          </a>
-        </li> 
         <li *ngIf="estaLogueado" class="nav-item">
           <a
             class="nav-link btn btn-default d-none d-lg-block"

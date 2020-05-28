@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { turno } from 'src/app/model/turno';
-import { login } from 'src/app/model/login';
+import { usuario } from 'src/app/model/usuario';
 import { TurnosService } from 'src/app/services/turnos.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { TurnosService } from 'src/app/services/turnos.service';
 export class TurnosHomeComponent implements OnInit {
 
   public listaEspecialidad: turno[];
-  user:login;
+  user:usuario;
   isLogueado:boolean;
 
   constructor(private especialidadService:TurnosService) {

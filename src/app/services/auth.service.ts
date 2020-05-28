@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
  import {AngularFireAuth} from '@angular/fire/auth';
 
-import { Router } from "@angular/router";
-import { login } from "../model/login";
+import {Router } from "@angular/router";
+import {usuario } from "../model/usuario";
 
 import { map }from 'rxjs/operators';
 import {auth}from 'firebase/app';
@@ -52,7 +52,7 @@ export class AuthService {
       return this.usuarios;
   }
 
-  public guardarUsuario(dataLogin: login)
+  public guardarUsuario(dataLogin: usuario)
   {
        
       this.usuarios.forEach(user=>{
@@ -91,12 +91,12 @@ export class AuthService {
 
   }
     
-  Loguear(dataLogin: login){
+  Loguear(dataLogin: usuario){
 
       return new Promise((resolve,reject)=>{
       this.AFauth.signInWithEmailAndPassword(dataLogin.usuario,dataLogin.password).then(userData =>{//despues doy de alta el empleado 
         resolve(userData)
-        dataLogin.idUsario=userData.user.uid;
+        dataLogin.id=userData.user.uid;
        // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona 
        this.guardarUsuario(dataLogin);
        }).catch(err=>{
@@ -114,7 +114,7 @@ export class AuthService {
     })
   }
 
-  register(dataLogin: login)
+  register(dataLogin: usuario)
   {
     return new Promise((resolve,rejected)=>{
       this.AFauth.createUserWithEmailAndPassword(dataLogin.usuario,dataLogin.password).then(user => {
@@ -124,6 +124,7 @@ export class AuthService {
   
 
   }
+  
 
   //desde aca mi codigo 4
   registerUser(email: string, pass: string){

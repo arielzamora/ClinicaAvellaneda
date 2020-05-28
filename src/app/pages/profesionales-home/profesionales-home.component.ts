@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { profesional } from 'src/app/model/profesional';
-import { login } from 'src/app/model/login';
+import { usuario } from 'src/app/model/usuario';
 import { ProfesionalService } from 'src/app/services/profesional.service';
 
 @Component({
@@ -9,13 +9,13 @@ import { ProfesionalService } from 'src/app/services/profesional.service';
   styleUrls: ['./profesionales-home.component.scss']
 })
 export class ProfesionalesHomeComponent implements OnInit {
-  public listaProfesionales: profesional[];
-  user:login;
+  listadoProfesionales: profesional[];
+  user:usuario;
   isLogueado:boolean;
   showModalHome:boolean;
 
-  constructor(private profesionalService:ProfesionalService) {
-    this.cargarLista();
+  constructor() {
+    
     this.obtenerUsuarioActual();
    }
 
@@ -26,17 +26,6 @@ export class ProfesionalesHomeComponent implements OnInit {
      this.isLogueado=true;
    }
 
-  public cargarLista() {
-    this.profesionalService.Listar()
-     .subscribe(
-      data => {
-        this.listaProfesionales = data;
-      },
-      error => {
-        console.log(error);
-      }
-    );
-  }
   scrollToDownload(element: any) {
     element.scrollIntoView({ behavior: "smooth" });
   }

@@ -19,4 +19,4 @@
   
   <app-footer></app-footer>
 </div>
-<app-alta-especialidades #modalRegistro [showModalAlta]="showModalHome" (closeModal)="showModalHome = false" (registradoCorrectamente)="cargarLista()"></app-alta-especialidades>
+<app-alta-especialidades #modalRegistro [showModalAlta]="showModalHome" (closeModal)="showModalHome = $event" (registradoCorrectamente)="cargarLista()"></app-alta-especialidades>

@@ -1,6 +1,6 @@
-import { login } from './login';
+import { usuario } from './usuario';
 
-export class profesional extends login{
+export class profesional extends usuario{
    
     id: string; 
     idProfesional: string; 
@@ -11,6 +11,7 @@ export class profesional extends login{
     edad: string;
     especialidad: string;
     nacionalidad:string;
+    horario:string;
 
     constructor() {
         super();

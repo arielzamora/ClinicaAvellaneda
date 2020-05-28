@@ -2,7 +2,7 @@ import { Component, OnInit,Input,Output,EventEmitter, OnDestroy} from '@angular/
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from "../../services/auth.service";
-import { login } from "src/app/model/login";
+import { usuario } from "src/app/model/usuario";
 import { Router } from '@angular/router';
 //import { ReCaptcha2Component } from 'ngx-captcha';
 
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
   public form: FormGroup;
   public error: boolean;
   public errorMessage: string;
-  user:login;
+  user:usuario;
   isLogueado:boolean;
   constructor(private fb: FormBuilder, public authService:AuthService,private router:Router,private fireStore:AngularFireStorage) {
     this.form = this.fb.group({
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
     if (this.form.valid) {
       localStorage.clear();
 
-      this.user=new login();
+      this.user=new usuario();
       this.user.usuario= this.form.get('Email').value
       this.user.password=this.form.get('Password').value
 

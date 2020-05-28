@@ -1,5 +1,5 @@
-export class login {
-    idUsario:string;
+export class usuario {
+    id:string;
     usuario: string;
     password: string;
     tipo:string;

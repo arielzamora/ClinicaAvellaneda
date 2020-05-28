@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from "../../services/auth.service";
 import { Router } from '@angular/router';
-import { login } from 'src/app/model/login';
+import { usuario } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-navmenu',
@@ -11,7 +11,7 @@ import { login } from 'src/app/model/login';
 export class NavmenuComponent implements OnInit {
   isCollapsed = true;
   @Input() estaLogueado:boolean;
-  @Input() usuario:login
+  @Input() usuario:usuario
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {

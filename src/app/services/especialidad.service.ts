@@ -26,7 +26,7 @@ export class EspecialidadService {
      .pipe(map(changes => {
        return changes.map(action => {
          const data = action.payload.doc.data() as especialidad;
-         data.idEspecialidad = action.payload.doc.id; 
+         data.id = action.payload.doc.id; 
          return data;
        });
      }));
@@ -38,7 +38,7 @@ export class EspecialidadService {
     .pipe(map(changes => {
       return changes.map(action => {
         const data = action.payload.doc.data() as especialidad;
-        data.idEspecialidad = action.payload.doc.id;
+        data.id = action.payload.doc.id;
         return data;
       });
     }));
@@ -47,10 +47,17 @@ export class EspecialidadService {
 
   public Registrar(especialidad:especialidad): Promise<any> {
 
-    this.especialidadColeccion=this.afs.collection<especialidad>('especialidades');
+    
     return new Promise((resolve, reject) => {
 
-    this.especialidadColeccion.add(especialidad).then(result => {
+      this.afs.collection('especialidades').add({
+        idEspecialidad: especialidad.idEspecialidad,
+        fechaAlta:especialidad.fechaAlta,
+        nombre: especialidad.nombre,
+        usuarioAlta:especialidad.usuarioAlta,
+        activa:especialidad.activa,
+        usuarioAprobacion:especialidad.usuarioAprobacion      
+    }).then(result => {
       resolve(true);
       }).catch(err => {
         reject(false);

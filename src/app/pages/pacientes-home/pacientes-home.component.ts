@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { paciente } from 'src/app/model/paciente';
 import { PacienteService } from 'src/app/services/paciente.service';
-import { login } from 'src/app/model/login';
+import { usuario } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-pacientes-home',
@@ -11,11 +11,11 @@ import { login } from 'src/app/model/login';
 export class PacientesHomeComponent implements OnInit {
 
   public listaEspecialidad: paciente[];
-  user:login;
+  user:usuario;
   isLogueado:boolean;
 
   constructor(private especialidadService:PacienteService) {
-    //this.cargarLista();
+    this.cargarLista();
     this.obtenerUsuarioActual();
    }
 

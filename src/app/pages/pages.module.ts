@@ -27,7 +27,6 @@ import { NavmenuComponent } from './navmenu/navmenu.component';
 
 import { ValidarRolesDirective } from "./../directivas/validar-roles.directive";
 import { TurnosHomeComponent } from './turnos-home/turnos-home.component';
-import { AltaTurnoComponent } from './turnos-home/alta-turno/alta-turno.component';
 import { ListadoTurnosComponent } from './turnos-home/listado-turnos/listado-turnos.component';
 import { CalendarioComponent } from './turnos-home/calendario/calendario.component'
 import { ProfesionalesHomeComponent } from './profesionales-home/profesionales-home.component';
@@ -76,7 +75,6 @@ import { ListadoPacientesComponent } from './pacientes-home/listado-pacientes/li
     RegistroComponent,
     ValidarRolesDirective,
     TurnosHomeComponent,
-    AltaTurnoComponent,
     ListadoTurnosComponent,
     CalendarioComponent,
     PacientesHomeComponent,

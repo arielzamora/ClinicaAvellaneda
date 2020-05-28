@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { profesional } from 'src/app/model/profesional';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {ProfesionalService} from 'src/app/services/profesional.service';
+import { EspecialidadService } from 'src/app/services/especialidad.service';
+import { especialidad } from 'src/app/model/especialidad';
 
 @Component({
   selector: 'app-alta-profesionales',
@@ -22,22 +24,22 @@ export class AltaProfesionalesComponent implements OnInit {
   public error: boolean;
   public success: boolean;
   focus:any;
-  constructor(private fb: FormBuilder, private profesionalService:ProfesionalService) {
+  listaEspecialidad: especialidad[];
+  constructor(private fb: FormBuilder,private especialidaService:EspecialidadService, private profesionalService:ProfesionalService) {
 
     this.closeModal = new EventEmitter<void>();
     this.registradoCorrectamente = new EventEmitter<any>();
-  
+    this.cargarLista();
   }
 
-  nombre: string;
-    apellido: string;
-    dni:string;
-    edad: string;
   ngOnInit() {
+
     this.form = this.fb.group({
       idProfesional: ['', Validators.required],
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
       tipoDni: ['', Validators.required],
       sexo: ['', Validators.required],
       dni: ['', Validators.required],
@@ -47,6 +49,17 @@ export class AltaProfesionalesComponent implements OnInit {
       horario: ['', Validators.required]
     });
   }
+  public cargarLista() {
+    this.especialidaService.Listar()
+     .subscribe(
+      data => {
+        this.listaEspecialidad = data;
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
   Submit() {
     this.errorMessage = '';
     this.error = false;
@@ -54,14 +67,17 @@ export class AltaProfesionalesComponent implements OnInit {
     this.submitted=true;
 
     if (this.form.valid ) {
-
-      this.profesional.idProfesional = this.form.get('idprofesional').value;
+      this.profesional=new profesional();
+      this.profesional.idProfesional = this.form.get('idProfesional').value;
       this.profesional.nombre = this.form.get('nombre').value;
       this.profesional.apellido = this.form.get('apellido').value;
-      this.profesional.tipo = this.form.get('dni').value;
+      this.profesional.usuario = this.form.get('email').value;
+      this.profesional.password = this.form.get('password').value;
+      this.profesional.tipo = this.form.get('tipoDni').value;
       this.profesional.dni = this.form.get('dni').value;
       this.profesional.sexo = this.form.get('sexo').value;
       this.profesional.edad = this.form.get('edad').value;
+      this.profesional.horario = this.form.get('horario').value;
       this.profesional.especialidad = this.form.get('especialidad').value;
       this.profesional.nacionalidad = this.form.get('nacionalidad').value;
 
@@ -91,6 +107,9 @@ export class AltaProfesionalesComponent implements OnInit {
     } else {
       this.errorMessage = 'Debe completar los campos correctamente.';
       this.error = true;
+      this.success = false;
+      this.submitted=false;
+  
     }
   }
 

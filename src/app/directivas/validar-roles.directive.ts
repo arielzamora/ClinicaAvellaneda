@@ -1,6 +1,6 @@
 
 import { Directive, ElementRef, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
-import { login } from '../model/login';
+import { usuario } from '../model/usuario';
 
 @Directive({
   selector: '[appValidarRoles]'
@@ -8,7 +8,7 @@ import { login } from '../model/login';
 export class ValidarRolesDirective implements OnInit {
 
   private rolesAdmitidos: string[];
-   user: login;
+   user: usuario;
   public isCliente:any=null;
   public userUid:string=null;
 

@@ -331,7 +331,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Listado de Especialidades</h3>\n        <app-listado-especialidades (showModalOuput)=\"showModalHome=$event\" [listaEspecialidad]=\"listaEspecialidad\"></app-listado-especialidades>\n      </div>\n    </div>\n  </div>\n  \n  <app-footer></app-footer>\n</div>\n<app-alta-especialidades #modalRegistro [showModalAlta]=\"showModalHome\" (closeModal)=\"showModalHome = false\" (registradoCorrectamente)=\"cargarLista()\"></app-alta-especialidades>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Listado de Especialidades</h3>\n        <app-listado-especialidades (showModalOuput)=\"showModalHome=$event\" [listaEspecialidad]=\"listaEspecialidad\"></app-listado-especialidades>\n      </div>\n    </div>\n  </div>\n  \n  <app-footer></app-footer>\n</div>\n<app-alta-especialidades #modalRegistro [showModalAlta]=\"showModalHome\" (closeModal)=\"showModalHome = $event\" (registradoCorrectamente)=\"cargarLista()\"></app-alta-especialidades>\n");
 
 /***/ }),
 
@@ -448,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/landing']\">\n                <i class=\"tim-icons icon-image-02\"> </i> landing\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profile']\">\n                <i class=\"tim-icons icon-single-02\"> </i> profile\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente','admin','profesional']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              href=\"javascript:void(0)\"\n              (click)=\"scrollToDownload(target)\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"!estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            [routerLink]=\"['/login']\"\n          >\n            <i class=\"tim-icons icon-single-02\"> </i> Ingresar\n          </a>\n        </li> \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/landing']\">\n                <i class=\"tim-icons icon-image-02\"> </i> landing\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profile']\">\n                <i class=\"tim-icons icon-single-02\"> </i> profile\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente','admin','profesional']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              href=\"javascript:void(0)\"\n              (click)=\"scrollToDownload(target)\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
 
 /***/ }),
 
@@ -461,7 +461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n    <div class=\"row justify-content-center align-items-center\"> \n      <div class=\"contenedor col-11 col-xl-11\">\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <th>Name</th>\n                    <th>Job Position</th>\n                    <th>Since</th>\n                    <th class=\"text-right\">Salary</th>\n                    <th class=\"text-right\">Actions</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <td class=\"text-center\">1</td>\n                    <td>Andrew Mike</td>\n                    <td>Develop</td>\n                    <td>2013</td>\n                    <td class=\"text-right\">&euro; 99,225</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>\n                <tr>\n                    <td class=\"text-center\">2</td>\n                    <td>John Doe</td>\n                    <td>Design</td>\n                    <td>2012</td>\n                    <td class=\"text-right\">&euro; 89,241</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>\n                <tr>\n                    <td class=\"text-center\">3</td>\n                    <td>Alex Mike</td>\n                    <td>Design</td>\n                    <td>2010</td>\n                    <td class=\"text-right\">&euro; 92,144</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n      </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n    <div class=\"row justify-content-center align-items-center\"> \n      <div class=\"contenedor col-11 col-xl-11\">\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <td>Nombre</td>\n                    <td>Apellido</td>\n                    <td>Plan</td>\n                    <td>Dni</td>\n                    <td>Edad</td>\n                    <td>Sexo</td>\n                    <td>Activo</td>\n                    <th class=\"text-right\">Actions</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let paciente of listaPaciente\">\n                    <td class=\"text-center\">{{paciente.idEspecialidad}}</td>\n                    <td>{{paciente.idPaciente}}</td>\n                    <td>{{paciente.nombre}}</td>\n                    <td>{{paciente.apellido}}</td>\n                    <td>{{paciente.planMedico}}</td>\n                    <td>{{paciente.dni}}</td>\n                    <td>{{paciente.edad}}</td>\n                    <td>{{paciente.sexo}}</td>\n                    <td>{{paciente.activo}}</td>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>                       \n            </tbody>\n        </table>\n      </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -474,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Listado de Pacientes</h3>\r\n        <app-listado-pacientes></app-listado-pacientes>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Listado de Pacientes</h3>\r\n        <app-listado-pacientes  [listaPacientes]=\"listaPacientes\"></app-listado-pacientes>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <app-footer></app-footer>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
@@ -487,7 +487,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Profesional</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n          <div class=\"row\">\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"idProfesional\" formControlName=\"idProfesional\" class=\"form-control\" placeholder=\"Id Profesional\" [ngClass]=\"{ 'is-invalid': submitted && f.idProfesional.errors?.required }\">\n                  <div *ngIf=\"submitted && f.idProfesional.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"username\">\n                    <div *ngIf=\"f.idProfesional.errors?.required\">Debe ingresar un id para el Profesional</div>\n                  </div>\n                </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"especialidad\" formControlName=\"especialidad\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Especialidad</option>\n                  <option >Clinica</option>\n                </select>\n                <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                </div>\n            </div>\n           </div>              \n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                </div>\n              </div>\n            </div>\n        </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Sexo</option>\n                  <option >Masculino</option>\n                  <option>Femenino</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                </div>\n            </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">      \n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Tipo Dni</option>\n                  <option >DNI</option>\n                  <option>LE</option>\n                  <option >LC</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                </div>\n            </div>             \n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"username\">\n                  <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"horario\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Horario</option>\n                  <option>09-14</option>\n                  <option>14-20</option>\n                  <option>12-20</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.horario.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.horario.errors?.required\">Seleccione Horario</div>\n                </div>\n            </div>\n           </div>\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                    <option selected value=\"\">Nacionalidad</option>\n                    <option >Argentina</option>\n                    <option> Venezuela</option>\n                    <option> Colombia</option>\n                    <option >Brasil</option>\n                    <option>Mexico</option>\n                  </select>\n                  <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                  </div>\n              </div>\n            </div>\n          </div>\n            <div class=\"row\">\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n            </div>\n              <hr>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                </div>\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                </div>\n              </div>\n            </form>\n        </div>\n        </div>\n      </div>\n    </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Profesional</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n          <div class=\"row\">\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"idProfesional\" formControlName=\"idProfesional\" class=\"form-control\" placeholder=\"Id Profesional\" [ngClass]=\"{ 'is-invalid': submitted && f.idProfesional.errors?.required }\">\n                  <div *ngIf=\"submitted && f.idProfesional.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"idProfesional\">\n                    <div *ngIf=\"f.idProfesional.errors?.required\">Debe ingresar un id para el Profesional</div>\n                  </div>\n                </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"especialidad\" formControlName=\"especialidad\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Especialidad</option>\n                  <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                </select>\n                <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                </div>\n            </div>\n           </div>              \n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"nombre\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"apellido\">\n                  <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                </div>\n              </div>\n            </div>\n        </div>\n            <div class=\"row\">\n              <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                  <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"email\">\n                    <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                  <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"password\">\n                    <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                  </div>\n                </div>\n              </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Sexo</option>\n                  <option >Masculino</option>\n                  <option>Femenino</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                </div>\n            </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"edad\">\n                  <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">      \n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Tipo Dni</option>\n                  <option >DNI</option>\n                  <option>LE</option>\n                  <option >LC</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                </div>\n            </div>             \n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"dni\">\n                  <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"horario\" formControlName=\"horario\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Horario</option>\n                  <option>09-14</option>\n                  <option>14-20</option>\n                  <option>12-20</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.horario.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.horario.errors?.required\">Seleccione Horario</div>\n                </div>\n            </div>\n           </div>\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                    <option selected value=\"\">Nacionalidad</option>\n                    <option >Argentina</option>\n                    <option> Venezuela</option>\n                    <option> Colombia</option>\n                    <option >Brasil</option>\n                    <option>Mexico</option>\n                  </select>\n                  <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                  </div>\n              </div>\n            </div>\n          </div>\n            <div class=\"row\">\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n            </div>\n              <hr>\n              <div class=\"row\">\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                </div>\n                <div class=\"col-6\">\n                  <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                </div>\n              </div>\n            </form>\n        </div>\n        </div>\n      </div>\n    </div>\n");
 
 /***/ }),
 
@@ -513,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Profesionales :</h3>\r\n            <app-listado-profesionales (showModalOuput)=\"showModalHome=$event\" [listaProfesionales]=\"listaProfesionales\"></app-listado-profesionales>\r\n          </div>\r\n        </div>\r\n      </div>      \r\n      <app-footer></app-footer>\r\n     </div>\r\n     <app-alta-profesionales #modalRegistro [showModalAlta]=\"showModalHome\" (closeModal)=\"showModalHome = false\" (registradoCorrectamente)=\"cargarLista()\"></app-alta-profesionales>");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\r\n\r\n<div class=\"wrapper\">\r\n  <div class=\"page-header header-filter\">\r\n    <div class=\"squares square1\"></div>\r\n    <div class=\"squares square2\"></div>\r\n    <div class=\"squares square3\"></div>\r\n    <div class=\"squares square4\"></div>\r\n    <div class=\"squares square5\"></div>\r\n    <div class=\"squares square6\"></div>\r\n    <div class=\"squares square7\"></div>\r\n    <div class=\"container\">\r\n      <div class=\"content-center\">\r\n        <h3>Profesionales :</h3>\r\n            <app-listado-profesionales (showModalOuput)=\"showModalHome=$event\"></app-listado-profesionales>\r\n          </div>\r\n        </div>\r\n      </div>      \r\n      <app-footer></app-footer>\r\n     </div>\r\n     <app-alta-profesionales #modalRegistro [showModalAlta]=\"showModalHome\" (closeModal)=\"showModalHome = false\" (registradoCorrectamente)=\"cargarLista()\"></app-alta-profesionales>");
 
 /***/ }),
 
@@ -527,19 +527,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"content\">\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"col-lg-10 col-md-6 offset-lg-0 offset-md-3\">\n            <div class=\"square square-7\" id=\"square7\"></div>\n            <div class=\"square square-8\" id=\"square8\"></div>\n            <div class=\"card card-register\">\n              <div class=\"card-header\">\n                <img\n                  alt=\"Card image\"\n                  class=\"card-img\"\n                  src=\"assets/img/square1-red.png\"\n                />\n\n                <h3 class=\"card-title\">Registro</h3>\n              </div>\n              <div class=\"card-body\">\n                <form class=\"form\" [formGroup]=\"form\">\n                        <div class=\"row\">\n                          <div class=\"col-6\">\n                            <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus === true }\">\n                              <div class=\"input-group-prepend\">\n                                <div class=\"input-group-text\">\n                                  <i class=\"tim-icons icon-single-02\"> </i>\n                                </div>\n                              </div>\n                              <input class=\"form-control\" placeholder=\"Nombre\"\n                                type=\"text\" (focus)=\"focus = true\" (blur)=\"focus = false\"formControlName=\"Nombre\"/>          \n                            </div>\n                          </div>\n                          <div class=\"col-6\">\n                            <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus1 === true }\">\n                              <div class=\"input-group-prepend\">\n                                <div class=\"input-group-text\">\n                                  <i class=\"tim-icons icon-single-02\"> </i>\n                                </div>\n                              </div>\n                              <input class=\"form-control\" placeholder=\"Apellido\"\n                                type=\"text\" (focus)=\"focus1 = true\" (blur)=\"focus1 = false\"formControlName=\"Apellido\"/>\n                            </div>\n                          </div>\n                        </div>\n                    <div class=\"row\">\n                        <div class=\"col-6\">\n                          <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus3 === true }\">\n                            <div class=\"input-group-prepend\">\n                              <div class=\"input-group-text\">\n                                <i class=\"tim-icons icon-single-02\"> </i>\n                              </div>\n                            </div>\n                            <input class=\"form-control\" placeholder=\"Dni\"\n                              type=\"number\" (focus)=\"focus3= true\"  (blur)=\"focus3 = false\"formControlName=\"Dni\"/>\n                          </div>\n                        </div>\n                        <div class=\"col-6\">\n                          <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus4 === true }\">\n                            <div class=\"input-group-prepend\">\n                              <div class=\"input-group-text\">\n                                <i class=\"tim-icons icon-single-02\"> </i>\n                              </div>\n                            </div>\n                            <input class=\"form-control\" placeholder=\"Edad\"\n                              type=\"number\" (focus)=\"focus4 = true\" (blur)=\"focus4 = false\"formControlName=\"Edad\"/>\n                          </div>\n                        </div>\n                    </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus5 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-single-02\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\" placeholder=\"Sexo\"\n                          type=\"number\" (focus)=\"focus5 = true\" (blur)=\"focus5 = false\"formControlName=\"Sexo\"/>\n                      </div>\n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus6 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-single-02\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\" placeholder=\"Nacionalidad\"\n                          type=\"number\" (focus)=\"focus6 = true\" (blur)=\"focus6 = false\" formControlName=\"Nacionalidad\"/>\n                      </div>  \n                    </div>\n                  </div>      \n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"input-group\" [ngClass]=\"{ 'input-group-focus': focus7 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-email-85\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\" placeholder=\"Email\" type=\"email\"\n                          (focus)=\"focus7 = true\" (blur)=\"focus7 = false\" formControlName=\"Email\"/>\n                      </div>\n                    </div>\n                    <div class=\"col-6\">              \n                      <div class=\"input-group\"[ngClass]=\"{ 'input-group-focus': focus8 === true }\">\n                        <div class=\"input-group-prepend\">\n                          <div class=\"input-group-text\">\n                            <i class=\"tim-icons icon-lock-circle\"> </i>\n                          </div>\n                        </div>\n                        <input class=\"form-control\"placeholder=\"Password\" type=\"password\"\n                        (focus)=\"focus8 = true\" (blur)=\"focus8 = false\" formControlName=\"Password\"/>\n                      </div>\n                    </div>\n                  </div>\n                </form>\n              </div>\n              <div class=\"card-footer\">\n                <a class=\"btn btn-danger btn-round btn-lg\" (click)=\"registrarse()\" >\n                  Registrarse\n                </a>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"register-bg\"></div>\n        <div class=\"square square-1\" id=\"square1\"></div>\n        <div class=\"square square-2\" id=\"square2\"></div>\n        <div class=\"square square-3\" id=\"square3\"></div>\n        <div class=\"square square-4\" id=\"square4\"></div>\n        <div class=\"square square-5\" id=\"square5\"></div>\n        <div class=\"square square-6\" id=\"square6\"></div>\n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>\n</div>\n\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/alta-turno/alta-turno.component.html":
-/*!**************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/alta-turno/alta-turno.component.html ***!
-  \**************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>alta-turno works!</p>\n");
 
 /***/ }),
 
@@ -1302,26 +1289,74 @@ var NologinGuard = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/model/login.ts":
-/*!********************************!*\
-  !*** ./src/app/model/login.ts ***!
-  \********************************/
-/*! exports provided: login */
+/***/ "./src/app/model/especialidad.ts":
+/*!***************************************!*\
+  !*** ./src/app/model/especialidad.ts ***!
+  \***************************************/
+/*! exports provided: especialidad */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "especialidad", function() { return especialidad; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
-var login = /** @class */ (function () {
-    function login() {
+var especialidad = /** @class */ (function () {
+    function especialidad() {
     }
-    login.prototype.guardarIngreso = function () {
+    return especialidad;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/profesional.ts":
+/*!**************************************!*\
+  !*** ./src/app/model/profesional.ts ***!
+  \**************************************/
+/*! exports provided: profesional */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "profesional", function() { return profesional; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _usuario__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./usuario */ "./src/app/model/usuario.ts");
+
+
+var profesional = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(profesional, _super);
+    function profesional() {
+        return _super.call(this) || this;
+    }
+    return profesional;
+}(_usuario__WEBPACK_IMPORTED_MODULE_1__["usuario"]));
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/usuario.ts":
+/*!**********************************!*\
+  !*** ./src/app/model/usuario.ts ***!
+  \**********************************/
+/*! exports provided: usuario */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "usuario", function() { return usuario; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+var usuario = /** @class */ (function () {
+    function usuario() {
+    }
+    usuario.prototype.guardarIngreso = function () {
     };
-    login.prototype.guardarSalida = function () {
+    usuario.prototype.guardarSalida = function () {
     };
-    return login;
+    return usuario;
 }());
 
 
@@ -1354,7 +1389,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
-/* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
+/* harmony import */ var src_app_model_especialidad__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/model/especialidad */ "./src/app/model/especialidad.ts");
+/* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
+
 
 
 
@@ -1367,6 +1404,7 @@ var AltaEspecialidadesComponent = /** @class */ (function () {
         this.submitted = false;
         this.closeModal = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.registradoCorrectamente = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.obtenerUsuarioActual();
     }
     Object.defineProperty(AltaEspecialidadesComponent.prototype, "f", {
         get: function () { return this.form.controls; },
@@ -1379,6 +1417,10 @@ var AltaEspecialidadesComponent = /** @class */ (function () {
             nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
         });
     };
+    AltaEspecialidadesComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+    };
     AltaEspecialidadesComponent.prototype.Submit = function () {
         var _this = this;
         this.errorMessage = '';
@@ -1386,8 +1428,18 @@ var AltaEspecialidadesComponent = /** @class */ (function () {
         this.success = false;
         this.submitted = true;
         if (this.form.valid) {
+            this.especialidad = new src_app_model_especialidad__WEBPACK_IMPORTED_MODULE_3__["especialidad"]();
             this.especialidad.idEspecialidad = this.form.get('idEspecialidad').value;
             this.especialidad.nombre = this.form.get('nombre').value;
+            this.especialidad.usuarioAlta = this.user.nombre;
+            if (this.user.tipo = "admin") {
+                this.especialidad.activa = true;
+                this.especialidad.usuarioAprobacion = this.user.tipo;
+            }
+            else {
+                this.especialidad.activa = false;
+            }
+            this.especialidad.fechaAlta = this.getDateFecha();
             this.especialidadService.Registrar(this.especialidad)
                 .then(function (response) {
                 console.log(response);
@@ -1427,9 +1479,22 @@ var AltaEspecialidadesComponent = /** @class */ (function () {
         this.closeModal.emit();
         this.form.reset();
     };
+    AltaEspecialidadesComponent.prototype.getDateFecha = function () {
+        var today = new Date();
+        this.dia = today.getDate();
+        this.mes = today.getMonth() + 1;
+        this.año = today.getFullYear();
+        if (this.dia < 10) {
+            this.dia = '0' + this.dia;
+        }
+        if (this.mes < 10) {
+            this.mes = '0' + this.mes;
+        }
+        return this.dia + '/' + this.mes + '/' + this.año;
+    };
     AltaEspecialidadesComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-        { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_3__["EspecialidadService"] }
+        { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__["EspecialidadService"] }
     ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -1449,7 +1514,7 @@ var AltaEspecialidadesComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-especialidades.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-especialidades.component.scss */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_3__["EspecialidadService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__["EspecialidadService"]])
     ], AltaEspecialidadesComponent);
     return AltaEspecialidadesComponent;
 }());
@@ -2112,7 +2177,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var src_app_model_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/model/login */ "./src/app/model/login.ts");
+/* harmony import */ var src_app_model_usuario__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/model/usuario */ "./src/app/model/usuario.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-storage.js");
 
@@ -2166,7 +2231,7 @@ var LoginComponent = /** @class */ (function () {
         this.error = false;
         if (this.form.valid) {
             localStorage.clear();
-            this.user = new src_app_model_login__WEBPACK_IMPORTED_MODULE_4__["login"]();
+            this.user = new src_app_model_usuario__WEBPACK_IMPORTED_MODULE_4__["usuario"]();
             this.user.usuario = this.form.get('Email').value;
             this.user.password = this.form.get('Password').value;
             this.authService.Loguear(this.user)
@@ -2245,7 +2310,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var src_app_model_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/model/login */ "./src/app/model/login.ts");
+/* harmony import */ var src_app_model_usuario__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/model/usuario */ "./src/app/model/usuario.ts");
 
 
 
@@ -2274,7 +2339,7 @@ var NavmenuComponent = /** @class */ (function () {
     ], NavmenuComponent.prototype, "estaLogueado", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", src_app_model_login__WEBPACK_IMPORTED_MODULE_4__["login"])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", src_app_model_usuario__WEBPACK_IMPORTED_MODULE_4__["usuario"])
     ], NavmenuComponent.prototype, "usuario", void 0);
     NavmenuComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2370,7 +2435,7 @@ __webpack_require__.r(__webpack_exports__);
 var PacientesHomeComponent = /** @class */ (function () {
     function PacientesHomeComponent(especialidadService) {
         this.especialidadService = especialidadService;
-        //this.cargarLista();
+        this.cargarLista();
         this.obtenerUsuarioActual();
     }
     PacientesHomeComponent.prototype.obtenerUsuarioActual = function () {
@@ -2452,20 +2517,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./navmenu/navmenu.component */ "./src/app/pages/navmenu/navmenu.component.ts");
 /* harmony import */ var _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../directivas/validar-roles.directive */ "./src/app/directivas/validar-roles.directive.ts");
 /* harmony import */ var _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
-/* harmony import */ var _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./turnos-home/alta-turno/alta-turno.component */ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts");
-/* harmony import */ var _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./turnos-home/listado-turnos/listado-turnos.component */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts");
-/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
-/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
-/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
-/* harmony import */ var _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./profesionales-home/alta-profesionales/alta-profesionales.component */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
-/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
-/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
-/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
-/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
-/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
-
+/* harmony import */ var _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./turnos-home/listado-turnos/listado-turnos.component */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts");
+/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
+/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
+/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
+/* harmony import */ var _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profesionales-home/alta-profesionales/alta-profesionales.component */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
+/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
+/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
+/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
+/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
 
 
 
@@ -2535,28 +2598,27 @@ var PagesModule = /** @class */ (function () {
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"],
                 _footer_footer_component__WEBPACK_IMPORTED_MODULE_22__["FooterComponent"],
                 _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__["NavmenuComponent"],
-                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_29__["ProfesionalesHomeComponent"],
-                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_30__["ListadoProfesionalesComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_32__["LoginComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_33__["RegistroComponent"],
+                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_28__["ProfesionalesHomeComponent"],
+                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_29__["ListadoProfesionalesComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_31__["LoginComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
                 _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__["ValidarRolesDirective"],
                 _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__["TurnosHomeComponent"],
-                _turnos_home_alta_turno_alta_turno_component__WEBPACK_IMPORTED_MODULE_26__["AltaTurnoComponent"],
-                _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_27__["ListadoTurnosComponent"],
-                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_28__["CalendarioComponent"],
-                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_34__["PacientesHomeComponent"],
-                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_35__["EspecialidadesHomeComponent"],
-                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_36__["ListadoEspecialidadesComponent"],
-                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_37__["AltaEspecialidadesComponent"],
-                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_38__["ListadoPacientesComponent"],
-                _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_31__["AltaProfesionalesComponent"]
+                _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_26__["ListadoTurnosComponent"],
+                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_27__["CalendarioComponent"],
+                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__["PacientesHomeComponent"],
+                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__["EspecialidadesHomeComponent"],
+                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__["ListadoEspecialidadesComponent"],
+                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__["AltaEspecialidadesComponent"],
+                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__["ListadoPacientesComponent"],
+                _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_30__["AltaProfesionalesComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
                 _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__["ProfilepageComponent"],
                 _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__["RegisterpageComponent"],
                 _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__["LandingpageComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_33__["RegistroComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"]
             ],
             providers: []
@@ -2594,19 +2656,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AltaProfesionalesComponent", function() { return AltaProfesionalesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
-/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+/* harmony import */ var src_app_model_profesional__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/model/profesional */ "./src/app/model/profesional.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+/* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
+
+
 
 
 
 
 var AltaProfesionalesComponent = /** @class */ (function () {
-    function AltaProfesionalesComponent(fb, profesionalService) {
+    function AltaProfesionalesComponent(fb, especialidaService, profesionalService) {
         this.fb = fb;
+        this.especialidaService = especialidaService;
         this.profesionalService = profesionalService;
         this.submitted = false;
         this.closeModal = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.registradoCorrectamente = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.cargarLista();
     }
     Object.defineProperty(AltaProfesionalesComponent.prototype, "f", {
         get: function () { return this.form.controls; },
@@ -2615,16 +2683,27 @@ var AltaProfesionalesComponent = /** @class */ (function () {
     });
     AltaProfesionalesComponent.prototype.ngOnInit = function () {
         this.form = this.fb.group({
-            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            horario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            horario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+        });
+    };
+    AltaProfesionalesComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.especialidaService.Listar()
+            .subscribe(function (data) {
+            _this.listaEspecialidad = data;
+        }, function (error) {
+            console.log(error);
         });
     };
     AltaProfesionalesComponent.prototype.Submit = function () {
@@ -2634,13 +2713,17 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         this.success = false;
         this.submitted = true;
         if (this.form.valid) {
-            this.profesional.idProfesional = this.form.get('idprofesional').value;
+            this.profesional = new src_app_model_profesional__WEBPACK_IMPORTED_MODULE_2__["profesional"]();
+            this.profesional.idProfesional = this.form.get('idProfesional').value;
             this.profesional.nombre = this.form.get('nombre').value;
             this.profesional.apellido = this.form.get('apellido').value;
-            this.profesional.tipo = this.form.get('dni').value;
+            this.profesional.usuario = this.form.get('email').value;
+            this.profesional.password = this.form.get('password').value;
+            this.profesional.tipo = this.form.get('tipoDni').value;
             this.profesional.dni = this.form.get('dni').value;
             this.profesional.sexo = this.form.get('sexo').value;
             this.profesional.edad = this.form.get('edad').value;
+            this.profesional.horario = this.form.get('horario').value;
             this.profesional.especialidad = this.form.get('especialidad').value;
             this.profesional.nacionalidad = this.form.get('nacionalidad').value;
             this.profesionalService.Registrar(this.profesional)
@@ -2666,19 +2749,21 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         else {
             this.errorMessage = 'Debe completar los campos correctamente.';
             this.error = true;
+            this.success = false;
+            this.submitted = false;
         }
     };
     AltaProfesionalesComponent.prototype.cargarForm = function () {
         this.form = this.fb.group({
-            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
         });
     };
     AltaProfesionalesComponent.prototype.cerrar = function () {
@@ -2686,8 +2771,9 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         this.form.reset();
     };
     AltaProfesionalesComponent.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_3__["ProfesionalService"] }
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+        { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__["EspecialidadService"] },
+        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_4__["ProfesionalService"] }
     ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -2707,7 +2793,7 @@ var AltaProfesionalesComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-profesionales.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-profesionales.component.scss */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_3__["ProfesionalService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__["EspecialidadService"], src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_4__["ProfesionalService"]])
     ], AltaProfesionalesComponent);
     return AltaProfesionalesComponent;
 }());
@@ -2741,13 +2827,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoProfesionalesComponent", function() { return ListadoProfesionalesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+
 
 
 var ListadoProfesionalesComponent = /** @class */ (function () {
-    function ListadoProfesionalesComponent() {
+    function ListadoProfesionalesComponent(profesionalService) {
+        this.profesionalService = profesionalService;
         this.showModalOuput = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.cargarLista();
     }
     ListadoProfesionalesComponent.prototype.ngOnInit = function () {
+    };
+    ListadoProfesionalesComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.profesionalService.Listar()
+            .subscribe(function (data) {
+            _this.listaProfesionales = data;
+        }, function (error) {
+            console.log(error);
+        });
     };
     ListadoProfesionalesComponent.prototype.showProfesionalAlta = function () {
         this.showModalAlta = true;
@@ -2757,10 +2856,9 @@ var ListadoProfesionalesComponent = /** @class */ (function () {
         this.showModalAlta = true;
         this.showModalOuput.emit(this.showModalAlta);
     };
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array)
-    ], ListadoProfesionalesComponent.prototype, "listaEspecialidad", void 0);
+    ListadoProfesionalesComponent.ctorParameters = function () { return [
+        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__["ProfesionalService"] }
+    ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
@@ -2771,7 +2869,7 @@ var ListadoProfesionalesComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-profesionales.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-profesionales.component.scss */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__["ProfesionalService"]])
     ], ListadoProfesionalesComponent);
     return ListadoProfesionalesComponent;
 }());
@@ -2805,29 +2903,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfesionalesHomeComponent", function() { return ProfesionalesHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
-
 
 
 var ProfesionalesHomeComponent = /** @class */ (function () {
-    function ProfesionalesHomeComponent(profesionalService) {
-        this.profesionalService = profesionalService;
-        this.cargarLista();
+    function ProfesionalesHomeComponent() {
         this.obtenerUsuarioActual();
     }
     ProfesionalesHomeComponent.prototype.obtenerUsuarioActual = function () {
         var data = localStorage.getItem('Login');
         this.user = JSON.parse(data);
         this.isLogueado = true;
-    };
-    ProfesionalesHomeComponent.prototype.cargarLista = function () {
-        var _this = this;
-        this.profesionalService.Listar()
-            .subscribe(function (data) {
-            _this.listaProfesionales = data;
-        }, function (error) {
-            console.log(error);
-        });
     };
     ProfesionalesHomeComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -2840,16 +2925,13 @@ var ProfesionalesHomeComponent = /** @class */ (function () {
         var body = document.getElementsByTagName("body")[0];
         body.classList.remove("index-page");
     };
-    ProfesionalesHomeComponent.ctorParameters = function () { return [
-        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__["ProfesionalService"] }
-    ]; };
     ProfesionalesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-profesionales-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./profesionales-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/profesionales-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./profesionales-home.component.scss */ "./src/app/pages/profesionales-home/profesionales-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_2__["ProfesionalService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
     ], ProfesionalesHomeComponent);
     return ProfesionalesHomeComponent;
 }());
@@ -2997,53 +3079,6 @@ var RegistroComponent = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]])
     ], RegistroComponent);
     return RegistroComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.scss":
-/*!************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/alta-turno/alta-turno.component.scss ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2FsdGEtdHVybm8vYWx0YS10dXJuby5jb21wb25lbnQuc2NzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts":
-/*!**********************************************************************!*\
-  !*** ./src/app/pages/turnos-home/alta-turno/alta-turno.component.ts ***!
-  \**********************************************************************/
-/*! exports provided: AltaTurnoComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AltaTurnoComponent", function() { return AltaTurnoComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-
-
-var AltaTurnoComponent = /** @class */ (function () {
-    function AltaTurnoComponent() {
-    }
-    AltaTurnoComponent.prototype.ngOnInit = function () {
-    };
-    AltaTurnoComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-alta-turno',
-            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-turno.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/alta-turno/alta-turno.component.html")).default,
-            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-turno.component.scss */ "./src/app/pages/turnos-home/alta-turno/alta-turno.component.scss")).default]
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-    ], AltaTurnoComponent);
-    return AltaTurnoComponent;
 }());
 
 
@@ -3304,7 +3339,7 @@ var AuthService = /** @class */ (function () {
         return new Promise(function (resolve, reject) {
             _this.AFauth.signInWithEmailAndPassword(dataLogin.usuario, dataLogin.password).then(function (userData) {
                 resolve(userData);
-                dataLogin.idUsario = userData.user.uid;
+                dataLogin.id = userData.user.uid;
                 // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona 
                 _this.guardarUsuario(dataLogin);
             }).catch(function (err) {
@@ -3416,7 +3451,7 @@ var EspecialidadService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
                 var data = action.payload.doc.data();
-                data.idEspecialidad = action.payload.doc.id;
+                data.id = action.payload.doc.id;
                 return data;
             });
         }));
@@ -3427,16 +3462,22 @@ var EspecialidadService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
                 var data = action.payload.doc.data();
-                data.idEspecialidad = action.payload.doc.id;
+                data.id = action.payload.doc.id;
                 return data;
             });
         }));
     };
     EspecialidadService.prototype.Registrar = function (especialidad) {
         var _this = this;
-        this.especialidadColeccion = this.afs.collection('especialidades');
         return new Promise(function (resolve, reject) {
-            _this.especialidadColeccion.add(especialidad).then(function (result) {
+            _this.afs.collection('especialidades').add({
+                idEspecialidad: especialidad.idEspecialidad,
+                fechaAlta: especialidad.fechaAlta,
+                nombre: especialidad.nombre,
+                usuarioAlta: especialidad.usuarioAlta,
+                activa: especialidad.activa,
+                usuarioAprobacion: especialidad.usuarioAprobacion
+            }).then(function (result) {
                 resolve(true);
             }).catch(function (err) {
                 reject(false);
@@ -3568,29 +3609,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+/* harmony import */ var _model_usuario__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../model/usuario */ "./src/app/model/usuario.ts");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-auth.js");
+
+
 
 
 
 
 var ProfesionalService = /** @class */ (function () {
-    function ProfesionalService(afs) {
+    function ProfesionalService(AFauth, afs) {
+        this.AFauth = AFauth;
         this.afs = afs;
-        this.profesionalColeccion = afs.collection('profesionals');
-        this.profesionals = this.profesionalColeccion.valueChanges();
     }
     ProfesionalService.prototype.Listar = function () {
-        this.profesionalColeccion = this.afs.collection('profesionals');
+        this.profesionalColeccion = this.afs.collection('profesionales');
         return this.profesionals = this.profesionalColeccion.snapshotChanges()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
                 var data = action.payload.doc.data();
-                data.idProfesional = action.payload.doc.id;
                 return data;
             });
         }));
     };
     ProfesionalService.prototype.Obtenerprofesional = function (codigo) {
-        this.profesionalColeccion = this.afs.collection('profesionals', function (x) { return x.where("codigo", "==", codigo); });
+        this.profesionalColeccion = this.afs.collection('profesionales', function (x) { return x.where("codigo", "==", codigo); });
         return this.profesionals = this.profesionalColeccion.snapshotChanges()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
@@ -3600,11 +3643,37 @@ var ProfesionalService = /** @class */ (function () {
             });
         }));
     };
-    ProfesionalService.prototype.Registrar = function (profesional) {
+    ProfesionalService.prototype.Registrar = function (profe) {
         var _this = this;
-        this.profesionalColeccion = this.afs.collection('profesionales');
+        //creo login 
+        this.dataLogin = new _model_usuario__WEBPACK_IMPORTED_MODULE_4__["usuario"]();
+        this.dataLogin.password = profe.password;
+        this.dataLogin.tipo = "profesional";
+        this.dataLogin.nombre = profe.nombre;
+        this.dataLogin.usuario = profe.usuario;
         return new Promise(function (resolve, reject) {
-            _this.profesionalColeccion.add(profesional).then(function (result) {
+            _this.AFauth.createUserWithEmailAndPassword(_this.dataLogin.usuario, _this.dataLogin.password).then(function (userData) {
+                _this.dataLogin.id = userData.user.uid;
+                //creo el usuario
+                _this.afs.collection('usuarios').doc(_this.dataLogin.id).set({
+                    id: _this.dataLogin.id,
+                    contraseña: _this.dataLogin.password,
+                    mail: _this.dataLogin.usuario,
+                    nombre: _this.dataLogin.nombre,
+                    tipo: _this.dataLogin.tipo
+                }).then().catch();
+                _this.afs.collection('profesionales').doc(_this.dataLogin.id).set({
+                    id: _this.dataLogin.id,
+                    idProfesional: profe.idProfesional,
+                    nombre: profe.nombre,
+                    apellido: profe.apellido,
+                    dni: profe.dni,
+                    sexo: profe.sexo,
+                    horario: profe.horario,
+                    edad: profe.edad,
+                    especialidad: profe.especialidad,
+                    nacionalidad: profe.nacionalidad
+                }).then().catch();
                 resolve(true);
             }).catch(function (err) {
                 reject(false);
@@ -3623,13 +3692,14 @@ var ProfesionalService = /** @class */ (function () {
         });
     };
     ProfesionalService.ctorParameters = function () { return [
+        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"] },
         { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"] }
     ]; };
     ProfesionalService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_5__["AngularFireAuth"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
     ], ProfesionalService);
     return ProfesionalService;
 }());

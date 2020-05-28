@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{EspecialidadService}from 'src/app/services/especialidad.service';
 import{especialidad}from 'src/app/model/especialidad';
-import { login } from 'src/app/model/login';
+import { usuario } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-especialidades-home',
@@ -11,7 +11,7 @@ import { login } from 'src/app/model/login';
 export class EspecialidadesHomeComponent implements OnInit {
 
   public listaEspecialidad: especialidad[];
-  user:login;
+  user:usuario;
   isLogueado:boolean;
   showModalHome:boolean;
 

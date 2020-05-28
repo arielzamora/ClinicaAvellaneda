@@ -14,7 +14,7 @@
                 <div class="form-group">
                   <input type="text" id="idProfesional" formControlName="idProfesional" class="form-control" placeholder="Id Profesional" [ngClass]="{ 'is-invalid': submitted && f.idProfesional.errors?.required }">
                   <div *ngIf="submitted && f.idProfesional.errors?.required" class="invalid-feedback"
-                    autocomplete="username">
+                    autocomplete="idProfesional">
                     <div *ngIf="f.idProfesional.errors?.required">Debe ingresar un id para el Profesional</div>
                   </div>
                 </div>
@@ -23,7 +23,7 @@
               <div class="form-group">
                 <select id="especialidad" formControlName="especialidad" class="form-control" placeholder="seleccione">
                   <option selected value="">Seleccione Especialidad</option>
-                  <option >Clinica</option>
+                  <option *ngFor="let esp of listaEspecialidad">{{esp.nombre}}</option>
                 </select>
                 <div *ngIf="submitted && f.especialidad.errors?.required" class="invalid-feedback">
                   <div *ngIf="f.especialidad.errors?.required">Seleccione Especialidad.</div>
@@ -36,7 +36,7 @@
               <div class="form-group">
                 <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors?.required }">               
                 <div *ngIf="submitted && f.nombre.errors?.required" class="invalid-feedback"
-                  autocomplete="username">
+                  autocomplete="nombre">
                   <div *ngIf="f.nombre.errors?.required">Debe ingresar un nombre.</div>
                 </div>
               </div>
@@ -45,12 +45,32 @@
               <div class="form-group">
                 <input type="text" id="apellido" formControlName="apellido" class="form-control" placeholder="Apellido" [ngClass]="{ 'is-invalid': submitted && f.apellido.errors?.required }">               
                 <div *ngIf="submitted && f.apellido.errors?.required" class="invalid-feedback"
-                  autocomplete="username">
+                  autocomplete="apellido">
                   <div *ngIf="f.apellido.errors?.required">Debe ingresar un Apellido.</div>
                 </div>
               </div>
             </div>
         </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <input type="text" id="email" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors?.required }">               
+                  <div *ngIf="submitted && f.email.errors?.required" class="invalid-feedback"
+                    autocomplete="email">
+                    <div *ngIf="f.email.errors?.required">Debe ingresar un email.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <input type="text" id="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors?.required }">               
+                  <div *ngIf="submitted && f.password.errors?.required" class="invalid-feedback"
+                    autocomplete="password">
+                    <div *ngIf="f.password.errors?.required">Debe ingresar un password.</div>
+                  </div>
+                </div>
+              </div>
+          </div>
           <div class="row">
             <div class="col-6">
               <div class="form-group">
@@ -69,7 +89,7 @@
               <div class="form-group">
                 <input type="text" id="edad" formControlName="edad" class="form-control" placeholder="Edad" [ngClass]="{ 'is-invalid': submitted && f.edad.errors?.required }">               
                 <div *ngIf="submitted && f.edad.errors?.required" class="invalid-feedback"
-                  autocomplete="username">
+                  autocomplete="edad">
                   <div *ngIf="f.edad.errors?.required">Debe ingresar las edad.</div>
                 </div>
               </div>
@@ -94,7 +114,7 @@
               <div class="form-group">
                 <input type="text" id="dni" formControlName="dni" class="form-control" placeholder="Dni" [ngClass]="{ 'is-invalid': submitted && f.dni.errors?.required }">               
                 <div *ngIf="submitted && f.dni.errors?.required" class="invalid-feedback"
-                  autocomplete="username">
+                  autocomplete="dni">
                   <div *ngIf="f.dni.errors?.required">Debe ingresar un Dni.</div>
                 </div>
               </div>
@@ -103,7 +123,7 @@
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <select id="horario" formControlName="sexo" class="form-control" placeholder="seleccione">
+                <select id="horario" formControlName="horario" class="form-control" placeholder="seleccione">
                   <option selected value="">Horario</option>
                   <option>09-14</option>
                   <option>14-20</option>

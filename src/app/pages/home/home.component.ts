@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy,ViewChild } from "@angular/core";
 
 import noUiSlider from "nouislider";
 import{LoginComponent} from "../login/login.component"
-import { login } from 'src/app/model/login';
+import { usuario } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   pagination = 3;
   pagination1 = 1;
   showModal: boolean;
-  user:login;
+  user:usuario;
   isLogueado:boolean;
   constructor() {
 

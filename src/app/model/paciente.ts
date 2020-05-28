@@ -1,8 +1,8 @@
-import { login } from './login';
+import { usuario } from './usuario';
 import { especialidad } from './especialidad';
 import { turno } from './turno';
 
-export class paciente extends login{
+export class paciente extends usuario{
    
     idPaciente: string; 
     nombre: string;
@@ -11,7 +11,10 @@ export class paciente extends login{
     edad: string;
     listaTurnos:turno[];
     sexo:string;
+    telefono:string;
     nacionalidad:string;
+    planMedico:string;
+    activo:string;
 
     constructor() {
         super();
