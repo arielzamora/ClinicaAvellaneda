@@ -34,6 +34,9 @@
               <a *appValidarRoles="['admin','profesional']" class="dropdown-item" [routerLink]="['/turnos']">
                 <i class="tim-icons icon-pin"> </i> Turnos
               </a>
+              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/usuarios']">
+                <i class="tim-icons icon-pin"> </i> Usuarios
+              </a>
               <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/landing']">
                 <i class="tim-icons icon-image-02"> </i> landing
               </a>
@@ -49,8 +52,7 @@
           <li *appValidarRoles="['paciente','admin','profesional']"  class="nav-item">
             <a
               class="nav-link btn btn-default d-none d-lg-block"
-              href="javascript:void(0)"
-              (click)="scrollToDownload(target)"
+              [routerLink]="['/registroTurno']"
             >
               <i class="tim-icons icon-calendar-60"> </i> Turnos
             </a>

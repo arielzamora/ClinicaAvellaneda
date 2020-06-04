@@ -8,6 +8,8 @@ import { firestore } from 'firebase';
 import{AuthService} from 'src/app/services/auth.service';
 import { usuario } from '../model/usuario';
 import {AngularFireAuth} from '@angular/fire/auth';
+import { especialidad } from '../model/especialidad';
+import { newArray } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +21,11 @@ export class ProfesionalService {
   private profesionalDoc:AngularFirestoreDocument<profesional>;
   private profesionals:Observable<profesional[]>;
   private profesional:Observable<profesional>;
+  private listadoEspecialidades:especialidad[]
+  listado:{};
   dataLogin:any;
   constructor(private AFauth :AngularFireAuth,private afs:AngularFirestore) { 
-
+      this.listadoEspecialidades=new Array<especialidad>();
 
   }
 
@@ -56,6 +60,9 @@ export class ProfesionalService {
 
   public Registrar(profe:profesional): Promise<any> {
 
+    
+
+
    //creo login 
    this.dataLogin=new usuario();
    this.dataLogin.password = profe.password;
@@ -72,7 +79,21 @@ export class ProfesionalService {
         mail:this.dataLogin.usuario,
         nombre:this.dataLogin.nombre,
         tipo:this.dataLogin.tipo
+
       }).then().catch();
+
+      profe.especialidades.forEach(item=>{
+
+        this.afs.collection('especialidadProfesional').doc(this.dataLogin.id).set({          
+          idEspecialidad:item.idEspecialidad,
+          idProfesional:this.dataLogin.id,
+          nombre:item.nombre,
+          activa:item.activa,
+          usuarioAlta:item.usuarioAlta,
+          usuarioAprobacion:item.usuarioAprobacion
+        }).then().catch();
+      });
+
 
       this.afs.collection('profesionales').doc(this.dataLogin.id).set({
         id: this.dataLogin.id, 
@@ -83,8 +104,15 @@ export class ProfesionalService {
         sexo:profe.sexo,
         horario:profe.horario,
         edad: profe.edad,
-        especialidad: profe.especialidad,
-        nacionalidad:profe.nacionalidad
+        nacionalidad:profe.nacionalidad,
+        diasHorarios:{
+          lunes:profe.diasHorarios.lunes,
+          martes:profe.diasHorarios.martes,
+          miercoles:profe.diasHorarios.miercoles,
+          jueves:profe.diasHorarios.jueves,
+          viernes:profe.diasHorarios.viernes,
+          sabado:profe.diasHorarios.sabado      
+        }
       }).then().catch();
 
       resolve(true);

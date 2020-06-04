@@ -1,4 +1,6 @@
 import { usuario } from './usuario';
+import { diasHorarios } from './diashorarios';
+import { especialidad } from './especialidad';
 
 export class profesional extends usuario{
    
@@ -9,9 +11,10 @@ export class profesional extends usuario{
     dni:string;
     sexo:string;
     edad: string;
-    especialidad: string;
+    especialidades: especialidad[];
     nacionalidad:string;
     horario:string;
+    diasHorarios:diasHorarios;
 
     constructor() {
         super();

@@ -1,5 +1,4 @@
 <app-navmenu [usuario]="user" [estaLogueado]="isLogueado" ></app-navmenu>
-
 <div class="wrapper">
   <div class="page-header header-filter">
     <div class="squares square1"></div>
@@ -15,8 +14,7 @@
         <app-listado-especialidades (showModalOuput)="showModalHome=$event" [listaEspecialidad]="listaEspecialidad"></app-listado-especialidades>
       </div>
     </div>
-  </div>
-  
+  </div> 
   <app-footer></app-footer>
 </div>
 <app-alta-especialidades #modalRegistro [showModalAlta]="showModalHome" (closeModal)="showModalHome = $event" (registradoCorrectamente)="cargarLista()"></app-alta-especialidades>

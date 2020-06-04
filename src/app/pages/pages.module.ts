@@ -40,7 +40,10 @@ import { EspecialidadesHomeComponent } from './especialidades-home/especialidade
 import { ListadoEspecialidadesComponent } from './especialidades-home/listado-especialidades/listado-especialidades.component';
 import{AltaEspecialidadesComponent}from './especialidades-home/alta-especialidades/alta-especialidades.component'
 import { ListadoPacientesComponent } from './pacientes-home/listado-pacientes/listado-pacientes.component';
-
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { UsuarioHomeComponent } from './usuario-home/usuario-home.component';
+import { ListadoUsuariosComponent } from './usuario-home/listado-usuarios/listado-usuarios.component';
+import { RegistroTurnoComponent } from './turnos-home/registro-turno/registro-turno.component';
 
 @NgModule({
   imports: [
@@ -59,7 +62,8 @@ import { ListadoPacientesComponent } from './pacientes-home/listado-pacientes/li
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    NgxCaptchaModule
   ],
   declarations: [
     IndexComponent,
@@ -82,7 +86,10 @@ import { ListadoPacientesComponent } from './pacientes-home/listado-pacientes/li
     ListadoEspecialidadesComponent,
     AltaEspecialidadesComponent,
     ListadoPacientesComponent,
-    AltaProfesionalesComponent
+    AltaProfesionalesComponent,
+    UsuarioHomeComponent,
+    ListadoUsuariosComponent,
+    RegistroTurnoComponent
 
   ],
   exports: [

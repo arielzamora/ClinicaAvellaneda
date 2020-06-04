@@ -12,7 +12,7 @@
               <div class="form-group">
                 <input type="text" id="idEspecialidad" formControlName="idEspecialidad" class="form-control" placeholder="Especialidad" [ngClass]="{ 'is-invalid': submitted && f.idEspecialidad.errors?.required }">
                 <div *ngIf="submitted && f.idEspecialidad.errors?.required" class="invalid-feedback"
-                  autocomplete="username">
+                  autocomplete="idEspecialidad">
                   <div *ngIf="f.idEspecialidad.errors?.required">Debe ingresar un id para la especialidad</div>
                 </div>
               </div>

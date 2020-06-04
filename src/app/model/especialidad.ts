@@ -7,6 +7,8 @@ export class especialidad {
     nombre: string;
     usuarioAlta:string;
     activa:boolean;
+    add:boolean;
+    delete:boolean;
     usuarioAprobacion:string;
 
     constructor() {

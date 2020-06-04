@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center"> 
+      <div class="contenedor col-11 col-xl-11">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Id</td>                   
+                    <td>Mail</td>
+                    <td>Contraseña</td>
+                    <td>Nombre</td>
+                    <td>Tipo</td>
+                    <td>Activo</td>
+                    <th class="text-right">detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of listaUsuarios">
+                    <td>{{usuario.id}}</td>
+                    <td>{{usuario.mail}}</td>
+                    <td>************</td>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.tipo}}</td>
+                    <td>{{usuario.activo}}</td>
+                    <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" class="btn btn-info btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-single-02"></i>
+                        </button>
+                    </td>
+                </tr>                       
+            </tbody>
+        </table>
+      </div>
+    </div>
+</div>

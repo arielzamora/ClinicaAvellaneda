@@ -4,6 +4,8 @@ import { map, tap, catchError, timeInterval } from 'rxjs/operators';
 import { paciente } from "src/app/model/paciente";
 import {AngularFirestore,AngularFirestoreCollection,AngularFirestoreDocument}from '@angular/fire/firestore';
 import { firestore } from 'firebase';
+import { usuario } from '../model/usuario';
+import {AngularFireAuth} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +16,8 @@ export class PacienteService {
   private pacienteDoc:AngularFirestoreDocument<paciente>;
   private pacientes:Observable<paciente[]>;
   private paciente:Observable<paciente>;
-
-  constructor(private afs:AngularFirestore) { 
+  dataLogin:any;
+  constructor(private AFauth :AngularFireAuth,private afs:AngularFirestore) { 
 
     this.pacienteColeccion=afs.collection<paciente>('pacientes');
     this.pacientes=this.pacienteColeccion.valueChanges(); 
@@ -49,17 +51,43 @@ export class PacienteService {
 
   public Registrar(paciente:paciente): Promise<any> {
 
-    this.pacienteColeccion=this.afs.collection<paciente>('pacientes');
-    return new Promise((resolve, reject) => {
+    //creo login 
+   this.dataLogin=new usuario();
+   this.dataLogin.password = paciente.password;
+   this.dataLogin.tipo = "paciente";
+   this.dataLogin.nombre = paciente.nombre;
+   this.dataLogin.usuario = paciente.usuario;
+   return new Promise((resolve, reject) => {
+     this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario,this.dataLogin.password).then(userData =>{ 
+     this.dataLogin.id=userData.user.uid;   
+      //creo el usuario
+      this.afs.collection('usuarios').doc(this.dataLogin.id).set({
+        id:this.dataLogin.id,
+        contraseña:this.dataLogin.password,
+        mail:this.dataLogin.usuario,
+        nombre:this.dataLogin.nombre,
+        tipo:this.dataLogin.tipo
+      }).then().catch();
 
-    this.pacienteColeccion.add(paciente).then(result => {
+      this.afs.collection('pacientes').doc(this.dataLogin.id).set({
+        id: this.dataLogin.id, 
+        nombre: paciente.nombre,
+        apellido: paciente.apellido,
+        dni:paciente.dni,
+        sexo:paciente.sexo,
+        edad: paciente.edad,
+        nacionalidad:paciente.nacionalidad,
+        planMedico:paciente.planMedico,
+        urlImagen:paciente.urlImage
+      }).then().catch();
+
       resolve(true);
-      }).catch(err => {
-        reject(false);
-      });
-    
-    })
-  }
+    }).catch(err => {
+      reject(false);
+    });
+  
+})
+ }
 
   public Eliminar(paciente: paciente): Promise<Object> {
        return new Promise((resolve, reject) => {

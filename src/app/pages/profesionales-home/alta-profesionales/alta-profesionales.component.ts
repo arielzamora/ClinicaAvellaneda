@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {ProfesionalService} from 'src/app/services/profesional.service';
 import { EspecialidadService } from 'src/app/services/especialidad.service';
 import { especialidad } from 'src/app/model/especialidad';
+import {diasHorarios}from 'src/app/model/diashorarios';
 
 @Component({
   selector: 'app-alta-profesionales',
@@ -23,13 +24,20 @@ export class AltaProfesionalesComponent implements OnInit {
   public errorMessage: string;
   public error: boolean;
   public success: boolean;
+  public diasHorarios:diasHorarios;
   focus:any;
   listaEspecialidad: especialidad[];
+  listaAuxAdd: especialidad[];
+  listaAuxFinal: especialidad[];
+  listaAux=new Array<especialidad>();
   constructor(private fb: FormBuilder,private especialidaService:EspecialidadService, private profesionalService:ProfesionalService) {
 
     this.closeModal = new EventEmitter<void>();
     this.registradoCorrectamente = new EventEmitter<any>();
-    this.cargarLista();
+    this.cargarLista();     
+    this.diasHorarios=new diasHorarios();
+    this.listaAuxAdd=new Array<especialidad>();
+    
   }
 
   ngOnInit() {
@@ -46,9 +54,53 @@ export class AltaProfesionalesComponent implements OnInit {
       edad: ['', Validators.required],
       especialidad: ['', Validators.required],
       nacionalidad: ['', Validators.required],
-      horario: ['', Validators.required]
+      horario: ['', Validators.required],
+      lunes:[''],
+      martes:[''],
+      miercoles:[''],
+      jueves:[''],
+      viernes:[''],
+      sabado:[''],
     });
   }
+
+  public especialidadChange(especi:especialidad){
+     
+    const data = localStorage.getItem('listaAux');
+    if (data){
+      this.listaAux=JSON.parse(data);
+    }
+    this.listaEspecialidad.forEach(esp=>{
+      if((esp.idEspecialidad==especi.idEspecialidad)&&esp.add==false)
+      {
+        especi.add=true;
+        this.listaAux.push(especi);
+      }else{
+          this.listaAux.forEach(item=>{
+             item.add=false;
+           });
+      }
+    });
+
+    //guardo la lista
+    localStorage.setItem('listaAux', JSON.stringify(this.listaAux));
+
+  }
+
+  public cargoEspecialidades()
+  {
+
+    const data = localStorage.getItem('listaAux');
+    if (data){
+      this.listaAux=JSON.parse(data);
+    }
+    this.listaAuxFinal=new Array<especialidad>();
+    this.listaAux.forEach(item=>{
+      if(item.add==true){
+        this.listaAuxFinal.push(item);
+      }
+    });
+  } 
   public cargarLista() {
     this.especialidaService.Listar()
      .subscribe(
@@ -67,6 +119,7 @@ export class AltaProfesionalesComponent implements OnInit {
     this.submitted=true;
 
     if (this.form.valid ) {
+      this.cargoEspecialidades();
       this.profesional=new profesional();
       this.profesional.idProfesional = this.form.get('idProfesional').value;
       this.profesional.nombre = this.form.get('nombre').value;
@@ -78,8 +131,15 @@ export class AltaProfesionalesComponent implements OnInit {
       this.profesional.sexo = this.form.get('sexo').value;
       this.profesional.edad = this.form.get('edad').value;
       this.profesional.horario = this.form.get('horario').value;
-      this.profesional.especialidad = this.form.get('especialidad').value;
+      this.profesional.especialidades =this.listaAuxFinal;
       this.profesional.nacionalidad = this.form.get('nacionalidad').value;
+      this.diasHorarios.lunes=this.form.get('lunes').value;
+      this.diasHorarios.martes=this.form.get('martes').value;
+      this.diasHorarios.miercoles=this.form.get('miercoles').value;
+      this.diasHorarios.jueves=this.form.get('jueves').value;
+      this.diasHorarios.viernes=this.form.get('viernes').value;
+      this.diasHorarios.sabado=this.form.get('sabado').value;
+      this.profesional.diasHorarios=this.diasHorarios;
 
       this.profesionalService.Registrar(this.profesional)
         .then(
@@ -107,11 +167,10 @@ export class AltaProfesionalesComponent implements OnInit {
     } else {
       this.errorMessage = 'Debe completar los campos correctamente.';
       this.error = true;
-      this.success = false;
-      this.submitted=false;
   
     }
   }
+
 
   cargarForm(){
     this.form = this.fb.group({
@@ -124,7 +183,6 @@ export class AltaProfesionalesComponent implements OnInit {
       edad: ['', Validators.required],
       especialidad: ['', Validators.required],
       nacionalidad: ['', Validators.required]
-
     });
   }
 

@@ -28,10 +28,6 @@ export class AuthService {
 
   constructor(private AFauth :AngularFireAuth ,private afs:AngularFirestore,private router :Router) {
 
-    if(!this.usuarios)
-    {
-      this.traerTodos()
-    }
    }
 
   
@@ -52,53 +48,13 @@ export class AuthService {
       return this.usuarios;
   }
 
-  public guardarUsuario(dataLogin: usuario)
-  {
-       
-      this.usuarios.forEach(user=>{
-        if((user.email==dataLogin.usuario)&&(user.contraseña==dataLogin.password)&&(!this.existe))
-        {
-          dataLogin.tipo=user.tipo;
-          dataLogin.nombre=user.nombre;
-          //no esta sigo
-        }
-
-    })
-    //obtengo la lista de usuarios y si se encuenta logeo por email y password ,sabiendo ya el tipo 
-    switch(dataLogin.tipo)
-    {
-      case "paciente": { 
-        localStorage.setItem('Login', JSON.stringify(dataLogin));
-        //statements; 
-        break; 
-     } 
-     case "profesional": { 
-      localStorage.setItem('Login', JSON.stringify(dataLogin));
-        //statements; 
-        break; 
-     } 
-     default: { 
-      localStorage.setItem('Login', JSON.stringify(dataLogin));
-        //statements; 
-        break; 
-     } 
-    }
-    //si es admin no busco nada ,solo tiene accesso total
-    
-    //si es paciente busco toda su info 
-    
-    //si es especialista tambien busco toda su info
-
-  }
+  
     
   Loguear(dataLogin: usuario){
 
       return new Promise((resolve,reject)=>{
       this.AFauth.signInWithEmailAndPassword(dataLogin.usuario,dataLogin.password).then(userData =>{//despues doy de alta el empleado 
-        resolve(userData)
-        dataLogin.id=userData.user.uid;
-       // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona 
-       this.guardarUsuario(dataLogin);
+        resolve(userData.user.uid)
        }).catch(err=>{
          reject(err)
        });

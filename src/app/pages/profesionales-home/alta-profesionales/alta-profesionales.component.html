@@ -10,7 +10,7 @@
         <div class="modal-body">
           <form [formGroup]="form" (keyup.enter)="Submit()">
           <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <div class="form-group">
                   <input type="text" id="idProfesional" formControlName="idProfesional" class="form-control" placeholder="Id Profesional" [ngClass]="{ 'is-invalid': submitted && f.idProfesional.errors?.required }">
                   <div *ngIf="submitted && f.idProfesional.errors?.required" class="invalid-feedback"
@@ -19,17 +19,23 @@
                   </div>
                 </div>
             </div>
-            <div class="col-6">
-              <div class="form-group">
-                <select id="especialidad" formControlName="especialidad" class="form-control" placeholder="seleccione">
-                  <option selected value="">Seleccione Especialidad</option>
-                  <option *ngFor="let esp of listaEspecialidad">{{esp.nombre}}</option>
-                </select>
-                <div *ngIf="submitted && f.especialidad.errors?.required" class="invalid-feedback">
-                  <div *ngIf="f.especialidad.errors?.required">Seleccione Especialidad.</div>
-                </div>
-            </div>
-           </div>              
+            <div class="col-4">
+              <div *ngFor="let esp of listaEspecialidad">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" (change)="especialidadChange(esp)" formControlName="especialidad">
+                    <span class="form-check-sign">                   
+                    </span> {{esp.nombre}} </label>
+                  </div>
+                  <div *ngIf="submitted && f.especialidad.errors?.required" class="invalid-feedback">
+                    <div *ngIf="f.especialidad.errors?.required">Seleccione Especialidad.</div>
+                  </div>
+              </div>
+           </div>
+           <div class="col-4">
+            <div class="row"><button type="submit" class="btn btn-primary" (click)="Submit()">Registrar</button><br></div>
+            <div class="row"><button type="submit" class="btn btn-secondary" (click)="cerrar()">Cancelar</button></div>
+            </div>              
           </div>
           <div class="row">
             <div class="col-6">
@@ -151,20 +157,61 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-2">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="lunes">
+                  <span class="form-check-sign">                    
+                  </span> Lunes </label>
+                </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="martes">
+                  <span class="form-check-sign">    
+                  </span> Martes </label>
+                </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="miercoles">
+                  <span class="form-check-sign">                   
+                  </span> Miercoles </label>
+                </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="jueves">
+                  <span class="form-check-sign">                   
+                  </span> Jueves </label>
+                </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="viernes">
+                  <span class="form-check-sign">                    
+                  </span> Viernes </label>
+                </div>
+            </div>
+            <div class="col-2">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" formControlName="sabado">
+                  <span class="form-check-sign">                   
+                  </span> Sabado </label>
+                </div>
+            </div>
+          </div>
             <div class="row">
               <small *ngIf="error" class="text-danger font-weight-bold"><i class="fa fa-times"></i> {{errorMessage}} </small>
               <small *ngIf="success" class="text-success font-weight-bold"><i class="fas fa-check"></i> Especialidad registrada
                 correctamente. </small>
             </div>
-              <hr>
-              <div class="row">
-                <div class="col-6">
-                  <button type="submit" class="btn btn-primary" (click)="Submit()">Registrar</button><br>
-                </div>
-                <div class="col-6">
-                  <button type="submit" class="btn btn-secondary" (click)="cerrar()">Cancelar</button><br>
-                </div>
-              </div>
             </form>
         </div>
         </div>

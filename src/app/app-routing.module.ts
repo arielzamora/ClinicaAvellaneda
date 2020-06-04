@@ -17,6 +17,8 @@ import{PacientesHomeComponent} from "./pages/pacientes-home/pacientes-home.compo
 import{EspecialidadesHomeComponent} from "./pages/especialidades-home/especialidades-home.component";
 import{ProfesionalesHomeComponent} from "./pages/profesionales-home/profesionales-home.component";
 import{TurnosHomeComponent} from "./pages/turnos-home/turnos-home.component";
+import{UsuarioHomeComponent}from "./pages/usuario-home/usuario-home.component";
+import{RegistroTurnoComponent}from "./pages/turnos-home/registro-turno/registro-turno.component";
 
 const routes: Routes = [
   { 
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: "especialidades", component: EspecialidadesHomeComponent ,canActivate:[AuthGuard]},
   { path: "profesionales", component: ProfesionalesHomeComponent ,canActivate:[AuthGuard]},
   { path: "turnos", component: TurnosHomeComponent ,canActivate:[AuthGuard]},
+  { path: "usuarios", component: UsuarioHomeComponent ,canActivate:[AuthGuard]},
+  { path: "registroTurno", component: RegistroTurnoComponent ,canActivate:[AuthGuard]},
   { path: "profile", component: ProfilepageComponent,
     canActivate: [AuthGuard],
     data: { roles: ['admin'] } 

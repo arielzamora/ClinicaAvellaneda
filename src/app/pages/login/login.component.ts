@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import {AngularFireStorage}from '@angular/fire/storage';
 import {finalize}from 'rxjs/operators';
 import {Observable} from 'rxjs/internal/Observable';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-login',
@@ -24,11 +25,14 @@ export class LoginComponent implements OnInit ,OnDestroy{
   public errorMessage: string;
   user:usuario;
   isLogueado:boolean;
-  constructor(private fb: FormBuilder, public authService:AuthService,private router:Router,private fireStore:AngularFireStorage) {
+  public usuarios: Array<any>;
+  existe:boolean=false;
+  constructor(private fb: FormBuilder, public authService:AuthService,private router:Router,private fireStore:AngularFireStorage,private AFauth :AngularFireAuth) {
     this.form = this.fb.group({
       Email: ['', Validators.required],
       Password: ['', Validators.required]
     });
+    this.usuarios=this.authService.traerTodos();
   }
 
 
@@ -70,9 +74,13 @@ export class LoginComponent implements OnInit ,OnDestroy{
       this.user.password=this.form.get('Password').value
 
       this.authService.Loguear(this.user)
-        .then(response => {
+        .then(response=>{
           if(response){
-            this.router.navigate(['/bienvenida']);
+            this.user.id=response.toString();
+            this.guardarUsuario(this.user);
+   
+            // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona          
+
           }
           }
         )
@@ -89,7 +97,44 @@ export class LoginComponent implements OnInit ,OnDestroy{
     }
   }
 
+  public guardarUsuario(dataLogin: usuario)
+  {
 
+      this.usuarios.forEach(user=>{
+        if((user.mail.toString()==dataLogin.usuario)&&(user.contraseña.toString()==dataLogin.password))
+        {
+          dataLogin.tipo=user.tipo;
+          dataLogin.nombre=user.nombre;
+            //obtengo la lista de usuarios y si se encuenta logeo por email y password ,sabiendo ya el tipo 
+            switch(dataLogin.tipo)
+            {
+              case "paciente": { 
+                localStorage.setItem('Login', JSON.stringify(dataLogin));
+                //statements; 
+                break; 
+            } 
+            case "profesional": { 
+              localStorage.setItem('Login', JSON.stringify(dataLogin));
+                //statements; 
+                break; 
+            } 
+            default: { 
+              localStorage.setItem('Login', JSON.stringify(dataLogin));
+                //statements; 
+                break; 
+            } 
+            }
+        }
+
+    })
+    this.router.navigate(['/bienvenida']);
+    //si es admin no busco nada ,solo tiene accesso total
+    
+    //si es paciente busco toda su info 
+    
+    //si es especialista tambien busco toda su info
+
+  }
   scrollToDownload(element: any) {
     element.scrollIntoView({ behavior: "smooth" });
   }

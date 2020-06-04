@@ -4,37 +4,32 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th class="text-center">#</th>
+                    <td></td>
                     <td>Nombre</td>
                     <td>Apellido</td>
-                    <td>Plan</td>
                     <td>Dni</td>
                     <td>Edad</td>
                     <td>Sexo</td>
+                    <td>Nacionalidad</td>
+                    <td>Plan Medico</td>
                     <td>Activo</td>
-                    <th class="text-right">Actions</th>
+                    <th class="text-right">detalle</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let paciente of listaPaciente">
-                    <td class="text-center">{{paciente.idEspecialidad}}</td>
-                    <td>{{paciente.idPaciente}}</td>
+                <tr *ngFor="let paciente of listaPacientes">
+                    <td><img src="{{paciente.urlImagen}}" alt="" style="width: 100px;"></td>
                     <td>{{paciente.nombre}}</td>
                     <td>{{paciente.apellido}}</td>
-                    <td>{{paciente.planMedico}}</td>
                     <td>{{paciente.dni}}</td>
                     <td>{{paciente.edad}}</td>
                     <td>{{paciente.sexo}}</td>
+                    <td>{{paciente.nacionalidad}}</td>
+                    <td>{{paciente.planMedico}}</td>
                     <td>{{paciente.activo}}</td>
                     <td class="td-actions text-right">
                         <button type="button" rel="tooltip" class="btn btn-info btn-simple btn-icon btn-sm">
                             <i class="tim-icons icon-single-02"></i>
-                        </button>
-                        <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
-                            <i class="tim-icons icon-settings-gear-63"></i>
-                        </button>
-                        <button type="button" rel="tooltip" class="btn btn-danger btn-simple btn-icon btn-sm">
-                            <i class="tim-icons icon-simple-remove"></i>
                         </button>
                     </td>
                 </tr>                       
