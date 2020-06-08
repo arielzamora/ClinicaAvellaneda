@@ -12,10 +12,16 @@
     <div class="container">
       <div class="content-center">
         <h3>Profesionales :</h3>
-            <app-listado-profesionales (showModalOuput)="showModalHome=$event"></app-listado-profesionales>
+            <app-listado-profesionales 
+            (showModalOuputEdit)="showModalHomeEdit($event)" 
+            (showModalOuput)="showModalHome=$event"
+            (showModalOuputDetalle)="showModalDetalle($event)"
+            ></app-listado-profesionales>
           </div>
         </div>
       </div>      
       <app-footer></app-footer>
      </div>
      <app-alta-profesionales #modalRegistro [showModalAlta]="showModalHome" (closeModal)="showModalHome = false" (registradoCorrectamente)="cargarLista()"></app-alta-profesionales>
+     <app-edit-profesional #modalEdit [showEdit]="showModalEdit" [profeInput]="profesionalEdit" (closeModal)="showModalEdit = false" (registradoCorrectamente)="cargarLista()"></app-edit-profesional>
+     <app-detalle-profesional #modalDetalle [showDetalle]="showModalDetal" [profeInput]="profesionalEdit" [listaInput]="listaEspecialidad" (closeModal)="showModalDetal = false"> </app-detalle-profesional>

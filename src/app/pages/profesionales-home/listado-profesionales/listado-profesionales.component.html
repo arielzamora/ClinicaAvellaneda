@@ -11,12 +11,11 @@
             <th class="text-center">#</th>
             <th>Nombre</th>
             <th>Apellido</th>
-            <th>Especialidad</th>
             <th>Sexo</th>
             <th>Dni</th>
             <th>Edad</th>
             <th>Horario</th>
-            <th class="text-right">Actions</th>
+            <th class="text-right">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -24,22 +23,23 @@
             <td class="text-center">{{profesional.idProfesional}}</td>
             <td>{{profesional.nombre}}</td>
             <td>{{profesional.apellido}}</td>
-            <td>{{profesional.especialidad}}</td>
             <td>{{profesional.sexo}}</td>
             <td>{{profesional.dni}}</td>
             <td>{{profesional.edad}}</td>
             <td>{{profesional.horario}}</td>
             <td class="td-actions text-right">
-                <button type="button" rel="tooltip" (click)="showProfesionalEdit(profesional)" class="btn btn-info btn-simple btn-icon btn-sm">
+                <button type="button" rel="tooltip" tooltip="Editar" (click)="showProfesionalEdit(profesional)" class="btn btn-info btn-simple btn-icon btn-sm">
                     <i class="tim-icons icon-single-02"></i>
                 </button>
-                <button type="button" rel="tooltip" class="btn btn-success btn-simple btn-icon btn-sm">
+                <button type="button" rel="tooltip" 
+                (click)="showDetalle(profesional)" tooltip="Detalle" class="btn btn-success btn-simple btn-icon btn-sm">
                     <i class="tim-icons icon-settings-gear-63"></i>
                 </button>
-                <button type="button" rel="tooltip" class="btn btn-danger btn-simple btn-icon btn-sm">
+                <button type="button" rel="tooltip" tooltip="Eliminar"  class="btn btn-danger btn-simple btn-icon btn-sm">
                     <i class="tim-icons icon-simple-remove"></i>
                 </button>
             </td>
         </tr>             
     </tbody>
 </table>
+

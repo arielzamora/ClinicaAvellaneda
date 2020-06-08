@@ -5,14 +5,17 @@ import { Observable } from 'rxjs';
 import { map, tap, catchError, timeInterval } from 'rxjs/operators';
 import {AngularFirestore,AngularFirestoreCollection,AngularFirestoreDocument}from '@angular/fire/firestore';
 import { firestore } from 'firebase';
+import { especialidadProfesional } from '../model/especialidadProfesional';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EspecialidadService {
   private especialidadColeccion:AngularFirestoreCollection<especialidad>;
+  private espProfesionalColeccion:AngularFirestoreCollection<especialidadProfesional>;
   private especialidadDoc:AngularFirestoreDocument<especialidad>;
   private especialidads:Observable<especialidad[]>;
+  private espProfesional:Observable<especialidadProfesional[]>;
   private especialidad:Observable<especialidad>;
 
   constructor(private afs:AngularFirestore) { 
@@ -27,6 +30,17 @@ export class EspecialidadService {
        return changes.map(action => {
          const data = action.payload.doc.data() as especialidad;
          data.id = action.payload.doc.id; 
+         return data;
+       });
+     }));
+  }
+
+  public ListarEspecialidadProfesional(idProfesional:string): Observable<especialidadProfesional[]> {
+    this.espProfesionalColeccion=this.afs.collection<especialidadProfesional>('profesionalEspecialidad',x=>x.where("idProfesional","==",idProfesional));
+    return this.espProfesional=this.espProfesionalColeccion.snapshotChanges()
+     .pipe(map(changes => {
+       return changes.map(action => {
+         const data = action.payload.doc.data() as especialidadProfesional;
          return data;
        });
      }));

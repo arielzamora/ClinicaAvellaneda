@@ -8,14 +8,15 @@ import {diasHorarios}from 'src/app/model/diashorarios';
 import { especialidadProfesional } from 'src/app/model/especialidadProfesional';
 
 @Component({
-  selector: 'app-alta-profesionales',
-  templateUrl: './alta-profesionales.component.html',
-  styleUrls: ['./alta-profesionales.component.scss']
+  selector: 'app-edit-profesional',
+  templateUrl: './edit-profesional.component.html',
+  styleUrls: ['./edit-profesional.component.scss']
 })
-export class AltaProfesionalesComponent implements OnInit {
+export class EditProfesionalComponent implements OnInit {
 
   profesional:profesional;
-  @Input() showModalAlta: boolean;
+  @Input() showEdit: boolean;
+  @Input() profeInput: profesional;
   @Output() closeModal: EventEmitter<void>;
   submitted = false;
   get f() { return this.form.controls; }
@@ -45,24 +46,24 @@ export class AltaProfesionalesComponent implements OnInit {
   ngOnInit() {
 
     this.form = this.fb.group({
-      idProfesional: ['', Validators.required],
-      nombre: ['', Validators.required],
-      apellido: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
-      tipoDni: ['', Validators.required],
-      sexo: ['', Validators.required],
-      dni: ['', Validators.required],
-      edad: ['', Validators.required],
-      especialidad: ['', Validators.required],
-      nacionalidad: ['', Validators.required],
-      horario: ['', Validators.required],
-      lunes:[''],
-      martes:[''],
-      miercoles:[''],
-      jueves:[''],
-      viernes:[''],
-      sabado:[''],
+      idProfesionalEdit: ['', Validators.required],
+      nombreEdit: ['', Validators.required],
+      apellidoEdit: ['', Validators.required],
+      emailEdit: ['', Validators.required],
+      passwordEdit: ['', Validators.required],
+      tipoDniEdit: ['', Validators.required],
+      sexoEdit: ['', Validators.required],
+      dniEdit: ['', Validators.required],
+      edadEdit: ['', Validators.required],
+      especialidadEdit: ['', Validators.required],
+      nacionalidadEdit: ['', Validators.required],
+      horarioEdit: ['', Validators.required],
+      lunesEdit:[''],
+      martesEdit:[''],
+      miercolesEdit:[''],
+      juevesEdit:[''],
+      viernesEdit:[''],
+      sabadoEdit:[''],
     });
   }
 

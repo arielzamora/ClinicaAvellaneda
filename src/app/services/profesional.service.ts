@@ -10,6 +10,7 @@ import { usuario } from '../model/usuario';
 import {AngularFireAuth} from '@angular/fire/auth';
 import { especialidad } from '../model/especialidad';
 import { newArray } from '@angular/compiler/src/util';
+import { especialidadProfesional } from '../model/especialidadProfesional';
 
 @Injectable({
   providedIn: 'root'
@@ -57,11 +58,22 @@ export class ProfesionalService {
     }));
   }
 
+  public RegistrarEspecialidadesProfesionales(especialidad:especialidadProfesional){
+    
+    //actualizo las especialidades
+    const id = this.afs.createId();
+    this.afs.collection('profesionalEspecialidad').doc(id).set({
+      idEspecialida:especialidad.idEspecialidad,
+      idProfesional:especialidad.idProfesional,
+      nombre:especialidad.nombre,
+      activa:especialidad.activa,
+      usuarioAlta:especialidad.usuarioAlta,
+      usuarioAprobacion:especialidad.usuarioAprobacion      
+    });
+  }
+
 
   public Registrar(profe:profesional): Promise<any> {
-
-    
-
 
    //creo login 
    this.dataLogin=new usuario();
@@ -79,21 +91,7 @@ export class ProfesionalService {
         mail:this.dataLogin.usuario,
         nombre:this.dataLogin.nombre,
         tipo:this.dataLogin.tipo
-
       }).then().catch();
-
-      profe.especialidades.forEach(item=>{
-
-        this.afs.collection('especialidadProfesional').doc(this.dataLogin.id).set({          
-          idEspecialidad:item.idEspecialidad,
-          idProfesional:this.dataLogin.id,
-          nombre:item.nombre,
-          activa:item.activa,
-          usuarioAlta:item.usuarioAlta,
-          usuarioAprobacion:item.usuarioAprobacion
-        }).then().catch();
-      });
-
 
       this.afs.collection('profesionales').doc(this.dataLogin.id).set({
         id: this.dataLogin.id, 
@@ -104,7 +102,7 @@ export class ProfesionalService {
         sexo:profe.sexo,
         horario:profe.horario,
         edad: profe.edad,
-        nacionalidad:profe.nacionalidad,
+        nacionalidad:profe.nacionalidad,       
         diasHorarios:{
           lunes:profe.diasHorarios.lunes,
           martes:profe.diasHorarios.martes,
@@ -113,8 +111,7 @@ export class ProfesionalService {
           viernes:profe.diasHorarios.viernes,
           sabado:profe.diasHorarios.sabado      
         }
-      }).then().catch();
-
+      }).then().catch();   
       resolve(true);
     }).catch(err => {
       reject(false);

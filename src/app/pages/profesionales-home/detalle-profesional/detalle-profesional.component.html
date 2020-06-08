@@ -1,0 +1,48 @@
+<div class="modal modal-black" [ngStyle]="{'display': showDetalle ? 'block' : 'none'} " >
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="exampleModalAlta">Informacion del Profesional</p>
+          <button type="button" class="close" (click)="cerrar()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <h1 class="profile-title text-left">Legajo:{{profeInput.idProfesional}}</h1>
+                    <h2 class="text-info">{{profeInput.nombre}} {{profeInput.apellido}}</h2>
+                    <p class="text-info">Edad : {{profeInput.edad}}</p>
+                    <p class="text-info">Nacionalidad : {{profeInput.nacionalidad}}</p>
+                    <p class="text-info">Sexo : {{profeInput.sexo}}</p>
+                    <p class="text-info">Horario : {{profeInput.horario}}</p>
+                         <div class="btn-wrapper profile pt-3">
+                             <a href="https://twitter.com/creativetim" target="_blank" class="btn btn-icon btn-twitter btn-round mr-1"><i class="fab fa-twitter"></i></a><a href="https://www.facebook.com/creativetim" target="_blank" class="btn btn-icon btn-facebook btn-round mr-1">
+                                <i class="fab fa-facebook-square"></i></a>
+                                <a href="https://dribbble.com/creativetim" target="_blank" class="btn btn-icon btn-dribbble btn-round"><i class="fab fa-dribbble"></i></a>
+                            </div>
+                        </div>
+                    <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                        <div class="card card-coin card-plain">
+                            <div class="card-header">
+                                <img src="assets/img/doctor.jpg" class="img-center img-fluid rounded-circle">
+                                <h4 class="title">Especialidades:</h4>
+                            </div>
+                             <div class="card-body">
+                                <div *ngFor="let esp of listaInput">
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input type="checkbox" checked="checked" class="form-check-input" disabled>
+                                        <span class="form-check-sign">                   
+                                        </span> {{esp.nombre}} </label>
+                                      </div>
+                                  </div>
+                             </div>
+                             </div>
+                     </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+

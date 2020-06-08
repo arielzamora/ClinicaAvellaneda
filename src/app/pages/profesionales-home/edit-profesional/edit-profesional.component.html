@@ -1,8 +1,8 @@
-<div class="modal modal-black" [ngStyle]="{'display': showModalAlta ? 'block' : 'none'} " >
+<div class="modal modal-black" [ngStyle]="{'display': showEdit ? 'block' : 'none'} " >
     <div class="modal-dialog ">
       <div class="modal-content">
         <div class="modal-header">
-          <p class="modal-title" id="exampleModalAlta">Alta de Profesional</p>
+          <p class="modal-title" id="exampleModalAlta">Edicion de Profesional</p>
           <button type="button" class="close" (click)="cerrar()">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -12,23 +12,23 @@
           <div class="row">
             <div class="col-4">
                 <div class="form-group">
-                  <input type="text" id="idProfesional" formControlName="idProfesional" class="form-control" placeholder="Id Profesional" [ngClass]="{ 'is-invalid': submitted && f.idProfesional.errors?.required }">
-                  <div *ngIf="submitted && f.idProfesional.errors?.required" class="invalid-feedback"
-                    autocomplete="idProfesional">
-                    <div *ngIf="f.idProfesional.errors?.required">Debe ingresar un id para el Profesional</div>
+                  <input type="text" id="idProfesionalEdit" formControlName="idProfesionalEdit" class="form-control" placeholder="Id Profesional" [ngClass]="{ 'is-invalid': submitted && f.idProfesionalEdit.errors?.required }">
+                  <div *ngIf="submitted && f.idProfesionalEdit.errors?.required" class="invalid-feedback"
+                    autocomplete="idProfesionalEdit">
+                    <div *ngIf="f.idProfesionalEdit.errors?.required">Debe ingresar un id para el Profesional</div>
                   </div>
                 </div>
             </div>
             <div class="col-4" style="height: 200px;">
-              <div *ngFor="let esp of listaEspecialidad">
+              <div *ngFor="let esp of listaespecialidad">
                 <div class="form-check">
                   <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" (change)="especialidadChange(esp)" formControlName="especialidad">
+                    <input type="checkbox" class="form-check-input" (change)="especialidadChange(esp)" formControlName="especialidadEdit">
                     <span class="form-check-sign">                   
                     </span> {{esp.nombre}} </label>
                   </div>
-                  <div *ngIf="submitted && f.especialidad.errors?.required" class="invalid-feedback">
-                    <div *ngIf="f.especialidad.errors?.required">Seleccione Especialidad.</div>
+                  <div *ngIf="submitted && f.especialidadEdit.errors?.required" class="invalid-feedback">
+                    <div *ngIf="f.especialidadEdit.errors?.required">Seleccione especialidad.</div>
                   </div>
               </div>
            </div>
@@ -40,19 +40,19 @@
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <input type="text" id="nombre" formControlName="nombre" class="form-control" placeholder="Nombre" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors?.required }">               
-                <div *ngIf="submitted && f.nombre.errors?.required" class="invalid-feedback"
-                  autocomplete="nombre">
-                  <div *ngIf="f.nombre.errors?.required">Debe ingresar un nombre.</div>
+                <input type="text" id="nombreEdit" formControlName="nombreEdit" class="form-control" placeholder="nombreEdit" [ngClass]="{ 'is-invalid': submitted && f.nombreEdit.errors?.required }">               
+                <div *ngIf="submitted && f.nombreEdit.errors?.required" class="invalid-feedback"
+                  autocomplete="nombreEdit">
+                  <div *ngIf="f.nombreEdit.errors?.required">Debe ingresar un nombre.</div>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <div class="form-group">
-                <input type="text" id="apellido" formControlName="apellido" class="form-control" placeholder="Apellido" [ngClass]="{ 'is-invalid': submitted && f.apellido.errors?.required }">               
-                <div *ngIf="submitted && f.apellido.errors?.required" class="invalid-feedback"
-                  autocomplete="apellido">
-                  <div *ngIf="f.apellido.errors?.required">Debe ingresar un Apellido.</div>
+                <input type="text" id="apellidoeDIT" formControlName="apellidoEdit" class="form-control" placeholder="apellidoEdit" [ngClass]="{ 'is-invalid': submitted && f.apellidoEdit.errors?.required }">               
+                <div *ngIf="submitted && f.apellidoEdit.errors?.required" class="invalid-feedback"
+                  autocomplete="apellidoEdit">
+                  <div *ngIf="f.apellidoEdit.errors?.required">Debe ingresar un Apellido.</div>
                 </div>
               </div>
             </div>
@@ -60,19 +60,19 @@
             <div class="row">
               <div class="col-6">
                 <div class="form-group">
-                  <input type="text" id="email" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors?.required }">               
-                  <div *ngIf="submitted && f.email.errors?.required" class="invalid-feedback"
-                    autocomplete="email">
-                    <div *ngIf="f.email.errors?.required">Debe ingresar un email.</div>
+                  <input type="text" id="emailEdit" formControlName="emailEdit" class="form-control" placeholder="emailEdit" [ngClass]="{ 'is-invalid': submitted && f.emailEdit.errors?.required }">               
+                  <div *ngIf="submitted && f.emailEdit.errors?.required" class="invalid-feedback"
+                    autocomplete="emailEdit">
+                    <div *ngIf="f.emailEdit.errors?.required">Debe ingresar un email.</div>
                   </div>
                 </div>
               </div>
               <div class="col-6">
                 <div class="form-group">
-                  <input type="text" id="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors?.required }">               
-                  <div *ngIf="submitted && f.password.errors?.required" class="invalid-feedback"
-                    autocomplete="password">
-                    <div *ngIf="f.password.errors?.required">Debe ingresar un password.</div>
+                  <input type="text" id="passwordEdit" formControlName="passwordEdit" class="form-control" placeholder="passwordEdit" [ngClass]="{ 'is-invalid': submitted && f.passwordEdit.errors?.required }">               
+                  <div *ngIf="submitted && f.passwordEdit.errors?.required" class="invalid-feedback"
+                    autocomplete="passwordEdit">
+                    <div *ngIf="f.passwordEdit.errors?.required">Debe ingresar un password.</div>
                   </div>
                 </div>
               </div>
@@ -80,23 +80,23 @@
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <select id="sexo" formControlName="sexo" class="form-control" placeholder="seleccione">
+                <select id="sexoEdit" formControlName="sexoEdit" class="form-control" placeholder="seleccione">
                   <option selected value="">Seleccione Sexo</option>
                   <option >Masculino</option>
                   <option>Femenino</option>
                   <option>otros</option>
                 </select>
-                <div *ngIf="submitted && f.sexo.errors?.required" class="invalid-feedback">
-                  <div *ngIf="f.sexo.errors?.required">Seleccione sexo</div>
+                <div *ngIf="submitted && f.sexoEdit.errors?.required" class="invalid-feedback">
+                  <div *ngIf="f.sexoEdit.errors?.required">Seleccione sexo</div>
                 </div>
             </div>
             </div>
             <div class="col-6">
               <div class="form-group">
-                <input type="text" id="edad" formControlName="edad" class="form-control" placeholder="Edad" [ngClass]="{ 'is-invalid': submitted && f.edad.errors?.required }">               
-                <div *ngIf="submitted && f.edad.errors?.required" class="invalid-feedback"
-                  autocomplete="edad">
-                  <div *ngIf="f.edad.errors?.required">Debe ingresar las edad.</div>
+                <input type="text" id="edadEdit" formControlName="edadEdit" class="form-control" placeholder="Edad" [ngClass]="{ 'is-invalid': submitted && f.edadEdit.errors?.required }">               
+                <div *ngIf="submitted && f.edadEdit.errors?.required" class="invalid-feedback"
+                  autocomplete="edadEdit">
+                  <div *ngIf="f.edadEdit.errors?.required">Debe ingresar las edad.</div>
                 </div>
               </div>
             </div>
@@ -104,24 +104,24 @@
           <div class="row">      
             <div class="col-6">
               <div class="form-group">
-                <select id="tipoDni" formControlName="tipoDni" class="form-control" placeholder="seleccione">
+                <select id="tipoDniEdit" formControlName="tipoDniEdit" class="form-control" placeholder="seleccione">
                   <option selected value="">Tipo Dni</option>
                   <option >DNI</option>
                   <option>LE</option>
                   <option >LC</option>
                   <option>otros</option>
                 </select>
-                <div *ngIf="submitted && f.tipoDni.errors?.required" class="invalid-feedback">
-                  <div *ngIf="f.tipoDni.errors?.required">Seleccione Tipo</div>
+                <div *ngIf="submitted && f.tipoDniEdit.errors?.required" class="invalid-feedback">
+                  <div *ngIf="f.tipoDniEdit.errors?.required">Seleccione Tipo</div>
                 </div>
             </div>             
             </div>
             <div class="col-6">
               <div class="form-group">
-                <input type="text" id="dni" formControlName="dni" class="form-control" placeholder="Dni" [ngClass]="{ 'is-invalid': submitted && f.dni.errors?.required }">               
-                <div *ngIf="submitted && f.dni.errors?.required" class="invalid-feedback"
-                  autocomplete="dni">
-                  <div *ngIf="f.dni.errors?.required">Debe ingresar un Dni.</div>
+                <input type="text" id="dniEdit" formControlName="dniEdit" class="form-control" placeholder="Dni" [ngClass]="{ 'is-invalid': submitted && f.dniEdit.errors?.required }">               
+                <div *ngIf="submitted && f.dniEdit.errors?.required" class="invalid-feedback"
+                  autocomplete="dniEdit">
+                  <div *ngIf="f.dniEdit.errors?.required">Debe ingresar un Dni.</div>
                 </div>
               </div>
             </div>
@@ -129,21 +129,21 @@
           <div class="row">
             <div class="col-6">
               <div class="form-group">
-                <select id="horario" formControlName="horario" class="form-control" placeholder="seleccione">
+                <select id="horarioEdit" formControlName="horarioEdit" class="form-control" placeholder="seleccione">
                   <option selected value="">Horario</option>
                   <option>09-14</option>
                   <option>14-20</option>
                   <option>12-20</option>
                   <option>otros</option>
                 </select>
-                <div *ngIf="submitted && f.horario.errors?.required" class="invalid-feedback">
-                  <div *ngIf="f.horario.errors?.required">Seleccione Horario</div>
+                <div *ngIf="submitted && f.horarioEdit.errors?.required" class="invalid-feedback">
+                  <div *ngIf="f.horarioEdit.errors?.required">Seleccione Horario</div>
                 </div>
             </div>
            </div>
             <div class="col-6">
                 <div class="form-group">
-                  <select id="nacionalidad" formControlName="nacionalidad" class="form-control" placeholder="seleccione">
+                  <select id="nacionalidadEdit" formControlName="nacionalidadEdit" class="form-control" placeholder="seleccione">
                     <option selected value="">Nacionalidad</option>
                     <option >Argentina</option>
                     <option> Venezuela</option>
@@ -151,8 +151,8 @@
                     <option >Brasil</option>
                     <option>Mexico</option>
                   </select>
-                  <div *ngIf="submitted && f.nacionalidad.errors?.required" class="invalid-feedback">
-                    <div *ngIf="f.nacionalidad.errors?.required">seleccione Nacionalidad.</div>
+                  <div *ngIf="submitted && f.nacionalidadEdit.errors?.required" class="invalid-feedback">
+                    <div *ngIf="f.nacionalidadEdit.errors?.required">seleccione Nacionalidad.</div>
                   </div>
               </div>
             </div>
@@ -161,7 +161,7 @@
             <div class="col-2">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" formControlName="lunes">
+                  <input type="checkbox" class="form-check-input" formControlName="lunesEdit">
                   <span class="form-check-sign">                    
                   </span> Lunes </label>
                 </div>
@@ -169,7 +169,7 @@
             <div class="col-2">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" formControlName="martes">
+                  <input type="checkbox" class="form-check-input" formControlName="martesEdit">
                   <span class="form-check-sign">    
                   </span> Martes </label>
                 </div>
@@ -177,7 +177,7 @@
             <div class="col-2">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" formControlName="miercoles">
+                  <input type="checkbox" class="form-check-input" formControlName="miercolesEdit">
                   <span class="form-check-sign">                   
                   </span> Miercoles </label>
                 </div>
@@ -185,7 +185,7 @@
             <div class="col-2">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" formControlName="jueves">
+                  <input type="checkbox" class="form-check-input" formControlName="juevesEdit">
                   <span class="form-check-sign">                   
                   </span> Jueves </label>
                 </div>
@@ -193,7 +193,7 @@
             <div class="col-2">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" formControlName="viernes">
+                  <input type="checkbox" class="form-check-input" formControlName="viernesEdit">
                   <span class="form-check-sign">                    
                   </span> Viernes </label>
                 </div>
@@ -201,7 +201,7 @@
             <div class="col-2">
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="checkbox" class="form-check-input" formControlName="sabado">
+                  <input type="checkbox" class="form-check-input" formControlName="sabadoEdit">
                   <span class="form-check-sign">                   
                   </span> Sabado </label>
                 </div>
@@ -209,7 +209,7 @@
           </div>
             <div class="row">
               <small *ngIf="error" class="text-danger font-weight-bold"><i class="fa fa-times"></i> {{errorMessage}} </small>
-              <small *ngIf="success" class="text-success font-weight-bold"><i class="fas fa-check"></i> Especialidad registrada
+              <small *ngIf="success" class="text-success font-weight-bold"><i class="fas fa-check"></i> especialidadEdit registrada
                 correctamente. </small>
             </div>
             </form>
@@ -217,3 +217,4 @@
         </div>
       </div>
     </div>
+

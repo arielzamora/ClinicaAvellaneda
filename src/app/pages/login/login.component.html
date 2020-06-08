@@ -41,30 +41,35 @@
                 </div>
               </div>
               <form class="form" [formGroup]="form">
-                <div class="input-group" [ngClass]="{ 'input-group-focus': focus3 === true }">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="tim-icons icon-email-85"> </i>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input type="text" id="email" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors?.required }">               
+                      <div *ngIf="submitted && f.email.errors?.required" class="invalid-feedback"
+                        autocomplete="email">
+                        <div *ngIf="f.email.errors?.required">Debe ingresar un email.</div>
+                      </div>
                     </div>
                   </div>
-                  <input class="form-control" placeholder="Email" type="text"
-                    (focus)="focus3 = true" (blur)="focus3 = false" formControlName="Email"/>
                 </div>
-                <div class="input-group"[ngClass]="{ 'input-group-focus': focus4 === true }">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="tim-icons icon-lock-circle"> </i>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input type="text" id="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors?.required }">               
+                      <div *ngIf="submitted && f.password.errors?.required" class="invalid-feedback"
+                        autocomplete="password">
+                        <div *ngIf="f.password.errors?.required">Debe ingresar un password.</div>
+                      </div>
                     </div>
                   </div>
-                  <input class="form-control"placeholder="Password"type="text"
-                  (focus)="focus4 = true" (blur)="focus4 = false" formControlName="Password"/>
-                </div>
-                <div class="form-check text-left">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" />
-
-                    <span class="form-check-sign"> </span> va el capchta
-                  </label>
+              </div>
+                <div class="row">
+                  <div class="col-12">
+                  <div class="form-group">
+                    <ngx-recaptcha2 (resolved)="resolved($event)" #captchaElem [siteKey]="key" [size]="'normal'" [hl]="'es'" [theme]="'light'" [type]="'image'" formControlName="recaptcha">
+                    </ngx-recaptcha2>  
+                  </div>  
+                  </div>
                 </div>
               </form>
             </div>

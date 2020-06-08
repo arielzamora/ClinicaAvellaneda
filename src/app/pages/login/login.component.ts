@@ -1,15 +1,13 @@
-import { Component, OnInit,Input,Output,EventEmitter, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from "../../services/auth.service";
 import { usuario } from "src/app/model/usuario";
 import { Router } from '@angular/router';
-//import { ReCaptcha2Component } from 'ngx-captcha';
 
 import {AngularFireStorage}from '@angular/fire/storage';
-import {finalize}from 'rxjs/operators';
-import {Observable} from 'rxjs/internal/Observable';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { ReCaptcha2Component } from 'ngx-captcha';
 
 @Component({
   selector: 'app-login',
@@ -17,22 +15,24 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit ,OnDestroy{
-  focus;
-  focus1;
-  focus2;
+
   public form: FormGroup;
-  public error: boolean;
   public errorMessage: string;
+  public error: boolean;
+  public success: boolean;
+  submitted = false;
   user:usuario;
   isLogueado:boolean;
   public usuarios: Array<any>;
   existe:boolean=false;
+  @ViewChild('captchaElem',{static:true}) captcha: ReCaptcha2Component;
+  @ViewChild('inputEmail',{static:true}) inputEmail: ReCaptcha2Component;
+  @ViewChild('inputPassword',{static:true}) inputPasword: ReCaptcha2Component;
+  key:string;
   constructor(private fb: FormBuilder, public authService:AuthService,private router:Router,private fireStore:AngularFireStorage,private AFauth :AngularFireAuth) {
-    this.form = this.fb.group({
-      Email: ['', Validators.required],
-      Password: ['', Validators.required]
-    });
+
     this.usuarios=this.authService.traerTodos();
+    this.key = '6Le-Z78UAAAAABcjicZLxcZMuebY_chP-kDOHlWj';
   }
 
 
@@ -41,22 +41,25 @@ export class LoginComponent implements OnInit ,OnDestroy{
     switch (tipo) {
       case 'A':
         dataLogin = {
-          Email: 'admin@admin.com',
-          Password: '123456'
+          email: 'admin@admin.com',
+          password: '123456',
+          recaptcha:''
         };
         this.form.setValue(dataLogin);
       break;
       case 'P':
           dataLogin = {
-            Email: 'paciente@paciente.com',
-            Password: '123456'
+            email: 'paciente@paciente.com',
+            password: '123456',
+            recaptcha:''
           };
       this.form.setValue(dataLogin);
       break;
       case 'E':
             dataLogin = {
-              Email: 'profesional@profesional.com',
-              Password: '123456'
+              email: 'profesional@profesional.com',
+              password: '123456',
+              recaptcha:''
             };
        this.form.setValue(dataLogin);
       break;
@@ -66,16 +69,19 @@ export class LoginComponent implements OnInit ,OnDestroy{
   public Ingresar(): void {
     this.errorMessage = '';
     this.error = false;
+    this.success = false;
+    this.submitted=true;
     if (this.form.valid) {
       localStorage.clear();
 
       this.user=new usuario();
-      this.user.usuario= this.form.get('Email').value
-      this.user.password=this.form.get('Password').value
+      this.user.usuario= this.form.get('email').value
+      this.user.password=this.form.get('password').value
 
       this.authService.Loguear(this.user)
         .then(response=>{
           if(response){
+            this.success = true;
             this.user.id=response.toString();
             this.guardarUsuario(this.user);
    
@@ -139,6 +145,11 @@ export class LoginComponent implements OnInit ,OnDestroy{
     element.scrollIntoView({ behavior: "smooth" });
   }
   ngOnInit() {
+    this.form = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      recaptcha: ['', Validators.required]
+    });
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("index-page");
   }

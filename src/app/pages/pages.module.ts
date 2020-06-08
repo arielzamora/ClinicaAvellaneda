@@ -44,6 +44,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 import { UsuarioHomeComponent } from './usuario-home/usuario-home.component';
 import { ListadoUsuariosComponent } from './usuario-home/listado-usuarios/listado-usuarios.component';
 import { RegistroTurnoComponent } from './turnos-home/registro-turno/registro-turno.component';
+import { DetalleProfesionalComponent } from './profesionales-home/detalle-profesional/detalle-profesional.component';
+import { EditProfesionalComponent } from './profesionales-home/edit-profesional/edit-profesional.component';
 
 @NgModule({
   imports: [
@@ -89,7 +91,9 @@ import { RegistroTurnoComponent } from './turnos-home/registro-turno/registro-tu
     AltaProfesionalesComponent,
     UsuarioHomeComponent,
     ListadoUsuariosComponent,
-    RegistroTurnoComponent
+    RegistroTurnoComponent,
+    DetalleProfesionalComponent,
+    EditProfesionalComponent
 
   ],
   exports: [
