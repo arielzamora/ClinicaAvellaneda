@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
   public errorMessage: string;
   public error: boolean;
   public success: boolean;
+  get f() { return this.form.controls; }
   submitted = false;
   user:usuario;
   isLogueado:boolean;
@@ -98,6 +99,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
           }
         );
     } else {
+      this.isLogueado=false;
       this.errorMessage = 'Debe completar los campos correctamente.';
       this.error = true;
     }
@@ -134,11 +136,6 @@ export class LoginComponent implements OnInit ,OnDestroy{
 
     })
     this.router.navigate(['/bienvenida']);
-    //si es admin no busco nada ,solo tiene accesso total
-    
-    //si es paciente busco toda su info 
-    
-    //si es especialista tambien busco toda su info
 
   }
   scrollToDownload(element: any) {

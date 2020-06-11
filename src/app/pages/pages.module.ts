@@ -46,6 +46,8 @@ import { ListadoUsuariosComponent } from './usuario-home/listado-usuarios/listad
 import { RegistroTurnoComponent } from './turnos-home/registro-turno/registro-turno.component';
 import { DetalleProfesionalComponent } from './profesionales-home/detalle-profesional/detalle-profesional.component';
 import { EditProfesionalComponent } from './profesionales-home/edit-profesional/edit-profesional.component';
+import { ListadoDiasComponent } from './turnos-home/listado-dias/listado-dias.component';
+import { ListadoHorariosComponent } from './turnos-home/listado-horarios/listado-horarios.component';
 
 @NgModule({
   imports: [
@@ -93,7 +95,9 @@ import { EditProfesionalComponent } from './profesionales-home/edit-profesional/
     ListadoUsuariosComponent,
     RegistroTurnoComponent,
     DetalleProfesionalComponent,
-    EditProfesionalComponent
+    EditProfesionalComponent,
+    ListadoDiasComponent,
+    ListadoHorariosComponent
 
   ],
   exports: [

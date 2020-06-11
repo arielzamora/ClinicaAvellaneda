@@ -569,6 +569,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-dias/listado-dias.component.html":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-dias/listado-dias.component.html ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Profesional</th>\n            <th>Especialidad</th>\n            <th>Dia</th>\n            <th>Disponible</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>dr marcos</td>\n            <td>Clinica</td>\n            <td>10/10/2020</td>\n            <td>si</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.html":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.html ***!
+  \**************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Profesional</th>\n            <th>Horario</th>\n            <th>Disponible</th>\n            <th class=\"text-right\">Seleccionar</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>Dr Marcos</td>\n            <td>09:00</td>\n            <td>Si</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html":
 /*!**********************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html ***!
@@ -591,7 +617,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <br>\n            <br>\n            <div class=\"card card-register\">\n              <h3 class=\"card-title\">Registro Turno</h3>\n              <div class=\"card-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n                <div class=\"row\">\n                <div class=\"col-4\">\n                    <div class=\"form-group\">\n                        <select id=\"especialidad\" formControlName=\"especialidad\" class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Seleccione Especialidad</option>\n                            <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-4\">\n                    <div class=\"form-group\">\n                    <select id=\"especialidad\" formControlName=\"especialidad\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Seleccione Profesional</option>\n                        <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                    </div>\n                </div>\n                </div>              \n                <div class=\"col-4\">\n                    <div class=\"form-group\">\n                    <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                    <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"nombre\">\n                        <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                    </div>\n                    </div>\n                </div>\n            </div>\n             <div class=\"row\">\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                    <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"apellido\">\n                        <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                    </div>\n                    </div>\n                </div>\n            </div>\n                <div class=\"row\">\n                    <div class=\"col-6\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"email\">\n                        <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                        </div>\n                    </div>\n                    </div>\n                    <div class=\"col-6\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"password\">\n                        <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                        </div>\n                    </div>\n                    </div>\n                </div>\n                <div class=\"row\">\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Seleccione Sexo</option>\n                        <option >Masculino</option>\n                        <option>Femenino</option>\n                        <option>otros</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                    </div>\n                </div>\n                </div>\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                    <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"edad\">\n                        <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                    </div>\n                    </div>\n                </div>\n                </div>\n                <div class=\"row\">      \n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Tipo Dni</option>\n                        <option >DNI</option>\n                        <option>LE</option>\n                        <option >LC</option>\n                        <option>otros</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                    </div>\n                </div>             \n                </div>\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                    <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"dni\">\n                        <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                    </div>\n                    </div>\n                </div>\n                </div>\n                <div class=\"row\">\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <select id=\"horario\" formControlName=\"horario\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Horario</option>\n                        <option>09-14</option>\n                        <option>14-20</option>\n                        <option>12-20</option>\n                        <option>otros</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.horario.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.horario.errors?.required\">Seleccione Horario</div>\n                    </div>\n                </div>\n                </div>\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                        <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Nacionalidad</option>\n                        <option >Argentina</option>\n                        <option> Venezuela</option>\n                        <option> Colombia</option>\n                        <option >Brasil</option>\n                        <option>Mexico</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                        </div>\n                    </div>\n                </div>\n                </div>\n                <div class=\"row\">\n                <div class=\"col-2\">\n                    <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                        <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"lunes\">\n                        <span class=\"form-check-sign\">                    \n                        </span> Lunes </label>\n                    </div>\n                </div>\n                <div class=\"col-2\">\n                    <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                        <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"martes\">\n                        <span class=\"form-check-sign\">    \n                        </span> Martes </label>\n                    </div>\n                </div>\n                <div class=\"col-2\">\n                    <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                        <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"miercoles\">\n                        <span class=\"form-check-sign\">                   \n                        </span> Miercoles </label>\n                    </div>\n                </div>\n                <div class=\"col-2\">\n                    <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                        <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"jueves\">\n                        <span class=\"form-check-sign\">                   \n                        </span> Jueves </label>\n                    </div>\n                </div>\n                <div class=\"col-2\">\n                    <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                        <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"viernes\">\n                        <span class=\"form-check-sign\">                    \n                        </span> Viernes </label>\n                    </div>\n                </div>\n                <div class=\"col-2\">\n                    <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                        <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"sabado\">\n                        <span class=\"form-check-sign\">                   \n                        </span> Sabado </label>\n                    </div>\n                </div>\n                </div>\n                <div class=\"row\">\n                    <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                    <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                    correctamente. </small>\n                </div>\n                    <hr>\n                    <div class=\"row\">\n                    <div class=\"col-6\">\n                        <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                    </div>\n                    <div class=\"col-6\">\n                        <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                    </div>\n                    </div>\n            </form>\n        </div>\n      </div>\n    </div>\n  </div>     \n</div>\n</div>\n</div>\n<app-footer></app-footer>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <br>\n            <br>\n            <div class=\"card card-register\">\n              <h3 class=\"card-title\">Paciente : </h3>\n              <div class=\"card-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n                <div class=\"row\">\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                        <select id=\"especialidad\" formControlName=\"especialidad\" (change)=\"especialidadChange(esp)\" class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Seleccione Especialidad</option>\n                            <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <select id=\"especialidad\" formControlName=\"especialidad\" (change)=\"profesionalChange(esp)\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Seleccione Profesional</option>\n                        <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                    </div>\n                </div>\n                </div>              \n            </div>                        \n                <div class=\"row\" *ngIf=\"onDias\">\n                <div class=\"col-10\">\n               <p class=\"text-success\">Dias disponibles</p>\n                    <table class=\"table\">\n                        <thead>\n                            <tr>\n                                <th class=\"text-center\">#</th>\n                                <th>Profesional</th>\n                                <th>Especialidad</th>\n                                <th>Dia</th>\n                                <th>Disponible</th>\n                                <th class=\"text-right\">Actions</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr>\n                                <td class=\"text-center\">1</td>\n                                <td>dr marcos</td>\n                                <td>Clinica</td>\n                                <td>10/10/2020</td>\n                                <td>si</td>\n                                <td class=\"td-actions text-right\">\n                                    <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                                        <i class=\"tim-icons icon-single-02\"></i>\n                                    </button>\n                                </td>\n                            </tr>\n                        </tbody>\n                    </table>                \n        </div>\n                </div>\n            <div class=\"row\" *ngIf=\"onTurnos\">\n                    <div class=\"col-10\">\n                    <p class=\"text-success\">Horarios disponibles</p>\n                        <app-listado-horarios (profesional)=\"profesional\" [horarioSeleccion]=\"\"></app-listado-horarios>\n                </div>\n                </div>\n                <div class=\"row\">\n                    <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                    <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                    correctamente. </small>\n                </div>\n                    <hr>\n                    <div class=\"row\">\n                    <div class=\"col-6\">\n                        <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                    </div>\n                    <div class=\"col-6\">\n                        <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                    </div>\n                    </div>\n            </form>\n        </div>\n      </div>\n    </div>\n  </div>     \n</div>\n</div>\n</div>\n<app-footer></app-footer>\n</div>\n");
 
 /***/ }),
 
@@ -2347,6 +2373,11 @@ var LoginComponent = /** @class */ (function () {
         this.usuarios = this.authService.traerTodos();
         this.key = '6Le-Z78UAAAAABcjicZLxcZMuebY_chP-kDOHlWj';
     }
+    Object.defineProperty(LoginComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
     LoginComponent.prototype.CargarDefault = function (tipo) {
         var dataLogin = null;
         switch (tipo) {
@@ -2403,6 +2434,7 @@ var LoginComponent = /** @class */ (function () {
             });
         }
         else {
+            this.isLogueado = false;
             this.errorMessage = 'Debe completar los campos correctamente.';
             this.error = true;
         }
@@ -2433,9 +2465,6 @@ var LoginComponent = /** @class */ (function () {
             }
         });
         this.router.navigate(['/bienvenida']);
-        //si es admin no busco nada ,solo tiene accesso total
-        //si es paciente busco toda su info 
-        //si es especialista tambien busco toda su info
     };
     LoginComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -2755,6 +2784,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./turnos-home/registro-turno/registro-turno.component */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.ts");
 /* harmony import */ var _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./profesionales-home/detalle-profesional/detalle-profesional.component */ "./src/app/pages/profesionales-home/detalle-profesional/detalle-profesional.component.ts");
 /* harmony import */ var _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./profesionales-home/edit-profesional/edit-profesional.component */ "./src/app/pages/profesionales-home/edit-profesional/edit-profesional.component.ts");
+/* harmony import */ var _turnos_home_listado_dias_listado_dias_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./turnos-home/listado-dias/listado-dias.component */ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.ts");
+/* harmony import */ var _turnos_home_listado_horarios_listado_horarios_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./turnos-home/listado-horarios/listado-horarios.component */ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.ts");
+
+
 
 
 
@@ -2849,7 +2882,9 @@ var PagesModule = /** @class */ (function () {
                 _usuario_home_listado_usuarios_listado_usuarios_component__WEBPACK_IMPORTED_MODULE_40__["ListadoUsuariosComponent"],
                 _turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_41__["RegistroTurnoComponent"],
                 _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_42__["DetalleProfesionalComponent"],
-                _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_43__["EditProfesionalComponent"]
+                _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_43__["EditProfesionalComponent"],
+                _turnos_home_listado_dias_listado_dias_component__WEBPACK_IMPORTED_MODULE_44__["ListadoDiasComponent"],
+                _turnos_home_listado_horarios_listado_horarios_component__WEBPACK_IMPORTED_MODULE_45__["ListadoHorariosComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
@@ -3880,6 +3915,100 @@ var CalendarioComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/listado-dias/listado-dias.component.scss ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2xpc3RhZG8tZGlhcy9saXN0YWRvLWRpYXMuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/listado-dias/listado-dias.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: ListadoDiasComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoDiasComponent", function() { return ListadoDiasComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var ListadoDiasComponent = /** @class */ (function () {
+    function ListadoDiasComponent() {
+    }
+    ListadoDiasComponent.prototype.ngOnInit = function () {
+    };
+    ListadoDiasComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-listado-dias',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-dias.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-dias/listado-dias.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-dias.component.scss */ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], ListadoDiasComponent);
+    return ListadoDiasComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.scss":
+/*!************************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.scss ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2xpc3RhZG8taG9yYXJpb3MvbGlzdGFkby1ob3Jhcmlvcy5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: ListadoHorariosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoHorariosComponent", function() { return ListadoHorariosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var ListadoHorariosComponent = /** @class */ (function () {
+    function ListadoHorariosComponent() {
+    }
+    ListadoHorariosComponent.prototype.ngOnInit = function () {
+    };
+    ListadoHorariosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-listado-horarios',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-horarios.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-horarios.component.scss */ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], ListadoHorariosComponent);
+    return ListadoHorariosComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss":
 /*!********************************************************************************!*\
   !*** ./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss ***!
@@ -3936,7 +4065,7 @@ var ListadoTurnosComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3JlZ2lzdHJvLXR1cm5vL3JlZ2lzdHJvLXR1cm5vLmNvbXBvbmVudC5zY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("select.form-control {\n  background-color: #1f2251;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdHVybm9zLWhvbWUvcmVnaXN0cm8tdHVybm8vQzpcXEFubmd1bGFyXFxibGstZGVzaWduLXN5c3RlbS1hbmd1bGFyLW1hc3Rlci9zcmNcXGFwcFxccGFnZXNcXHR1cm5vcy1ob21lXFxyZWdpc3Ryby10dXJub1xccmVnaXN0cm8tdHVybm8uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3JlZ2lzdHJvLXR1cm5vL3JlZ2lzdHJvLXR1cm5vLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kseUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3JlZ2lzdHJvLXR1cm5vL3JlZ2lzdHJvLXR1cm5vLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsic2VsZWN0LmZvcm0tY29udHJvbCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiMxZjIyNTE7O1xyXG5cclxufSIsInNlbGVjdC5mb3JtLWNvbnRyb2wge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMWYyMjUxO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -3970,12 +4099,18 @@ var RegistroTurnoComponent = /** @class */ (function () {
         this.submitted = false;
         this.cargarLista();
         this.diasHorarios = new src_app_model_diashorarios__WEBPACK_IMPORTED_MODULE_3__["diasHorarios"]();
+        this.obtenerUsuarioActual();
     }
     Object.defineProperty(RegistroTurnoComponent.prototype, "f", {
         get: function () { return this.form.controls; },
         enumerable: true,
         configurable: true
     });
+    RegistroTurnoComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
+    };
     RegistroTurnoComponent.prototype.cargarLista = function () {
         var _this = this;
         this.especialidaService.Listar()
@@ -3987,6 +4122,12 @@ var RegistroTurnoComponent = /** @class */ (function () {
     };
     RegistroTurnoComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
+    };
+    RegistroTurnoComponent.prototype.especialidadChange = function (espo) {
+    };
+    RegistroTurnoComponent.prototype.profesionalChange = function (espo) {
+        this.onDias = true;
+        this.onTurnos = true;
     };
     RegistroTurnoComponent.prototype.ngOnInit = function () {
         var body = document.getElementsByTagName("body")[0];
