@@ -71,6 +71,11 @@
                   </div>  
                   </div>
                 </div>
+                <div class="row">
+                  <small *ngIf="error" class="text-danger font-weight-bold"><i class="fa fa-times"></i> {{errorMessage}} </small>
+                  <small *ngIf="success" class="text-success font-weight-bold"><i class="fas fa-check"></i> Especialidad registrada
+                  correctamente. </small>
+              </div>
               </form>
             </div>
             <div class="card-footer">

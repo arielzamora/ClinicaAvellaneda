@@ -97,7 +97,7 @@ export class EditProfesionalComponent implements OnInit {
     this.listaAux.forEach(item=>{
       if(item.add==true){
         this.especialidadPro=new especialidadProfesional();
-        this.especialidadPro.idEspecialidad=item.idEspecialidad,
+        this.especialidadPro.idEspecialida=item.idEspecialidad,
         this.especialidadPro.idProfesional=idProfesional,
         this.especialidadPro.nombre=item.nombre,
         this.especialidadPro.activa=item.activa,

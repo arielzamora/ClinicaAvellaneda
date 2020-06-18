@@ -10,21 +10,22 @@
     <div class="squares square6"></div>
     <div class="squares square7"></div>
     <div class="container">
-      <div class="content-center">
+        <br>
+      <div class="content">
         <div class="row">
           <div class="col-12">
             <br>
             <br>
             <div class="card card-register">
-              <h3 class="card-title">Paciente : </h3>
+              <h3 class="card-title">Turnos para : {{pacienteStorage[0].nombre}}-{{pacienteStorage[0].apellido}}</h3>
               <div class="card-body">
             <form [formGroup]="form" (keyup.enter)="Submit()">
                 <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <select id="especialidad" formControlName="especialidad" (change)="especialidadChange(esp)" class="form-control" placeholder="seleccione">
+                        <select id="especialidad" formControlName="especialidad"  (change)="especialidadChange($event)"  class="form-control" placeholder="seleccione">
                             <option selected value="">Seleccione Especialidad</option>
-                            <option *ngFor="let esp of listaEspecialidad">{{esp.nombre}}</option>
+                            <option value="{{esp.idEspecialida}}" *ngFor="let esp of listaEspecialidadFiltrada" >{{esp.nombre}}</option>
                         </select>
                         <div *ngIf="submitted && f.especialidad.errors?.required" class="invalid-feedback">
                             <div *ngIf="f.especialidad.errors?.required">Seleccione Especialidad.</div>
@@ -33,52 +34,50 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                    <select id="especialidad" formControlName="especialidad" (change)="profesionalChange(esp)" class="form-control" placeholder="seleccione">
+                    <select id="profesional" formControlName="profesional" (change)="profesionalChange($event)" class="form-control" placeholder="seleccione">
                         <option selected value="">Seleccione Profesional</option>
-                        <option *ngFor="let esp of listaEspecialidad">{{esp.nombre}}</option>
+                        <option value="{{prof.idProfesional}}" *ngFor="let prof of listaEspecialidadAux">{{prof.nombreProfesional}}</option>
                     </select>
-                    <div *ngIf="submitted && f.especialidad.errors?.required" class="invalid-feedback">
-                        <div *ngIf="f.especialidad.errors?.required">Seleccione Especialidad.</div>
+                    <div *ngIf="submitted && f.profesional.errors?.required" class="invalid-feedback">
+                        <div *ngIf="f.profesional.errors?.required">Seleccione profesional.</div>
                     </div>
                 </div>
                 </div>              
             </div>                        
-                <div class="row" *ngIf="onDias">
-                <div class="col-10">
+                <div class="row">
+                <div class="col-6">
                <p class="text-success">Dias disponibles</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="text-center">#</th>
-                                <th>Profesional</th>
-                                <th>Especialidad</th>
-                                <th>Dia</th>
-                                <th>Disponible</th>
-                                <th class="text-right">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">1</td>
-                                <td>dr marcos</td>
-                                <td>Clinica</td>
-                                <td>10/10/2020</td>
-                                <td>si</td>
-                                <td class="td-actions text-right">
-                                    <button type="button" rel="tooltip" class="btn btn-info btn-simple btn-icon btn-sm">
-                                        <i class="tim-icons icon-single-02"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>                
-        </div>
+                <div class="form-group">
+                    <select id="dia" formControlName="dia" (change)="diaChange($event)" class="form-control" placeholder="seleccione">
+                        <option selected value="">Seleccione Dia</option>
+                        <option value="{{dias.fecha}}" *ngFor="let dias of listadoTurnoDias">{{dias.dia}} : {{dias.fecha}}</option>
+                    </select>
+                    <div *ngIf="submitted && f.dia.errors?.required" class="invalid-feedback">
+                        <div *ngIf="f.dia.errors?.required">Seleccione Dia.</div>
+                    </div>
                 </div>
-            <div class="row" *ngIf="onTurnos">
-                    <div class="col-10">
+            
+                    </div>
+                    <div class="col-6">
                     <p class="text-success">Horarios disponibles</p>
-                        <app-listado-horarios (profesional)="profesional" [horarioSeleccion]=""></app-listado-horarios>
+                    <div class="form-group">
+                        <select id="hora" formControlName="hora" class="form-control" placeholder="seleccione">
+                            <option selected value="">Seleccione hora</option>
+                            <option value="{{hora}}" *ngFor="let hora of listadoHorarios">{{hora}}</option>
+                        </select>
+                        <div *ngIf="submitted && f.hora.errors?.required" class="invalid-feedback">
+                            <div *ngIf="f.hora.errors?.required">Seleccione hora.</div>
+                        </div>
+                    </div>
                 </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-success">Motivo de Atencion :</p>
+                        <div class="form-group">
+                            <textarea class="form-control" formControlName="motivo" rows="10" placeholder="Motivo de atencion?" required></textarea>
+                        </div>
+                    </div>    
                 </div>
                 <div class="row">
                     <small *ngIf="error" class="text-danger font-weight-bold"><i class="fa fa-times"></i> {{errorMessage}} </small>
@@ -87,10 +86,10 @@
                 </div>
                     <hr>
                     <div class="row">
-                    <div class="col-6">
-                        <button type="submit" class="btn btn-primary" (click)="Submit()">Registrar</button><br>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary" (click)="RegistrarTurno()">Registrar</button><br>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <button type="submit" class="btn btn-secondary" (click)="cerrar()">Cancelar</button><br>
                     </div>
                     </div>

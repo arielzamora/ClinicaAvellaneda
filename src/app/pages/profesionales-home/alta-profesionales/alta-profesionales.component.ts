@@ -85,7 +85,7 @@ export class AltaProfesionalesComponent implements OnInit {
 
   }
 
-  public cargoEspecialidades(idProfesional:string)
+  public cargoEspecialidades(prof:profesional)
   {
     
     const data = localStorage.getItem('listaAux');
@@ -96,9 +96,10 @@ export class AltaProfesionalesComponent implements OnInit {
     this.listaAux.forEach(item=>{
       if(item.add==true){
         this.especialidadPro=new especialidadProfesional();
-        this.especialidadPro.idEspecialidad=item.idEspecialidad,
-        this.especialidadPro.idProfesional=idProfesional,
+        this.especialidadPro.idEspecialida=item.idEspecialidad,
+        this.especialidadPro.idProfesional=prof.idProfesional,
         this.especialidadPro.nombre=item.nombre,
+        this.especialidadPro.nombreProfesional=prof.nombre+'-'+prof.apellido,
         this.especialidadPro.activa=item.activa,
         this.especialidadPro.usuarioAlta=item.usuarioAlta,
         this.especialidadPro.usuarioAprobacion=""
@@ -124,7 +125,7 @@ export class AltaProfesionalesComponent implements OnInit {
     this.submitted=true;
 
     if (this.form.valid ) {
-      this.cargoEspecialidades(this.form.get('idProfesional').value);
+      
       this.profesional=new profesional();
       this.profesional.idProfesional = this.form.get('idProfesional').value;
       this.profesional.nombre = this.form.get('nombre').value;
@@ -144,6 +145,7 @@ export class AltaProfesionalesComponent implements OnInit {
       this.diasHorarios.viernes=this.form.get('viernes').value;
       this.diasHorarios.sabado=this.form.get('sabado').value;
       this.profesional.diasHorarios=this.diasHorarios;
+      this.cargoEspecialidades(this.profesional);
 
       this.profesionalService.Registrar(this.profesional)
         .then(

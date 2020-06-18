@@ -19,6 +19,7 @@ import{ProfesionalesHomeComponent} from "./pages/profesionales-home/profesionale
 import{TurnosHomeComponent} from "./pages/turnos-home/turnos-home.component";
 import{UsuarioHomeComponent}from "./pages/usuario-home/usuario-home.component";
 import{RegistroTurnoComponent}from "./pages/turnos-home/registro-turno/registro-turno.component";
+import{MisTurnosComponent}from "./pages/turnos-home/mis-turnos/mis-turnos.component";
 
 const routes: Routes = [
   { 
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: "turnos", component: TurnosHomeComponent ,canActivate:[AuthGuard]},
   { path: "usuarios", component: UsuarioHomeComponent ,canActivate:[AuthGuard]},
   { path: "registroTurno", component: RegistroTurnoComponent ,canActivate:[AuthGuard]},
+  { path: "misTurnos", component: MisTurnosComponent ,canActivate:[AuthGuard]},
   { path: "profile", component: ProfilepageComponent,
     canActivate: [AuthGuard],
     data: { roles: ['admin'] } 

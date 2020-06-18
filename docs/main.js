@@ -309,6 +309,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/common/csv/csv.component.html":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/common/csv/csv.component.html ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<button class=\"btn btn-outline-primary btn-sm\" type=\"button\" (click)=\"onDownload()\"><i class=\"fas fa-file-csv\"></i> Exportar a CSV</button>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.html":
 /*!****************************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.html ***!
@@ -409,7 +422,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center brand\">\n        <h1 class=\"h1-seo\">Clinica Avellaneda</h1>\n        <h3>\n         Somos una clinica en la ciudad de avellaneda \n        </h3>\n      </div>\n    </div>\n  </div>\n\n  <app-footer></app-footer>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <div class=\"row\">\n          <div class=\"col-6\">\n            <h1 class=\"h1-seo\">Clinica Avellaneda</h1>\n            <h3>\n             Somos una clinica en la ciudad de avellaneda con mas de 30 años brindando servicios \n            </h3>\n          </div>\n          <div class=\"col-6\">\n            <img alt=\"Rounded image\" src=\"assets/img/clinicaAvellaneda.jpg\" class=\"img-fluid rounded shadow\" style=\"width: 350px;\">\n          </div>\n        </div>\n     \n      </div>\n    </div>\n  </div>\n\n  <app-footer></app-footer>\n</div>\n\n");
 
 /***/ }),
 
@@ -435,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<br>\n<div class=\"wrapper\">\n    <div class=\"page-header\">\n      <div class=\"page-header-image\"></div>\n      <div class=\"squares square1\"></div>\n      <div class=\"squares square2\"></div>\n      <div class=\"squares square3\"></div>\n      <div class=\"squares square4\"></div>\n      <div class=\"squares square5\"></div>\n      <div class=\"squares square6\"></div>\n      <div class=\"squares square7\"></div>\n      <div class=\"container\">\n        <div class=\"content-center brand col-lg-10 col-md-6\">\n          <div class=\"card card-register\">\n            <div class=\"card-header\">\n              <img\n                alt=\"Card image\"\n                class=\"card-img\"\n                src=\"assets/img/square1-red.png\"\n              />\n\n              <h3 class=\"card-title\">Ingreso</h3>\n            </div>\n            <div class=\"card-body\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Administrador\" class=\"btn btn-primary btn-icon btn-round mr-1\" (click)=\"CargarDefault('A')\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Paciente\" class=\"btn btn-succes btn-icon btn-round mr-1\" (click)=\"CargarDefault('P')\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Profesional\" class=\"btn btn-danger btn-icon btn-round mr-1\" (click)=\"CargarDefault('E')\">\n                    <i class=\"tim-icons icon-heart-2\"></i>\n                    </button>\n                </div>\n              </div>\n              <form class=\"form\" [formGroup]=\"form\">\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"email\">\n                        <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"password\">\n                        <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                      </div>\n                    </div>\n                  </div>\n              </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                  <div class=\"form-group\">\n                    <ngx-recaptcha2 (resolved)=\"resolved($event)\" #captchaElem [siteKey]=\"key\" [size]=\"'normal'\" [hl]=\"'es'\" [theme]=\"'light'\" [type]=\"'image'\" formControlName=\"recaptcha\">\n                    </ngx-recaptcha2>  \n                  </div>  \n                  </div>\n                </div>\n              </form>\n            </div>\n            <div class=\"card-footer\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <a class=\"btn btn-primary btn-round btn-lg\" (click)=\"Ingresar()\" >\n                    Ingresar\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-succes btn-round btn-lg\" [routerLink]=\"['/registro']\">\n                    Registrarse\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-danger btn-round btn-lg\" [routerLink]=\"['/bienvenida']\">\n                    Cancelar\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n</div>\n</div>\n</div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<br>\n<div class=\"wrapper\">\n    <div class=\"page-header\">\n      <div class=\"page-header-image\"></div>\n      <div class=\"squares square1\"></div>\n      <div class=\"squares square2\"></div>\n      <div class=\"squares square3\"></div>\n      <div class=\"squares square4\"></div>\n      <div class=\"squares square5\"></div>\n      <div class=\"squares square6\"></div>\n      <div class=\"squares square7\"></div>\n      <div class=\"container\">\n        <div class=\"content-center brand col-lg-10 col-md-6\">\n          <div class=\"card card-register\">\n            <div class=\"card-header\">\n              <img\n                alt=\"Card image\"\n                class=\"card-img\"\n                src=\"assets/img/square1-red.png\"\n              />\n\n              <h3 class=\"card-title\">Ingreso</h3>\n            </div>\n            <div class=\"card-body\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Administrador\" class=\"btn btn-primary btn-icon btn-round mr-1\" (click)=\"CargarDefault('A')\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Paciente\" class=\"btn btn-succes btn-icon btn-round mr-1\" (click)=\"CargarDefault('P')\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Profesional\" class=\"btn btn-danger btn-icon btn-round mr-1\" (click)=\"CargarDefault('E')\">\n                    <i class=\"tim-icons icon-heart-2\"></i>\n                    </button>\n                </div>\n              </div>\n              <form class=\"form\" [formGroup]=\"form\">\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"email\">\n                        <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"password\">\n                        <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                      </div>\n                    </div>\n                  </div>\n              </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                  <div class=\"form-group\">\n                    <ngx-recaptcha2 (resolved)=\"resolved($event)\" #captchaElem [siteKey]=\"key\" [size]=\"'normal'\" [hl]=\"'es'\" [theme]=\"'light'\" [type]=\"'image'\" formControlName=\"recaptcha\">\n                    </ngx-recaptcha2>  \n                  </div>  \n                  </div>\n                </div>\n                <div class=\"row\">\n                  <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                  <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                  correctamente. </small>\n              </div>\n              </form>\n            </div>\n            <div class=\"card-footer\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <a class=\"btn btn-primary btn-round btn-lg\" (click)=\"Ingresar()\" >\n                    Ingresar\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-succes btn-round btn-lg\" [routerLink]=\"['/registro']\">\n                    Registrarse\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-danger btn-round btn-lg\" [routerLink]=\"['/bienvenida']\">\n                    Cancelar\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n</div>\n</div>\n</div>\n</div>\n");
 
 /***/ }),
 
@@ -448,7 +461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/usuarios']\">\n                <i class=\"tim-icons icon-pin\"> </i> Usuarios\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/landing']\">\n                <i class=\"tim-icons icon-image-02\"> </i> landing\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profile']\">\n                <i class=\"tim-icons icon-single-02\"> </i> profile\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente','admin','profesional']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registroTurno']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/usuarios']\">\n                <i class=\"tim-icons icon-pin\"> </i> Usuarios\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registroTurno']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Solicitar Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['paciente']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/misTurnos']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Mis Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
 
 /***/ }),
 
@@ -569,42 +582,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-dias/listado-dias.component.html":
-/*!******************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-dias/listado-dias.component.html ***!
-  \******************************************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.html ***!
+  \**************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Profesional</th>\n            <th>Especialidad</th>\n            <th>Dia</th>\n            <th>Disponible</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>dr marcos</td>\n            <td>Clinica</td>\n            <td>10/10/2020</td>\n            <td>si</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.html":
-/*!**************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.html ***!
-  \**************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Profesional</th>\n            <th>Horario</th>\n            <th>Disponible</th>\n            <th class=\"text-right\">Seleccionar</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>Dr Marcos</td>\n            <td>09:00</td>\n            <td>Si</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html":
-/*!**********************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html ***!
-  \**********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table\">\n    <thead>\n        <tr>\n            <th class=\"text-center\">#</th>\n            <th>Name</th>\n            <th>Job Position</th>\n            <th>Since</th>\n            <th class=\"text-right\">Salary</th>\n            <th class=\"text-right\">Actions</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td class=\"text-center\">1</td>\n            <td>Andrew Mike</td>\n            <td>Develop</td>\n            <td>2013</td>\n            <td class=\"text-right\">&euro; 99,225</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">2</td>\n            <td>John Doe</td>\n            <td>Design</td>\n            <td>2012</td>\n            <td class=\"text-right\">&euro; 89,241</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n        <tr>\n            <td class=\"text-center\">3</td>\n            <td>Alex Mike</td>\n            <td>Design</td>\n            <td>2010</td>\n            <td class=\"text-right\">&euro; 92,144</td>\n            <td class=\"td-actions text-right\">\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                </button>\n                <button type=\"button\" rel=\"tooltip\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                    <i class=\"tim-icons icon-simple-remove\"></i>\n                </button>\n            </td>\n        </tr>\n    </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Turnos :</h3>\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Profesional</th>\n                    <th>Especialidad</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Dejar Reseña</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let turno of listaTurnosPaciente\">\n                    <td class=\"text-center\">1</td>\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.profesional}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Reseña\"  data-target=\"#modalRes\"\n                        (click)=\"guardarResena(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Ver Observaciones\" \n                        (click)=\"verObservaciones(turno)\"\n                        data-target=\"#modalObs\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Cancelar\" (click)=\"cancelarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>\n <!--modal observaciones-->\n <div\n aria-hidden=\"true\"\n aria-labelledby=\"myModalLabel\"\n bsModal\n class=\"modal fade\"\n #modalObs=\"bs-modal\"\n id=\"modalObs\"\n role=\"dialog\"\n tabindex=\"-1\"\n>\n <div class=\"modal-dialog\">\n   <div class=\"modal-content\">\n     <div class=\"modal-header justify-content-center\">\n       <button\n         aria-hidden=\"true\"\n         class=\"close\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         <i class=\"tim-icons icon-simple-remove\"> </i>\n       </button>\n       <h4 class=\"title title-up\">Observaciones sobre el turno :</h4>\n     </div>\n     <div class=\"modal-body\">\n       <p>\n         {{Observacion}}\n       </p>\n     </div>\n     <div class=\"modal-footer\">\n       <button\n         class=\"btn btn-danger\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         Cerrar\n       </button>\n     </div>\n   </div>\n </div>\n</div>\n<!--modal reseña-->\n<div\n      aria-hidden=\"true\"\n      aria-labelledby=\"myModalLabel\"\n      bsModal\n      class=\"modal fade modal-black\"\n      #modalRes=\"bs-modal\"\n      id=\"modalRes\"\n      role=\"dialog\"\n      tabindex=\"-1\"\n    >\n      <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header justify-content-center\">\n            <button\n              aria-hidden=\"true\"\n              class=\"close\"\n              data-dismiss=\"modal\"\n              (click)=\"modalRes.hide()\"\n              type=\"button\"\n            >\n              <i class=\"tim-icons icon-simple-remove text-white\"> </i>\n            </button>\n            <div class=\"text-muted text-center ml-auto mr-auto\">\n              <h3 class=\"mb-0\">Deje su Comentario </h3>\n            </div>\n          </div>\n          <div class=\"modal-body\">\n            <div class=\"btn-wrapper text-center\">\n                <img src=\"assets/img/clinicaAvellaneda.jpg\" class=\"img-fluid rounded shadow\" style=\"width: 100px;\"/>\n            </div>\n            <form [formGroup]=\"form\" (keyup.enter)=\"guardarComentario()\">\n              <div class=\"form-group mb-3\">\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <p class=\"text-success\">Comentario sobre la atencion Recibida :</p>\n                        <div class=\"form-group\">\n                            <textarea class=\"form-control\" name=\"comentario\" id=\"comentario\" formControlName=\"comentario\" rows=\"10\" placeholder=\"Que tal fue su experiencia?\" required></textarea>\n                            <div *ngIf=\"submitted && f.comentario.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"comentario\">\n                            <div *ngIf=\"f.comentario.errors?.required\">Debe ingresar un comentario.</div>\n                          </div>\n                        </div>\n                    </div>    \n                </div>\n              </div>\n              <div class=\"text-center\">\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"guardarComentario()\">\n                  Guardar Comentario\n                </button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n");
 
 /***/ }),
 
@@ -617,7 +604,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <br>\n            <br>\n            <div class=\"card card-register\">\n              <h3 class=\"card-title\">Paciente : </h3>\n              <div class=\"card-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n                <div class=\"row\">\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                        <select id=\"especialidad\" formControlName=\"especialidad\" (change)=\"especialidadChange(esp)\" class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Seleccione Especialidad</option>\n                            <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <select id=\"especialidad\" formControlName=\"especialidad\" (change)=\"profesionalChange(esp)\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Seleccione Profesional</option>\n                        <option *ngFor=\"let esp of listaEspecialidad\">{{esp.nombre}}</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                    </div>\n                </div>\n                </div>              \n            </div>                        \n                <div class=\"row\" *ngIf=\"onDias\">\n                <div class=\"col-10\">\n               <p class=\"text-success\">Dias disponibles</p>\n                    <table class=\"table\">\n                        <thead>\n                            <tr>\n                                <th class=\"text-center\">#</th>\n                                <th>Profesional</th>\n                                <th>Especialidad</th>\n                                <th>Dia</th>\n                                <th>Disponible</th>\n                                <th class=\"text-right\">Actions</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr>\n                                <td class=\"text-center\">1</td>\n                                <td>dr marcos</td>\n                                <td>Clinica</td>\n                                <td>10/10/2020</td>\n                                <td>si</td>\n                                <td class=\"td-actions text-right\">\n                                    <button type=\"button\" rel=\"tooltip\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                                        <i class=\"tim-icons icon-single-02\"></i>\n                                    </button>\n                                </td>\n                            </tr>\n                        </tbody>\n                    </table>                \n        </div>\n                </div>\n            <div class=\"row\" *ngIf=\"onTurnos\">\n                    <div class=\"col-10\">\n                    <p class=\"text-success\">Horarios disponibles</p>\n                        <app-listado-horarios (profesional)=\"profesional\" [horarioSeleccion]=\"\"></app-listado-horarios>\n                </div>\n                </div>\n                <div class=\"row\">\n                    <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                    <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                    correctamente. </small>\n                </div>\n                    <hr>\n                    <div class=\"row\">\n                    <div class=\"col-6\">\n                        <button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br>\n                    </div>\n                    <div class=\"col-6\">\n                        <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                    </div>\n                    </div>\n            </form>\n        </div>\n      </div>\n    </div>\n  </div>     \n</div>\n</div>\n</div>\n<app-footer></app-footer>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n        <br>\n      <div class=\"content\">\n        <div class=\"row\">\n          <div class=\"col-12\">\n            <br>\n            <br>\n            <div class=\"card card-register\">\n              <h3 class=\"card-title\">Turnos para : {{pacienteStorage[0].nombre}}-{{pacienteStorage[0].apellido}}</h3>\n              <div class=\"card-body\">\n            <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n                <div class=\"row\">\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                        <select id=\"especialidad\" formControlName=\"especialidad\"  (change)=\"especialidadChange($event)\"  class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Seleccione Especialidad</option>\n                            <option value=\"{{esp.idEspecialida}}\" *ngFor=\"let esp of listaEspecialidadFiltrada\" >{{esp.nombre}}</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-6\">\n                    <div class=\"form-group\">\n                    <select id=\"profesional\" formControlName=\"profesional\" (change)=\"profesionalChange($event)\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Seleccione Profesional</option>\n                        <option value=\"{{prof.idProfesional}}\" *ngFor=\"let prof of listaEspecialidadAux\">{{prof.nombreProfesional}}</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.profesional.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.profesional.errors?.required\">Seleccione profesional.</div>\n                    </div>\n                </div>\n                </div>              \n            </div>                        \n                <div class=\"row\">\n                <div class=\"col-6\">\n               <p class=\"text-success\">Dias disponibles</p>\n                <div class=\"form-group\">\n                    <select id=\"dia\" formControlName=\"dia\" (change)=\"diaChange($event)\" class=\"form-control\" placeholder=\"seleccione\">\n                        <option selected value=\"\">Seleccione Dia</option>\n                        <option value=\"{{dias.fecha}}\" *ngFor=\"let dias of listadoTurnoDias\">{{dias.dia}} : {{dias.fecha}}</option>\n                    </select>\n                    <div *ngIf=\"submitted && f.dia.errors?.required\" class=\"invalid-feedback\">\n                        <div *ngIf=\"f.dia.errors?.required\">Seleccione Dia.</div>\n                    </div>\n                </div>\n            \n                    </div>\n                    <div class=\"col-6\">\n                    <p class=\"text-success\">Horarios disponibles</p>\n                    <div class=\"form-group\">\n                        <select id=\"hora\" formControlName=\"hora\" class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Seleccione hora</option>\n                            <option value=\"{{hora}}\" *ngFor=\"let hora of listadoHorarios\">{{hora}}</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.hora.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.hora.errors?.required\">Seleccione hora.</div>\n                        </div>\n                    </div>\n                </div>\n                </div>\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <p class=\"text-success\">Motivo de Atencion :</p>\n                        <div class=\"form-group\">\n                            <textarea class=\"form-control\" formControlName=\"motivo\" rows=\"10\" placeholder=\"Motivo de atencion?\" required></textarea>\n                        </div>\n                    </div>    \n                </div>\n                <div class=\"row\">\n                    <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                    <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                    correctamente. </small>\n                </div>\n                    <hr>\n                    <div class=\"row\">\n                    <div class=\"col-4\">\n                        <button type=\"submit\" class=\"btn btn-primary\" (click)=\"RegistrarTurno()\">Registrar</button><br>\n                    </div>\n                    <div class=\"col-4\">\n                        <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                    </div>\n                    </div>\n            </form>\n        </div>\n      </div>\n    </div>\n  </div>     \n</div>\n</div>\n</div>\n<app-footer></app-footer>\n</div>\n");
 
 /***/ }),
 
@@ -630,7 +617,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Turnos :</h3>\n        <app-listado-turnos></app-listado-turnos>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Listado de turnos :</h3>\n        <table class=\"table\">\n            <thead>\n              <tr>\n                <th class=\"text-center\" colspan=\"8\">\n                  <app-csv class=\"float-right csv\" [data]=\"data\" [filename]=\"generarNombreCsv()\" [options]=\"options\"></app-csv>\n                  <button  class=\"float-right  btn btn-outline-primary btn-sm  mx-auto mb-4\" type=\"button\" (click)=\"generarPDF()\" ><i class=\"fas fa-file\"></i>Generar PDF</button>\n                </th>\n              </tr>\n                <tr>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Profesional</th>\n                    <th>Especialidad</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Dejar Reseña</th>\n                </tr>\n            </thead>\n            <tbody id=\"tablaPDF\">\n                <tr *ngFor=\"let turno of listaTurnosPaciente\">\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.profesional}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Observaciones\"  data-target=\"#modalRes\"\n                        (click)=\"verObservacion(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-alert-circle-exc\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Comentario Pacientes\" \n                        (click)=\"verComentarios(turno)\"\n                        data-target=\"#modalObs\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-shape-star\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Cancelar\" (click)=\"cancelarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Rechazar\" (click)=\"rechazarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                          <i class=\"tim-icons icon-simple-delete\"></i>\n                      </button>\n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>\n <!--modal observaciones-->\n <div\n aria-hidden=\"true\"\n aria-labelledby=\"myModalLabel\"\n bsModal\n class=\"modal fade\"\n #modalObs=\"bs-modal\"\n id=\"modalObs\"\n role=\"dialog\"\n tabindex=\"-1\"\n>\n <div class=\"modal-dialog\">\n   <div class=\"modal-content\">\n     <div class=\"modal-header justify-content-center\">\n       <button\n         aria-hidden=\"true\"\n         class=\"close\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         <i class=\"tim-icons icon-simple-remove\"> </i>\n       </button>\n       <h4 class=\"title title-up\">Comentarios sobre el turno :</h4>\n     </div>\n     <div class=\"modal-body\">\n       <p>\n         {{Observacion}}\n       </p>\n     </div>\n     <div class=\"modal-footer\">\n       <button\n         class=\"btn btn-danger\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         Cerrar\n       </button>\n     </div>\n   </div>\n </div>\n</div>\n<!--modal reseña-->\n<div\n      aria-hidden=\"true\"\n      aria-labelledby=\"myModalLabel\"\n      bsModal\n      class=\"modal fade modal-black\"\n      #modalRes=\"bs-modal\"\n      id=\"modalRes\"\n      role=\"dialog\"\n      tabindex=\"-1\"\n    >\n      <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header justify-content-center\">\n            <button\n              aria-hidden=\"true\"\n              class=\"close\"\n              data-dismiss=\"modal\"\n              (click)=\"modalRes.hide()\"\n              type=\"button\"\n            >\n              <i class=\"tim-icons icon-simple-remove text-white\"> </i>\n            </button>\n            <div class=\"text-muted text-center ml-auto mr-auto\">\n              <h3 class=\"mb-0\">Observaciones </h3>\n            </div>\n          </div>\n\n          <div class=\"modal-body\">\n            <div class=\"row\">\n              <div class=\"col-5\">\n                <p class=\"text-info\">Fecha: {{fecha}}</p>\n                <p class=\"text-info\">Paciente: {{paciente}}</p>\n                <p class=\"text-info\">Motivo: {{motivo}}</p>\n              </div>\n              <div class=\"col-5\">\n                <p class=\"text-info\">Hora: {{hora}}</p>\n                <p class=\"text-info\">{{especialidad}}</p>\n              </div>\n            </div>          \n            \n            <form [formGroup]=\"form\" (keyup.enter)=\"guardarComentario()\">\n              <div class=\"form-group mb-3\">\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <p class=\"text-success\">Observacion sobre el paciente :</p>\n                        <div class=\"form-group\">\n                          <div formArrayName=\"info\">                           \n                            <div *ngFor=\"let item of getInfo.controls; let pointIndex=index\" [formGroupName]=\"pointIndex\">                             \n                              <div class=\"row\">\n                              <div class=\"col-4\">\n                                <input formControlName=\"clave{{pointIndex}}\">\n                              </div>\n                              <div class=\"col-4\">\n                                <input formControlName=\"valor{{pointIndex}}\">\n                              </div>                             \n                            </div>\n                            </div>\n                          </div>\n                          <a class=\"btn btn-danger\" (click)=\"agregarInfo(pointIndex)\">add</a>\n                        </div>\n                        <div class=\"form-group\">\n                          <div class=\"row\">\n                            <div class=\"col-12\">\n                              <div class=\"form-check\">\n                                <label class=\"form-check-label\">\n                                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"atendido\">\n                                  <span class=\"form-check-sign\">                    \n                                  </span> Atendido </label>\n                                </div>\n                            </div>\n                          </div>\n                        </div>\n                    </div>    \n                </div>\n              </div>\n              <div class=\"text-center\">\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"guardarObservacion()\">\n                  Guardar Observacion\n                </button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n");
 
 /***/ }),
 
@@ -961,6 +948,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
 /* harmony import */ var _pages_usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/usuario-home/usuario-home.component */ "./src/app/pages/usuario-home/usuario-home.component.ts");
 /* harmony import */ var _pages_turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/turnos-home/registro-turno/registro-turno.component */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.ts");
+/* harmony import */ var _pages_turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/turnos-home/mis-turnos/mis-turnos.component */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts");
 
 
 
@@ -971,6 +959,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //mios
+
 
 
 
@@ -994,6 +983,7 @@ var routes = [
     { path: "turnos", component: _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_17__["TurnosHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
     { path: "usuarios", component: _pages_usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_18__["UsuarioHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
     { path: "registroTurno", component: _pages_turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_19__["RegistroTurnoComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
+    { path: "misTurnos", component: _pages_turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_20__["MisTurnosComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
     { path: "profile", component: _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_6__["ProfilepageComponent"],
         canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
         data: { roles: ['admin'] }
@@ -1140,6 +1130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-storage.js");
 /* harmony import */ var _pages_pages_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/pages.module */ "./src/app/pages/pages.module.ts");
 /* harmony import */ var _src_environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var angular2_csv__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angular2-csv */ "./node_modules/angular2-csv/__ivy_ngcc__/fesm5/angular2-csv.js");
 
 
 
@@ -1150,6 +1141,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //firestore y imagenes 
+
 
 
 
@@ -1180,7 +1172,8 @@ var AppModule = /** @class */ (function () {
                 _angular_fire_storage__WEBPACK_IMPORTED_MODULE_11__["AngularFireStorageModule"],
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuthModule"],
                 _angular_fire_database__WEBPACK_IMPORTED_MODULE_10__["AngularFireDatabaseModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["firebaseConfig"])
+                _angular_fire__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["firebaseConfig"]),
+                angular2_csv__WEBPACK_IMPORTED_MODULE_14__["Angular2CsvModule"]
             ],
             providers: [
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuth"],
@@ -1191,6 +1184,54 @@ var AppModule = /** @class */ (function () {
     ], AppModule);
     return AppModule;
 }());
+
+
+
+/***/ }),
+
+/***/ "./src/app/common/csv/csv.component.scss":
+/*!***********************************************!*\
+  !*** ./src/app/common/csv/csv.component.scss ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbW1vbi9jc3YvY3N2LmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/common/csv/csv.component.ts":
+/*!*********************************************!*\
+  !*** ./src/app/common/csv/csv.component.ts ***!
+  \*********************************************/
+/*! exports provided: CsvComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CsvComponent", function() { return CsvComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var angular2_csv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angular2-csv */ "./node_modules/angular2-csv/__ivy_ngcc__/fesm5/angular2-csv.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+
+var CsvComponent = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(CsvComponent, _super);
+    function CsvComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    CsvComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-csv',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./csv.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/common/csv/csv.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./csv.component.scss */ "./src/app/common/csv/csv.component.scss")).default]
+        })
+    ], CsvComponent);
+    return CsvComponent;
+}(angular2_csv__WEBPACK_IMPORTED_MODULE_1__["Angular2CsvComponent"]));
 
 
 
@@ -1400,7 +1441,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var diasHorarios = /** @class */ (function () {
     function diasHorarios() {
-        this.horarios = ["9:00", "9:30", "10:00", "10:30", "11:00",
+        this.horarios = ["09:00", "09:30", "10:00", "10:30", "11:00",
             "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30",
             "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"];
     }
@@ -1502,6 +1543,28 @@ var profesional = /** @class */ (function (_super) {
     }
     return profesional;
 }(_usuario__WEBPACK_IMPORTED_MODULE_1__["usuario"]));
+
+
+
+/***/ }),
+
+/***/ "./src/app/model/turno.ts":
+/*!********************************!*\
+  !*** ./src/app/model/turno.ts ***!
+  \********************************/
+/*! exports provided: turno */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "turno", function() { return turno; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+var turno = /** @class */ (function () {
+    function turno() {
+    }
+    return turno;
+}());
 
 
 
@@ -2352,6 +2415,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-storage.js");
 /* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-auth.js");
 /* harmony import */ var ngx_captcha__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-captcha */ "./node_modules/ngx-captcha/__ivy_ngcc__/fesm5/ngx-captcha.js");
+/* harmony import */ var src_app_services_paciente_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/services/paciente.service */ "./src/app/services/paciente.service.ts");
+/* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+
+
 
 
 
@@ -2362,12 +2429,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(fb, authService, router, fireStore, AFauth) {
+    function LoginComponent(fb, authService, router, fireStore, AFauth, pacienteService, profesioanService) {
         this.fb = fb;
         this.authService = authService;
         this.router = router;
         this.fireStore = fireStore;
         this.AFauth = AFauth;
+        this.pacienteService = pacienteService;
+        this.profesioanService = profesioanService;
         this.submitted = false;
         this.existe = false;
         this.usuarios = this.authService.traerTodos();
@@ -2391,7 +2460,7 @@ var LoginComponent = /** @class */ (function () {
                 break;
             case 'P':
                 dataLogin = {
-                    email: 'paciente@paciente.com',
+                    email: 'jzamora@gmail.com',
                     password: '123456',
                     recaptcha: ''
                 };
@@ -2399,7 +2468,7 @@ var LoginComponent = /** @class */ (function () {
                 break;
             case 'E':
                 dataLogin = {
-                    email: 'profesional@profesional.com',
+                    email: 'tsoros@cavellaneda.com',
                     password: '123456',
                     recaptcha: ''
                 };
@@ -2424,7 +2493,6 @@ var LoginComponent = /** @class */ (function () {
                     _this.success = true;
                     _this.user.id = response.toString();
                     _this.guardarUsuario(_this.user);
-                    // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona          
                 }
             })
                 .catch(function (response) {
@@ -2440,6 +2508,7 @@ var LoginComponent = /** @class */ (function () {
         }
     };
     LoginComponent.prototype.guardarUsuario = function (dataLogin) {
+        var _this = this;
         this.usuarios.forEach(function (user) {
             if ((user.mail.toString() == dataLogin.usuario) && (user.contraseña.toString() == dataLogin.password)) {
                 dataLogin.tipo = user.tipo;
@@ -2447,11 +2516,19 @@ var LoginComponent = /** @class */ (function () {
                 //obtengo la lista de usuarios y si se encuenta logeo por email y password ,sabiendo ya el tipo 
                 switch (dataLogin.tipo) {
                     case "paciente": {
+                        _this.pacienteService.Obtenerpaciente(dataLogin.id).subscribe(function (item) {
+                            _this.paciente = item.map(function (x) { return x; });
+                            localStorage.setItem('LoginUsuario', JSON.stringify(_this.paciente));
+                        });
                         localStorage.setItem('Login', JSON.stringify(dataLogin));
                         //statements; 
                         break;
                     }
                     case "profesional": {
+                        _this.profesioanService.Obtenerprofesional(dataLogin.id).subscribe(function (item) {
+                            _this.profesional = item.map(function (x) { return x; });
+                            localStorage.setItem('LoginUsuario', JSON.stringify(_this.profesional));
+                        });
                         localStorage.setItem('Login', JSON.stringify(dataLogin));
                         //statements; 
                         break;
@@ -2487,7 +2564,9 @@ var LoginComponent = /** @class */ (function () {
         { type: _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
         { type: _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"] },
-        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_7__["AngularFireAuth"] }
+        { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_7__["AngularFireAuth"] },
+        { type: src_app_services_paciente_service__WEBPACK_IMPORTED_MODULE_9__["PacienteService"] },
+        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_10__["ProfesionalService"] }
     ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('captchaElem', { static: true }),
@@ -2507,7 +2586,13 @@ var LoginComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./login.component.scss */ "./src/app/pages/login/login.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_7__["AngularFireAuth"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            _angular_fire_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"],
+            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_7__["AngularFireAuth"],
+            src_app_services_paciente_service__WEBPACK_IMPORTED_MODULE_9__["PacienteService"],
+            src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_10__["ProfesionalService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -2766,27 +2851,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./navmenu/navmenu.component */ "./src/app/pages/navmenu/navmenu.component.ts");
 /* harmony import */ var _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./../directivas/validar-roles.directive */ "./src/app/directivas/validar-roles.directive.ts");
 /* harmony import */ var _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
-/* harmony import */ var _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./turnos-home/listado-turnos/listado-turnos.component */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts");
-/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
-/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
-/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
-/* harmony import */ var _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./profesionales-home/alta-profesionales/alta-profesionales.component */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
-/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
-/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
-/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
-/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
-/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
-/* harmony import */ var ngx_captcha__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ngx-captcha */ "./node_modules/ngx-captcha/__ivy_ngcc__/fesm5/ngx-captcha.js");
-/* harmony import */ var _usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./usuario-home/usuario-home.component */ "./src/app/pages/usuario-home/usuario-home.component.ts");
-/* harmony import */ var _usuario_home_listado_usuarios_listado_usuarios_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./usuario-home/listado-usuarios/listado-usuarios.component */ "./src/app/pages/usuario-home/listado-usuarios/listado-usuarios.component.ts");
-/* harmony import */ var _turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./turnos-home/registro-turno/registro-turno.component */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.ts");
-/* harmony import */ var _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./profesionales-home/detalle-profesional/detalle-profesional.component */ "./src/app/pages/profesionales-home/detalle-profesional/detalle-profesional.component.ts");
-/* harmony import */ var _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./profesionales-home/edit-profesional/edit-profesional.component */ "./src/app/pages/profesionales-home/edit-profesional/edit-profesional.component.ts");
-/* harmony import */ var _turnos_home_listado_dias_listado_dias_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./turnos-home/listado-dias/listado-dias.component */ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.ts");
-/* harmony import */ var _turnos_home_listado_horarios_listado_horarios_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./turnos-home/listado-horarios/listado-horarios.component */ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.ts");
-
+/* harmony import */ var _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./turnos-home/calendario/calendario.component */ "./src/app/pages/turnos-home/calendario/calendario.component.ts");
+/* harmony import */ var _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
+/* harmony import */ var _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./profesionales-home/listado-profesionales/listado-profesionales.component */ "./src/app/pages/profesionales-home/listado-profesionales/listado-profesionales.component.ts");
+/* harmony import */ var _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./profesionales-home/alta-profesionales/alta-profesionales.component */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _registro_registro_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
+/* harmony import */ var _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
+/* harmony import */ var _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./especialidades-home/listado-especialidades/listado-especialidades.component */ "./src/app/pages/especialidades-home/listado-especialidades/listado-especialidades.component.ts");
+/* harmony import */ var _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./especialidades-home/alta-especialidades/alta-especialidades.component */ "./src/app/pages/especialidades-home/alta-especialidades/alta-especialidades.component.ts");
+/* harmony import */ var _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./pacientes-home/listado-pacientes/listado-pacientes.component */ "./src/app/pages/pacientes-home/listado-pacientes/listado-pacientes.component.ts");
+/* harmony import */ var ngx_captcha__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ngx-captcha */ "./node_modules/ngx-captcha/__ivy_ngcc__/fesm5/ngx-captcha.js");
+/* harmony import */ var _usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./usuario-home/usuario-home.component */ "./src/app/pages/usuario-home/usuario-home.component.ts");
+/* harmony import */ var _usuario_home_listado_usuarios_listado_usuarios_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./usuario-home/listado-usuarios/listado-usuarios.component */ "./src/app/pages/usuario-home/listado-usuarios/listado-usuarios.component.ts");
+/* harmony import */ var _turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./turnos-home/registro-turno/registro-turno.component */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.ts");
+/* harmony import */ var _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./profesionales-home/detalle-profesional/detalle-profesional.component */ "./src/app/pages/profesionales-home/detalle-profesional/detalle-profesional.component.ts");
+/* harmony import */ var _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./profesionales-home/edit-profesional/edit-profesional.component */ "./src/app/pages/profesionales-home/edit-profesional/edit-profesional.component.ts");
+/* harmony import */ var _turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./turnos-home/mis-turnos/mis-turnos.component */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts");
+/* harmony import */ var _common_csv_csv_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../common/csv/csv.component */ "./src/app/common/csv/csv.component.ts");
 
 
 
@@ -2854,7 +2937,7 @@ var PagesModule = /** @class */ (function () {
                 ngx_bootstrap_datepicker__WEBPACK_IMPORTED_MODULE_13__["BsDatepickerModule"].forRoot(),
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_14__["CarouselModule"].forRoot(),
                 ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_15__["ModalModule"].forRoot(),
-                ngx_captcha__WEBPACK_IMPORTED_MODULE_38__["NgxCaptchaModule"]
+                ngx_captcha__WEBPACK_IMPORTED_MODULE_37__["NgxCaptchaModule"]
             ],
             declarations: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
@@ -2864,34 +2947,33 @@ var PagesModule = /** @class */ (function () {
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"],
                 _footer_footer_component__WEBPACK_IMPORTED_MODULE_22__["FooterComponent"],
                 _navmenu_navmenu_component__WEBPACK_IMPORTED_MODULE_23__["NavmenuComponent"],
-                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_28__["ProfesionalesHomeComponent"],
-                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_29__["ListadoProfesionalesComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_31__["LoginComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
+                _profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_27__["ProfesionalesHomeComponent"],
+                _profesionales_home_listado_profesionales_listado_profesionales_component__WEBPACK_IMPORTED_MODULE_28__["ListadoProfesionalesComponent"],
+                _login_login_component__WEBPACK_IMPORTED_MODULE_30__["LoginComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_31__["RegistroComponent"],
                 _directivas_validar_roles_directive__WEBPACK_IMPORTED_MODULE_24__["ValidarRolesDirective"],
                 _turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_25__["TurnosHomeComponent"],
-                _turnos_home_listado_turnos_listado_turnos_component__WEBPACK_IMPORTED_MODULE_26__["ListadoTurnosComponent"],
-                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_27__["CalendarioComponent"],
-                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_33__["PacientesHomeComponent"],
-                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_34__["EspecialidadesHomeComponent"],
-                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_35__["ListadoEspecialidadesComponent"],
-                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_36__["AltaEspecialidadesComponent"],
-                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_37__["ListadoPacientesComponent"],
-                _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_30__["AltaProfesionalesComponent"],
-                _usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_39__["UsuarioHomeComponent"],
-                _usuario_home_listado_usuarios_listado_usuarios_component__WEBPACK_IMPORTED_MODULE_40__["ListadoUsuariosComponent"],
-                _turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_41__["RegistroTurnoComponent"],
-                _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_42__["DetalleProfesionalComponent"],
-                _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_43__["EditProfesionalComponent"],
-                _turnos_home_listado_dias_listado_dias_component__WEBPACK_IMPORTED_MODULE_44__["ListadoDiasComponent"],
-                _turnos_home_listado_horarios_listado_horarios_component__WEBPACK_IMPORTED_MODULE_45__["ListadoHorariosComponent"]
+                _turnos_home_calendario_calendario_component__WEBPACK_IMPORTED_MODULE_26__["CalendarioComponent"],
+                _pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_32__["PacientesHomeComponent"],
+                _especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_33__["EspecialidadesHomeComponent"],
+                _especialidades_home_listado_especialidades_listado_especialidades_component__WEBPACK_IMPORTED_MODULE_34__["ListadoEspecialidadesComponent"],
+                _especialidades_home_alta_especialidades_alta_especialidades_component__WEBPACK_IMPORTED_MODULE_35__["AltaEspecialidadesComponent"],
+                _pacientes_home_listado_pacientes_listado_pacientes_component__WEBPACK_IMPORTED_MODULE_36__["ListadoPacientesComponent"],
+                _profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_29__["AltaProfesionalesComponent"],
+                _usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_38__["UsuarioHomeComponent"],
+                _usuario_home_listado_usuarios_listado_usuarios_component__WEBPACK_IMPORTED_MODULE_39__["ListadoUsuariosComponent"],
+                _turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_40__["RegistroTurnoComponent"],
+                _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_41__["DetalleProfesionalComponent"],
+                _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_42__["EditProfesionalComponent"],
+                _turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_43__["MisTurnosComponent"],
+                _common_csv_csv_component__WEBPACK_IMPORTED_MODULE_44__["CsvComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
                 _examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_18__["ProfilepageComponent"],
                 _examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_19__["RegisterpageComponent"],
                 _examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_20__["LandingpageComponent"],
-                _registro_registro_component__WEBPACK_IMPORTED_MODULE_32__["RegistroComponent"],
+                _registro_registro_component__WEBPACK_IMPORTED_MODULE_31__["RegistroComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_21__["HomeComponent"]
             ],
             providers: []
@@ -2999,7 +3081,7 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         //guardo la lista
         localStorage.setItem('listaAux', JSON.stringify(this.listaAux));
     };
-    AltaProfesionalesComponent.prototype.cargoEspecialidades = function (idProfesional) {
+    AltaProfesionalesComponent.prototype.cargoEspecialidades = function (prof) {
         var _this = this;
         var data = localStorage.getItem('listaAux');
         if (data) {
@@ -3009,9 +3091,10 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         this.listaAux.forEach(function (item) {
             if (item.add == true) {
                 _this.especialidadPro = new src_app_model_especialidadProfesional__WEBPACK_IMPORTED_MODULE_7__["especialidadProfesional"]();
-                _this.especialidadPro.idEspecialidad = item.idEspecialidad,
-                    _this.especialidadPro.idProfesional = idProfesional,
+                _this.especialidadPro.idEspecialida = item.idEspecialidad,
+                    _this.especialidadPro.idProfesional = prof.idProfesional,
                     _this.especialidadPro.nombre = item.nombre,
+                    _this.especialidadPro.nombreProfesional = prof.nombre + '-' + prof.apellido,
                     _this.especialidadPro.activa = item.activa,
                     _this.especialidadPro.usuarioAlta = item.usuarioAlta,
                     _this.especialidadPro.usuarioAprobacion = "";
@@ -3035,7 +3118,6 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         this.success = false;
         this.submitted = true;
         if (this.form.valid) {
-            this.cargoEspecialidades(this.form.get('idProfesional').value);
             this.profesional = new src_app_model_profesional__WEBPACK_IMPORTED_MODULE_2__["profesional"]();
             this.profesional.idProfesional = this.form.get('idProfesional').value;
             this.profesional.nombre = this.form.get('nombre').value;
@@ -3055,6 +3137,7 @@ var AltaProfesionalesComponent = /** @class */ (function () {
             this.diasHorarios.viernes = this.form.get('viernes').value;
             this.diasHorarios.sabado = this.form.get('sabado').value;
             this.profesional.diasHorarios = this.diasHorarios;
+            this.cargoEspecialidades(this.profesional);
             this.profesionalService.Registrar(this.profesional)
                 .then(function (response) {
                 console.log(response);
@@ -3311,7 +3394,7 @@ var EditProfesionalComponent = /** @class */ (function () {
         this.listaAux.forEach(function (item) {
             if (item.add == true) {
                 _this.especialidadPro = new src_app_model_especialidadProfesional__WEBPACK_IMPORTED_MODULE_7__["especialidadProfesional"]();
-                _this.especialidadPro.idEspecialidad = item.idEspecialidad,
+                _this.especialidadPro.idEspecialida = item.idEspecialidad,
                     _this.especialidadPro.idProfesional = idProfesional,
                     _this.especialidadPro.nombre = item.nombre,
                     _this.especialidadPro.activa = item.activa,
@@ -3915,141 +3998,183 @@ var CalendarioComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.scss":
-/*!****************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/listado-dias/listado-dias.component.scss ***!
-  \****************************************************************************/
+/***/ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.scss ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2xpc3RhZG8tZGlhcy9saXN0YWRvLWRpYXMuY29tcG9uZW50LnNjc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL21pcy10dXJub3MvbWlzLXR1cm5vcy5jb21wb25lbnQuc2NzcyJ9 */");
 
 /***/ }),
 
-/***/ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.ts":
-/*!**************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/listado-dias/listado-dias.component.ts ***!
-  \**************************************************************************/
-/*! exports provided: ListadoDiasComponent */
+/***/ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: MisTurnosComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoDiasComponent", function() { return ListadoDiasComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MisTurnosComponent", function() { return MisTurnosComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/model/turno */ "./src/app/model/turno.ts");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
 
 
-var ListadoDiasComponent = /** @class */ (function () {
-    function ListadoDiasComponent() {
+
+
+
+var MisTurnosComponent = /** @class */ (function () {
+    function MisTurnosComponent(turnosService, fb) {
+        this.turnosService = turnosService;
+        this.fb = fb;
+        this.submitted = false;
+        this.obtenerUsuarioActual();
+        this.cargarLista();
     }
-    ListadoDiasComponent.prototype.ngOnInit = function () {
+    Object.defineProperty(MisTurnosComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    MisTurnosComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
+        switch (this.user.tipo) {
+            case "paciente": {
+                this.pacienteStorage = JSON.parse(dataUsuario);
+                break;
+            }
+            case "profesional": {
+                this.profesionalStorage = JSON.parse(dataUsuario);
+                break;
+            }
+        }
     };
-    ListadoDiasComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-listado-dias',
-            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-dias.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-dias/listado-dias.component.html")).default,
-            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-dias.component.scss */ "./src/app/pages/turnos-home/listado-dias/listado-dias.component.scss")).default]
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-    ], ListadoDiasComponent);
-    return ListadoDiasComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.scss":
-/*!************************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.scss ***!
-  \************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2xpc3RhZG8taG9yYXJpb3MvbGlzdGFkby1ob3Jhcmlvcy5jb21wb25lbnQuc2NzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.ts":
-/*!**********************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.ts ***!
-  \**********************************************************************************/
-/*! exports provided: ListadoHorariosComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoHorariosComponent", function() { return ListadoHorariosComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-
-
-var ListadoHorariosComponent = /** @class */ (function () {
-    function ListadoHorariosComponent() {
-    }
-    ListadoHorariosComponent.prototype.ngOnInit = function () {
+    MisTurnosComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.turnosService.ListarTurnosPacientes(this.pacienteStorage[0].idPaciente)
+            .subscribe(function (data) {
+            _this.listaTurnosPaciente = data;
+        }, function (error) {
+            console.log(error);
+        });
     };
-    ListadoHorariosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-listado-horarios',
-            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-horarios.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.html")).default,
-            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-horarios.component.scss */ "./src/app/pages/turnos-home/listado-horarios/listado-horarios.component.scss")).default]
-        }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-    ], ListadoHorariosComponent);
-    return ListadoHorariosComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss":
-/*!********************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2xpc3RhZG8tdHVybm9zL2xpc3RhZG8tdHVybm9zLmNvbXBvbmVudC5zY3NzIn0= */");
-
-/***/ }),
-
-/***/ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts":
-/*!******************************************************************************!*\
-  !*** ./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.ts ***!
-  \******************************************************************************/
-/*! exports provided: ListadoTurnosComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListadoTurnosComponent", function() { return ListadoTurnosComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-
-
-var ListadoTurnosComponent = /** @class */ (function () {
-    function ListadoTurnosComponent() {
-    }
-    ListadoTurnosComponent.prototype.ngOnInit = function () {
+    MisTurnosComponent.prototype.guardarResena = function (turnoTab) {
+        this.modalResena.show();
+        this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
+        this.turnoSeleccionado = turnoTab;
     };
-    ListadoTurnosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    MisTurnosComponent.prototype.verObservaciones = function (turno) {
+        if (turno.observaciones) {
+            this.Observacion = turno.observaciones;
+        }
+        else {
+            this.Observacion = "su profesional de salud aun no ha emitido una observacion sobre su turno o este aun no fue tomado";
+        }
+        this.modalObservaciones.show();
+    };
+    MisTurnosComponent.prototype.cancelarTurno = function (turnoTab) {
+        var _this = this;
+        this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
+        this.turnoSeleccionado = turnoTab;
+        this.turnoSeleccionado.estado = "cancelado";
+        this.turnoSeleccionado.observaciones = "turno cancelado por el paciente";
+        this.turnosService.actualizar(this.turnoSeleccionado)
+            .then(function (response) {
+            console.log(response);
+            if (response) {
+                _this.success = true;
+                _this.form.reset();
+                _this.modalResena.hide();
+            }
+            else {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+            }
+        })
+            .catch(function (error) {
+            _this.error = true;
+            _this.errorMessage = "error al actualizar el turno";
+            console.log(error);
+        });
+    };
+    MisTurnosComponent.prototype.guardarComentario = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.turnoSeleccionado.resenia = this.form.get('comentario').value;
+            this.turnosService.actualizar(this.turnoSeleccionado)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.modalResena.hide();
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al actualizar el turno";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    MisTurnosComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    MisTurnosComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            comentario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+        });
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    MisTurnosComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    MisTurnosComponent.ctorParameters = function () { return [
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+    ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalRes'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], MisTurnosComponent.prototype, "modalResena", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalObs'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], MisTurnosComponent.prototype, "modalObservaciones", void 0);
+    MisTurnosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-listado-turnos',
-            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./listado-turnos.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.html")).default,
-            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./listado-turnos.component.scss */ "./src/app/pages/turnos-home/listado-turnos/listado-turnos.component.scss")).default]
+            selector: 'app-mis-turnos',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./mis-turnos.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./mis-turnos.component.scss */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
-    ], ListadoTurnosComponent);
-    return ListadoTurnosComponent;
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    ], MisTurnosComponent);
+    return MisTurnosComponent;
 }());
 
 
@@ -4085,6 +4210,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_model_diashorarios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/model/diashorarios */ "./src/app/model/diashorarios.ts");
 /* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
 /* harmony import */ var src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/profesional.service */ "./src/app/services/profesional.service.ts");
+/* harmony import */ var src_app_model_turno__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/model/turno */ "./src/app/model/turno.ts");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
+
 
 
 
@@ -4092,12 +4223,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var RegistroTurnoComponent = /** @class */ (function () {
-    function RegistroTurnoComponent(fb, especialidaService, profesionalService) {
+    function RegistroTurnoComponent(fb, especialidaService, profesionalService, router, turnoService) {
         this.fb = fb;
         this.especialidaService = especialidaService;
         this.profesionalService = profesionalService;
+        this.router = router;
+        this.turnoService = turnoService;
         this.submitted = false;
-        this.cargarLista();
+        this.cargarListaEspecialidad();
+        this.cargarListaProfesional();
+        this.listaProfes = new Array();
+        this.listaEspecialidadFiltrada = new Array();
         this.diasHorarios = new src_app_model_diashorarios__WEBPACK_IMPORTED_MODULE_3__["diasHorarios"]();
         this.obtenerUsuarioActual();
     }
@@ -4108,14 +4244,80 @@ var RegistroTurnoComponent = /** @class */ (function () {
     });
     RegistroTurnoComponent.prototype.obtenerUsuarioActual = function () {
         var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
         this.user = JSON.parse(data);
         this.isLogueado = true;
+        switch (this.user.tipo) {
+            case "paciente": {
+                this.pacienteStorage = JSON.parse(dataUsuario);
+                break;
+            }
+            case "profesional": {
+                this.profesional = JSON.parse(dataUsuario);
+                break;
+            }
+        }
     };
-    RegistroTurnoComponent.prototype.cargarLista = function () {
+    RegistroTurnoComponent.prototype.cargarListaEspecialidad = function () {
         var _this = this;
-        this.especialidaService.Listar()
+        var existe = false;
+        this.especialidaService.ListarProfesionalesXespecialidad()
             .subscribe(function (data) {
             _this.listaEspecialidad = data;
+            //filtro los distintos
+            _this.listaEspecialidad.forEach(function (esp) {
+                if (!_this.listaEspecialidadFiltrada.some(function (e) { return e.idEspecialida.toString() == esp.idEspecialida.toString(); })) {
+                    _this.listaEspecialidadFiltrada.push(esp);
+                }
+            });
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    RegistroTurnoComponent.prototype.RegistrarTurno = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.turno = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_6__["turno"]();
+            this.turno.fecha = this.form.get('dia').value;
+            this.turno.hora = this.form.get('hora').value;
+            this.turno.especialidad = this.especialidadSelNombre;
+            this.turno.idEspecialidad = this.form.get('especialidad').value;
+            this.turno.paciente = this.pacienteStorage[0].nombre;
+            this.turno.idPaciente = this.pacienteStorage[0].idPaciente;
+            this.turno.idProfesional = this.form.get('profesional').value;
+            this.turno.profesional = this.profesionalSelNombre;
+            this.turno.motivo = this.form.get('motivo').value;
+            this.turno.estado = "pendiente";
+            this.turno.resenia = "";
+            this.turno.observaciones = "";
+            this.turnoService.Registrar(this.turno)
+                .then(function (response) {
+                if (response) {
+                    _this.success = true;
+                    _this.router.navigate(['/bienvenida']);
+                }
+            })
+                .catch(function (response) {
+                _this.error = true;
+                _this.isLogueado = false;
+                _this.errorMessage = response.message;
+            });
+        }
+        else {
+            this.isLogueado = false;
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    RegistroTurnoComponent.prototype.cargarListaProfesional = function () {
+        var _this = this;
+        this.profesionalService.Listar()
+            .subscribe(function (data) {
+            _this.listaProfesioanal = data;
         }, function (error) {
             console.log(error);
         });
@@ -4124,33 +4326,133 @@ var RegistroTurnoComponent = /** @class */ (function () {
         element.scrollIntoView({ behavior: "smooth" });
     };
     RegistroTurnoComponent.prototype.especialidadChange = function (espo) {
+        var _this = this;
+        this.especialidadSeleccionada = espo.target.value;
+        this.listaEspecialidadAux = new Array();
+        this.listaEspecialidad.forEach(function (item) {
+            if (item.idEspecialida.toString() == _this.especialidadSeleccionada.toString()) {
+                _this.listaEspecialidadAux.push(item);
+                _this.especialidadSelNombre = item.nombre;
+            }
+        });
+    };
+    RegistroTurnoComponent.prototype.diaChange = function (espo) {
+        var res = espo.target.value;
+        var turnoHorario = this.profesionalItem.horario.split('-');
+        var horaDesde = turnoHorario[0] + ':00';
+        var horaHasta = turnoHorario[1] + ':00';
+        var desde = this.diasHorarios.horarios.indexOf(horaDesde);
+        var hasta = this.diasHorarios.horarios.indexOf(horaHasta);
+        this.listadoHorarios = this.diasHorarios.horarios.slice(desde, hasta);
     };
     RegistroTurnoComponent.prototype.profesionalChange = function (espo) {
+        var _this = this;
+        var res = espo.target.value;
+        this.listaProfesioanal.forEach(function (item) {
+            if (item.idProfesional.toString() == res.toString()) {
+                //cargo el profesioanal
+                _this.profesionalItem = item;
+            }
+        });
         this.onDias = true;
         this.onTurnos = true;
+        this.getDate();
+        this.profesionalSelNombre = this.profesionalItem.nombre + ' ' + this.profesionalItem.apellido;
+        this.cargoDias(this.profesionalItem);
+    };
+    RegistroTurnoComponent.prototype.cargoDias = function (prof) {
+        var _this = this;
+        this.listadoTurnoDias = new Array();
+        this.listadoTurnoDiasAux = new Array();
+        //agrego los dias que el profesional atiende
+        this.listadoDias.forEach(function (item) {
+            _this.listadoTurnoDiasAux.push({
+                profesional: prof.nombre,
+                idProfesional: prof.idProfesional,
+                especialidad: _this.especialidadSeleccionada,
+                dia: item.dia,
+                fecha: item.fecha
+            });
+        });
+        this.listadoTurnoDiasAux.forEach(function (item) {
+            if ((prof.diasHorarios.lunes) && (item.dia.toString() == "lunes")) {
+                _this.listadoTurnoDias.push(item);
+            }
+            if ((prof.diasHorarios.martes) && (item.dia.toString() == "martes")) {
+                _this.listadoTurnoDias.push(item);
+            }
+            if ((prof.diasHorarios.miercoles) && (item.dia.toString() == "miercoles")) {
+                _this.listadoTurnoDias.push(item);
+            }
+            if ((prof.diasHorarios.jueves) && (item.dia.toString() == "jueves")) {
+                _this.listadoTurnoDias.push(item);
+            }
+            if ((prof.diasHorarios.viernes) && (item.dia.toString() == "viernes")) {
+                _this.listadoTurnoDias.push(item);
+            }
+            if ((prof.diasHorarios.sabado) && (item.dia == "sabado")) {
+                _this.listadoTurnoDias.push(item);
+            }
+        });
+    };
+    RegistroTurnoComponent.prototype.getDate = function () {
+        var startDate = new Date(); //YYYY-MM-DD
+        var endDate = new Date(startDate); //YYYY-MM-DD
+        endDate.setDate(endDate.getDate() + 15);
+        this.listadoDias = new Array();
+        var dt = new Date(startDate);
+        while (dt <= endDate) {
+            this.listadoDias.push({
+                dia: this.getDia(dt.getUTCDay()),
+                fecha: dt.getDate().toString() + "/" + (dt.getMonth() + 1).toString() + "/" + dt.getUTCFullYear().toString(),
+            });
+            dt.setDate(dt.getDate() + 1);
+        }
+        return this.listadoDias;
+    };
+    RegistroTurnoComponent.prototype.getDia = function (dia) {
+        var diaSemana;
+        switch (dia) {
+            case 0: {
+                diaSemana = "domingo";
+                break;
+            }
+            case 1: {
+                diaSemana = "lunes";
+                break;
+            }
+            case 2: {
+                diaSemana = "martes";
+                break;
+            }
+            case 3: {
+                diaSemana = "miercoles";
+                break;
+            }
+            case 4: {
+                diaSemana = "jueves";
+                break;
+            }
+            case 5: {
+                diaSemana = "viernes";
+                break;
+            }
+            case 6: {
+                diaSemana = "sabado";
+                break;
+            }
+        }
+        return diaSemana;
     };
     RegistroTurnoComponent.prototype.ngOnInit = function () {
         var body = document.getElementsByTagName("body")[0];
         body.classList.add("index-page");
         this.form = this.fb.group({
-            idProfesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            nombre: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            apellido: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            tipoDni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            sexo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            dni: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            horario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            lunes: [''],
-            martes: [''],
-            miercoles: [''],
-            jueves: [''],
-            viernes: [''],
-            sabado: [''],
+            profesional: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            dia: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            hora: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            motivo: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     };
     RegistroTurnoComponent.prototype.ngOnDestroy = function () {
@@ -4160,16 +4462,10 @@ var RegistroTurnoComponent = /** @class */ (function () {
     RegistroTurnoComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
         { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__["EspecialidadService"] },
-        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_5__["ProfesionalService"] }
+        { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_5__["ProfesionalService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_8__["Router"] },
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_7__["TurnosService"] }
     ]; };
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)
-    ], RegistroTurnoComponent.prototype, "showModalAlta", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
-    ], RegistroTurnoComponent.prototype, "closeModal", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
@@ -4180,7 +4476,11 @@ var RegistroTurnoComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./registro-turno.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/registro-turno/registro-turno.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./registro-turno.component.scss */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__["EspecialidadService"], src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_5__["ProfesionalService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_4__["EspecialidadService"],
+            src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_5__["ProfesionalService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_8__["Router"],
+            src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_7__["TurnosService"]])
     ], RegistroTurnoComponent);
     return RegistroTurnoComponent;
 }());
@@ -4198,7 +4498,7 @@ var RegistroTurnoComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3R1cm5vcy1ob21lLmNvbXBvbmVudC5zY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".table th {\n  color: black;\n}\n\n.modal.show .modal-dialog {\n  transform: translate(0, 10%);\n}\n\n.modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-dialog {\n  max-width: 700px;\n}\n\n.modal-content {\n  width: 700px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdHVybm9zLWhvbWUvQzpcXEFubmd1bGFyXFxibGstZGVzaWduLXN5c3RlbS1hbmd1bGFyLW1hc3Rlci9zcmNcXGFwcFxccGFnZXNcXHR1cm5vcy1ob21lXFx0dXJub3MtaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvdHVybm9zLWhvbWUvdHVybm9zLWhvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQSxZQUFBO0FDQ0E7O0FEQ0E7RUFDSSw0QkFBQTtBQ0VKOztBREFBO0VBQ0ksOEJBQUE7QUNHSjs7QURERTtFQUNFLGdCQUFBO0FDSUo7O0FERkU7RUFDRSxZQUFBO0FDS0oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy90dXJub3MtaG9tZS90dXJub3MtaG9tZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB0aHtcclxuY29sb3I6YmxhY2s7XHJcbn1cclxuLm1vZGFsLnNob3cgLm1vZGFsLWRpYWxvZyB7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwLCAxMCUpO1xyXG59XHJcbi5tb2RhbCB7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNik7XHJcbiAgfVxyXG4gIC5tb2RhbC1kaWFsb2d7XHJcbiAgICBtYXgtd2lkdGg6IDcwMHB4O1xyXG4gIH1cclxuICAubW9kYWwtY29udGVudHtcclxuICAgIHdpZHRoOiA3MDBweDtcclxuICB9IiwiLnRhYmxlIHRoIHtcbiAgY29sb3I6IGJsYWNrO1xufVxuXG4ubW9kYWwuc2hvdyAubW9kYWwtZGlhbG9nIHtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCwgMTAlKTtcbn1cblxuLm1vZGFsIHtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjYpO1xufVxuXG4ubW9kYWwtZGlhbG9nIHtcbiAgbWF4LXdpZHRoOiA3MDBweDtcbn1cblxuLm1vZGFsLWNvbnRlbnQge1xuICB3aWR0aDogNzAwcHg7XG59Il19 */");
 
 /***/ }),
 
@@ -4214,34 +4514,212 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnosHomeComponent", function() { return TurnosHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
-/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/model/turno */ "./src/app/model/turno.ts");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! html2canvas */ "./node_modules/html2canvas/dist/npm/index.js");
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
 
 
 
 var TurnosHomeComponent = /** @class */ (function () {
-    function TurnosHomeComponent(especialidadService) {
-        this.especialidadService = especialidadService;
-        //this.cargarLista();
+    function TurnosHomeComponent(turnosService, fb) {
+        this.turnosService = turnosService;
+        this.fb = fb;
+        this.submitted = false;
+        this.options = {
+            fieldSeparator: ';',
+            quoteStrings: '"',
+            decimalseparator: '.',
+            showLabels: true,
+            headers: ['Fecha', 'Hora', 'Profesional', 'Estado'],
+            showTitle: true,
+            title: 'Listado de turnos',
+            useBom: true,
+            removeNewLines: true,
+            keys: ['fecha', 'hora', 'profesional', 'estado']
+        };
         this.obtenerUsuarioActual();
+        this.cargarLista();
     }
+    Object.defineProperty(TurnosHomeComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
     TurnosHomeComponent.prototype.obtenerUsuarioActual = function () {
         var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
         this.user = JSON.parse(data);
         this.isLogueado = true;
+        switch (this.user.tipo) {
+            case "paciente": {
+                this.pacienteStorage = JSON.parse(dataUsuario);
+                break;
+            }
+            case "profesional": {
+                this.profesionalStorage = JSON.parse(dataUsuario);
+                break;
+            }
+        }
     };
     TurnosHomeComponent.prototype.cargarLista = function () {
         var _this = this;
-        this.especialidadService.Listar()
+        this.turnosService.ListarTurnosProfesional(this.profesionalStorage[0].idProfesional)
             .subscribe(function (data) {
-            _this.listaEspecialidad = data;
+            _this.listaTurnosPaciente = data;
+            _this.data = data;
         }, function (error) {
             console.log(error);
+        });
+    };
+    TurnosHomeComponent.prototype.verObservacion = function (turnoTab) {
+        this.modalResena.show();
+        this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
+        this.turnoSeleccionado = turnoTab;
+        this.fecha = turnoTab.fecha;
+        this.hora = turnoTab.hora;
+        this.paciente = turnoTab.paciente;
+        this.especialidad = turnoTab.especialidad;
+        this.motivo = turnoTab.motivo;
+    };
+    TurnosHomeComponent.prototype.verComentarios = function (turno) {
+        if (turno.resenia) {
+            this.Observacion = turno.resenia;
+        }
+        else {
+            this.Observacion = "El Paciente no ha dejado un comentario sobre la atencion recibida";
+        }
+        this.modalObservaciones.show();
+    };
+    TurnosHomeComponent.prototype.rechazarTurno = function (turnoTab) {
+        var _this = this;
+        this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
+        this.turnoSeleccionado = turnoTab;
+        this.turnoSeleccionado.estado = "rechazado";
+        this.turnoSeleccionado.observaciones = "Su turno a sido rechazado por el Profesional,comuniquese con la central de turnos para mas informacion";
+        this.turnosService.actualizar(this.turnoSeleccionado)
+            .then(function (response) {
+            console.log(response);
+            if (response) {
+                _this.success = true;
+                _this.form.reset();
+                _this.modalResena.hide();
+            }
+            else {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+            }
+        })
+            .catch(function (error) {
+            _this.error = true;
+            _this.errorMessage = "error al actualizar el turno";
+            console.log(error);
+        });
+    };
+    TurnosHomeComponent.prototype.cancelarTurno = function (turnoTab) {
+        var _this = this;
+        this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
+        this.turnoSeleccionado = turnoTab;
+        this.turnoSeleccionado.estado = "cancelado";
+        this.turnoSeleccionado.observaciones = "Su turno a sido cancelado por el Profesional,comuniquese con la central de turnos para mas informacion";
+        this.turnosService.actualizar(this.turnoSeleccionado)
+            .then(function (response) {
+            console.log(response);
+            if (response) {
+                _this.success = true;
+                _this.form.reset();
+                _this.modalResena.hide();
+            }
+            else {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+            }
+        })
+            .catch(function (error) {
+            _this.error = true;
+            _this.errorMessage = "error al actualizar el turno";
+            console.log(error);
+        });
+    };
+    TurnosHomeComponent.prototype.guardarObservacion = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.turnoSeleccionado.resenia = this.form.get('comentario').value;
+            this.turnosService.actualizar(this.turnoSeleccionado)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.modalResena.hide();
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al actualizar el turno";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    TurnosHomeComponent.prototype.generarNombreCsv = function () {
+        var nombre = 'ListaTurnos ' + new Date().toDateString();
+        return nombre;
+    };
+    TurnosHomeComponent.prototype.generarPDF = function () {
+        var data = document.getElementById('tablaPDF');
+        html2canvas__WEBPACK_IMPORTED_MODULE_6___default()(data).then(function (canvas) {
+            // Few necessary setting options  
+            var imgWidth = 208;
+            var pageHeight = 295;
+            var imgHeight = canvas.height * imgWidth / canvas.width;
+            var heightLeft = imgHeight;
+            var contentDataURL = canvas.toDataURL('image/png');
+            var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_5__('p', 'mm', 'a4'); // A4 size page of PDF  
+            var position = 0;
+            pdf.setTextColor(0, 0, 255);
+            pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
+            pdf.save('PDFTurnos.pdf'); // Generated PDF   
         });
     };
     TurnosHomeComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
     };
+    Object.defineProperty(TurnosHomeComponent.prototype, "getInfo", {
+        get: function () {
+            return this.form.get('infos');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    TurnosHomeComponent.prototype.agregarInfo = function (index) {
+        var control = this.form.controls['infos'];
+        control.push(this.fb.group({ info: [] }));
+    };
     TurnosHomeComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            comentario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            infos: this.fb.array([this.fb.group({ info: [''] })]),
+            atendido: ['',]
+        });
         var body = document.getElementsByTagName("body")[0];
         body.classList.add("index-page");
     };
@@ -4250,15 +4728,24 @@ var TurnosHomeComponent = /** @class */ (function () {
         body.classList.remove("index-page");
     };
     TurnosHomeComponent.ctorParameters = function () { return [
-        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"] }
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
     ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalRes'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], TurnosHomeComponent.prototype, "modalResena", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalObs'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], TurnosHomeComponent.prototype, "modalObservaciones", void 0);
     TurnosHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-turnos-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turnos-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turnos-home.component.scss */ "./src/app/pages/turnos-home/turnos-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
     ], TurnosHomeComponent);
     return TurnosHomeComponent;
 }());
@@ -4554,6 +5041,16 @@ var EspecialidadService = /** @class */ (function () {
             });
         }));
     };
+    EspecialidadService.prototype.ListarProfesionalesXespecialidad = function () {
+        this.espProfesionalColeccion = this.afs.collection('profesionalEspecialidad');
+        return this.espProfesional = this.espProfesionalColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                return data;
+            });
+        }));
+    };
     EspecialidadService.prototype.ListarEspecialidadProfesional = function (idProfesional) {
         this.espProfesionalColeccion = this.afs.collection('profesionalEspecialidad', function (x) { return x.where("idProfesional", "==", idProfesional); });
         return this.espProfesional = this.espProfesionalColeccion.snapshotChanges()
@@ -4659,8 +5156,8 @@ var PacienteService = /** @class */ (function () {
             });
         }));
     };
-    PacienteService.prototype.Obtenerpaciente = function (codigo) {
-        this.pacienteColeccion = this.afs.collection('pacientes', function (x) { return x.where("codigo", "==", codigo); });
+    PacienteService.prototype.Obtenerpaciente = function (id) {
+        this.pacienteColeccion = this.afs.collection('pacientes', function (x) { return x.where("id", "==", id); });
         return this.pacientes = this.pacienteColeccion.snapshotChanges()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
@@ -4772,8 +5269,8 @@ var ProfesionalService = /** @class */ (function () {
             });
         }));
     };
-    ProfesionalService.prototype.Obtenerprofesional = function (codigo) {
-        this.profesionalColeccion = this.afs.collection('profesionales', function (x) { return x.where("codigo", "==", codigo); });
+    ProfesionalService.prototype.Obtenerprofesional = function (id) {
+        this.profesionalColeccion = this.afs.collection('profesionales', function (x) { return x.where("id", "==", id); });
         return this.profesionals = this.profesionalColeccion.snapshotChanges()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
             return changes.map(function (action) {
@@ -4787,7 +5284,7 @@ var ProfesionalService = /** @class */ (function () {
         //actualizo las especialidades
         var id = this.afs.createId();
         this.afs.collection('profesionalEspecialidad').doc(id).set({
-            idEspecialida: especialidad.idEspecialidad,
+            idEspecialida: especialidad.idEspecialida,
             idProfesional: especialidad.idProfesional,
             nombre: especialidad.nombre,
             activa: especialidad.activa,
@@ -4891,6 +5388,28 @@ var TurnosService = /** @class */ (function () {
         this.turnoColeccion = afs.collection('turnos');
         this.turnos = this.turnoColeccion.valueChanges();
     }
+    TurnosService.prototype.ListarTurnosProfesional = function (idProfesional) {
+        this.turnoColeccion = this.afs.collection('turnos', function (x) { return x.where("idProfesional", "==", idProfesional); });
+        return this.turnos = this.turnoColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idTurno = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
+    TurnosService.prototype.ListarTurnosPacientes = function (idPaciente) {
+        this.turnoColeccion = this.afs.collection('turnos', function (x) { return x.where("idPaciente", "==", idPaciente); });
+        return this.turnos = this.turnoColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idTurno = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
     TurnosService.prototype.Listar = function () {
         this.turnoColeccion = this.afs.collection('turnos');
         return this.turnos = this.turnoColeccion.snapshotChanges()
@@ -4913,11 +5432,73 @@ var TurnosService = /** @class */ (function () {
             });
         }));
     };
+    TurnosService.prototype.actualizar = function (turno) {
+        var _this = this;
+        this.turnoColeccion = this.afs.collection('turnos');
+        return new Promise(function (resolve, reject) {
+            _this.turnoColeccion.doc(turno.idTurno).set({
+                fecha: turno.fecha,
+                hora: turno.hora,
+                especialidad: turno.especialidad,
+                idEspecialidad: turno.idEspecialidad,
+                paciente: turno.paciente,
+                idPaciente: turno.idPaciente,
+                profesional: turno.profesional,
+                idProfesional: turno.idProfesional,
+                estado: turno.estado,
+                motivo: turno.motivo,
+                reseña: turno.resenia,
+                observaciones: turno.observaciones
+            }).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    TurnosService.prototype.cancelar = function (turno) {
+        var _this = this;
+        this.turnoColeccion = this.afs.collection('turnos');
+        return new Promise(function (resolve, reject) {
+            _this.turnoColeccion.doc(turno.idTurno).set({
+                fecha: turno.fecha,
+                hora: turno.hora,
+                especialidad: turno.especialidad,
+                idEspecialidad: turno.idEspecialidad,
+                paciente: turno.paciente,
+                idPaciente: turno.idPaciente,
+                profesional: turno.profesional,
+                idProfesional: turno.idProfesional,
+                estado: turno.estado,
+                motivo: turno.motivo,
+                reseña: turno.resenia,
+                observaciones: turno.observaciones
+            }).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
     TurnosService.prototype.Registrar = function (turno) {
         var _this = this;
         this.turnoColeccion = this.afs.collection('turnos');
         return new Promise(function (resolve, reject) {
-            _this.turnoColeccion.add(turno).then(function (result) {
+            var id = _this.afs.createId();
+            _this.turnoColeccion.doc(id).set({
+                fecha: turno.fecha,
+                hora: turno.hora,
+                especialidad: turno.especialidad,
+                idEspecialidad: turno.idEspecialidad,
+                paciente: turno.paciente,
+                idPaciente: turno.idPaciente,
+                profesional: turno.profesional,
+                idProfesional: turno.idProfesional,
+                estado: turno.estado,
+                motivo: turno.motivo,
+                reseña: turno.resenia,
+                observaciones: turno.observaciones
+            }).then(function (result) {
                 resolve(true);
             }).catch(function (err) {
                 reject(false);

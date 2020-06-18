@@ -46,8 +46,8 @@ export class ProfesionalService {
    
 
 
-  public Obtenerprofesional(codigo:string):Observable<profesional[]>{
-    this.profesionalColeccion=this.afs.collection<profesional>('profesionales',x=>x.where("codigo","==",codigo));
+  public Obtenerprofesional(id:string):Observable<profesional[]>{
+    this.profesionalColeccion=this.afs.collection<profesional>('profesionales',x=>x.where("id","==",id));
     return this.profesionals=this.profesionalColeccion.snapshotChanges()
     .pipe(map(changes => {
       return changes.map(action => {
@@ -63,7 +63,7 @@ export class ProfesionalService {
     //actualizo las especialidades
     const id = this.afs.createId();
     this.afs.collection('profesionalEspecialidad').doc(id).set({
-      idEspecialida:especialidad.idEspecialidad,
+      idEspecialida:especialidad.idEspecialida,
       idProfesional:especialidad.idProfesional,
       nombre:especialidad.nombre,
       activa:especialidad.activa,

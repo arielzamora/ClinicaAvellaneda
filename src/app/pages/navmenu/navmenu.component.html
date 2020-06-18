@@ -37,24 +37,26 @@
               <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/usuarios']">
                 <i class="tim-icons icon-pin"> </i> Usuarios
               </a>
-              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/landing']">
-                <i class="tim-icons icon-image-02"> </i> landing
-              </a>
-              <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/profile']">
-                <i class="tim-icons icon-single-02"> </i> profile
-              </a>
               <a *appValidarRoles="['admin']" class="dropdown-item" [routerLink]="['/home']">
                 <i class="tim-icons icon-single-02"> </i> Maqueta
               </a>
             </div>
           </li>
 
-          <li *appValidarRoles="['paciente','admin','profesional']"  class="nav-item">
+          <li *appValidarRoles="['paciente']"  class="nav-item">
             <a
               class="nav-link btn btn-default d-none d-lg-block"
               [routerLink]="['/registroTurno']"
             >
-              <i class="tim-icons icon-calendar-60"> </i> Turnos
+              <i class="tim-icons icon-calendar-60"> </i> Solicitar Turnos
+            </a>
+          </li>
+          <li *appValidarRoles="['paciente']"  class="nav-item">
+            <a
+              class="nav-link btn btn-default d-none d-lg-block"
+              [routerLink]="['/misTurnos']"
+            >
+              <i class="tim-icons icon-calendar-60"> </i> Mis Turnos
             </a>
           </li>
           <li *appValidarRoles="['admin','profesional']" class="nav-item">

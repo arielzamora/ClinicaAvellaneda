@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 import {AngularFireStorage}from '@angular/fire/storage';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { ReCaptcha2Component } from 'ngx-captcha';
+import { PacienteService } from 'src/app/services/paciente.service';
+import { ProfesionalService } from 'src/app/services/profesional.service';
+import { analytics } from 'firebase';
 
 @Component({
   selector: 'app-login',
@@ -30,7 +33,15 @@ export class LoginComponent implements OnInit ,OnDestroy{
   @ViewChild('inputEmail',{static:true}) inputEmail: ReCaptcha2Component;
   @ViewChild('inputPassword',{static:true}) inputPasword: ReCaptcha2Component;
   key:string;
-  constructor(private fb: FormBuilder, public authService:AuthService,private router:Router,private fireStore:AngularFireStorage,private AFauth :AngularFireAuth) {
+  paciente:any;
+  profesional:any;
+  constructor(private fb: FormBuilder, 
+    public authService:AuthService,
+    private router:Router,
+    private fireStore:AngularFireStorage,
+    private AFauth :AngularFireAuth,
+    private pacienteService:PacienteService,
+    private profesioanService:ProfesionalService) {
 
     this.usuarios=this.authService.traerTodos();
     this.key = '6Le-Z78UAAAAABcjicZLxcZMuebY_chP-kDOHlWj';
@@ -50,7 +61,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
       break;
       case 'P':
           dataLogin = {
-            email: 'paciente@paciente.com',
+            email: 'jzamora@gmail.com',
             password: '123456',
             recaptcha:''
           };
@@ -58,7 +69,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
       break;
       case 'E':
             dataLogin = {
-              email: 'profesional@profesional.com',
+              email: 'tsoros@cavellaneda.com',
               password: '123456',
               recaptcha:''
             };
@@ -85,9 +96,6 @@ export class LoginComponent implements OnInit ,OnDestroy{
             this.success = true;
             this.user.id=response.toString();
             this.guardarUsuario(this.user);
-   
-            // this.updateUserDataEmpleado(userData.user,role) //tenemos que enviarle el rol que se selecciona          
-
           }
           }
         )
@@ -108,6 +116,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
   public guardarUsuario(dataLogin: usuario)
   {
 
+    
       this.usuarios.forEach(user=>{
         if((user.mail.toString()==dataLogin.usuario)&&(user.contraseña.toString()==dataLogin.password))
         {
@@ -117,16 +126,29 @@ export class LoginComponent implements OnInit ,OnDestroy{
             switch(dataLogin.tipo)
             {
               case "paciente": { 
-                localStorage.setItem('Login', JSON.stringify(dataLogin));
-                //statements; 
-                break; 
-            } 
-            case "profesional": { 
+
+              this.pacienteService.Obtenerpaciente(dataLogin.id).subscribe(item=>{
+                this.paciente=item.map(x=>x);                
+                localStorage.setItem('LoginUsuario', JSON.stringify(this.paciente));
+              });
               localStorage.setItem('Login', JSON.stringify(dataLogin));
+             
                 //statements; 
                 break; 
             } 
-            default: { 
+            case "profesional": {
+              
+              this.profesioanService.Obtenerprofesional(dataLogin.id).subscribe(item=>{
+                this.profesional=item.map(x=>x);                
+                localStorage.setItem('LoginUsuario', JSON.stringify(this.profesional));
+              });
+              localStorage.setItem('Login', JSON.stringify(dataLogin));
+           
+                //statements; 
+                break; 
+            } 
+            default: {
+
               localStorage.setItem('Login', JSON.stringify(dataLogin));
                 //statements; 
                 break; 

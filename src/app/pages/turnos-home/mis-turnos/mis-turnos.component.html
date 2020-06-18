@@ -1,0 +1,155 @@
+<app-navmenu [usuario]="user" [estaLogueado]="isLogueado" ></app-navmenu>
+
+<div class="wrapper">
+  <div class="page-header header-filter">
+    <div class="squares square1"></div>
+    <div class="squares square2"></div>
+    <div class="squares square3"></div>
+    <div class="squares square4"></div>
+    <div class="squares square5"></div>
+    <div class="squares square6"></div>
+    <div class="squares square7"></div>
+    <div class="container">
+      <div class="content-center">
+        <h3>Turnos :</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Profesional</th>
+                    <th>Especialidad</th>
+                    <th>Estado</th>
+                    <th class="text-right">Dejar Reseña</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let turno of listaTurnosPaciente">
+                    <td class="text-center">1</td>
+                    <th>{{turno.fecha}}</th>
+                    <th>{{turno.hora}}</th>
+                    <th>{{turno.profesional}}</th>
+                    <th>{{turno.especialidad}}</th>
+                    <th>{{turno.estado}}</th>
+                    <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" tooltip="Reseña"  data-target="#modalRes"
+                        (click)="guardarResena(turno)" class="btn btn-info btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-single-02"></i>
+                        </button>
+                        <button type="button" rel="tooltip" tooltip="Ver Observaciones" 
+                        (click)="verObservaciones(turno)"
+                        data-target="#modalObs" class="btn btn-success btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-settings-gear-63"></i>
+                        </button>
+                        <button type="button" rel="tooltip" tooltip="Cancelar" (click)="cancelarTurno(turno)" class="btn btn-danger btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-simple-remove"></i>
+                        </button>
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>      
+  <app-footer></app-footer>
+ </div>
+ <!--modal observaciones-->
+ <div
+ aria-hidden="true"
+ aria-labelledby="myModalLabel"
+ bsModal
+ class="modal fade"
+ #modalObs="bs-modal"
+ id="modalObs"
+ role="dialog"
+ tabindex="-1"
+>
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header justify-content-center">
+       <button
+         aria-hidden="true"
+         class="close"
+         data-dismiss="modal"
+         type="button"
+         (click)="modalObs.hide()"
+       >
+         <i class="tim-icons icon-simple-remove"> </i>
+       </button>
+       <h4 class="title title-up">Observaciones sobre el turno :</h4>
+     </div>
+     <div class="modal-body">
+       <p>
+         {{Observacion}}
+       </p>
+     </div>
+     <div class="modal-footer">
+       <button
+         class="btn btn-danger"
+         data-dismiss="modal"
+         type="button"
+         (click)="modalObs.hide()"
+       >
+         Cerrar
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
+<!--modal reseña-->
+<div
+      aria-hidden="true"
+      aria-labelledby="myModalLabel"
+      bsModal
+      class="modal fade modal-black"
+      #modalRes="bs-modal"
+      id="modalRes"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <button
+              aria-hidden="true"
+              class="close"
+              data-dismiss="modal"
+              (click)="modalRes.hide()"
+              type="button"
+            >
+              <i class="tim-icons icon-simple-remove text-white"> </i>
+            </button>
+            <div class="text-muted text-center ml-auto mr-auto">
+              <h3 class="mb-0">Deje su Comentario </h3>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="btn-wrapper text-center">
+                <img src="assets/img/clinicaAvellaneda.jpg" class="img-fluid rounded shadow" style="width: 100px;"/>
+            </div>
+            <form [formGroup]="form" (keyup.enter)="guardarComentario()">
+              <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-success">Comentario sobre la atencion Recibida :</p>
+                        <div class="form-group">
+                            <textarea class="form-control" name="comentario" id="comentario" formControlName="comentario" rows="10" placeholder="Que tal fue su experiencia?" required></textarea>
+                            <div *ngIf="submitted && f.comentario.errors?.required" class="invalid-feedback"
+                            autocomplete="comentario">
+                            <div *ngIf="f.comentario.errors?.required">Debe ingresar un comentario.</div>
+                          </div>
+                        </div>
+                    </div>    
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary my-4" type="button" (click)="guardarComentario()">
+                  Guardar Comentario
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

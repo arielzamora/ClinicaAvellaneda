@@ -11,10 +11,182 @@
     <div class="squares square7"></div>
     <div class="container">
       <div class="content-center">
-        <h3>Turnos :</h3>
-        <app-listado-turnos></app-listado-turnos>
+        <h3>Listado de turnos :</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th class="text-center" colspan="8">
+                  <app-csv class="float-right csv" [data]="data" [filename]="generarNombreCsv()" [options]="options"></app-csv>
+                  <button  class="float-right  btn btn-outline-primary btn-sm  mx-auto mb-4" type="button" (click)="generarPDF()" ><i class="fas fa-file"></i>Generar PDF</button>
+                </th>
+              </tr>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Profesional</th>
+                    <th>Especialidad</th>
+                    <th>Estado</th>
+                    <th class="text-right">Dejar Reseña</th>
+                </tr>
+            </thead>
+            <tbody id="tablaPDF">
+                <tr *ngFor="let turno of listaTurnosPaciente">
+                    <th>{{turno.fecha}}</th>
+                    <th>{{turno.hora}}</th>
+                    <th>{{turno.profesional}}</th>
+                    <th>{{turno.especialidad}}</th>
+                    <th>{{turno.estado}}</th>
+                    <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" tooltip="Observaciones"  data-target="#modalRes"
+                        (click)="verObservacion(turno)" class="btn btn-info btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-alert-circle-exc"></i>
+                        </button>
+                        <button type="button" rel="tooltip" tooltip="Comentario Pacientes" 
+                        (click)="verComentarios(turno)"
+                        data-target="#modalObs" class="btn btn-success btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-shape-star"></i>
+                        </button>
+                        <button type="button" rel="tooltip" tooltip="Cancelar" (click)="cancelarTurno(turno)" class="btn btn-danger btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-simple-remove"></i>
+                        </button>
+                        <button type="button" rel="tooltip" tooltip="Rechazar" (click)="rechazarTurno(turno)" class="btn btn-danger btn-simple btn-icon btn-sm">
+                          <i class="tim-icons icon-simple-delete"></i>
+                      </button>
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
       </div>
     </div>
   </div>      
   <app-footer></app-footer>
  </div>
+ <!--modal observaciones-->
+ <div
+ aria-hidden="true"
+ aria-labelledby="myModalLabel"
+ bsModal
+ class="modal fade"
+ #modalObs="bs-modal"
+ id="modalObs"
+ role="dialog"
+ tabindex="-1"
+>
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header justify-content-center">
+       <button
+         aria-hidden="true"
+         class="close"
+         data-dismiss="modal"
+         type="button"
+         (click)="modalObs.hide()"
+       >
+         <i class="tim-icons icon-simple-remove"> </i>
+       </button>
+       <h4 class="title title-up">Comentarios sobre el turno :</h4>
+     </div>
+     <div class="modal-body">
+       <p>
+         {{Observacion}}
+       </p>
+     </div>
+     <div class="modal-footer">
+       <button
+         class="btn btn-danger"
+         data-dismiss="modal"
+         type="button"
+         (click)="modalObs.hide()"
+       >
+         Cerrar
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
+<!--modal reseña-->
+<div
+      aria-hidden="true"
+      aria-labelledby="myModalLabel"
+      bsModal
+      class="modal fade modal-black"
+      #modalRes="bs-modal"
+      id="modalRes"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header justify-content-center">
+            <button
+              aria-hidden="true"
+              class="close"
+              data-dismiss="modal"
+              (click)="modalRes.hide()"
+              type="button"
+            >
+              <i class="tim-icons icon-simple-remove text-white"> </i>
+            </button>
+            <div class="text-muted text-center ml-auto mr-auto">
+              <h3 class="mb-0">Observaciones </h3>
+            </div>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <p class="text-info">Fecha: {{fecha}}</p>
+                <p class="text-info">Paciente: {{paciente}}</p>
+                <p class="text-info">Motivo: {{motivo}}</p>
+              </div>
+              <div class="col-5">
+                <p class="text-info">Hora: {{hora}}</p>
+                <p class="text-info">{{especialidad}}</p>
+              </div>
+            </div>          
+            
+            <form [formGroup]="form" (keyup.enter)="guardarComentario()">
+              <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-success">Observacion sobre el paciente :</p>
+                        <div class="form-group">
+                          <div formArrayName="info">                           
+                            <div *ngFor="let item of getInfo.controls; let pointIndex=index" [formGroupName]="pointIndex">                             
+                              <div class="row">
+                              <div class="col-4">
+                                <input formControlName="clave{{pointIndex}}">
+                              </div>
+                              <div class="col-4">
+                                <input formControlName="valor{{pointIndex}}">
+                              </div>                             
+                            </div>
+                            </div>
+                          </div>
+                          <a class="btn btn-danger" (click)="agregarInfo(pointIndex)">add</a>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-12">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" formControlName="atendido">
+                                  <span class="form-check-sign">                    
+                                  </span> Atendido </label>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>    
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary my-4" type="button" (click)="guardarObservacion()">
+                  Guardar Observacion
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

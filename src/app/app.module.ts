@@ -34,6 +34,8 @@ import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.c
 import { firebaseConfig } from "./../../src/environments/environment";
 import { AuthService } from "src/app/services/auth.service";
 
+import { Angular2CsvModule } from 'angular2-csv';
+
 
 
 @NgModule({
@@ -55,7 +57,8 @@ import { AuthService } from "src/app/services/auth.service";
     AngularFireStorageModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    Angular2CsvModule
   ],
   providers: [
     AngularFireAuth,//

@@ -6,11 +6,15 @@ export class turno {
     idTurno: string; 
     fecha: string;
     hora:string;
-    especialidad:especialidad;
-    paciente:paciente;
-    profesional:profesional;
-    tomado:boolean;
-    cancelado:boolean;
+    especialidad:string;
+    idEspecialidad:string;
+    idPaciente:string;
+    paciente:string;
+    idProfesional:string;
+    profesional:string;
+    motivo:string;
+    estado:string;
+    resenia:string;
     observaciones:string; 
     constructor() {
         

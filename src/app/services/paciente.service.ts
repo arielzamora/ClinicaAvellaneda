@@ -36,8 +36,8 @@ export class PacienteService {
      }));
   }
 
-  public Obtenerpaciente(codigo:string):Observable<paciente[]>{
-    this.pacienteColeccion=this.afs.collection<paciente>('pacientes',x=>x.where("codigo","==",codigo));
+  public Obtenerpaciente(id:string):Observable<paciente[]>{
+    this.pacienteColeccion=this.afs.collection<paciente>('pacientes',x=>x.where("id","==",id));
     return this.pacientes=this.pacienteColeccion.snapshotChanges()
     .pipe(map(changes => {
       return changes.map(action => {

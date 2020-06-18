@@ -1,0 +1,15 @@
+.table th{
+color:black;
+}
+.modal.show .modal-dialog {
+    transform: translate(0, 10%);
+}
+.modal {
+    background: rgba(0,0,0,0.6);
+  }
+  .modal-dialog{
+    max-width: 700px;
+  }
+  .modal-content{
+    width: 700px;
+  }

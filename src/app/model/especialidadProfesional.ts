@@ -1,8 +1,9 @@
 import { usuario } from './usuario';
 
 export class especialidadProfesional {
-    idEspecialidad:string;
+    idEspecialida:string;
     idProfesional:string;
+    nombreProfesional:string;
     nombre:string;
     activa:boolean;
     usuarioAlta:string;
