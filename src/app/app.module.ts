@@ -35,6 +35,15 @@ import { firebaseConfig } from "./../../src/environments/environment";
 import { AuthService } from "src/app/services/auth.service";
 
 import { Angular2CsvModule } from 'angular2-csv';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+// import { MatNativeDateModule } from '@angular/material/core';
+// import { MatTableModule } from '@angular/material/table';
+
+// import { MatInputModule } from '@angular/material/input';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatSelectModule } from '@angular/material/select';
+// import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -58,7 +67,8 @@ import { Angular2CsvModule } from 'angular2-csv';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    Angular2CsvModule
+    Angular2CsvModule,
+    NgbModule
   ],
   providers: [
     AngularFireAuth,//

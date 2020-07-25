@@ -1,0 +1,59 @@
+<app-navmenu [usuario]="user" [estaLogueado]="isLogueado" ></app-navmenu>
+<div class="wrapper">
+  <div class="page-header header-filter">
+    <div class="squares square1"></div>
+    <div class="squares square2"></div>
+    <div class="squares square3"></div>
+    <div class="squares square4"></div>
+    <div class="squares square5"></div>
+    <div class="squares square6"></div>
+    <div class="squares square7"></div>
+    <div class="container">
+      <div class="content-center">
+        <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center" colspan="12">
+                      <div class="row">
+                        <div class="form-group has-search col-6">
+                          <span class="fa fa-search form-control-feedback"></span>
+                          <input type="text" class="form-control col-12" [(ngModel)]="filterPost" name="filterPost" placeholder="Paciente,Profesional,Especialidad.">
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th>Paciente</th>
+                    <th>Profesional</th>
+                    <th>Especialidad</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Estado</th>
+                    <th class="text-right">Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let turno of listaTurnosPaciente | filter:filterPost">
+                    <td class="text-center">1</td>
+                    <th>{{turno.paciente}}</th>
+                    <th>{{turno.profesional}}</th>
+                    <th>{{turno.especialidad}}</th>
+                    <th>{{turno.fecha}}</th>
+                    <th>{{turno.hora}}</th>
+                    <th>{{turno.estado}}</th>
+                    <td class="td-actions text-right">
+                        <button type="button" rel="tooltip" tooltip="Detalle"  
+                        (click)="verObservaciones(turno)" class="btn btn-info btn-simple btn-icon btn-sm">
+                            <i class="tim-icons icon-single-02"></i>
+                        </button>                     
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>      
+ </div>
+ 

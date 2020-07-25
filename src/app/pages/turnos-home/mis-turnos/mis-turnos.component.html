@@ -33,11 +33,11 @@
                     <th>{{turno.especialidad}}</th>
                     <th>{{turno.estado}}</th>
                     <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" tooltip="Reseña"  data-target="#modalRes"
+                        <button *ngIf="turno.estado === 'cerrado'" type="button" rel="tooltip" tooltip="Reseña"  data-target="#modalRes"
                         (click)="guardarResena(turno)" class="btn btn-info btn-simple btn-icon btn-sm">
                             <i class="tim-icons icon-single-02"></i>
                         </button>
-                        <button type="button" rel="tooltip" tooltip="Ver Observaciones" 
+                        <button *ngIf="turno.estado === 'cerrado'"  type="button" rel="tooltip" tooltip="Ver Observaciones" 
                         (click)="verObservaciones(turno)"
                         data-target="#modalObs" class="btn btn-success btn-simple btn-icon btn-sm">
                             <i class="tim-icons icon-settings-gear-63"></i>
@@ -97,59 +97,4 @@
    </div>
  </div>
 </div>
-<!--modal reseña-->
-<div
-      aria-hidden="true"
-      aria-labelledby="myModalLabel"
-      bsModal
-      class="modal fade modal-black"
-      #modalRes="bs-modal"
-      id="modalRes"
-      role="dialog"
-      tabindex="-1"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header justify-content-center">
-            <button
-              aria-hidden="true"
-              class="close"
-              data-dismiss="modal"
-              (click)="modalRes.hide()"
-              type="button"
-            >
-              <i class="tim-icons icon-simple-remove text-white"> </i>
-            </button>
-            <div class="text-muted text-center ml-auto mr-auto">
-              <h3 class="mb-0">Deje su Comentario </h3>
-            </div>
-          </div>
-          <div class="modal-body">
-            <div class="btn-wrapper text-center">
-                <img src="assets/img/clinicaAvellaneda.jpg" class="img-fluid rounded shadow" style="width: 100px;"/>
-            </div>
-            <form [formGroup]="form" (keyup.enter)="guardarComentario()">
-              <div class="form-group mb-3">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="text-success">Comentario sobre la atencion Recibida :</p>
-                        <div class="form-group">
-                            <textarea class="form-control" name="comentario" id="comentario" formControlName="comentario" rows="10" placeholder="Que tal fue su experiencia?" required></textarea>
-                            <div *ngIf="submitted && f.comentario.errors?.required" class="invalid-feedback"
-                            autocomplete="comentario">
-                            <div *ngIf="f.comentario.errors?.required">Debe ingresar un comentario.</div>
-                          </div>
-                        </div>
-                    </div>    
-                </div>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-primary my-4" type="button" (click)="guardarComentario()">
-                  Guardar Comentario
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+

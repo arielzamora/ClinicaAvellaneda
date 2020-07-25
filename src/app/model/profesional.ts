@@ -15,6 +15,7 @@ export class profesional extends usuario{
     nacionalidad:string;
     horario:string;
     diasHorarios:diasHorarios;
+    urlImage:string;
 
     constructor() {
         super();

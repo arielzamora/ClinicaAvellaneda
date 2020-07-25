@@ -149,8 +149,7 @@ export class EditProfesionalComponent implements OnInit {
       this.profesionalService.Registrar(this.profesional)
         .then(
           response => {
-            console.log(response);
-            if (response) {
+
               this.listaAuxFinal.forEach(item=>{
                 this.profesionalService.RegistrarEspecialidadesProfesionales(item);
               }); 
@@ -160,10 +159,7 @@ export class EditProfesionalComponent implements OnInit {
 
               this.registradoCorrectamente.emit();
               this.cerrar();
-            } else {
-              this.error = true;
-              this.errorMessage = "error al registrar el profesional";
-            }
+
           }
         )
         .catch(

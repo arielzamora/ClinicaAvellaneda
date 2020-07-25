@@ -7,18 +7,29 @@ import {
 } from "@angular/core";
 import { Location } from "@angular/common";
 import { DOCUMENT } from "@angular/common";
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  styleUrls: ["./app.component.scss"],
+  animations: [
+    slideInAnimation
+  ]
 })
 export class AppComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     public location: Location,
     @Inject(DOCUMENT) document
-  ) {}
+  ) {
+
+
+  }
+  prepareRoute(outlet: RouterOutlet){
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(e) {
     if (window.pageYOffset > 100) {

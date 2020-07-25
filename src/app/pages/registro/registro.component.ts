@@ -40,8 +40,6 @@ export class RegistroComponent implements OnInit, OnDestroy  {
     private pacienteService:PacienteService,
     private fireStore:AngularFireStorage,
     private auth:AuthService) {
-    //this.cargarLista();
-    this.key = '6Le-Z78UAAAAABcjicZLxcZMuebY_chP-kDOHlWj';
   }
   //@HostListener("document:mousemove", ["$event"])
  
@@ -69,7 +67,6 @@ export class RegistroComponent implements OnInit, OnDestroy  {
       edad: ['', Validators.required],
       nacionalidad: ['', Validators.required],
       planMedico: ['', Validators.required],
-      recaptcha: ['', Validators.required],
       imagen: [''],
       imagenUser: ['']
     });
@@ -103,34 +100,29 @@ export class RegistroComponent implements OnInit, OnDestroy  {
     this.paciente.urlImage=this.urlImage;
     this.paciente.activo=true;
     if (this.form.valid ) {
-    this.pacienteService.Registrar(this.paciente)
-    .then(
-      response => {
-        console.log(response);
-        if (response) {
-          this.success = true;
-          this.form.reset();
-          this.cerrar();
-          this.auth.logout();
-          this.router.navigate(['/login']);
-        } else {
+
+      this.pacienteService.RegistrarPaciente(this.paciente);
+
+      this.pacienteService.Registrar(this.paciente)
+      .then(response => {
+            this.success = true;
+            this.form.reset();
+            this.cerrar();
+            this.auth.logout();
+            this.router.navigate(['/login']);
+          }
+        ).catch(
+        error => {
           this.error = true;
           this.errorMessage = "error al registrar el paciente";
+          console.log(error);
         }
-      }
-    )
-    .catch(
-      error => {
+      );
+      } else {
+        this.errorMessage = 'Debe completar los campos correctamente.';
         this.error = true;
-        this.errorMessage = "error al registrar el paciente";
-        console.log(error);
-      }
-    );
-} else {
-  this.errorMessage = 'Debe completar los campos correctamente.';
-  this.error = true;
 
-}
+      }
 }
 cerrar() {
   
@@ -161,56 +153,5 @@ cerrar() {
     var squares7 = document.getElementById("square7");
     var squares8 = document.getElementById("square8");
 
-    var posX = e.clientX - window.innerWidth / 2;
-    var posY = e.clientY - window.innerWidth / 6;
-
-    squares1.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.05 +
-      "deg) rotateX(" +
-      posY * -0.05 +
-      "deg)";
-    squares2.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.05 +
-      "deg) rotateX(" +
-      posY * -0.05 +
-      "deg)";
-    squares3.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.05 +
-      "deg) rotateX(" +
-      posY * -0.05 +
-      "deg)";
-    squares4.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.05 +
-      "deg) rotateX(" +
-      posY * -0.05 +
-      "deg)";
-    squares5.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.05 +
-      "deg) rotateX(" +
-      posY * -0.05 +
-      "deg)";
-    squares6.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.05 +
-      "deg) rotateX(" +
-      posY * -0.05 +
-      "deg)";
-    squares7.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.02 +
-      "deg) rotateX(" +
-      posY * -0.02 +
-      "deg)";
-    squares8.style.transform =
-      "perspective(500px) rotateY(" +
-      posX * 0.02 +
-      "deg) rotateX(" +
-      posY * -0.02 +
-      "deg)";
   }
 }

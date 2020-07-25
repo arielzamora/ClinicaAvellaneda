@@ -1,5 +1,4 @@
-<app-navmenu></app-navmenu>
-<br>
+
 <div class="wrapper">
     <div class="page-header">
       <div class="page-header-image"></div>
@@ -19,23 +18,33 @@
                 class="card-img"
                 src="assets/img/square1-red.png"
               />
-
+              <br>
               <h3 class="card-title">Ingreso</h3>
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-4">
+                <div class="col-2">
                   <button type="button" tooltip="Administrador" class="btn btn-primary btn-icon btn-round mr-1" (click)="CargarDefault('A')">
                     <i class="tim-icons icon-settings-gear-63"></i>
                     </button>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                   <button type="button" tooltip="Paciente" class="btn btn-succes btn-icon btn-round mr-1" (click)="CargarDefault('P')">
                     <i class="tim-icons icon-single-02"></i>
                     </button>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
+                  <button type="button" tooltip="Paciente2" class="btn btn-succes btn-icon btn-round mr-1" (click)="CargarDefault('P2')">
+                    <i class="tim-icons icon-single-02"></i>
+                    </button>
+                </div>
+                <div class="col-2">
                   <button type="button" tooltip="Profesional" class="btn btn-danger btn-icon btn-round mr-1" (click)="CargarDefault('E')">
+                    <i class="tim-icons icon-heart-2"></i>
+                    </button>
+                </div>
+                <div class="col-2">
+                  <button type="button" tooltip="Profesional2" class="btn btn-danger btn-icon btn-round mr-1" (click)="CargarDefault('E2')">
                     <i class="tim-icons icon-heart-2"></i>
                     </button>
                 </div>
@@ -63,7 +72,19 @@
                     </div>
                   </div>
               </div>
-                <div class="row">
+              <div class="row">
+                <div class="col-12">
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" (change)="mostrarCaptcha()">
+                      <span class="form-check-sign">                   
+                      </span> Mostrar Captcha </label>
+                    </div>
+                </div>
+                </div>
+              </div>
+                <div *ngIf="muestroCaptcha" class="row">
                   <div class="col-12">
                   <div class="form-group">
                     <ngx-recaptcha2 (resolved)="resolved($event)" #captchaElem [siteKey]="key" [size]="'normal'" [hl]="'es'" [theme]="'light'" [type]="'image'" formControlName="recaptcha">
@@ -79,23 +100,26 @@
               </form>
             </div>
             <div class="card-footer">
+              <div class="form-group">
               <div class="row">
-                <div class="col-4">
-                  <a class="btn btn-primary btn-round btn-lg" (click)="Ingresar()" >
+                  <button class="btn btn-primary col-6" (click)="Ingresar()" >
                     Ingresar
-                  </a>
-                </div>
-                <div class="col-4">
-                  <a class="btn btn-succes btn-round btn-lg" [routerLink]="['/registro']">
-                    Registrarse
-                  </a>
-                </div>
-                <div class="col-4">
-                  <a class="btn btn-danger btn-round btn-lg" [routerLink]="['/bienvenida']">
-                    Cancelar
-                  </a>
-                </div>
+                  </button>
+                <button class="btn btn-danger col-5" [routerLink]="['/bienvenida']">
+                  Cancelar
+                </button>
               </div>
+            </div>
+                <div class="row">
+                  <button class="btn btn-succes col-11" [routerLink]="['/registroProfesional']">
+                    Registro Profesionales
+                  </button>
+                </div>
+                  <div class="row">
+                    <button class="btn btn-succes col-11" [routerLink]="['/registro']">
+                      Registro Pacientes
+                    </button>
+                  </div>               
             </div>
           </div>
 </div>

@@ -72,8 +72,42 @@ export class ProfesionalService {
     });
   }
 
+  public RegistrarProfesional(profe:profesional){
+ //creo el usuario
 
-  public Registrar(profe:profesional): Promise<any> {
+       const id = this.afs.createId();
+        this.afs.collection('usuarios').doc(id).set({
+          id:id,
+          contraseña:profe.password,
+          mail:profe.usuario,
+          nombre:profe.nombre,
+          tipo:"profesional"
+        }).then().catch();
+
+        this.afs.collection('profesionales').doc(id).set({
+          id: id, 
+          idProfesional: profe.idProfesional, 
+          nombre: profe.nombre,
+          apellido: profe.apellido,
+          dni:profe.dni,
+          sexo:profe.sexo,
+          horario:profe.horario,
+          edad: profe.edad,
+          nacionalidad:profe.nacionalidad,   
+          imagen:profe.urlImage,    
+          habilitado: false,
+          diasHorarios:{
+            lunes:profe.diasHorarios.lunes,
+            martes:profe.diasHorarios.martes,
+            miercoles:profe.diasHorarios.miercoles,
+            jueves:profe.diasHorarios.jueves,
+            viernes:profe.diasHorarios.viernes,
+            sabado:profe.diasHorarios.sabado      
+          }
+        }).then().catch();   
+  }
+
+  public Registrar(profe:profesional){
 
    //creo login 
    this.dataLogin=new usuario();
@@ -81,43 +115,9 @@ export class ProfesionalService {
    this.dataLogin.tipo = "profesional";
    this.dataLogin.nombre = profe.nombre;
    this.dataLogin.usuario = profe.usuario;
-   return new Promise((resolve, reject) => {
-     this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario,this.dataLogin.password).then(userData =>{ 
-     this.dataLogin.id=userData.user.uid;   
-      //creo el usuario
-      this.afs.collection('usuarios').doc(this.dataLogin.id).set({
-        id:this.dataLogin.id,
-        contraseña:this.dataLogin.password,
-        mail:this.dataLogin.usuario,
-        nombre:this.dataLogin.nombre,
-        tipo:this.dataLogin.tipo
-      }).then().catch();
-
-      this.afs.collection('profesionales').doc(this.dataLogin.id).set({
-        id: this.dataLogin.id, 
-        idProfesional: profe.idProfesional, 
-        nombre: profe.nombre,
-        apellido: profe.apellido,
-        dni:profe.dni,
-        sexo:profe.sexo,
-        horario:profe.horario,
-        edad: profe.edad,
-        nacionalidad:profe.nacionalidad,       
-        diasHorarios:{
-          lunes:profe.diasHorarios.lunes,
-          martes:profe.diasHorarios.martes,
-          miercoles:profe.diasHorarios.miercoles,
-          jueves:profe.diasHorarios.jueves,
-          viernes:profe.diasHorarios.viernes,
-          sabado:profe.diasHorarios.sabado      
-        }
-      }).then().catch();   
-      resolve(true);
-    }).catch(err => {
-      reject(false);
-    });
-  
-})
+   return this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario,this.dataLogin.password).then(userData =>{ 
+     this.dataLogin.id=userData.user.uid;        
+      });
  }
 
   public Eliminar(profesional: profesional): Promise<Object> {

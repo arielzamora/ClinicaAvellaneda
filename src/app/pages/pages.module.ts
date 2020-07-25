@@ -47,6 +47,14 @@ import { DetalleProfesionalComponent } from './profesionales-home/detalle-profes
 import { EditProfesionalComponent } from './profesionales-home/edit-profesional/edit-profesional.component';
 import { MisTurnosComponent } from './turnos-home/mis-turnos/mis-turnos.component';
 import {CsvComponent} from './../common/csv/csv.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { TurnoObservacionComponent } from './turnos-home/turno-observacion/turno-observacion.component';
+import { BusquedaTurnosComponent } from './turnos-home/busqueda-turnos/busqueda-turnos.component';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import { filter } from 'rxjs/operators';
+import { TurnoObservacionDetalleComponent } from './turnos-home/turno-observacion-detalle/turno-observacion-detalle.component';
+import { TurnoEncuestaComponent } from './turnos-home/turno-encuesta/turno-encuesta.component';
+import { InformesHomeComponent } from './informes-home/informes-home.component';
 
 @NgModule({
   imports: [
@@ -55,6 +63,7 @@ import {CsvComponent} from './../common/csv/csv.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    NgbModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
     TooltipModule.forRoot(),
@@ -95,8 +104,13 @@ import {CsvComponent} from './../common/csv/csv.component';
     DetalleProfesionalComponent,
     EditProfesionalComponent,
     MisTurnosComponent,
-    CsvComponent
-
+    CsvComponent,
+    TurnoObservacionComponent,
+    BusquedaTurnosComponent,
+    FilterPipe,
+    TurnoObservacionDetalleComponent,
+    TurnoEncuestaComponent,
+    InformesHomeComponent
   ],
   exports: [
     IndexComponent,

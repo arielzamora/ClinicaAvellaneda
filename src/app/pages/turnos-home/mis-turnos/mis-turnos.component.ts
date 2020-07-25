@@ -5,6 +5,7 @@ import { TurnosService } from 'src/app/services/turnos.service';
 import { profesional } from 'src/app/model/profesional';
 import { paciente } from 'src/app/model/paciente';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mis-turnos',
@@ -28,7 +29,8 @@ export class MisTurnosComponent implements OnInit {
   public error: boolean;
   public success: boolean;
   turnoSeleccionado:turno;
-  constructor(private turnosService:TurnosService,private fb: FormBuilder) {   
+  selectedProfesional = 4;
+  constructor(private turnosService:TurnosService,private router:Router,private fb: FormBuilder) {   
     this.obtenerUsuarioActual();
     this.cargarLista();
    }
@@ -67,9 +69,13 @@ export class MisTurnosComponent implements OnInit {
   }
 
   public guardarResena(turnoTab:turno){
-    this.modalResena.show();
+
+    localStorage.removeItem('TurnoEncuesta');
     this.turnoSeleccionado=new turno();
     this.turnoSeleccionado=turnoTab;
+
+    localStorage.setItem('TurnoEncuesta', JSON.stringify(this.turnoSeleccionado));
+    this.router.navigate(['/turnosEncuesta']);
   
   }
   public verObservaciones(turno:turno){
@@ -88,6 +94,7 @@ export class MisTurnosComponent implements OnInit {
     this.turnoSeleccionado = turnoTab;
     this.turnoSeleccionado.estado = "cancelado"
     this.turnoSeleccionado.observaciones = "turno cancelado por el paciente";
+ 
 
     this.turnosService.actualizar(this.turnoSeleccionado)
       .then(
@@ -124,7 +131,7 @@ export class MisTurnosComponent implements OnInit {
   if (this.form.valid ) {
     
     this.turnoSeleccionado.resenia= this.form.get('comentario').value;
-
+    this.turnoSeleccionado.puntosProfesional=this.selectedProfesional;
     this.turnosService.actualizar(this.turnoSeleccionado)
       .then(
         response => {

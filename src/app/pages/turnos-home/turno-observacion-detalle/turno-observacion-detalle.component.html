@@ -1,0 +1,141 @@
+
+     <div class="modal-header justify-content-center">
+        <div class="text-muted text-center ml-auto mr-auto">
+          <h3 class="mb-0">Observaciones </h3>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-5">
+            <p class="text-info">Fecha: {{fecha}}</p>
+            <p class="text-info">Paciente: {{paciente}}</p>
+            <p class="text-info">Motivo: {{motivo}}</p>
+          </div>
+          <div class="col-5">
+            <p class="text-info">Hora: {{hora}}</p>
+            <p class="text-info">{{especialidad}}</p>
+          </div>
+        </div>          
+        
+        <form [formGroup]="form">
+          <div class="form-group mb-3">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-success">Observacion sobre el paciente :</p> 
+                    <div  class="form-group">
+                      <div class="row">
+                        <div class="col-3">
+                          <p class="text-info">Edad: {{edad}}</p>       
+                        </div>
+                        <div class="col-3">
+                          <p class="text-info">Presion: {{presion}}</p>                           
+                        </div>                          
+                      </div>
+                      <div class="row">
+                        <div class="col-3">
+                          <p class="text-info">Temperatura: {{temperatura}}</p> 
+                        </div>  
+                        <div  class="form-group col-6">
+                          <p class="text-info">Observacion: {{observacion}}</p>                         
+                        </div>
+                      </div>
+
+                        <p class="text-success">Info Opcionales :</p>
+                        <div *ngIf="tieneClave1" class="row">
+                          <div class="col-3">
+                            <p class="text-info">{{clave1}}:</p> 
+                          </div>
+                          <div class="col-3">
+                            <p class="text-info">{{valor1}}</p> 
+                          </div>                             
+                        </div>
+                        <div *ngIf="tieneClave2" class="row">
+                          <div class="col-3">
+                            <p class="text-info">{{clave2}}:</p> 
+                          </div>
+                          <div class="col-3">
+                            <p class="text-info">{{valor2}}</p> 
+                          </div>                             
+                        </div>
+                        <div *ngIf="tieneClave3" class="row">
+                          <div class="col-3">
+                            <p class="text-info">{{clave3}}:</p> 
+                          </div>
+                          <div class="col-3">
+                            <p class="text-info">{{valor3}}</p>       
+                          </div>                         
+                        </div>
+                        <div *ngIf="tieneClave4" class="row">
+                          <div class="col-3">
+                            <p class="text-info">{{clave4}}:</p> 
+                          </div>  
+                          <div  class="form-group col-4">
+                            <p class="text-info">{{valor4}}</p> 
+                          </div>
+                        </div>   
+                          <div *ngIf="tieneClave5" class="row">
+                            <div class="col-3">
+                              <p class="text-info">{{clave5}}:</p> 
+                            </div>
+                            <div class="col-4">
+                              <p class="text-info">{{valor5}}</p> 
+                            </div>
+                          </div>
+                          <p class="text-success">Encuesta :</p>
+                          <div *ngIf="completoEncuesta" >
+                            <div class="row">
+                              <div class="col-3">
+                                <p class="text-info">reseña:</p> 
+                              </div>
+                              <div class="col-4">
+                                <p class="text-info">{{resenia}}</p> 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <p class="text-info">Puntos Profesional:</p> 
+                              </div>
+                              <div class="col-4">
+                                <p class="text-info">{{puntosProfesional}}</p> 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <p class="text-info">Puntos Lugar:</p> 
+                              </div>
+                              <div class="col-4">
+                                <p class="text-info">{{puntosLugar}}</p> 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <p class="text-info">Recibe Info:</p> 
+                              </div>
+                              <div class="col-4">
+                                <p class="text-info">{{recibeInfo}}</p> 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <p class="text-info">Recomienda:</p> 
+                              </div>
+                              <div class="col-4">
+                                <p class="text-info">{{recomienda}}</p> 
+                              </div>
+                            </div>
+                          </div>
+                          
+                      </div>                          
+                </div>    
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary my-4" type="button" (click)="cancelar()">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+
+

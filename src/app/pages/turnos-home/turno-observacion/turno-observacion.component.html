@@ -1,0 +1,111 @@
+
+     <div class="modal-header justify-content-center">
+            <div class="text-muted text-center ml-auto mr-auto">
+              <h3 class="mb-0">Observaciones </h3>
+            </div>
+          </div>
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <p class="text-info">Fecha: {{fecha}}</p>
+                <p class="text-info">Paciente: {{paciente}}</p>
+                <p class="text-info">Motivo: {{motivo}}</p>
+              </div>
+              <div class="col-5">
+                <p class="text-info">Hora: {{hora}}</p>
+                <p class="text-info">{{especialidad}}</p>
+              </div>
+            </div>          
+            
+            <form [formGroup]="form">
+              <div class="form-group mb-3">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-success">Observacion sobre el paciente :</p> 
+                        <div  class="form-group">
+                          <div class="row">
+                            <div class="col-3">
+                              <input type="text" id="edad" formControlName="edad" class="form-control" placeholder="ingrese edad" >       
+                            </div>
+                            <div class="col-3">
+                              <input type="text" id="presion" formControlName="presion" class="form-control" placeholder="ingrese Presion" >       
+                            </div>                          
+                          </div>
+                          <div class="row">
+                            <div class="col-3">
+                              <input type="text" id="temperatura" formControlName="temperatura" class="form-control" placeholder="ingrese Temperatura" >       
+                            </div>  
+                            <div  class="form-group col-6">
+                              <input type="text" id="observacion" formControlName="observacion" class="form-control" placeholder="ingrese observacion" >       
+                            </div>
+                          </div>
+
+                            <p class="text-success">Campos Opcionales :</p>
+                            <div class="row">
+                              <div class="col-3">
+                                <input type="text" id="clave1" formControlName="clave1" class="form-control" placeholder="ingrese clave" >       
+                              </div>
+                              <div class="col-3">
+                                <input type="text" id="valor1" formControlName="valor1" class="form-control" placeholder="ingrese valor" >       
+                              </div>                             
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <input type="text" id="clave2" formControlName="clave2" class="form-control" placeholder="ingrese clave" >       
+                              </div>
+                              <div class="col-3">
+                                <input type="text" id="valor2" formControlName="valor2" class="form-control" placeholder="ingrese valor" >       
+                              </div>                             
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <input type="text" id="clave3" formControlName="clave3" class="form-control" placeholder="ingrese clave" >       
+                              </div>
+                              <div class="col-3">
+                                <p class="category">0-100</p>
+                                <div class="slider slider-danger"  id="sliderRegular"></div>
+                                <br />                 
+                              </div>   
+                              <div class="col-1">
+                                <span class="example-val" id="slider-span"></span>      
+                              </div>                          
+                            </div>
+                            <div class="row">
+                              <div class="col-3">
+                                <input type="text" id="clave4" formControlName="clave4" class="form-control" placeholder="ingrese clave num" >       
+                              </div>  
+                              <div  class="form-group col-4">
+                                <input type="text" id="valor4" formControlName="valor4" class="form-control" placeholder="ingrese valor numerico" >       
+                              </div>
+                            </div>   
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-3">
+                                  <input type="text" id="clave5" formControlName="clave5" class="form-control" placeholder="ingrese clave" >       
+                                </div>
+                                <div class="col-4">
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" formControlName="valor5">
+                                      <span class="form-check-sign">                    
+                                      </span> Verdadero </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                          
+                    </div>    
+                </div>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary my-4" type="button" (click)="onSubmit(form.value)">
+                  Guardar Turno
+                </button>
+                <button class="btn btn-primary my-4" type="button" (click)="cancelar()">
+                  Cancelar
+                </button>
+              </div>
+            </form>
+          </div>
+

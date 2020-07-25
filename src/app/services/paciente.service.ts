@@ -19,8 +19,6 @@ export class PacienteService {
   dataLogin:any;
   constructor(private AFauth :AngularFireAuth,private afs:AngularFirestore) { 
 
-    this.pacienteColeccion=afs.collection<paciente>('pacientes');
-    this.pacientes=this.pacienteColeccion.valueChanges(); 
 
   }
 
@@ -48,8 +46,30 @@ export class PacienteService {
     }));
   }
 
+  public RegistrarPaciente(paciente:paciente){
+  //creo el usuario
+  const id = this.afs.createId();
+    this.afs.collection('usuarios').doc(id).set({
+      id:id ,
+      contraseña:paciente.password,
+      mail:paciente.usuario,
+      nombre:paciente.nombre,
+      tipo:"Paciente"
+    }).then().catch();
 
-  public Registrar(paciente:paciente): Promise<any> {
+    this.afs.collection('pacientes').doc(id).set({
+      id:id , 
+      nombre:paciente.nombre,
+      apellido:paciente.apellido,
+      dni:paciente.dni,
+      sexo:paciente.sexo,
+      edad:paciente.edad,
+      nacionalidad:paciente.nacionalidad,
+      planMedico:paciente.planMedico,
+      urlImagen:paciente.urlImage
+    }).then().catch();
+  }
+  public Registrar(paciente:paciente) {
 
     //creo login 
    this.dataLogin=new usuario();
@@ -57,36 +77,11 @@ export class PacienteService {
    this.dataLogin.tipo = "paciente";
    this.dataLogin.nombre = paciente.nombre;
    this.dataLogin.usuario = paciente.usuario;
-   return new Promise((resolve, reject) => {
-     this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario,this.dataLogin.password).then(userData =>{ 
-     this.dataLogin.id=userData.user.uid;   
-      //creo el usuario
-      this.afs.collection('usuarios').doc(this.dataLogin.id).set({
-        id:this.dataLogin.id,
-        contraseña:this.dataLogin.password,
-        mail:this.dataLogin.usuario,
-        nombre:this.dataLogin.nombre,
-        tipo:this.dataLogin.tipo
-      }).then().catch();
-
-      this.afs.collection('pacientes').doc(this.dataLogin.id).set({
-        id: this.dataLogin.id, 
-        nombre: paciente.nombre,
-        apellido: paciente.apellido,
-        dni:paciente.dni,
-        sexo:paciente.sexo,
-        edad: paciente.edad,
-        nacionalidad:paciente.nacionalidad,
-        planMedico:paciente.planMedico,
-        urlImagen:paciente.urlImage
-      }).then().catch();
-
-      resolve(true);
+   return this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario,this.dataLogin.password).then(userData =>{ 
+     this.dataLogin.id=userData.user.uid;     
     }).catch(err => {
-      reject(false);
     });
   
-})
  }
 
   public Eliminar(paciente: paciente): Promise<Object> {

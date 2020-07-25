@@ -1,0 +1,93 @@
+
+          <div class="modal-header justify-content-center">
+            <div class="text-muted text-center ml-auto mr-auto">
+              <h3 class="mb-0">Deje su Comentario </h3>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="btn-wrapper text-center">
+                <img src="assets/img/clinicaAvellaneda.jpg" class="img-fluid rounded shadow" style="width: 100px;"/>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <p class="text-info">Fecha: {{fecha}}</p>
+                <p class="text-info">Paciente: {{paciente}}</p>
+                <p class="text-info">Motivo: {{motivo}}</p>
+              </div>
+              <div class="col-5">
+                <p class="text-info">Hora: {{hora}}</p>
+                <p class="text-info">{{especialidad}}</p>
+              </div>
+            </div>   
+            <form [formGroup]="form" (keyup.enter)="guardarComentario()">
+              <div class="form-group mb-3">
+                        <p class="text-success">Comentario sobre la atencion Recibida :</p>
+                        <div class="form-group">
+                            <textarea class="form-control" name="comentario" id="comentario" formControlName="comentario" rows="10" placeholder="Que tal fue su experiencia?" required></textarea>
+                            <div *ngIf="submitted && f.comentario.errors?.required" class="invalid-feedback"
+                            autocomplete="comentario">
+                            <div *ngIf="f.comentario.errors?.required">Debe ingresar un comentario.</div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <label for="moz" class="col-4">Califique el Profesional</label>
+                          <div class="col-4">
+                            <ngb-rating [(rate)]="selectedProfesional" class="col-4">
+                              <ng-template let-fill="fill" let-index="index">
+                                  <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                </ng-template>
+                              </ngb-rating>
+                          </div>            
+                        </div>
+                        <div class="row">
+                            <label for="moz" class="col-4">Calificacion lugar de atencion :</label>
+                          <div class="col-4">
+                            <p class="category">0-100</p>
+                            <div class="slider slider-danger"  id="sliderRegular"></div>
+                            <br />                 
+                          </div>   
+                          <div class="col-1">
+                            <span class="example-val" id="slider-span"></span>      
+                          </div>                          
+                        </div>
+                            <div class="row">
+                              <div class="col-4">
+                                <label for="moz" >desea recibir informacion sobre novedades?</label>       
+                              </div>
+                              <div class="col-4">
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" formControlName="recibeInfo">
+                                    <span class="form-check-sign">                    
+                                    </span> Si </label>
+                                  </div>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                            <div class="col-4">
+                              <label for="moz" >Recomendaria la Clinica a un conocido?</label>       
+                            </div>
+                            <div class="col-4">
+                              <div class="form-check form-check-radio">
+                              <label class="form-check-label">
+                              <input class="form-check-input" formControlName="recomienda" name="recomienda" type="radio" value="option1">
+                              <span class="form-check-sign"></span> Si </label>
+                              </div>
+                              <div class="form-check form-check-radio">
+                              <label class="form-check-label">
+                              <input checked="checked" class="form-check-input" formControlName="recomienda" name="recomienda" type="radio" value="option2">
+                              <span class="form-check-sign"></span> No </label>
+                              </div>
+                              </div>
+                        </div>
+              <div class="text-center">
+                <button class="btn btn-primary my-4" type="button" (click)="guardarComentario()">
+                  Guardar Comentario
+                </button>
+              </div>
+            </div>
+            </form>
+          </div>
+
+

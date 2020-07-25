@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
   public errorMessage: string;
   public error: boolean;
   public success: boolean;
+  public muestroCaptcha: boolean;
   get f() { return this.form.controls; }
   submitted = false;
   user:usuario;
@@ -47,7 +48,16 @@ export class LoginComponent implements OnInit ,OnDestroy{
     this.key = '6Le-Z78UAAAAABcjicZLxcZMuebY_chP-kDOHlWj';
   }
 
+  public mostrarCaptcha()
+  {
+    if(this.muestroCaptcha){
+      this.muestroCaptcha=false;
+    }else
+    {
+      this.muestroCaptcha=true;
+    }
 
+  }
   CargarDefault(tipo: string) {
     let dataLogin: Object = null;
     switch (tipo) {
@@ -67,6 +77,14 @@ export class LoginComponent implements OnInit ,OnDestroy{
           };
       this.form.setValue(dataLogin);
       break;
+      case 'P2':
+        dataLogin = {
+          email: 'gmorin@gmail.com',
+          password: '123456',
+          recaptcha:''
+        };
+    this.form.setValue(dataLogin);
+    break;
       case 'E':
             dataLogin = {
               email: 'tsoros@cavellaneda.com',
@@ -75,6 +93,14 @@ export class LoginComponent implements OnInit ,OnDestroy{
             };
        this.form.setValue(dataLogin);
       break;
+      case 'E2':
+        dataLogin = {
+          email: 'azamora@cavellaneda.com',
+          password: '123456',
+          recaptcha:''
+        };
+   this.form.setValue(dataLogin);
+  break;
     }
   }
 
@@ -167,7 +193,7 @@ export class LoginComponent implements OnInit ,OnDestroy{
     this.form = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
-      recaptcha: ['', Validators.required]
+      recaptcha: ['']
     });
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("index-page");

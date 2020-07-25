@@ -146,17 +146,9 @@
                                   Cargar foto:<input type="file" style="display: none;" accept=".png, .jpg" (change)="onUpload($event)" formControlName="imagen">
                               </span>
                           </label>
-                          <input type="text" formControlName="imagenUser" class="form-control" readonly [value]="urlImage | async">
+                          <input type="text" formControlName="imagenUser" class="form-control" readonly [value]="urlImage">
                       </div>
                   </div>                
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                    <div class="form-group">
-                      <ngx-recaptcha2 (resolved)="resolved($event)" #captchaElem [siteKey]="key" [size]="'normal'" [hl]="'es'" [theme]="'light'" [type]="'image'" formControlName="recaptcha">
-                      </ngx-recaptcha2>  
-                    </div>  
-                    </div>
                   </div>
                     <div class="row">
                       <small *ngIf="error" class="text-danger font-weight-bold"><i class="fa fa-times"></i> {{errorMessage}} </small>

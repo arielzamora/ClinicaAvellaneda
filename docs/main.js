@@ -439,6 +439,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/informes-home/informes-home.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/informes-home/informes-home.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>informes-home works!</p>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html":
 /*!****************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/login/login.component.html ***!
@@ -448,7 +461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<br>\n<div class=\"wrapper\">\n    <div class=\"page-header\">\n      <div class=\"page-header-image\"></div>\n      <div class=\"squares square1\"></div>\n      <div class=\"squares square2\"></div>\n      <div class=\"squares square3\"></div>\n      <div class=\"squares square4\"></div>\n      <div class=\"squares square5\"></div>\n      <div class=\"squares square6\"></div>\n      <div class=\"squares square7\"></div>\n      <div class=\"container\">\n        <div class=\"content-center brand col-lg-10 col-md-6\">\n          <div class=\"card card-register\">\n            <div class=\"card-header\">\n              <img\n                alt=\"Card image\"\n                class=\"card-img\"\n                src=\"assets/img/square1-red.png\"\n              />\n\n              <h3 class=\"card-title\">Ingreso</h3>\n            </div>\n            <div class=\"card-body\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Administrador\" class=\"btn btn-primary btn-icon btn-round mr-1\" (click)=\"CargarDefault('A')\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Paciente\" class=\"btn btn-succes btn-icon btn-round mr-1\" (click)=\"CargarDefault('P')\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                    </button>\n                </div>\n                <div class=\"col-4\">\n                  <button type=\"button\" tooltip=\"Profesional\" class=\"btn btn-danger btn-icon btn-round mr-1\" (click)=\"CargarDefault('E')\">\n                    <i class=\"tim-icons icon-heart-2\"></i>\n                    </button>\n                </div>\n              </div>\n              <form class=\"form\" [formGroup]=\"form\">\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"email\">\n                        <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"password\">\n                        <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                      </div>\n                    </div>\n                  </div>\n              </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                  <div class=\"form-group\">\n                    <ngx-recaptcha2 (resolved)=\"resolved($event)\" #captchaElem [siteKey]=\"key\" [size]=\"'normal'\" [hl]=\"'es'\" [theme]=\"'light'\" [type]=\"'image'\" formControlName=\"recaptcha\">\n                    </ngx-recaptcha2>  \n                  </div>  \n                  </div>\n                </div>\n                <div class=\"row\">\n                  <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                  <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                  correctamente. </small>\n              </div>\n              </form>\n            </div>\n            <div class=\"card-footer\">\n              <div class=\"row\">\n                <div class=\"col-4\">\n                  <a class=\"btn btn-primary btn-round btn-lg\" (click)=\"Ingresar()\" >\n                    Ingresar\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-succes btn-round btn-lg\" [routerLink]=\"['/registro']\">\n                    Registrarse\n                  </a>\n                </div>\n                <div class=\"col-4\">\n                  <a class=\"btn btn-danger btn-round btn-lg\" [routerLink]=\"['/bienvenida']\">\n                    Cancelar\n                  </a>\n                </div>\n              </div>\n            </div>\n          </div>\n</div>\n</div>\n</div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"wrapper\">\n    <div class=\"page-header\">\n      <div class=\"page-header-image\"></div>\n      <div class=\"squares square1\"></div>\n      <div class=\"squares square2\"></div>\n      <div class=\"squares square3\"></div>\n      <div class=\"squares square4\"></div>\n      <div class=\"squares square5\"></div>\n      <div class=\"squares square6\"></div>\n      <div class=\"squares square7\"></div>\n      <div class=\"container\">\n        <div class=\"content-center brand col-lg-10 col-md-6\">\n          <div class=\"card card-register\">\n            <div class=\"card-header\">\n              <img\n                alt=\"Card image\"\n                class=\"card-img\"\n                src=\"assets/img/square1-red.png\"\n              />\n              <br>\n              <h3 class=\"card-title\">Ingreso</h3>\n            </div>\n            <div class=\"card-body\">\n              <div class=\"row\">\n                <div class=\"col-2\">\n                  <button type=\"button\" tooltip=\"Administrador\" class=\"btn btn-primary btn-icon btn-round mr-1\" (click)=\"CargarDefault('A')\">\n                    <i class=\"tim-icons icon-settings-gear-63\"></i>\n                    </button>\n                </div>\n                <div class=\"col-2\">\n                  <button type=\"button\" tooltip=\"Paciente\" class=\"btn btn-succes btn-icon btn-round mr-1\" (click)=\"CargarDefault('P')\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                    </button>\n                </div>\n                <div class=\"col-2\">\n                  <button type=\"button\" tooltip=\"Paciente2\" class=\"btn btn-succes btn-icon btn-round mr-1\" (click)=\"CargarDefault('P2')\">\n                    <i class=\"tim-icons icon-single-02\"></i>\n                    </button>\n                </div>\n                <div class=\"col-2\">\n                  <button type=\"button\" tooltip=\"Profesional\" class=\"btn btn-danger btn-icon btn-round mr-1\" (click)=\"CargarDefault('E')\">\n                    <i class=\"tim-icons icon-heart-2\"></i>\n                    </button>\n                </div>\n                <div class=\"col-2\">\n                  <button type=\"button\" tooltip=\"Profesional2\" class=\"btn btn-danger btn-icon btn-round mr-1\" (click)=\"CargarDefault('E2')\">\n                    <i class=\"tim-icons icon-heart-2\"></i>\n                    </button>\n                </div>\n              </div>\n              <form class=\"form\" [formGroup]=\"form\">\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"email\">\n                        <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <div class=\"row\">\n                  <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                      <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                        autocomplete=\"password\">\n                        <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                      </div>\n                    </div>\n                  </div>\n              </div>\n              <div class=\"row\">\n                <div class=\"col-12\">\n                <div class=\"form-group\">\n                  <div class=\"form-check\">\n                    <label class=\"form-check-label\">\n                      <input type=\"checkbox\" class=\"form-check-input\" (change)=\"mostrarCaptcha()\">\n                      <span class=\"form-check-sign\">                   \n                      </span> Mostrar Captcha </label>\n                    </div>\n                </div>\n                </div>\n              </div>\n                <div *ngIf=\"muestroCaptcha\" class=\"row\">\n                  <div class=\"col-12\">\n                  <div class=\"form-group\">\n                    <ngx-recaptcha2 (resolved)=\"resolved($event)\" #captchaElem [siteKey]=\"key\" [size]=\"'normal'\" [hl]=\"'es'\" [theme]=\"'light'\" [type]=\"'image'\" formControlName=\"recaptcha\">\n                    </ngx-recaptcha2>  \n                  </div>  \n                  </div>\n                </div>\n                <div class=\"row\">\n                  <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                  <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                  correctamente. </small>\n              </div>\n              </form>\n            </div>\n            <div class=\"card-footer\">\n              <div class=\"form-group\">\n              <div class=\"row\">\n                  <button class=\"btn btn-primary col-6\" (click)=\"Ingresar()\" >\n                    Ingresar\n                  </button>\n                <button class=\"btn btn-danger col-5\" [routerLink]=\"['/bienvenida']\">\n                  Cancelar\n                </button>\n              </div>\n            </div>\n                <div class=\"row\">\n                  <button class=\"btn btn-succes col-11\" [routerLink]=\"['/registroProfesional']\">\n                    Registro Profesionales\n                  </button>\n                </div>\n                  <div class=\"row\">\n                    <button class=\"btn btn-succes col-11\" [routerLink]=\"['/registro']\">\n                      Registro Pacientes\n                    </button>\n                  </div>               \n            </div>\n          </div>\n</div>\n</div>\n</div>\n</div>\n");
 
 /***/ }),
 
@@ -461,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/usuarios']\">\n                <i class=\"tim-icons icon-pin\"> </i> Usuarios\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registroTurno']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Solicitar Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['paciente']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/misTurnos']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Mis Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav\n  class=\"navbar navbar-expand-lg fixed-top navbar-transparent\"\n  color-on-scroll=\"100\"\n  id=\"navbar-top\"\n>\n  <div class=\"container\">\n    <div *ngIf=\"estaLogueado\" class=\"navbar-translate\">\n        <h5>Bienvenido : {{usuario.nombre}} </h5>\n    </div>\n    <div\n      class=\"navbar-collapse justify-content-end collapse\"\n      [collapse]=\"isCollapsed\"\n      id=\"navigation\"\n    >  \n      <ul class=\"navbar-nav\">\n        <li *appValidarRoles=\"['admin','profesional']\" class=\"dropdown nav-item\" dropdown>\n            <a\n              class=\"dropdown-toggle nav-link dropdown-toggle\"\n              data-toggle=\"dropdown\"\n              dropdownToggle\n            >\n              <i class=\"fa fa-cogs d-lg-none d-xl-none\"> </i> Administracion\n            </a>\n            <div class=\"dropdown-menu dropdown-with-icons\" *dropdownMenu>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/profesionales']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Profesionales\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/pacientes']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Pacientes\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/especialidades']\">\n                <i class=\"tim-icons icon-bullet-list-67\"> </i> Especialidades\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/turnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Turnos\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/busquedaTurnos']\">\n                <i class=\"tim-icons icon-pin\"> </i> Busqueda Turnos\n              </a>\n              <a *appValidarRoles=\"['admin','profesional']\" class=\"dropdown-item\" [routerLink]=\"['/informes']\">\n                <i class=\"tim-icons icon-pin\"> </i> Informes\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/usuarios']\">\n                <i class=\"tim-icons icon-pin\"> </i> Usuarios\n              </a>\n              <a *appValidarRoles=\"['admin']\" class=\"dropdown-item\" [routerLink]=\"['/home']\">\n                <i class=\"tim-icons icon-single-02\"> </i> Maqueta\n              </a>\n            </div>\n          </li>\n\n          <li *appValidarRoles=\"['paciente']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registroTurno']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Solicitar Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['paciente']\"  class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/misTurnos']\"\n            >\n              <i class=\"tim-icons icon-calendar-60\"> </i> Mis Turnos\n            </a>\n          </li>\n          <li *appValidarRoles=\"['admin','profesional']\" class=\"nav-item\">\n            <a\n              class=\"nav-link btn btn-default d-none d-lg-block\"\n              [routerLink]=\"['/registro']\"\n            >\n              <i class=\"tim-icons icon-badge\"> </i> Registro Pacientes\n            </a>\n          </li>\n        <!--redes sociales-->\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://twitter.com/codeutnfra?lang=es\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Twitter\"\n          >\n            <i class=\"fab fa-twitter\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Twitter</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.facebook.com/UTNAvellaneda/\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Like us on Facebook\"\n          >\n            <i class=\"fab fa-facebook-square\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Facebook</p>\n          </a>\n        </li>\n        <li class=\"nav-item p-0\">\n          <a\n            class=\"nav-link\"\n            href=\"https://www.instagram.com/codeutnfra/?hl=es-la\"\n            placement=\"bottom\"\n            target=\"_blank\"\n            tooltip=\"Follow us on Instagram\"\n          >\n            <i class=\"fab fa-instagram\"> </i>\n            <p class=\"d-lg-none d-xl-none\">Instagram</p>\n          </a>\n        </li>   \n        <li *ngIf=\"estaLogueado\" class=\"nav-item\">\n          <a\n            class=\"nav-link btn btn-default d-none d-lg-block\"\n            (click)=\"desconectarse()\"\n          >\n            <i class=\"tim-icons icon-button-power\"> </i> Desconectarse\n          </a>\n        </li>     \n      </ul>\n    </div>\n  </div>\n</nav>\n");
 
 /***/ }),
 
@@ -500,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showModalAlta ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Alta de Profesional</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n          <div class=\"row\">\n            <div class=\"col-4\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"idProfesional\" formControlName=\"idProfesional\" class=\"form-control\" placeholder=\"Id Profesional\" [ngClass]=\"{ 'is-invalid': submitted && f.idProfesional.errors?.required }\">\n                  <div *ngIf=\"submitted && f.idProfesional.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"idProfesional\">\n                    <div *ngIf=\"f.idProfesional.errors?.required\">Debe ingresar un id para el Profesional</div>\n                  </div>\n                </div>\n            </div>\n            <div class=\"col-4\" style=\"height: 200px;\">\n              <div *ngFor=\"let esp of listaEspecialidad\">\n                <div class=\"form-check\">\n                  <label class=\"form-check-label\">\n                    <input type=\"checkbox\" class=\"form-check-input\" (change)=\"especialidadChange(esp)\" formControlName=\"especialidad\">\n                    <span class=\"form-check-sign\">                   \n                    </span> {{esp.nombre}} </label>\n                  </div>\n                  <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                  </div>\n              </div>\n           </div>\n           <div class=\"col-4\">\n            <div class=\"row\"><button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br></div>\n            <div class=\"row\"><button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button></div>\n            </div>              \n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"nombre\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"apellido\">\n                  <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                </div>\n              </div>\n            </div>\n        </div>\n            <div class=\"row\">\n              <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                  <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"email\">\n                    <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                  <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"password\">\n                    <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                  </div>\n                </div>\n              </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Sexo</option>\n                  <option >Masculino</option>\n                  <option>Femenino</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                </div>\n            </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"edad\">\n                  <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">      \n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Tipo Dni</option>\n                  <option >DNI</option>\n                  <option>LE</option>\n                  <option >LC</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                </div>\n            </div>             \n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"dni\">\n                  <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"horario\" formControlName=\"horario\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Horario</option>\n                  <option>09-14</option>\n                  <option>14-20</option>\n                  <option>12-20</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.horario.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.horario.errors?.required\">Seleccione Horario</div>\n                </div>\n            </div>\n           </div>\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                    <option selected value=\"\">Nacionalidad</option>\n                    <option >Argentina</option>\n                    <option> Venezuela</option>\n                    <option> Colombia</option>\n                    <option >Brasil</option>\n                    <option>Mexico</option>\n                  </select>\n                  <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                  </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"lunes\">\n                  <span class=\"form-check-sign\">                    \n                  </span> Lunes </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"martes\">\n                  <span class=\"form-check-sign\">    \n                  </span> Martes </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"miercoles\">\n                  <span class=\"form-check-sign\">                   \n                  </span> Miercoles </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"jueves\">\n                  <span class=\"form-check-sign\">                   \n                  </span> Jueves </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"viernes\">\n                  <span class=\"form-check-sign\">                    \n                  </span> Viernes </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"sabado\">\n                  <span class=\"form-check-sign\">                   \n                  </span> Sabado </label>\n                </div>\n            </div>\n          </div>\n            <div class=\"row\">\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n            </div>\n            </form>\n        </div>\n        </div>\n      </div>\n    </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"content-center\">\n<div class=\"col-10\">\n  <h1 class=\"modal-title\" id=\"exampleModalAlta\">Alta de Profesional</h1>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n          <form [formGroup]=\"form\" (keyup.enter)=\"Submit()\">\n          <div class=\"row\">\n            <div class=\"col-4\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"idProfesional\" formControlName=\"idProfesional\" class=\"form-control\" placeholder=\"Id Profesional\" [ngClass]=\"{ 'is-invalid': submitted && f.idProfesional.errors?.required }\">\n                  <div *ngIf=\"submitted && f.idProfesional.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"idProfesional\">\n                    <div *ngIf=\"f.idProfesional.errors?.required\">Debe ingresar un id para el Profesional</div>\n                  </div>\n                </div>\n            </div>\n            <div class=\"col-4\" style=\"height: 200px;\">\n              <div *ngFor=\"let esp of listaEspecialidad\">\n                <div class=\"form-check\">\n                  <label class=\"form-check-label\">\n                    <input type=\"checkbox\" class=\"form-check-input\" (change)=\"especialidadChange(esp)\" formControlName=\"especialidad\">\n                    <span class=\"form-check-sign\">                   \n                    </span> {{esp.nombre}} </label>\n                  </div>\n                  <div *ngIf=\"submitted && f.especialidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.especialidad.errors?.required\">Seleccione Especialidad.</div>\n                  </div>\n              </div>\n           </div>      \n           <div class=\"col-4\">\n            <div class=\"input-group\">\n                <label class=\"input-group-btn\">\n                    <span class=\"btn btn-danger\">\n                        Cargar foto:<input type=\"file\" style=\"display: none;\" accept=\".png, .jpg\" (change)=\"onUpload($event)\" formControlName=\"imagen\">\n                    </span>\n                </label>\n                <input type=\"text\" formControlName=\"imagenUser\" class=\"form-control\" readonly [value]=\"urlImage\">\n            </div>\n        </div>       \n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"nombre\">\n                  <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"apellido\">\n                  <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                </div>\n              </div>\n            </div>\n        </div>\n            <div class=\"row\">\n              <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                  <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"email\">\n                    <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                  <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                    autocomplete=\"password\">\n                    <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                  </div>\n                </div>\n              </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Seleccione Sexo</option>\n                  <option >Masculino</option>\n                  <option>Femenino</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                </div>\n            </div>\n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"edad\">\n                  <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">      \n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Tipo Dni</option>\n                  <option >DNI</option>\n                  <option>LE</option>\n                  <option >LC</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                </div>\n            </div>             \n            </div>\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                  autocomplete=\"dni\">\n                  <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-6\">\n              <div class=\"form-group\">\n                <select id=\"horario\" formControlName=\"horario\" class=\"form-control\" placeholder=\"seleccione\">\n                  <option selected value=\"\">Horario</option>\n                  <option>09-14</option>\n                  <option>14-20</option>\n                  <option>12-20</option>\n                  <option>otros</option>\n                </select>\n                <div *ngIf=\"submitted && f.horario.errors?.required\" class=\"invalid-feedback\">\n                  <div *ngIf=\"f.horario.errors?.required\">Seleccione Horario</div>\n                </div>\n            </div>\n           </div>\n            <div class=\"col-6\">\n                <div class=\"form-group\">\n                  <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                    <option selected value=\"\">Nacionalidad</option>\n                    <option >Argentina</option>\n                    <option> Venezuela</option>\n                    <option> Colombia</option>\n                    <option >Brasil</option>\n                    <option>Mexico</option>\n                  </select>\n                  <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                    <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                  </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"row\">\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"lunes\">\n                  <span class=\"form-check-sign\">                    \n                  </span> Lunes </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"martes\">\n                  <span class=\"form-check-sign\">    \n                  </span> Martes </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"miercoles\">\n                  <span class=\"form-check-sign\">                   \n                  </span> Miercoles </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"jueves\">\n                  <span class=\"form-check-sign\">                   \n                  </span> Jueves </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"viernes\">\n                  <span class=\"form-check-sign\">                    \n                  </span> Viernes </label>\n                </div>\n            </div>\n            <div class=\"col-2\">\n              <div class=\"form-check\">\n                <label class=\"form-check-label\">\n                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"sabado\">\n                  <span class=\"form-check-sign\">                   \n                  </span> Sabado </label>\n                </div>\n            </div>\n          </div>\n            <div class=\"row\">\n              <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n              <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                correctamente. </small>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-6\"><button type=\"submit\" class=\"btn btn-primary\" (click)=\"Submit()\">Registrar</button><br></div>\n              <div class=\"col-6\"><button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button></div>\n              </div>   \n            </form>\n</div>\n</div>\n</div>\n        \n\n");
 
 /***/ }),
 
@@ -513,7 +526,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showDetalle ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Informacion del Profesional</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"row\">\n                <div class=\"col-lg-6 col-md-6\">\n                    <h1 class=\"profile-title text-left\">Legajo:{{profeInput.idProfesional}}</h1>\n                    <h2 class=\"text-info\">{{profeInput.nombre}} {{profeInput.apellido}}</h2>\n                    <p class=\"text-info\">Edad : {{profeInput.edad}}</p>\n                    <p class=\"text-info\">Nacionalidad : {{profeInput.nacionalidad}}</p>\n                    <p class=\"text-info\">Sexo : {{profeInput.sexo}}</p>\n                    <p class=\"text-info\">Horario : {{profeInput.horario}}</p>\n                         <div class=\"btn-wrapper profile pt-3\">\n                             <a href=\"https://twitter.com/creativetim\" target=\"_blank\" class=\"btn btn-icon btn-twitter btn-round mr-1\"><i class=\"fab fa-twitter\"></i></a><a href=\"https://www.facebook.com/creativetim\" target=\"_blank\" class=\"btn btn-icon btn-facebook btn-round mr-1\">\n                                <i class=\"fab fa-facebook-square\"></i></a>\n                                <a href=\"https://dribbble.com/creativetim\" target=\"_blank\" class=\"btn btn-icon btn-dribbble btn-round\"><i class=\"fab fa-dribbble\"></i></a>\n                            </div>\n                        </div>\n                    <div class=\"col-lg-4 col-md-6 ml-auto mr-auto\">\n                        <div class=\"card card-coin card-plain\">\n                            <div class=\"card-header\">\n                                <img src=\"assets/img/doctor.jpg\" class=\"img-center img-fluid rounded-circle\">\n                                <h4 class=\"title\">Especialidades:</h4>\n                            </div>\n                             <div class=\"card-body\">\n                                <div *ngFor=\"let esp of listaInput\">\n                                    <div class=\"form-check\">\n                                      <label class=\"form-check-label\">\n                                        <input type=\"checkbox\" checked=\"checked\" class=\"form-check-input\" disabled>\n                                        <span class=\"form-check-sign\">                   \n                                        </span> {{esp.nombre}} </label>\n                                      </div>\n                                  </div>\n                             </div>\n                             </div>\n                     </div>\n            </div>\n        </div>\n        </div>\n      </div>\n    </div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal modal-black\" [ngStyle]=\"{'display': showDetalle ? 'block' : 'none'} \" >\n    <div class=\"modal-dialog \">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <p class=\"modal-title\" id=\"exampleModalAlta\">Informacion del Profesional</p>\n          <button type=\"button\" class=\"close\" (click)=\"cerrar()\">\n            <span aria-hidden=\"true\">&times;</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n            <div class=\"row\">\n                <div class=\"col-lg-6 col-md-6\">\n                    <h1 class=\"profile-title text-left\">Legajo:{{profeInput.idProfesional}}</h1>\n                    <h2 class=\"text-info\">{{profeInput.nombre}} {{profeInput.apellido}}</h2>\n                    <p class=\"text-info\">Edad : {{profeInput.edad}}</p>\n                    <p class=\"text-info\">Nacionalidad : {{profeInput.nacionalidad}}</p>\n                    <p class=\"text-info\">Sexo : {{profeInput.sexo}}</p>\n                    <p class=\"text-info\">Horario : {{profeInput.horario}}</p>\n                         <div class=\"btn-wrapper profile pt-3\">\n                             <a href=\"https://twitter.com/creativetim\" target=\"_blank\" class=\"btn btn-icon btn-twitter btn-round mr-1\"><i class=\"fab fa-twitter\"></i></a><a href=\"https://www.facebook.com/creativetim\" target=\"_blank\" class=\"btn btn-icon btn-facebook btn-round mr-1\">\n                                <i class=\"fab fa-facebook-square\"></i></a>\n                                <a href=\"https://dribbble.com/creativetim\" target=\"_blank\" class=\"btn btn-icon btn-dribbble btn-round\"><i class=\"fab fa-dribbble\"></i></a>\n                            </div>\n                        </div>\n                    <div class=\"col-lg-4 col-md-6 ml-auto mr-auto\">\n                        <div class=\"card card-coin card-plain\">\n                            <div class=\"card-header\">\n                                <img src=\"{{profeInput.imagen}}\" class=\"img-center img-fluid rounded-circle\">\n                                <h4 class=\"title\">Especialidades:</h4>\n                            </div>\n                             <div class=\"card-body\">\n                                <div *ngFor=\"let esp of listaInput\">\n                                    <div class=\"form-check\">\n                                      <label class=\"form-check-label\">\n                                        <input type=\"checkbox\" checked=\"checked\" class=\"form-check-input\" disabled>\n                                        <span class=\"form-check-sign\">                   \n                                        </span> {{esp.nombre}} </label>\n                                      </div>\n                                  </div>\n                             </div>\n                             </div>\n                     </div>\n            </div>\n        </div>\n        </div>\n      </div>\n    </div>\n\n");
 
 /***/ }),
 
@@ -565,7 +578,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"square square-1\" id=\"square1\"></div>\n    <div class=\"square square-2\" id=\"square2\"></div>\n    <div class=\"square square-3\" id=\"square3\"></div>\n    <div class=\"square square-6\" id=\"square6\"></div>\n    <div class=\"square square-7\" id=\"square7\"></div>\n    <div class=\"square square-8\" id=\"square8\"></div>\n      <div class=\"container\">\n        <div class=\"content-center\">\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <br>\n            <br>\n            <div class=\"card card-register\">\n              <h3 class=\"card-title\">Registro Pacientes</h3>\n              <div class=\"card-body\">\n                <form class=\"form\" [formGroup]=\"form\">\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"nombre\">\n                          <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"apellido\">\n                          <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                        </div>\n                      </div>\n                    </div>\n                </div>\n                    <div class=\"row\">\n                      <div class=\"col-6\">\n                        <div class=\"form-group\">\n                          <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                          <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"email\">\n                            <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                          </div>\n                        </div>\n                      </div>\n                      <div class=\"col-6\">\n                        <div class=\"form-group\">\n                          <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                          <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"password\">\n                            <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                          </div>\n                        </div>\n                      </div>\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                          <option selected value=\"\">Seleccione Sexo</option>\n                          <option >Masculino</option>\n                          <option>Femenino</option>\n                          <option>otros</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                          <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                        </div>\n                    </div>\n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"edad\">\n                          <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"row\">      \n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                          <option selected value=\"\">Tipo Dni</option>\n                          <option >DNI</option>\n                          <option>LE</option>\n                          <option >LC</option>\n                          <option>otros</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                          <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                        </div>\n                    </div>             \n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"dni\">\n                          <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <select id=\"planMedico\" formControlName=\"planMedico\" class=\"form-control\" placeholder=\"seleccione\">\n                          <option selected value=\"\">Plan Medico</option>\n                          <option>UTN-10</option>\n                          <option>UTN-20</option>\n                          <option>UTN-30</option>\n                          <option>UTN-40</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.planMedico.errors?.required\" class=\"invalid-feedback\">\n                          <div *ngIf=\"f.planMedico.errors?.required\">Seleccione plan Medico</div>\n                        </div>\n                    </div>\n                   </div>\n                    <div class=\"col-6\">\n                        <div class=\"form-group\">\n                          <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Nacionalidad</option>\n                            <option >Argentina</option>\n                            <option> Venezuela</option>\n                            <option> Colombia</option>\n                            <option >Brasil</option>\n                            <option>Mexico</option>\n                          </select>\n                          <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                          </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-12\">\n                      <div class=\"input-group\">\n                          <label class=\"input-group-btn\">\n                              <span class=\"btn btn-danger\">\n                                  Cargar foto:<input type=\"file\" style=\"display: none;\" accept=\".png, .jpg\" (change)=\"onUpload($event)\" formControlName=\"imagen\">\n                              </span>\n                          </label>\n                          <input type=\"text\" formControlName=\"imagenUser\" class=\"form-control\" readonly [value]=\"urlImage | async\">\n                      </div>\n                  </div>                \n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-12\">\n                    <div class=\"form-group\">\n                      <ngx-recaptcha2 (resolved)=\"resolved($event)\" #captchaElem [siteKey]=\"key\" [size]=\"'normal'\" [hl]=\"'es'\" [theme]=\"'light'\" [type]=\"'image'\" formControlName=\"recaptcha\">\n                      </ngx-recaptcha2>  \n                    </div>  \n                    </div>\n                  </div>\n                    <div class=\"row\">\n                      <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                      <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                        correctamente. </small>\n                    </div>\n                      <hr>\n                      <div class=\"row\">\n                        <div class=\"col-6\">\n                          <button type=\"submit\" class=\"btn btn-primary\" (click)=\"registrarse()\">Registrar</button><br>\n                        </div>\n                        <div class=\"col-6\">\n                          <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                        </div>\n                      </div>\n                </form>\n              </div>\n            </div>\n          </div>\n        </div>     \n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header\">\n    <div class=\"page-header-image\"></div>\n    <div class=\"square square-1\" id=\"square1\"></div>\n    <div class=\"square square-2\" id=\"square2\"></div>\n    <div class=\"square square-3\" id=\"square3\"></div>\n    <div class=\"square square-6\" id=\"square6\"></div>\n    <div class=\"square square-7\" id=\"square7\"></div>\n    <div class=\"square square-8\" id=\"square8\"></div>\n      <div class=\"container\">\n        <div class=\"content-center\">\n        <div class=\"row\">\n          <div class=\"col-8\">\n            <br>\n            <br>\n            <div class=\"card card-register\">\n              <h3 class=\"card-title\">Registro Pacientes</h3>\n              <div class=\"card-body\">\n                <form class=\"form\" [formGroup]=\"form\">\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"nombre\" formControlName=\"nombre\" class=\"form-control\" placeholder=\"Nombre\" [ngClass]=\"{ 'is-invalid': submitted && f.nombre.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.nombre.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"nombre\">\n                          <div *ngIf=\"f.nombre.errors?.required\">Debe ingresar un nombre.</div>\n                        </div>\n                      </div>\n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"apellido\" formControlName=\"apellido\" class=\"form-control\" placeholder=\"Apellido\" [ngClass]=\"{ 'is-invalid': submitted && f.apellido.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.apellido.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"apellido\">\n                          <div *ngIf=\"f.apellido.errors?.required\">Debe ingresar un Apellido.</div>\n                        </div>\n                      </div>\n                    </div>\n                </div>\n                    <div class=\"row\">\n                      <div class=\"col-6\">\n                        <div class=\"form-group\">\n                          <input type=\"text\" id=\"email\" formControlName=\"email\" class=\"form-control\" placeholder=\"Email\" [ngClass]=\"{ 'is-invalid': submitted && f.email.errors?.required }\">               \n                          <div *ngIf=\"submitted && f.email.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"email\">\n                            <div *ngIf=\"f.email.errors?.required\">Debe ingresar un email.</div>\n                          </div>\n                        </div>\n                      </div>\n                      <div class=\"col-6\">\n                        <div class=\"form-group\">\n                          <input type=\"text\" id=\"password\" formControlName=\"password\" class=\"form-control\" placeholder=\"Password\" [ngClass]=\"{ 'is-invalid': submitted && f.password.errors?.required }\">               \n                          <div *ngIf=\"submitted && f.password.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"password\">\n                            <div *ngIf=\"f.password.errors?.required\">Debe ingresar un password.</div>\n                          </div>\n                        </div>\n                      </div>\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <select id=\"sexo\" formControlName=\"sexo\" class=\"form-control\" placeholder=\"seleccione\">\n                          <option selected value=\"\">Seleccione Sexo</option>\n                          <option >Masculino</option>\n                          <option>Femenino</option>\n                          <option>otros</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.sexo.errors?.required\" class=\"invalid-feedback\">\n                          <div *ngIf=\"f.sexo.errors?.required\">Seleccione sexo</div>\n                        </div>\n                    </div>\n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"Edad\" [ngClass]=\"{ 'is-invalid': submitted && f.edad.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.edad.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"edad\">\n                          <div *ngIf=\"f.edad.errors?.required\">Debe ingresar las edad.</div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"row\">      \n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <select id=\"tipoDni\" formControlName=\"tipoDni\" class=\"form-control\" placeholder=\"seleccione\">\n                          <option selected value=\"\">Tipo Dni</option>\n                          <option >DNI</option>\n                          <option>LE</option>\n                          <option >LC</option>\n                          <option>otros</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.tipoDni.errors?.required\" class=\"invalid-feedback\">\n                          <div *ngIf=\"f.tipoDni.errors?.required\">Seleccione Tipo</div>\n                        </div>\n                    </div>             \n                    </div>\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <input type=\"text\" id=\"dni\" formControlName=\"dni\" class=\"form-control\" placeholder=\"Dni\" [ngClass]=\"{ 'is-invalid': submitted && f.dni.errors?.required }\">               \n                        <div *ngIf=\"submitted && f.dni.errors?.required\" class=\"invalid-feedback\"\n                          autocomplete=\"dni\">\n                          <div *ngIf=\"f.dni.errors?.required\">Debe ingresar un Dni.</div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-6\">\n                      <div class=\"form-group\">\n                        <select id=\"planMedico\" formControlName=\"planMedico\" class=\"form-control\" placeholder=\"seleccione\">\n                          <option selected value=\"\">Plan Medico</option>\n                          <option>UTN-10</option>\n                          <option>UTN-20</option>\n                          <option>UTN-30</option>\n                          <option>UTN-40</option>\n                        </select>\n                        <div *ngIf=\"submitted && f.planMedico.errors?.required\" class=\"invalid-feedback\">\n                          <div *ngIf=\"f.planMedico.errors?.required\">Seleccione plan Medico</div>\n                        </div>\n                    </div>\n                   </div>\n                    <div class=\"col-6\">\n                        <div class=\"form-group\">\n                          <select id=\"nacionalidad\" formControlName=\"nacionalidad\" class=\"form-control\" placeholder=\"seleccione\">\n                            <option selected value=\"\">Nacionalidad</option>\n                            <option >Argentina</option>\n                            <option> Venezuela</option>\n                            <option> Colombia</option>\n                            <option >Brasil</option>\n                            <option>Mexico</option>\n                          </select>\n                          <div *ngIf=\"submitted && f.nacionalidad.errors?.required\" class=\"invalid-feedback\">\n                            <div *ngIf=\"f.nacionalidad.errors?.required\">seleccione Nacionalidad.</div>\n                          </div>\n                      </div>\n                    </div>\n                  </div>\n                  <div class=\"row\">\n                    <div class=\"col-12\">\n                      <div class=\"input-group\">\n                          <label class=\"input-group-btn\">\n                              <span class=\"btn btn-danger\">\n                                  Cargar foto:<input type=\"file\" style=\"display: none;\" accept=\".png, .jpg\" (change)=\"onUpload($event)\" formControlName=\"imagen\">\n                              </span>\n                          </label>\n                          <input type=\"text\" formControlName=\"imagenUser\" class=\"form-control\" readonly [value]=\"urlImage\">\n                      </div>\n                  </div>                \n                  </div>\n                    <div class=\"row\">\n                      <small *ngIf=\"error\" class=\"text-danger font-weight-bold\"><i class=\"fa fa-times\"></i> {{errorMessage}} </small>\n                      <small *ngIf=\"success\" class=\"text-success font-weight-bold\"><i class=\"fas fa-check\"></i> Especialidad registrada\n                        correctamente. </small>\n                    </div>\n                      <hr>\n                      <div class=\"row\">\n                        <div class=\"col-6\">\n                          <button type=\"submit\" class=\"btn btn-primary\" (click)=\"registrarse()\">Registrar</button><br>\n                        </div>\n                        <div class=\"col-6\">\n                          <button type=\"submit\" class=\"btn btn-secondary\" (click)=\"cerrar()\">Cancelar</button><br>\n                        </div>\n                      </div>\n                </form>\n              </div>\n            </div>\n          </div>\n        </div>     \n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.html":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.html ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <div class=\"row\">\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\" colspan=\"12\">\n                      <div class=\"row\">\n                        <div class=\"form-group has-search col-6\">\n                          <span class=\"fa fa-search form-control-feedback\"></span>\n                          <input type=\"text\" class=\"form-control col-12\" [(ngModel)]=\"filterPost\" name=\"filterPost\" placeholder=\"Paciente,Profesional,Especialidad.\">\n                        </div>\n                      </div>\n                    </th>\n                  </tr>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <th>Paciente</th>\n                    <th>Profesional</th>\n                    <th>Especialidad</th>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Detalle</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let turno of listaTurnosPaciente | filter:filterPost\">\n                    <td class=\"text-center\">1</td>\n                    <th>{{turno.paciente}}</th>\n                    <th>{{turno.profesional}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Detalle\"  \n                        (click)=\"verObservaciones(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>                     \n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n </div>\n ");
 
 /***/ }),
 
@@ -591,7 +617,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Turnos :</h3>\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Profesional</th>\n                    <th>Especialidad</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Dejar Reseña</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let turno of listaTurnosPaciente\">\n                    <td class=\"text-center\">1</td>\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.profesional}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Reseña\"  data-target=\"#modalRes\"\n                        (click)=\"guardarResena(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Ver Observaciones\" \n                        (click)=\"verObservaciones(turno)\"\n                        data-target=\"#modalObs\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Cancelar\" (click)=\"cancelarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>\n <!--modal observaciones-->\n <div\n aria-hidden=\"true\"\n aria-labelledby=\"myModalLabel\"\n bsModal\n class=\"modal fade\"\n #modalObs=\"bs-modal\"\n id=\"modalObs\"\n role=\"dialog\"\n tabindex=\"-1\"\n>\n <div class=\"modal-dialog\">\n   <div class=\"modal-content\">\n     <div class=\"modal-header justify-content-center\">\n       <button\n         aria-hidden=\"true\"\n         class=\"close\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         <i class=\"tim-icons icon-simple-remove\"> </i>\n       </button>\n       <h4 class=\"title title-up\">Observaciones sobre el turno :</h4>\n     </div>\n     <div class=\"modal-body\">\n       <p>\n         {{Observacion}}\n       </p>\n     </div>\n     <div class=\"modal-footer\">\n       <button\n         class=\"btn btn-danger\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         Cerrar\n       </button>\n     </div>\n   </div>\n </div>\n</div>\n<!--modal reseña-->\n<div\n      aria-hidden=\"true\"\n      aria-labelledby=\"myModalLabel\"\n      bsModal\n      class=\"modal fade modal-black\"\n      #modalRes=\"bs-modal\"\n      id=\"modalRes\"\n      role=\"dialog\"\n      tabindex=\"-1\"\n    >\n      <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header justify-content-center\">\n            <button\n              aria-hidden=\"true\"\n              class=\"close\"\n              data-dismiss=\"modal\"\n              (click)=\"modalRes.hide()\"\n              type=\"button\"\n            >\n              <i class=\"tim-icons icon-simple-remove text-white\"> </i>\n            </button>\n            <div class=\"text-muted text-center ml-auto mr-auto\">\n              <h3 class=\"mb-0\">Deje su Comentario </h3>\n            </div>\n          </div>\n          <div class=\"modal-body\">\n            <div class=\"btn-wrapper text-center\">\n                <img src=\"assets/img/clinicaAvellaneda.jpg\" class=\"img-fluid rounded shadow\" style=\"width: 100px;\"/>\n            </div>\n            <form [formGroup]=\"form\" (keyup.enter)=\"guardarComentario()\">\n              <div class=\"form-group mb-3\">\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <p class=\"text-success\">Comentario sobre la atencion Recibida :</p>\n                        <div class=\"form-group\">\n                            <textarea class=\"form-control\" name=\"comentario\" id=\"comentario\" formControlName=\"comentario\" rows=\"10\" placeholder=\"Que tal fue su experiencia?\" required></textarea>\n                            <div *ngIf=\"submitted && f.comentario.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"comentario\">\n                            <div *ngIf=\"f.comentario.errors?.required\">Debe ingresar un comentario.</div>\n                          </div>\n                        </div>\n                    </div>    \n                </div>\n              </div>\n              <div class=\"text-center\">\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"guardarComentario()\">\n                  Guardar Comentario\n                </button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Turnos :</h3>\n        <table class=\"table\">\n            <thead>\n                <tr>\n                    <th class=\"text-center\">#</th>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Profesional</th>\n                    <th>Especialidad</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Dejar Reseña</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let turno of listaTurnosPaciente\">\n                    <td class=\"text-center\">1</td>\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.profesional}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button *ngIf=\"turno.estado === 'cerrado'\" type=\"button\" rel=\"tooltip\" tooltip=\"Reseña\"  data-target=\"#modalRes\"\n                        (click)=\"guardarResena(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-single-02\"></i>\n                        </button>\n                        <button *ngIf=\"turno.estado === 'cerrado'\"  type=\"button\" rel=\"tooltip\" tooltip=\"Ver Observaciones\" \n                        (click)=\"verObservaciones(turno)\"\n                        data-target=\"#modalObs\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-settings-gear-63\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Cancelar\" (click)=\"cancelarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>\n <!--modal observaciones-->\n <div\n aria-hidden=\"true\"\n aria-labelledby=\"myModalLabel\"\n bsModal\n class=\"modal fade\"\n #modalObs=\"bs-modal\"\n id=\"modalObs\"\n role=\"dialog\"\n tabindex=\"-1\"\n>\n <div class=\"modal-dialog\">\n   <div class=\"modal-content\">\n     <div class=\"modal-header justify-content-center\">\n       <button\n         aria-hidden=\"true\"\n         class=\"close\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         <i class=\"tim-icons icon-simple-remove\"> </i>\n       </button>\n       <h4 class=\"title title-up\">Observaciones sobre el turno :</h4>\n     </div>\n     <div class=\"modal-body\">\n       <p>\n         {{Observacion}}\n       </p>\n     </div>\n     <div class=\"modal-footer\">\n       <button\n         class=\"btn btn-danger\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         Cerrar\n       </button>\n     </div>\n   </div>\n </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -608,6 +634,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.html":
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.html ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n          <div class=\"modal-header justify-content-center\">\n            <div class=\"text-muted text-center ml-auto mr-auto\">\n              <h3 class=\"mb-0\">Deje su Comentario </h3>\n            </div>\n          </div>\n          <div class=\"modal-body\">\n            <div class=\"btn-wrapper text-center\">\n                <img src=\"assets/img/clinicaAvellaneda.jpg\" class=\"img-fluid rounded shadow\" style=\"width: 100px;\"/>\n            </div>\n            <div class=\"row\">\n              <div class=\"col-5\">\n                <p class=\"text-info\">Fecha: {{fecha}}</p>\n                <p class=\"text-info\">Paciente: {{paciente}}</p>\n                <p class=\"text-info\">Motivo: {{motivo}}</p>\n              </div>\n              <div class=\"col-5\">\n                <p class=\"text-info\">Hora: {{hora}}</p>\n                <p class=\"text-info\">{{especialidad}}</p>\n              </div>\n            </div>   \n            <form [formGroup]=\"form\" (keyup.enter)=\"guardarComentario()\">\n              <div class=\"form-group mb-3\">\n                        <p class=\"text-success\">Comentario sobre la atencion Recibida :</p>\n                        <div class=\"form-group\">\n                            <textarea class=\"form-control\" name=\"comentario\" id=\"comentario\" formControlName=\"comentario\" rows=\"10\" placeholder=\"Que tal fue su experiencia?\" required></textarea>\n                            <div *ngIf=\"submitted && f.comentario.errors?.required\" class=\"invalid-feedback\"\n                            autocomplete=\"comentario\">\n                            <div *ngIf=\"f.comentario.errors?.required\">Debe ingresar un comentario.</div>\n                          </div>\n                        </div>\n                        <div class=\"row\">\n                          <label for=\"moz\" class=\"col-4\">Califique el Profesional</label>\n                          <div class=\"col-4\">\n                            <ngb-rating [(rate)]=\"selectedProfesional\" class=\"col-4\">\n                              <ng-template let-fill=\"fill\" let-index=\"index\">\n                                  <span class=\"star\" [class.filled]=\"fill === 100\">&#9733;</span>\n                                </ng-template>\n                              </ngb-rating>\n                          </div>            \n                        </div>\n                        <div class=\"row\">\n                            <label for=\"moz\" class=\"col-4\">Calificacion lugar de atencion :</label>\n                          <div class=\"col-4\">\n                            <p class=\"category\">0-100</p>\n                            <div class=\"slider slider-danger\"  id=\"sliderRegular\"></div>\n                            <br />                 \n                          </div>   \n                          <div class=\"col-1\">\n                            <span class=\"example-val\" id=\"slider-span\"></span>      \n                          </div>                          \n                        </div>\n                            <div class=\"row\">\n                              <div class=\"col-4\">\n                                <label for=\"moz\" >desea recibir informacion sobre novedades?</label>       \n                              </div>\n                              <div class=\"col-4\">\n                                <div class=\"form-check\">\n                                  <label class=\"form-check-label\">\n                                    <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"recibeInfo\">\n                                    <span class=\"form-check-sign\">                    \n                                    </span> Si </label>\n                                  </div>\n                              </div>\n                          </div>\n                          <br>\n                          <div class=\"row\">\n                            <div class=\"col-4\">\n                              <label for=\"moz\" >Recomendaria la Clinica a un conocido?</label>       \n                            </div>\n                            <div class=\"col-4\">\n                              <div class=\"form-check form-check-radio\">\n                              <label class=\"form-check-label\">\n                              <input class=\"form-check-input\" formControlName=\"recomienda\" name=\"recomienda\" type=\"radio\" value=\"option1\">\n                              <span class=\"form-check-sign\"></span> Si </label>\n                              </div>\n                              <div class=\"form-check form-check-radio\">\n                              <label class=\"form-check-label\">\n                              <input checked=\"checked\" class=\"form-check-input\" formControlName=\"recomienda\" name=\"recomienda\" type=\"radio\" value=\"option2\">\n                              <span class=\"form-check-sign\"></span> No </label>\n                              </div>\n                              </div>\n                        </div>\n              <div class=\"text-center\">\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"guardarComentario()\">\n                  Guardar Comentario\n                </button>\n              </div>\n            </div>\n            </form>\n          </div>\n\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.html":
+/*!********************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.html ***!
+  \********************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n     <div class=\"modal-header justify-content-center\">\n        <div class=\"text-muted text-center ml-auto mr-auto\">\n          <h3 class=\"mb-0\">Observaciones </h3>\n        </div>\n      </div>\n\n      <div class=\"modal-body\">\n        <div class=\"row\">\n          <div class=\"col-5\">\n            <p class=\"text-info\">Fecha: {{fecha}}</p>\n            <p class=\"text-info\">Paciente: {{paciente}}</p>\n            <p class=\"text-info\">Motivo: {{motivo}}</p>\n          </div>\n          <div class=\"col-5\">\n            <p class=\"text-info\">Hora: {{hora}}</p>\n            <p class=\"text-info\">{{especialidad}}</p>\n          </div>\n        </div>          \n        \n        <form [formGroup]=\"form\">\n          <div class=\"form-group mb-3\">\n            <div class=\"row\">\n                <div class=\"col-12\">\n                    <p class=\"text-success\">Observacion sobre el paciente :</p> \n                    <div  class=\"form-group\">\n                      <div class=\"row\">\n                        <div class=\"col-3\">\n                          <p class=\"text-info\">Edad: {{edad}}</p>       \n                        </div>\n                        <div class=\"col-3\">\n                          <p class=\"text-info\">Presion: {{presion}}</p>                           \n                        </div>                          \n                      </div>\n                      <div class=\"row\">\n                        <div class=\"col-3\">\n                          <p class=\"text-info\">Temperatura: {{temperatura}}</p> \n                        </div>  \n                        <div  class=\"form-group col-6\">\n                          <p class=\"text-info\">Observacion: {{observacion}}</p>                         \n                        </div>\n                      </div>\n\n                        <p class=\"text-success\">Info Opcionales :</p>\n                        <div *ngIf=\"tieneClave1\" class=\"row\">\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{clave1}}:</p> \n                          </div>\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{valor1}}</p> \n                          </div>                             \n                        </div>\n                        <div *ngIf=\"tieneClave2\" class=\"row\">\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{clave2}}:</p> \n                          </div>\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{valor2}}</p> \n                          </div>                             \n                        </div>\n                        <div *ngIf=\"tieneClave3\" class=\"row\">\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{clave3}}:</p> \n                          </div>\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{valor3}}</p>       \n                          </div>                         \n                        </div>\n                        <div *ngIf=\"tieneClave4\" class=\"row\">\n                          <div class=\"col-3\">\n                            <p class=\"text-info\">{{clave4}}:</p> \n                          </div>  \n                          <div  class=\"form-group col-4\">\n                            <p class=\"text-info\">{{valor4}}</p> \n                          </div>\n                        </div>   \n                          <div *ngIf=\"tieneClave5\" class=\"row\">\n                            <div class=\"col-3\">\n                              <p class=\"text-info\">{{clave5}}:</p> \n                            </div>\n                            <div class=\"col-4\">\n                              <p class=\"text-info\">{{valor5}}</p> \n                            </div>\n                          </div>\n                          <p class=\"text-success\">Encuesta :</p>\n                          <div *ngIf=\"completoEncuesta\" >\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <p class=\"text-info\">reseña:</p> \n                              </div>\n                              <div class=\"col-4\">\n                                <p class=\"text-info\">{{resenia}}</p> \n                              </div>\n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <p class=\"text-info\">Puntos Profesional:</p> \n                              </div>\n                              <div class=\"col-4\">\n                                <p class=\"text-info\">{{puntosProfesional}}</p> \n                              </div>\n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <p class=\"text-info\">Puntos Lugar:</p> \n                              </div>\n                              <div class=\"col-4\">\n                                <p class=\"text-info\">{{puntosLugar}}</p> \n                              </div>\n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <p class=\"text-info\">Recibe Info:</p> \n                              </div>\n                              <div class=\"col-4\">\n                                <p class=\"text-info\">{{recibeInfo}}</p> \n                              </div>\n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <p class=\"text-info\">Recomienda:</p> \n                              </div>\n                              <div class=\"col-4\">\n                                <p class=\"text-info\">{{recomienda}}</p> \n                              </div>\n                            </div>\n                          </div>\n                          \n                      </div>                          \n                </div>    \n            </div>\n          </div>\n          <div class=\"text-center\">\n            <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"cancelar()\">\n              Cancelar\n            </button>\n          </div>\n        </form>\n      </div>\n\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.html":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.html ***!
+  \****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n     <div class=\"modal-header justify-content-center\">\n            <div class=\"text-muted text-center ml-auto mr-auto\">\n              <h3 class=\"mb-0\">Observaciones </h3>\n            </div>\n          </div>\n\n          <div class=\"modal-body\">\n            <div class=\"row\">\n              <div class=\"col-5\">\n                <p class=\"text-info\">Fecha: {{fecha}}</p>\n                <p class=\"text-info\">Paciente: {{paciente}}</p>\n                <p class=\"text-info\">Motivo: {{motivo}}</p>\n              </div>\n              <div class=\"col-5\">\n                <p class=\"text-info\">Hora: {{hora}}</p>\n                <p class=\"text-info\">{{especialidad}}</p>\n              </div>\n            </div>          \n            \n            <form [formGroup]=\"form\">\n              <div class=\"form-group mb-3\">\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <p class=\"text-success\">Observacion sobre el paciente :</p> \n                        <div  class=\"form-group\">\n                          <div class=\"row\">\n                            <div class=\"col-3\">\n                              <input type=\"text\" id=\"edad\" formControlName=\"edad\" class=\"form-control\" placeholder=\"ingrese edad\" >       \n                            </div>\n                            <div class=\"col-3\">\n                              <input type=\"text\" id=\"presion\" formControlName=\"presion\" class=\"form-control\" placeholder=\"ingrese Presion\" >       \n                            </div>                          \n                          </div>\n                          <div class=\"row\">\n                            <div class=\"col-3\">\n                              <input type=\"text\" id=\"temperatura\" formControlName=\"temperatura\" class=\"form-control\" placeholder=\"ingrese Temperatura\" >       \n                            </div>  \n                            <div  class=\"form-group col-6\">\n                              <input type=\"text\" id=\"observacion\" formControlName=\"observacion\" class=\"form-control\" placeholder=\"ingrese observacion\" >       \n                            </div>\n                          </div>\n\n                            <p class=\"text-success\">Campos Opcionales :</p>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <input type=\"text\" id=\"clave1\" formControlName=\"clave1\" class=\"form-control\" placeholder=\"ingrese clave\" >       \n                              </div>\n                              <div class=\"col-3\">\n                                <input type=\"text\" id=\"valor1\" formControlName=\"valor1\" class=\"form-control\" placeholder=\"ingrese valor\" >       \n                              </div>                             \n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <input type=\"text\" id=\"clave2\" formControlName=\"clave2\" class=\"form-control\" placeholder=\"ingrese clave\" >       \n                              </div>\n                              <div class=\"col-3\">\n                                <input type=\"text\" id=\"valor2\" formControlName=\"valor2\" class=\"form-control\" placeholder=\"ingrese valor\" >       \n                              </div>                             \n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <input type=\"text\" id=\"clave3\" formControlName=\"clave3\" class=\"form-control\" placeholder=\"ingrese clave\" >       \n                              </div>\n                              <div class=\"col-3\">\n                                <p class=\"category\">0-100</p>\n                                <div class=\"slider slider-danger\"  id=\"sliderRegular\"></div>\n                                <br />                 \n                              </div>   \n                              <div class=\"col-1\">\n                                <span class=\"example-val\" id=\"slider-span\"></span>      \n                              </div>                          \n                            </div>\n                            <div class=\"row\">\n                              <div class=\"col-3\">\n                                <input type=\"text\" id=\"clave4\" formControlName=\"clave4\" class=\"form-control\" placeholder=\"ingrese clave num\" >       \n                              </div>  \n                              <div  class=\"form-group col-4\">\n                                <input type=\"text\" id=\"valor4\" formControlName=\"valor4\" class=\"form-control\" placeholder=\"ingrese valor numerico\" >       \n                              </div>\n                            </div>   \n                            <div class=\"form-group\">\n                              <div class=\"row\">\n                                <div class=\"col-3\">\n                                  <input type=\"text\" id=\"clave5\" formControlName=\"clave5\" class=\"form-control\" placeholder=\"ingrese clave\" >       \n                                </div>\n                                <div class=\"col-4\">\n                                  <div class=\"form-check\">\n                                    <label class=\"form-check-label\">\n                                      <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"valor5\">\n                                      <span class=\"form-check-sign\">                    \n                                      </span> Verdadero </label>\n                                    </div>\n                                </div>\n                              </div>\n                            </div>\n                          </div>                          \n                    </div>    \n                </div>\n              </div>\n              <div class=\"text-center\">\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"onSubmit(form.value)\">\n                  Guardar Turno\n                </button>\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"cancelar()\">\n                  Cancelar\n                </button>\n              </div>\n            </form>\n          </div>\n\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html":
 /*!****************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html ***!
@@ -617,7 +682,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Listado de turnos :</h3>\n        <table class=\"table\">\n            <thead>\n              <tr>\n                <th class=\"text-center\" colspan=\"8\">\n                  <app-csv class=\"float-right csv\" [data]=\"data\" [filename]=\"generarNombreCsv()\" [options]=\"options\"></app-csv>\n                  <button  class=\"float-right  btn btn-outline-primary btn-sm  mx-auto mb-4\" type=\"button\" (click)=\"generarPDF()\" ><i class=\"fas fa-file\"></i>Generar PDF</button>\n                </th>\n              </tr>\n                <tr>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Profesional</th>\n                    <th>Especialidad</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Dejar Reseña</th>\n                </tr>\n            </thead>\n            <tbody id=\"tablaPDF\">\n                <tr *ngFor=\"let turno of listaTurnosPaciente\">\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.profesional}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Observaciones\"  data-target=\"#modalRes\"\n                        (click)=\"verObservacion(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-alert-circle-exc\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Comentario Pacientes\" \n                        (click)=\"verComentarios(turno)\"\n                        data-target=\"#modalObs\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-shape-star\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Cancelar\" (click)=\"cancelarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Rechazar\" (click)=\"rechazarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                          <i class=\"tim-icons icon-simple-delete\"></i>\n                      </button>\n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>\n <!--modal observaciones-->\n <div\n aria-hidden=\"true\"\n aria-labelledby=\"myModalLabel\"\n bsModal\n class=\"modal fade\"\n #modalObs=\"bs-modal\"\n id=\"modalObs\"\n role=\"dialog\"\n tabindex=\"-1\"\n>\n <div class=\"modal-dialog\">\n   <div class=\"modal-content\">\n     <div class=\"modal-header justify-content-center\">\n       <button\n         aria-hidden=\"true\"\n         class=\"close\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         <i class=\"tim-icons icon-simple-remove\"> </i>\n       </button>\n       <h4 class=\"title title-up\">Comentarios sobre el turno :</h4>\n     </div>\n     <div class=\"modal-body\">\n       <p>\n         {{Observacion}}\n       </p>\n     </div>\n     <div class=\"modal-footer\">\n       <button\n         class=\"btn btn-danger\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         Cerrar\n       </button>\n     </div>\n   </div>\n </div>\n</div>\n<!--modal reseña-->\n<div\n      aria-hidden=\"true\"\n      aria-labelledby=\"myModalLabel\"\n      bsModal\n      class=\"modal fade modal-black\"\n      #modalRes=\"bs-modal\"\n      id=\"modalRes\"\n      role=\"dialog\"\n      tabindex=\"-1\"\n    >\n      <div class=\"modal-dialog\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header justify-content-center\">\n            <button\n              aria-hidden=\"true\"\n              class=\"close\"\n              data-dismiss=\"modal\"\n              (click)=\"modalRes.hide()\"\n              type=\"button\"\n            >\n              <i class=\"tim-icons icon-simple-remove text-white\"> </i>\n            </button>\n            <div class=\"text-muted text-center ml-auto mr-auto\">\n              <h3 class=\"mb-0\">Observaciones </h3>\n            </div>\n          </div>\n\n          <div class=\"modal-body\">\n            <div class=\"row\">\n              <div class=\"col-5\">\n                <p class=\"text-info\">Fecha: {{fecha}}</p>\n                <p class=\"text-info\">Paciente: {{paciente}}</p>\n                <p class=\"text-info\">Motivo: {{motivo}}</p>\n              </div>\n              <div class=\"col-5\">\n                <p class=\"text-info\">Hora: {{hora}}</p>\n                <p class=\"text-info\">{{especialidad}}</p>\n              </div>\n            </div>          \n            \n            <form [formGroup]=\"form\" (keyup.enter)=\"guardarComentario()\">\n              <div class=\"form-group mb-3\">\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <p class=\"text-success\">Observacion sobre el paciente :</p>\n                        <div class=\"form-group\">\n                          <div formArrayName=\"info\">                           \n                            <div *ngFor=\"let item of getInfo.controls; let pointIndex=index\" [formGroupName]=\"pointIndex\">                             \n                              <div class=\"row\">\n                              <div class=\"col-4\">\n                                <input formControlName=\"clave{{pointIndex}}\">\n                              </div>\n                              <div class=\"col-4\">\n                                <input formControlName=\"valor{{pointIndex}}\">\n                              </div>                             \n                            </div>\n                            </div>\n                          </div>\n                          <a class=\"btn btn-danger\" (click)=\"agregarInfo(pointIndex)\">add</a>\n                        </div>\n                        <div class=\"form-group\">\n                          <div class=\"row\">\n                            <div class=\"col-12\">\n                              <div class=\"form-check\">\n                                <label class=\"form-check-label\">\n                                  <input type=\"checkbox\" class=\"form-check-input\" formControlName=\"atendido\">\n                                  <span class=\"form-check-sign\">                    \n                                  </span> Atendido </label>\n                                </div>\n                            </div>\n                          </div>\n                        </div>\n                    </div>    \n                </div>\n              </div>\n              <div class=\"text-center\">\n                <button class=\"btn btn-primary my-4\" type=\"button\" (click)=\"guardarObservacion()\">\n                  Guardar Observacion\n                </button>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navmenu [usuario]=\"user\" [estaLogueado]=\"isLogueado\" ></app-navmenu>\n\n<div class=\"wrapper\">\n  <div class=\"page-header header-filter\">\n    <div class=\"squares square1\"></div>\n    <div class=\"squares square2\"></div>\n    <div class=\"squares square3\"></div>\n    <div class=\"squares square4\"></div>\n    <div class=\"squares square5\"></div>\n    <div class=\"squares square6\"></div>\n    <div class=\"squares square7\"></div>\n    <div class=\"container\">\n      <div class=\"content-center\">\n        <h3>Mis turnos :</h3>\n        <table class=\"table\">\n            <thead>\n              <tr>\n                <th class=\"text-center\" colspan=\"8\">\n                  <app-csv class=\"float-right csv\" [data]=\"data\" [filename]=\"generarNombreCsv()\" [options]=\"options\"></app-csv>\n                  <button  class=\"float-right  btn btn-outline-primary btn-sm  mx-auto mb-4\" type=\"button\" (click)=\"generarPDF()\" ><i class=\"fas fa-file\"></i>Generar PDF</button>\n                </th>\n              </tr>\n                <tr>\n                    <th>Fecha</th>\n                    <th>Hora</th>\n                    <th>Paciente</th>\n                    <th>Especialidad</th>\n                    <th>Estado</th>\n                    <th class=\"text-right\">Dejar Reseña</th>\n                </tr>\n            </thead>\n            <tbody id=\"tablaPDF\">\n                <tr *ngFor=\"let turno of listaTurnosPaciente\">\n                    <th>{{turno.fecha}}</th>\n                    <th>{{turno.hora}}</th>\n                    <th>{{turno.paciente}}</th>\n                    <th>{{turno.especialidad}}</th>\n                    <th>{{turno.estado}}</th>\n                    <td class=\"td-actions text-right\">\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Observaciones\"  data-target=\"#modalRes\"\n                        (click)=\"verObservacion(turno)\" class=\"btn btn-info btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-alert-circle-exc\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Comentario Pacientes\" \n                        (click)=\"verComentarios(turno)\"\n                        data-target=\"#modalObs\" class=\"btn btn-success btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-shape-star\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Cancelar\" (click)=\"cancelarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                            <i class=\"tim-icons icon-simple-remove\"></i>\n                        </button>\n                        <button type=\"button\" rel=\"tooltip\" tooltip=\"Rechazar\" (click)=\"rechazarTurno(turno)\" class=\"btn btn-danger btn-simple btn-icon btn-sm\">\n                          <i class=\"tim-icons icon-simple-delete\"></i>\n                      </button>\n                    </td>\n                </tr>       \n            </tbody>\n        </table>\n      </div>\n    </div>\n  </div>      \n  <app-footer></app-footer>\n </div>\n <!--modal observaciones-->\n <div\n aria-hidden=\"true\"\n aria-labelledby=\"myModalLabel\"\n bsModal\n class=\"modal fade\"\n #modalObs=\"bs-modal\"\n id=\"modalObs\"\n role=\"dialog\"\n tabindex=\"-1\"\n>\n <div class=\"modal-dialog\">\n   <div class=\"modal-content\">\n     <div class=\"modal-header justify-content-center\">\n       <button\n         aria-hidden=\"true\"\n         class=\"close\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         <i class=\"tim-icons icon-simple-remove\"> </i>\n       </button>\n       <h4 class=\"title title-up\">Comentarios sobre el turno :</h4>\n     </div>\n     <div class=\"modal-body\">\n       <p>\n         {{Observacion}}\n       </p>\n     </div>\n     <div class=\"modal-footer\">\n       <button\n         class=\"btn btn-danger\"\n         data-dismiss=\"modal\"\n         type=\"button\"\n         (click)=\"modalObs.hide()\"\n       >\n         Cerrar\n       </button>\n     </div>\n   </div>\n </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -918,6 +983,74 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/animations.ts":
+/*!*******************************!*\
+  !*** ./src/app/animations.ts ***!
+  \*******************************/
+/*! exports provided: slideInAnimation */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "slideInAnimation", function() { return slideInAnimation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/__ivy_ngcc__/fesm5/animations.js");
+
+
+var slideInAnimation = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('routeAnimations', [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])('PrincipalPage <=> LoginPage', [
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ position: 'relative' }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter, :leave', [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%'
+            })
+        ], { optional: true }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ left: '-100%' })
+        ], { optional: true }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animateChild"])(), { optional: true }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["group"])([
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':leave', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ left: '100%' }))
+            ], { optional: true }),
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ left: '0%' }))
+            ], { optional: true })
+        ]),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animateChild"])(), { optional: true }),
+    ]),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])('* <=> LoginPage', [
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ position: 'relative' }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter, :leave', [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%'
+            })
+        ], { optional: true }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ left: '-100%' })
+        ], { optional: true }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':leave', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animateChild"])(), { optional: true }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["group"])([
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':leave', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('200ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ left: '100%' }))
+            ], { optional: true }),
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('300ms ease-out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ left: '0%' }))
+            ], { optional: true })
+        ]),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animateChild"])(), { optional: true }),
+    ])
+]);
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -932,23 +1065,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm5/platform-browser.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
-/* harmony import */ var _pages_index_index_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/index/index.component */ "./src/app/pages/index/index.component.ts");
-/* harmony import */ var _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/examples/profilepage/profilepage.component */ "./src/app/pages/examples/profilepage/profilepage.component.ts");
-/* harmony import */ var _pages_examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/examples/registerpage/registerpage.component */ "./src/app/pages/examples/registerpage/registerpage.component.ts");
-/* harmony import */ var _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/examples/landingpage/landingpage.component */ "./src/app/pages/examples/landingpage/landingpage.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./././guards/auth.guard */ "./src/app/guards/auth.guard.ts");
-/* harmony import */ var _guards_nologin_guard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ././guards/nologin.guard */ "./src/app/guards/nologin.guard.ts");
-/* harmony import */ var _pages_pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
-/* harmony import */ var _pages_especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
-/* harmony import */ var _pages_profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
-/* harmony import */ var _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
-/* harmony import */ var _pages_usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/usuario-home/usuario-home.component */ "./src/app/pages/usuario-home/usuario-home.component.ts");
-/* harmony import */ var _pages_turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/turnos-home/registro-turno/registro-turno.component */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.ts");
-/* harmony import */ var _pages_turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/turnos-home/mis-turnos/mis-turnos.component */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm5/animations.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _pages_index_index_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/index/index.component */ "./src/app/pages/index/index.component.ts");
+/* harmony import */ var _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/examples/profilepage/profilepage.component */ "./src/app/pages/examples/profilepage/profilepage.component.ts");
+/* harmony import */ var _pages_examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/examples/registerpage/registerpage.component */ "./src/app/pages/examples/registerpage/registerpage.component.ts");
+/* harmony import */ var _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/examples/landingpage/landingpage.component */ "./src/app/pages/examples/landingpage/landingpage.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/registro/registro.component */ "./src/app/pages/registro/registro.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./././guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var _guards_nologin_guard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ././guards/nologin.guard */ "./src/app/guards/nologin.guard.ts");
+/* harmony import */ var _pages_pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/pacientes-home/pacientes-home.component */ "./src/app/pages/pacientes-home/pacientes-home.component.ts");
+/* harmony import */ var _pages_especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/especialidades-home/especialidades-home.component */ "./src/app/pages/especialidades-home/especialidades-home.component.ts");
+/* harmony import */ var _pages_profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/profesionales-home/profesionales-home.component */ "./src/app/pages/profesionales-home/profesionales-home.component.ts");
+/* harmony import */ var _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/turnos-home/turnos-home.component */ "./src/app/pages/turnos-home/turnos-home.component.ts");
+/* harmony import */ var _pages_turnos_home_turno_observacion_turno_observacion_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/turnos-home/turno-observacion/turno-observacion.component */ "./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.ts");
+/* harmony import */ var _pages_turnos_home_busqueda_turnos_busqueda_turnos_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/turnos-home/busqueda-turnos/busqueda-turnos.component */ "./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.ts");
+/* harmony import */ var _pages_usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/usuario-home/usuario-home.component */ "./src/app/pages/usuario-home/usuario-home.component.ts");
+/* harmony import */ var _pages_turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/turnos-home/registro-turno/registro-turno.component */ "./src/app/pages/turnos-home/registro-turno/registro-turno.component.ts");
+/* harmony import */ var _pages_turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/turnos-home/mis-turnos/mis-turnos.component */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts");
+/* harmony import */ var _pages_profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/profesionales-home/alta-profesionales/alta-profesionales.component */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.ts");
+/* harmony import */ var _pages_turnos_home_turno_observacion_detalle_turno_observacion_detalle_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component */ "./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.ts");
+/* harmony import */ var _pages_turnos_home_turno_encuesta_turno_encuesta_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/turnos-home/turno-encuesta/turno-encuesta.component */ "./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.ts");
+/* harmony import */ var _pages_informes_home_informes_home_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/informes-home/informes-home.component */ "./src/app/pages/informes-home/informes-home.component.ts");
+
 
 
 
@@ -971,36 +1112,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
 var routes = [
     {
-        path: "login", component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"], canActivate: [_guards_nologin_guard__WEBPACK_IMPORTED_MODULE_13__["NologinGuard"]]
+        path: "login", component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"], canActivate: [_guards_nologin_guard__WEBPACK_IMPORTED_MODULE_14__["NologinGuard"]]
     },
     { path: "", redirectTo: "/bienvenida", pathMatch: "full" },
-    { path: "bienvenida", component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "pacientes", component: _pages_pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_14__["PacientesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "especialidades", component: _pages_especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_15__["EspecialidadesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "profesionales", component: _pages_profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_16__["ProfesionalesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "turnos", component: _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_17__["TurnosHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "usuarios", component: _pages_usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_18__["UsuarioHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "registroTurno", component: _pages_turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_19__["RegistroTurnoComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "misTurnos", component: _pages_turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_20__["MisTurnosComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]] },
-    { path: "profile", component: _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_6__["ProfilepageComponent"],
-        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+    { path: "bienvenida", component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'PrincipalPage' } },
+    { path: "pacientes", component: _pages_pacientes_home_pacientes_home_component__WEBPACK_IMPORTED_MODULE_15__["PacientesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "especialidades", component: _pages_especialidades_home_especialidades_home_component__WEBPACK_IMPORTED_MODULE_16__["EspecialidadesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "profesionales", component: _pages_profesionales_home_profesionales_home_component__WEBPACK_IMPORTED_MODULE_17__["ProfesionalesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "turnos", component: _pages_turnos_home_turnos_home_component__WEBPACK_IMPORTED_MODULE_18__["TurnosHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "turnoObservacion", component: _pages_turnos_home_turno_observacion_turno_observacion_component__WEBPACK_IMPORTED_MODULE_19__["TurnoObservacionComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "busquedaTurnos", component: _pages_turnos_home_busqueda_turnos_busqueda_turnos_component__WEBPACK_IMPORTED_MODULE_20__["BusquedaTurnosComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "usuarios", component: _pages_usuario_home_usuario_home_component__WEBPACK_IMPORTED_MODULE_21__["UsuarioHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]] },
+    { path: "registroTurno", component: _pages_turnos_home_registro_turno_registro_turno_component__WEBPACK_IMPORTED_MODULE_22__["RegistroTurnoComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]] },
+    { path: "misTurnos", component: _pages_turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_23__["MisTurnosComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "turnoObservacionDetalle", component: _pages_turnos_home_turno_observacion_detalle_turno_observacion_detalle_component__WEBPACK_IMPORTED_MODULE_25__["TurnoObservacionDetalleComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "turnosEncuesta", component: _pages_turnos_home_turno_encuesta_turno_encuesta_component__WEBPACK_IMPORTED_MODULE_26__["TurnoEncuestaComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "informes", component: _pages_informes_home_informes_home_component__WEBPACK_IMPORTED_MODULE_27__["InformesHomeComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]], data: { animation: 'LoginPage' } },
+    { path: "profile", component: _pages_examples_profilepage_profilepage_component__WEBPACK_IMPORTED_MODULE_7__["ProfilepageComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]],
         data: { roles: ['admin'] }
     },
-    { path: "register", component: _pages_examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_7__["RegisterpageComponent"],
-        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+    { path: "register", component: _pages_examples_registerpage_registerpage_component__WEBPACK_IMPORTED_MODULE_8__["RegisterpageComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]],
         data: { roles: ['admin'] }
     },
-    { path: "landing", component: _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_8__["LandingpageComponent"],
-        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+    { path: "landing", component: _pages_examples_landingpage_landingpage_component__WEBPACK_IMPORTED_MODULE_9__["LandingpageComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]],
         data: { roles: ['admin'] }
     },
-    { path: "home", component: _pages_index_index_component__WEBPACK_IMPORTED_MODULE_5__["IndexComponent"],
-        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_12__["AuthGuard"]],
+    { path: "home", component: _pages_index_index_component__WEBPACK_IMPORTED_MODULE_6__["IndexComponent"],
+        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_13__["AuthGuard"]],
         data: { roles: ['admin'] }
     },
-    { path: "registro", component: _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_10__["RegistroComponent"] },
+    { path: "registro", component: _pages_registro_registro_component__WEBPACK_IMPORTED_MODULE_11__["RegistroComponent"] },
+    { path: "registroProfesional", component: _pages_profesionales_home_alta_profesionales_alta_profesionales_component__WEBPACK_IMPORTED_MODULE_24__["AltaProfesionalesComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1010,7 +1163,8 @@ var AppRoutingModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(routes, {
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(routes, {
                     useHash: true
                 })
             ],
@@ -1050,6 +1204,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+/* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animations */ "./src/app/animations.ts");
+
 
 
 
@@ -1059,6 +1215,9 @@ var AppComponent = /** @class */ (function () {
         this.renderer = renderer;
         this.location = location;
     }
+    AppComponent.prototype.prepareRoute = function (outlet) {
+        return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    };
     AppComponent.prototype.onWindowScroll = function (e) {
         if (window.pageYOffset > 100) {
             var element = document.getElementById("navbar-top");
@@ -1093,6 +1252,9 @@ var AppComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "app-root",
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
+            animations: [
+                _animations__WEBPACK_IMPORTED_MODULE_3__["slideInAnimation"]
+            ],
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")).default]
         }),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__param"])(2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_common__WEBPACK_IMPORTED_MODULE_2__["DOCUMENT"])),
@@ -1131,6 +1293,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_pages_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/pages.module */ "./src/app/pages/pages.module.ts");
 /* harmony import */ var _src_environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../../src/environments/environment */ "./src/environments/environment.ts");
 /* harmony import */ var angular2_csv__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angular2-csv */ "./node_modules/angular2-csv/__ivy_ngcc__/fesm5/angular2-csv.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
 
 
 
@@ -1149,6 +1312,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+// import { MatNativeDateModule } from '@angular/material/core';
+// import { MatTableModule } from '@angular/material/table';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatSelectModule } from '@angular/material/select';
+// import { MatIconModule } from '@angular/material/icon';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1173,7 +1343,8 @@ var AppModule = /** @class */ (function () {
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuthModule"],
                 _angular_fire_database__WEBPACK_IMPORTED_MODULE_10__["AngularFireDatabaseModule"],
                 _angular_fire__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_src_environments_environment__WEBPACK_IMPORTED_MODULE_13__["firebaseConfig"]),
-                angular2_csv__WEBPACK_IMPORTED_MODULE_14__["Angular2CsvModule"]
+                angular2_csv__WEBPACK_IMPORTED_MODULE_14__["Angular2CsvModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_15__["NgbModule"]
             ],
             providers: [
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuth"],
@@ -2383,6 +2554,53 @@ var IndexComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/informes-home/informes-home.component.scss":
+/*!******************************************************************!*\
+  !*** ./src/app/pages/informes-home/informes-home.component.scss ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2luZm9ybWVzLWhvbWUvaW5mb3JtZXMtaG9tZS5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/informes-home/informes-home.component.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/pages/informes-home/informes-home.component.ts ***!
+  \****************************************************************/
+/*! exports provided: InformesHomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformesHomeComponent", function() { return InformesHomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var InformesHomeComponent = /** @class */ (function () {
+    function InformesHomeComponent() {
+    }
+    InformesHomeComponent.prototype.ngOnInit = function () {
+    };
+    InformesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-informes-home',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./informes-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/informes-home/informes-home.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./informes-home.component.scss */ "./src/app/pages/informes-home/informes-home.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+    ], InformesHomeComponent);
+    return InformesHomeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/login/login.component.scss":
 /*!**************************************************!*\
   !*** ./src/app/pages/login/login.component.scss ***!
@@ -2447,6 +2665,14 @@ var LoginComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    LoginComponent.prototype.mostrarCaptcha = function () {
+        if (this.muestroCaptcha) {
+            this.muestroCaptcha = false;
+        }
+        else {
+            this.muestroCaptcha = true;
+        }
+    };
     LoginComponent.prototype.CargarDefault = function (tipo) {
         var dataLogin = null;
         switch (tipo) {
@@ -2466,9 +2692,25 @@ var LoginComponent = /** @class */ (function () {
                 };
                 this.form.setValue(dataLogin);
                 break;
+            case 'P2':
+                dataLogin = {
+                    email: 'gmorin@gmail.com',
+                    password: '123456',
+                    recaptcha: ''
+                };
+                this.form.setValue(dataLogin);
+                break;
             case 'E':
                 dataLogin = {
                     email: 'tsoros@cavellaneda.com',
+                    password: '123456',
+                    recaptcha: ''
+                };
+                this.form.setValue(dataLogin);
+                break;
+            case 'E2':
+                dataLogin = {
+                    email: 'azamora@cavellaneda.com',
                     password: '123456',
                     recaptcha: ''
                 };
@@ -2550,7 +2792,7 @@ var LoginComponent = /** @class */ (function () {
         this.form = this.fb.group({
             email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            recaptcha: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
+            recaptcha: ['']
         });
         var body = document.getElementsByTagName("body")[0];
         body.classList.add("index-page");
@@ -2870,6 +3112,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./profesionales-home/edit-profesional/edit-profesional.component */ "./src/app/pages/profesionales-home/edit-profesional/edit-profesional.component.ts");
 /* harmony import */ var _turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./turnos-home/mis-turnos/mis-turnos.component */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.ts");
 /* harmony import */ var _common_csv_csv_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./../common/csv/csv.component */ "./src/app/common/csv/csv.component.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
+/* harmony import */ var _turnos_home_turno_observacion_turno_observacion_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./turnos-home/turno-observacion/turno-observacion.component */ "./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.ts");
+/* harmony import */ var _turnos_home_busqueda_turnos_busqueda_turnos_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./turnos-home/busqueda-turnos/busqueda-turnos.component */ "./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.ts");
+/* harmony import */ var src_app_pipes_filter_pipe__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! src/app/pipes/filter.pipe */ "./src/app/pipes/filter.pipe.ts");
+/* harmony import */ var _turnos_home_turno_observacion_detalle_turno_observacion_detalle_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./turnos-home/turno-observacion-detalle/turno-observacion-detalle.component */ "./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.ts");
+/* harmony import */ var _turnos_home_turno_encuesta_turno_encuesta_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./turnos-home/turno-encuesta/turno-encuesta.component */ "./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.ts");
+/* harmony import */ var _informes_home_informes_home_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./informes-home/informes-home.component */ "./src/app/pages/informes-home/informes-home.component.ts");
+
+
+
+
+
+
+
 
 
 
@@ -2926,6 +3182,7 @@ var PagesModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_45__["NgbModule"],
                 ngx_bootstrap_dropdown__WEBPACK_IMPORTED_MODULE_6__["BsDropdownModule"].forRoot(),
                 ngx_bootstrap_progressbar__WEBPACK_IMPORTED_MODULE_7__["ProgressbarModule"].forRoot(),
                 ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_8__["TooltipModule"].forRoot(),
@@ -2966,7 +3223,13 @@ var PagesModule = /** @class */ (function () {
                 _profesionales_home_detalle_profesional_detalle_profesional_component__WEBPACK_IMPORTED_MODULE_41__["DetalleProfesionalComponent"],
                 _profesionales_home_edit_profesional_edit_profesional_component__WEBPACK_IMPORTED_MODULE_42__["EditProfesionalComponent"],
                 _turnos_home_mis_turnos_mis_turnos_component__WEBPACK_IMPORTED_MODULE_43__["MisTurnosComponent"],
-                _common_csv_csv_component__WEBPACK_IMPORTED_MODULE_44__["CsvComponent"]
+                _common_csv_csv_component__WEBPACK_IMPORTED_MODULE_44__["CsvComponent"],
+                _turnos_home_turno_observacion_turno_observacion_component__WEBPACK_IMPORTED_MODULE_46__["TurnoObservacionComponent"],
+                _turnos_home_busqueda_turnos_busqueda_turnos_component__WEBPACK_IMPORTED_MODULE_47__["BusquedaTurnosComponent"],
+                src_app_pipes_filter_pipe__WEBPACK_IMPORTED_MODULE_48__["FilterPipe"],
+                _turnos_home_turno_observacion_detalle_turno_observacion_detalle_component__WEBPACK_IMPORTED_MODULE_49__["TurnoObservacionDetalleComponent"],
+                _turnos_home_turno_encuesta_turno_encuesta_component__WEBPACK_IMPORTED_MODULE_50__["TurnoEncuestaComponent"],
+                _informes_home_informes_home_component__WEBPACK_IMPORTED_MODULE_51__["InformesHomeComponent"]
             ],
             exports: [
                 _index_index_component__WEBPACK_IMPORTED_MODULE_17__["IndexComponent"],
@@ -2995,7 +3258,7 @@ var PagesModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-dialog {\n  max-width: 700px;\n}\n\n.modal-content {\n  width: 700px;\n}\n\nselect.form-control {\n  background-color: #1f2251;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcHJvZmVzaW9uYWxlcy1ob21lL2FsdGEtcHJvZmVzaW9uYWxlcy9DOlxcQW5uZ3VsYXJcXGJsay1kZXNpZ24tc3lzdGVtLWFuZ3VsYXItbWFzdGVyL3NyY1xcYXBwXFxwYWdlc1xccHJvZmVzaW9uYWxlcy1ob21lXFxhbHRhLXByb2Zlc2lvbmFsZXNcXGFsdGEtcHJvZmVzaW9uYWxlcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvcHJvZmVzaW9uYWxlcy1ob21lL2FsdGEtcHJvZmVzaW9uYWxlcy9hbHRhLXByb2Zlc2lvbmFsZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSw4QkFBQTtBQ0NKOztBRENFO0VBQ0UsZ0JBQUE7QUNFSjs7QURBRTtFQUNFLFlBQUE7QUNHSjs7QURERTtFQUNJLHlCQUFBO0FDSU4iLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9wcm9mZXNpb25hbGVzLWhvbWUvYWx0YS1wcm9mZXNpb25hbGVzL2FsdGEtcHJvZmVzaW9uYWxlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tb2RhbCB7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNik7XHJcbiAgfVxyXG4gIC5tb2RhbC1kaWFsb2d7XHJcbiAgICBtYXgtd2lkdGg6IDcwMHB4O1xyXG4gIH1cclxuICAubW9kYWwtY29udGVudHtcclxuICAgIHdpZHRoOiA3MDBweDtcclxuICB9XHJcbiAgc2VsZWN0LmZvcm0tY29udHJvbCB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IzFmMjI1MTs7XHJcblxyXG4gIH0iLCIubW9kYWwge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNik7XG59XG5cbi5tb2RhbC1kaWFsb2cge1xuICBtYXgtd2lkdGg6IDcwMHB4O1xufVxuXG4ubW9kYWwtY29udGVudCB7XG4gIHdpZHRoOiA3MDBweDtcbn1cblxuc2VsZWN0LmZvcm0tY29udHJvbCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxZjIyNTE7XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".modal {\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-dialog {\n  max-width: 900px;\n}\n\n.modal-content {\n  width: 900px;\n}\n\nselect.form-control {\n  background-color: #1f2251;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvcHJvZmVzaW9uYWxlcy1ob21lL2FsdGEtcHJvZmVzaW9uYWxlcy9DOlxcQW5uZ3VsYXJcXGJsay1kZXNpZ24tc3lzdGVtLWFuZ3VsYXItbWFzdGVyL3NyY1xcYXBwXFxwYWdlc1xccHJvZmVzaW9uYWxlcy1ob21lXFxhbHRhLXByb2Zlc2lvbmFsZXNcXGFsdGEtcHJvZmVzaW9uYWxlcy5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvcHJvZmVzaW9uYWxlcy1ob21lL2FsdGEtcHJvZmVzaW9uYWxlcy9hbHRhLXByb2Zlc2lvbmFsZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSw4QkFBQTtBQ0NKOztBRENFO0VBQ0UsZ0JBQUE7QUNFSjs7QURBRTtFQUNFLFlBQUE7QUNHSjs7QURERTtFQUNJLHlCQUFBO0FDSU4iLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9wcm9mZXNpb25hbGVzLWhvbWUvYWx0YS1wcm9mZXNpb25hbGVzL2FsdGEtcHJvZmVzaW9uYWxlcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tb2RhbCB7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLDAuNik7XHJcbiAgfVxyXG4gIC5tb2RhbC1kaWFsb2d7XHJcbiAgICBtYXgtd2lkdGg6IDkwMHB4O1xyXG4gIH1cclxuICAubW9kYWwtY29udGVudHtcclxuICAgIHdpZHRoOiA5MDBweDtcclxuICB9XHJcbiAgc2VsZWN0LmZvcm0tY29udHJvbCB7XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IzFmMjI1MTs7XHJcblxyXG4gIH0iLCIubW9kYWwge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNik7XG59XG5cbi5tb2RhbC1kaWFsb2cge1xuICBtYXgtd2lkdGg6IDkwMHB4O1xufVxuXG4ubW9kYWwtY29udGVudCB7XG4gIHdpZHRoOiA5MDBweDtcbn1cblxuc2VsZWN0LmZvcm0tY29udHJvbCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMxZjIyNTE7XG59Il19 */");
 
 /***/ }),
 
@@ -3017,6 +3280,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/especialidad.service */ "./src/app/services/especialidad.service.ts");
 /* harmony import */ var src_app_model_diashorarios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/model/diashorarios */ "./src/app/model/diashorarios.ts");
 /* harmony import */ var src_app_model_especialidadProfesional__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/model/especialidadProfesional */ "./src/app/model/especialidadProfesional.ts");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-storage.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/services/auth.service */ "./src/app/services/auth.service.ts");
+
+
+
+
 
 
 
@@ -3026,8 +3297,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AltaProfesionalesComponent = /** @class */ (function () {
-    function AltaProfesionalesComponent(fb, especialidaService, profesionalService) {
+    function AltaProfesionalesComponent(fb, router, auth, fireStore, especialidaService, profesionalService) {
         this.fb = fb;
+        this.router = router;
+        this.auth = auth;
+        this.fireStore = fireStore;
         this.especialidaService = especialidaService;
         this.profesionalService = profesionalService;
         this.submitted = false;
@@ -3038,6 +3312,7 @@ var AltaProfesionalesComponent = /** @class */ (function () {
         this.cargarLista();
         this.diasHorarios = new src_app_model_diashorarios__WEBPACK_IMPORTED_MODULE_6__["diasHorarios"]();
         this.listaAuxAdd = new Array();
+        this.showModalAlta = true;
     }
     Object.defineProperty(AltaProfesionalesComponent.prototype, "f", {
         get: function () { return this.form.controls; },
@@ -3057,6 +3332,8 @@ var AltaProfesionalesComponent = /** @class */ (function () {
             edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             especialidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            imagen: [''],
+            imagenUser: [''],
             horario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
             lunes: [''],
             martes: [''],
@@ -3137,23 +3414,24 @@ var AltaProfesionalesComponent = /** @class */ (function () {
             this.diasHorarios.viernes = this.form.get('viernes').value;
             this.diasHorarios.sabado = this.form.get('sabado').value;
             this.profesional.diasHorarios = this.diasHorarios;
+            this.profesional.urlImage = this.urlImage;
             this.cargoEspecialidades(this.profesional);
+            //registro las especialidades
+            this.listaAuxFinal.forEach(function (item) {
+                _this.profesionalService.RegistrarEspecialidadesProfesionales(item);
+            });
+            //registro el profesional
+            this.profesionalService.RegistrarProfesional(this.profesional);
+            //registro el usuario 
             this.profesionalService.Registrar(this.profesional)
                 .then(function (response) {
-                console.log(response);
-                if (response) {
-                    _this.listaAuxFinal.forEach(function (item) {
-                        _this.profesionalService.RegistrarEspecialidadesProfesionales(item);
-                    });
-                    _this.success = true;
-                    _this.form.reset();
-                    _this.registradoCorrectamente.emit();
-                    _this.cerrar();
-                }
-                else {
-                    _this.error = true;
-                    _this.errorMessage = "error al registrar el profesional";
-                }
+                _this.success = true;
+                _this.form.reset();
+                _this.cerrar();
+                _this.auth.logout();
+                _this.router.navigate(['/login']);
+                _this.registradoCorrectamente.emit();
+                _this.cerrar();
             })
                 .catch(function (error) {
                 _this.error = true;
@@ -3165,6 +3443,21 @@ var AltaProfesionalesComponent = /** @class */ (function () {
             this.errorMessage = 'Debe completar los campos correctamente.';
             this.error = true;
         }
+    };
+    AltaProfesionalesComponent.prototype.onUpload = function (e) {
+        var _this = this;
+        //creamos un id aleatorio para poder asociarlo a la imagen
+        var id = Math.random().toString(36).substring(2);
+        var file = e.target.files[0];
+        var filePath = 'profesionales/profile_' + id;
+        var ref = this.fireStore.ref(filePath);
+        var task = this.fireStore.upload(filePath, file);
+        this.uploadPercent = task.percentageChanges(); //recuperamos el porcentaje de carga del archivo
+        task.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["finalize"])(function () {
+            return ref.getDownloadURL().subscribe(function (url) {
+                _this.urlImage = url;
+            });
+        })).subscribe();
     };
     AltaProfesionalesComponent.prototype.cargarForm = function () {
         this.form = this.fb.group({
@@ -3185,6 +3478,9 @@ var AltaProfesionalesComponent = /** @class */ (function () {
     };
     AltaProfesionalesComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_10__["Router"] },
+        { type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_11__["AuthService"] },
+        { type: _angular_fire_storage__WEBPACK_IMPORTED_MODULE_8__["AngularFireStorage"] },
         { type: src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__["EspecialidadService"] },
         { type: src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_4__["ProfesionalService"] }
     ]; };
@@ -3206,7 +3502,12 @@ var AltaProfesionalesComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alta-profesionales.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alta-profesionales.component.scss */ "./src/app/pages/profesionales-home/alta-profesionales/alta-profesionales.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__["EspecialidadService"], src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_4__["ProfesionalService"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_10__["Router"],
+            src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_11__["AuthService"],
+            _angular_fire_storage__WEBPACK_IMPORTED_MODULE_8__["AngularFireStorage"],
+            src_app_services_especialidad_service__WEBPACK_IMPORTED_MODULE_5__["EspecialidadService"],
+            src_app_services_profesional_service__WEBPACK_IMPORTED_MODULE_4__["ProfesionalService"]])
     ], AltaProfesionalesComponent);
     return AltaProfesionalesComponent;
 }());
@@ -3442,20 +3743,13 @@ var EditProfesionalComponent = /** @class */ (function () {
             this.profesional.diasHorarios = this.diasHorarios;
             this.profesionalService.Registrar(this.profesional)
                 .then(function (response) {
-                console.log(response);
-                if (response) {
-                    _this.listaAuxFinal.forEach(function (item) {
-                        _this.profesionalService.RegistrarEspecialidadesProfesionales(item);
-                    });
-                    _this.success = true;
-                    _this.form.reset();
-                    _this.registradoCorrectamente.emit();
-                    _this.cerrar();
-                }
-                else {
-                    _this.error = true;
-                    _this.errorMessage = "error al registrar el profesional";
-                }
+                _this.listaAuxFinal.forEach(function (item) {
+                    _this.profesionalService.RegistrarEspecialidadesProfesionales(item);
+                });
+                _this.success = true;
+                _this.form.reset();
+                _this.registradoCorrectamente.emit();
+                _this.cerrar();
             })
                 .catch(function (error) {
                 _this.error = true;
@@ -3751,8 +4045,6 @@ var RegistroComponent = /** @class */ (function () {
         this.auth = auth;
         this.isCollapsed = true;
         this.submitted = false;
-        //this.cargarLista();
-        this.key = '6Le-Z78UAAAAABcjicZLxcZMuebY_chP-kDOHlWj';
     }
     //@HostListener("document:mousemove", ["$event"])
     RegistroComponent.prototype.cargarLista = function () {
@@ -3776,7 +4068,6 @@ var RegistroComponent = /** @class */ (function () {
             edad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             nacionalidad: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             planMedico: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            recaptcha: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             imagen: [''],
             imagenUser: ['']
         });
@@ -3808,22 +4099,15 @@ var RegistroComponent = /** @class */ (function () {
         this.paciente.urlImage = this.urlImage;
         this.paciente.activo = true;
         if (this.form.valid) {
+            this.pacienteService.RegistrarPaciente(this.paciente);
             this.pacienteService.Registrar(this.paciente)
                 .then(function (response) {
-                console.log(response);
-                if (response) {
-                    _this.success = true;
-                    _this.form.reset();
-                    _this.cerrar();
-                    _this.auth.logout();
-                    _this.router.navigate(['/login']);
-                }
-                else {
-                    _this.error = true;
-                    _this.errorMessage = "error al registrar el paciente";
-                }
-            })
-                .catch(function (error) {
+                _this.success = true;
+                _this.form.reset();
+                _this.cerrar();
+                _this.auth.logout();
+                _this.router.navigate(['/login']);
+            }).catch(function (error) {
                 _this.error = true;
                 _this.errorMessage = "error al registrar el paciente";
                 console.log(error);
@@ -3861,56 +4145,6 @@ var RegistroComponent = /** @class */ (function () {
         var squares6 = document.getElementById("square6");
         var squares7 = document.getElementById("square7");
         var squares8 = document.getElementById("square8");
-        var posX = e.clientX - window.innerWidth / 2;
-        var posY = e.clientY - window.innerWidth / 6;
-        squares1.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.05 +
-                "deg) rotateX(" +
-                posY * -0.05 +
-                "deg)";
-        squares2.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.05 +
-                "deg) rotateX(" +
-                posY * -0.05 +
-                "deg)";
-        squares3.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.05 +
-                "deg) rotateX(" +
-                posY * -0.05 +
-                "deg)";
-        squares4.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.05 +
-                "deg) rotateX(" +
-                posY * -0.05 +
-                "deg)";
-        squares5.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.05 +
-                "deg) rotateX(" +
-                posY * -0.05 +
-                "deg)";
-        squares6.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.05 +
-                "deg) rotateX(" +
-                posY * -0.05 +
-                "deg)";
-        squares7.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.02 +
-                "deg) rotateX(" +
-                posY * -0.02 +
-                "deg)";
-        squares8.style.transform =
-            "perspective(500px) rotateY(" +
-                posX * 0.02 +
-                "deg) rotateX(" +
-                posY * -0.02 +
-                "deg)";
     };
     RegistroComponent.ctorParameters = function () { return [
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
@@ -3945,6 +4179,195 @@ var RegistroComponent = /** @class */ (function () {
             src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"]])
     ], RegistroComponent);
     return RegistroComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.scss":
+/*!**********************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.scss ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".has-search .form-control {\n  padding-left: 2.375rem;\n}\n\n.has-search .form-control-feedback {\n  position: absolute;\n  z-index: 2;\n  display: block;\n  width: 2.375rem;\n  height: 2.375rem;\n  line-height: 2.375rem;\n  text-align: center;\n  pointer-events: none;\n  color: #aaa;\n}\n\ntable, tr, th {\n  color: gainsboro;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdHVybm9zLWhvbWUvYnVzcXVlZGEtdHVybm9zL0M6XFxBbm5ndWxhclxcYmxrLWRlc2lnbi1zeXN0ZW0tYW5ndWxhci1tYXN0ZXIvc3JjXFxhcHBcXHBhZ2VzXFx0dXJub3MtaG9tZVxcYnVzcXVlZGEtdHVybm9zXFxidXNxdWVkYS10dXJub3MuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL2J1c3F1ZWRhLXR1cm5vcy9idXNxdWVkYS10dXJub3MuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxzQkFBQTtBQ0NKOztBREVBO0VBQ0ksa0JBQUE7RUFDQSxVQUFBO0VBQ0EsY0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxvQkFBQTtFQUNBLFdBQUE7QUNDSjs7QURFQTtFQUNJLGdCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy90dXJub3MtaG9tZS9idXNxdWVkYS10dXJub3MvYnVzcXVlZGEtdHVybm9zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhhcy1zZWFyY2ggLmZvcm0tY29udHJvbCB7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDIuMzc1cmVtO1xyXG59XHJcblxyXG4uaGFzLXNlYXJjaCAuZm9ybS1jb250cm9sLWZlZWRiYWNrIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHotaW5kZXg6IDI7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHdpZHRoOiAyLjM3NXJlbTtcclxuICAgIGhlaWdodDogMi4zNzVyZW07XHJcbiAgICBsaW5lLWhlaWdodDogMi4zNzVyZW07XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcclxuICAgIGNvbG9yOiAjYWFhO1xyXG59XHJcblxyXG50YWJsZSx0cix0aHtcclxuICAgIGNvbG9yOmdhaW5zYm9ybztcclxuICB9XHJcbiIsIi5oYXMtc2VhcmNoIC5mb3JtLWNvbnRyb2wge1xuICBwYWRkaW5nLWxlZnQ6IDIuMzc1cmVtO1xufVxuXG4uaGFzLXNlYXJjaCAuZm9ybS1jb250cm9sLWZlZWRiYWNrIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB6LWluZGV4OiAyO1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDIuMzc1cmVtO1xuICBoZWlnaHQ6IDIuMzc1cmVtO1xuICBsaW5lLWhlaWdodDogMi4zNzVyZW07XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG4gIGNvbG9yOiAjYWFhO1xufVxuXG50YWJsZSwgdHIsIHRoIHtcbiAgY29sb3I6IGdhaW5zYm9ybztcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: BusquedaTurnosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BusquedaTurnosComponent", function() { return BusquedaTurnosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/model/turno */ "./src/app/model/turno.ts");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
+
+
+
+
+var BusquedaTurnosComponent = /** @class */ (function () {
+    function BusquedaTurnosComponent(turnosService, router, fb) {
+        this.turnosService = turnosService;
+        this.router = router;
+        this.fb = fb;
+        this.submitted = false;
+        this.selectedProfesional = 4;
+        this.turnosTodos = [];
+        this.obtenerUsuarioActual();
+        this.cargarLista();
+        this.filterPost = "";
+    }
+    Object.defineProperty(BusquedaTurnosComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    BusquedaTurnosComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
+        switch (this.user.tipo) {
+            case "paciente": {
+                this.pacienteStorage = JSON.parse(dataUsuario);
+                break;
+            }
+            case "profesional": {
+                this.profesionalStorage = JSON.parse(dataUsuario);
+                break;
+            }
+        }
+    };
+    BusquedaTurnosComponent.prototype.verObservaciones = function (turnoTab) {
+        //si existe lo borro
+        localStorage.removeItem('TurnoSeleccionado');
+        this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
+        this.turnoSeleccionado = turnoTab;
+        localStorage.setItem('TurnoSeleccionado', JSON.stringify(this.turnoSeleccionado));
+        this.router.navigate(['/turnoObservacionDetalle']);
+    };
+    BusquedaTurnosComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.turnosService.ListarTurnosPacientesTodos()
+            .subscribe(function (data) {
+            _this.listaTurnosPaciente = data;
+            _this.dataFiltros = _this.listaTurnosPaciente;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    BusquedaTurnosComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    BusquedaTurnosComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            comentario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+        });
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    BusquedaTurnosComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    BusquedaTurnosComponent.prototype.traerTurnos = function () {
+        // this.firebase.getTurnosXProf(this.profe).subscribe(resul => {
+        //   resul.forEach(data =>{
+        //     this.turnosTodos.push(
+        //       {
+        //         id: data.payload.doc.data().id,
+        //         fecha: data.payload.doc.data().fecha,
+        //         hora: data.payload.doc.data().hora,
+        //         paciente: data.payload.doc.data().paciente,
+        //         especialidad: data.payload.doc.data().especialidad,
+        //         atendido: data.payload.doc.data().atendido,
+        //         estado: data.payload.doc.data().estado,
+        //         hclinica: data.payload.doc.data().hclinica,
+        //         profesional: data.payload.doc.data().profesional
+        //       }
+        //     );
+        //   });
+        //  this.dataSource = new MatTableDataSource(this.turnosTodos);
+        //});
+        //this.dataSource=null;
+    };
+    BusquedaTurnosComponent.prototype.aceptar = function (e) {
+        if (e.estado == "pendiente") {
+            e.estado = "confirmado";
+            // this.firebase.updateTurno(e.id, e).then(resul =>{
+            //   console.log("OK")
+            //   this.firebase.updateTurnoXProf(e.id, e).then(resul=>{
+            //     console.log("OK2");
+            //   }).catch(error =>{console.log(error)});
+            // }).catch(error=>{console.log(error)});
+            //this.actualizarTurno(e);
+        }
+        else {
+            console.log("El turno est\u00E1 " + e.estado);
+        }
+    };
+    BusquedaTurnosComponent.prototype.rechazar = function (e) {
+        if (e.estado !== "rechazado") {
+            e.estado = "rechazado";
+            // this.firebase.updateTurno(e.id, e).then(resul =>{
+            //   console.log("OK")
+            //   this.firebase.updateTurnoXProf(e.id, e).then(resul=>{
+            //     console.log("OK2");
+            //   }).catch(error =>{console.log(error)});
+            // }).catch(error=>{console.log(error)});
+            //this.actualizarTurno(e);
+        }
+        else {
+            console.log("El turno ya est\u00E1 " + e.estado);
+        }
+    };
+    BusquedaTurnosComponent.prototype.actualizarTurno = function (turno) {
+        for (var _i = 0, _a = this.turnosTodos; _i < _a.length; _i++) {
+            var t = _a[_i];
+            if (t.id === turno.id) {
+                t.estado = turno.estado;
+            }
+        }
+    };
+    BusquedaTurnosComponent.prototype.applyFilter = function (event) {
+        var filterValue = event.target.value;
+        // this.dataSource.filter = filterValue.trim().toLowerCase();
+    };
+    BusquedaTurnosComponent.prototype.exportarAsXlsx = function () {
+        // this.exporter.exportToExcel(this.dataSource.data, 'turnos');
+    };
+    BusquedaTurnosComponent.prototype.exportarAsXlsxFilter = function () {
+        // this.exporter.exportToExcel(this.dataSource.filteredData, 'turnos_filtrados');
+    };
+    BusquedaTurnosComponent.ctorParameters = function () { return [
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
+    ]; };
+    BusquedaTurnosComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-busqueda-turnos',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./busqueda-turnos.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./busqueda-turnos.component.scss */ "./src/app/pages/turnos-home/busqueda-turnos/busqueda-turnos.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+    ], BusquedaTurnosComponent);
+    return BusquedaTurnosComponent;
 }());
 
 
@@ -4007,7 +4430,7 @@ var CalendarioComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL21pcy10dXJub3MvbWlzLXR1cm5vcy5jb21wb25lbnQuc2NzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("table, tr, th {\n  color: gainsboro;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdHVybm9zLWhvbWUvbWlzLXR1cm5vcy9DOlxcQW5uZ3VsYXJcXGJsay1kZXNpZ24tc3lzdGVtLWFuZ3VsYXItbWFzdGVyL3NyY1xcYXBwXFxwYWdlc1xcdHVybm9zLWhvbWVcXG1pcy10dXJub3NcXG1pcy10dXJub3MuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL21pcy10dXJub3MvbWlzLXR1cm5vcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFBO0FDQ0YiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy90dXJub3MtaG9tZS9taXMtdHVybm9zL21pcy10dXJub3MuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ0YWJsZSx0cix0aHtcclxuICBjb2xvcjpnYWluc2Jvcm87XHJcbn0iLCJ0YWJsZSwgdHIsIHRoIHtcbiAgY29sb3I6IGdhaW5zYm9ybztcbn0iXX0= */");
 
 /***/ }),
 
@@ -4026,16 +4449,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/model/turno */ "./src/app/model/turno.ts");
 /* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
 
 
 
 
 
 var MisTurnosComponent = /** @class */ (function () {
-    function MisTurnosComponent(turnosService, fb) {
+    function MisTurnosComponent(turnosService, router, fb) {
         this.turnosService = turnosService;
+        this.router = router;
         this.fb = fb;
         this.submitted = false;
+        this.selectedProfesional = 4;
         this.obtenerUsuarioActual();
         this.cargarLista();
     }
@@ -4070,9 +4497,11 @@ var MisTurnosComponent = /** @class */ (function () {
         });
     };
     MisTurnosComponent.prototype.guardarResena = function (turnoTab) {
-        this.modalResena.show();
+        localStorage.removeItem('TurnoEncuesta');
         this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
         this.turnoSeleccionado = turnoTab;
+        localStorage.setItem('TurnoEncuesta', JSON.stringify(this.turnoSeleccionado));
+        this.router.navigate(['/turnosEncuesta']);
     };
     MisTurnosComponent.prototype.verObservaciones = function (turno) {
         if (turno.observaciones) {
@@ -4116,6 +4545,7 @@ var MisTurnosComponent = /** @class */ (function () {
         this.submitted = true;
         if (this.form.valid) {
             this.turnoSeleccionado.resenia = this.form.get('comentario').value;
+            this.turnoSeleccionado.puntosProfesional = this.selectedProfesional;
             this.turnosService.actualizar(this.turnoSeleccionado)
                 .then(function (response) {
                 console.log(response);
@@ -4156,6 +4586,7 @@ var MisTurnosComponent = /** @class */ (function () {
     };
     MisTurnosComponent.ctorParameters = function () { return [
         { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
     ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
@@ -4172,7 +4603,7 @@ var MisTurnosComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./mis-turnos.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./mis-turnos.component.scss */ "./src/app/pages/turnos-home/mis-turnos/mis-turnos.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
     ], MisTurnosComponent);
     return MisTurnosComponent;
 }());
@@ -4489,6 +4920,632 @@ var RegistroTurnoComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.scss":
+/*!********************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.scss ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("label {\n  color: blanchedalmond;\n}\n\n.star {\n  font-size: 1.5rem;\n  color: #b0c4de;\n}\n\n.filled {\n  color: #1e90ff;\n}\n\n.bad {\n  color: #deb0b0;\n}\n\n.filled.bad {\n  color: #ff1e1e;\n}\n\ntable, tr, th {\n  color: gainsboro;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdHVybm9zLWhvbWUvdHVybm8tZW5jdWVzdGEvQzpcXEFubmd1bGFyXFxibGstZGVzaWduLXN5c3RlbS1hbmd1bGFyLW1hc3Rlci9zcmNcXGFwcFxccGFnZXNcXHR1cm5vcy1ob21lXFx0dXJuby1lbmN1ZXN0YVxcdHVybm8tZW5jdWVzdGEuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3R1cm5vLWVuY3Vlc3RhL3R1cm5vLWVuY3Vlc3RhLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0kscUJBQUE7QUNDSjs7QURDRztFQUNDLGlCQUFBO0VBQ0EsY0FBQTtBQ0VKOztBREFFO0VBQ0UsY0FBQTtBQ0dKOztBRERFO0VBQ0UsY0FBQTtBQ0lKOztBREZFO0VBQ0UsY0FBQTtBQ0tKOztBREhFO0VBQ0UsZ0JBQUE7QUNNSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3R1cm5vLWVuY3Vlc3RhL3R1cm5vLWVuY3Vlc3RhLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibGFiZWx7XHJcbiAgICBjb2xvcjogYmxhbmNoZWRhbG1vbmQ7XHJcbiAgfVxyXG4gICAuc3RhciB7XHJcbiAgICBmb250LXNpemU6IDEuNXJlbTtcclxuICAgIGNvbG9yOiAjYjBjNGRlO1xyXG4gIH1cclxuICAuZmlsbGVkIHtcclxuICAgIGNvbG9yOiAjMWU5MGZmO1xyXG4gIH1cclxuICAuYmFkIHtcclxuICAgIGNvbG9yOiAjZGViMGIwO1xyXG4gIH1cclxuICAuZmlsbGVkLmJhZCB7XHJcbiAgICBjb2xvcjogI2ZmMWUxZTtcclxuICB9XHJcbiAgdGFibGUsdHIsdGh7XHJcbiAgICBjb2xvcjpnYWluc2Jvcm87XHJcbiAgfSIsImxhYmVsIHtcbiAgY29sb3I6IGJsYW5jaGVkYWxtb25kO1xufVxuXG4uc3RhciB7XG4gIGZvbnQtc2l6ZTogMS41cmVtO1xuICBjb2xvcjogI2IwYzRkZTtcbn1cblxuLmZpbGxlZCB7XG4gIGNvbG9yOiAjMWU5MGZmO1xufVxuXG4uYmFkIHtcbiAgY29sb3I6ICNkZWIwYjA7XG59XG5cbi5maWxsZWQuYmFkIHtcbiAgY29sb3I6ICNmZjFlMWU7XG59XG5cbnRhYmxlLCB0ciwgdGgge1xuICBjb2xvcjogZ2FpbnNib3JvO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: TurnoEncuestaComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnoEncuestaComponent", function() { return TurnoEncuestaComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! nouislider */ "./node_modules/nouislider/distribute/nouislider.js");
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+var TurnoEncuestaComponent = /** @class */ (function () {
+    function TurnoEncuestaComponent(turnosService, router, fb) {
+        this.turnosService = turnosService;
+        this.router = router;
+        this.fb = fb;
+        this.submitted = false;
+        this.selectedProfesional = 4;
+        this.obtenerUsuarioActual();
+        this.cargarLista();
+    }
+    Object.defineProperty(TurnoEncuestaComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    TurnoEncuestaComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
+        var dataTurno = localStorage.getItem('TurnoEncuesta');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
+        this.turnoSeleccionado = JSON.parse(dataTurno);
+        this.fecha = this.turnoSeleccionado.fecha;
+        this.hora = this.turnoSeleccionado.hora;
+        this.paciente = this.turnoSeleccionado.paciente;
+        this.especialidad = this.turnoSeleccionado.especialidad;
+        this.motivo = this.turnoSeleccionado.motivo;
+        switch (this.user.tipo) {
+            case "paciente": {
+                this.pacienteStorage = JSON.parse(dataUsuario);
+                break;
+            }
+            case "profesional": {
+                this.profesionalStorage = JSON.parse(dataUsuario);
+                break;
+            }
+        }
+    };
+    TurnoEncuestaComponent.prototype.guardarComentario = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.turnoSeleccionado.completoEncuesta = true;
+            this.turnoSeleccionado.resenia = this.form.get('comentario').value;
+            this.turnoSeleccionado.puntosProfesional = this.selectedProfesional;
+            this.turnoSeleccionado.puntosLugar = localStorage.getItem('RangoEncuesta');
+            this.turnoSeleccionado.recibeInfo = this.form.get('recibeInfo').value;
+            this.turnoSeleccionado.recomienda = this.form.get('recomienda').value;
+            this.turnoSeleccionado.noRecomienda = this.form.get('noRecomienda').value;
+            this.turnosService.actualizarConEncuesta(this.turnoSeleccionado)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.router.navigate(['/bienvenida']);
+                    _this.modalResena.hide();
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al actualizar el turno";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    TurnoEncuestaComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.turnosService.ListarTurnosPacientes(this.pacienteStorage[0].idPaciente)
+            .subscribe(function (data) {
+            _this.listaTurnosPaciente = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    TurnoEncuestaComponent.prototype.scrollToDownload = function (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    };
+    TurnoEncuestaComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            comentario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            recibeInfo: ['',],
+            recomienda: ['',],
+            noRecomienda: ['',]
+        });
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+        var slider = document.getElementById("sliderRegular");
+        var value;
+        nouislider__WEBPACK_IMPORTED_MODULE_5___default.a.create(slider, {
+            start: 20,
+            connect: true,
+            range: {
+                min: 0,
+                max: 100
+            }
+        });
+        //this.rango="20";
+        var rango = document.getElementById('slider-span');
+        slider.noUiSlider.on('update', function (values, handle) {
+            value = values[handle];
+            rango.innerHTML = value;
+            localStorage.setItem('RangoEncuesta', JSON.stringify(value));
+        });
+    };
+    TurnoEncuestaComponent.prototype.ngOnDestroy = function () {
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.remove("index-page");
+    };
+    TurnoEncuestaComponent.ctorParameters = function () { return [
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
+    ]; };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalRes'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], TurnoEncuestaComponent.prototype, "modalResena", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('modalObs'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)
+    ], TurnoEncuestaComponent.prototype, "modalObservaciones", void 0);
+    TurnoEncuestaComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-turno-encuesta',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turno-encuesta.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turno-encuesta.component.scss */ "./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], TurnoEncuestaComponent);
+    return TurnoEncuestaComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.scss":
+/*!******************************************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.scss ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3R1cm5vLW9ic2VydmFjaW9uLWRldGFsbGUvdHVybm8tb2JzZXJ2YWNpb24tZGV0YWxsZS5jb21wb25lbnQuc2NzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.ts":
+/*!****************************************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.ts ***!
+  \****************************************************************************************************/
+/*! exports provided: TurnoObservacionDetalleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnoObservacionDetalleComponent", function() { return TurnoObservacionDetalleComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
+
+
+
+var TurnoObservacionDetalleComponent = /** @class */ (function () {
+    function TurnoObservacionDetalleComponent(turnosService, router, fb) {
+        this.turnosService = turnosService;
+        this.router = router;
+        this.fb = fb;
+        this.submitted = false;
+        this.obtenerUsuarioActual();
+        // this.cargarLista();
+    }
+    Object.defineProperty(TurnoObservacionDetalleComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    TurnoObservacionDetalleComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            clave1: ['',],
+            valor1: ['',],
+            clave2: ['',],
+            valor2: ['',],
+            clave3: ['',],
+            valor3: ['',],
+            clave4: ['',],
+            valor4: ['',],
+            clave5: ['',],
+            valor5: ['',],
+            edad: ['',],
+            presion: ['',],
+            temperatura: ['',],
+            observacion: ['',]
+        });
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+    };
+    TurnoObservacionDetalleComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
+        var dataTurno = localStorage.getItem('TurnoSeleccionado');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
+        this.turnoSeleccionado = JSON.parse(dataTurno);
+        this.fecha = this.turnoSeleccionado.fecha;
+        this.hora = this.turnoSeleccionado.hora;
+        this.paciente = this.turnoSeleccionado.paciente;
+        this.especialidad = this.turnoSeleccionado.especialidad;
+        this.motivo = this.turnoSeleccionado.motivo;
+        this.temperatura = this.turnoSeleccionado.temperatura;
+        this.edad = this.turnoSeleccionado.edad;
+        this.presion = this.turnoSeleccionado.presion;
+        if (this.turnoSeleccionado.clave1) {
+            this.tieneClave1 = true;
+            this.clave1 = this.turnoSeleccionado.clave1;
+            this.valor1 = this.turnoSeleccionado.valor1;
+        }
+        if (this.turnoSeleccionado.clave2) {
+            this.tieneClave2 = true;
+            this.clave2 = this.turnoSeleccionado.clave2;
+            this.valor2 = this.turnoSeleccionado.valor2;
+        }
+        if (this.turnoSeleccionado.clave3) {
+            this.tieneClave3 = true;
+            this.clave3 = this.turnoSeleccionado.clave3;
+            this.valor3 = this.turnoSeleccionado.valor3;
+        }
+        if (this.turnoSeleccionado.clave4) {
+            this.tieneClave4 = true;
+            this.clave4 = this.turnoSeleccionado.clave4;
+            this.valor4 = this.turnoSeleccionado.valor4;
+        }
+        if (this.turnoSeleccionado.clave5) {
+            this.tieneClave5 = true;
+            this.clave5 = this.turnoSeleccionado.clave5;
+            this.valor5 = this.turnoSeleccionado.valor5;
+        }
+        if (this.turnoSeleccionado.completoEncuesta) {
+            this.completoEncuesta = true;
+            this.resenia = this.turnoSeleccionado.resenia;
+            this.puntosProfesional = this.turnoSeleccionado.puntosProfesional;
+            this.puntosLugar = this.turnoSeleccionado.puntosLugar;
+            this.recibeInfo = this.turnoSeleccionado.recibeInfo;
+            this.recomienda = this.turnoSeleccionado.recomienda;
+        }
+        this.profesionalStorage = JSON.parse(dataUsuario);
+    };
+    TurnoObservacionDetalleComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.turnosService.ListarTurnosProfesional(this.profesionalStorage[0].idProfesional)
+            .subscribe(function (data) {
+            _this.listaTurnosPaciente = data;
+            _this.data = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    TurnoObservacionDetalleComponent.prototype.cancelar = function () {
+        this.form.reset();
+        this.router.navigate(['/bienvenida']);
+    };
+    TurnoObservacionDetalleComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.turnoSeleccionado.observaciones = this.form.get('observacion').value;
+            this.turnoSeleccionado.estado = "cerrado";
+            this.turnoSeleccionado.edad = this.form.get('edad').value;
+            this.turnoSeleccionado.presion = this.form.get('presion').value;
+            this.turnoSeleccionado.temperatura = this.form.get('temperatura').value;
+            this.turnoSeleccionado.observaciones = this.form.get('observacion').value;
+            if (this.form.get('clave1').value === '') {
+                this.turnoSeleccionado.clave1 = "";
+                this.turnoSeleccionado.valor1 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave1 = this.form.get('clave1').value;
+                this.turnoSeleccionado.valor1 = this.form.get('valor1').value;
+            }
+            if (this.form.get('clave2').value === '') {
+                this.turnoSeleccionado.clave2 = "";
+                this.turnoSeleccionado.valor2 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave2 = this.form.get('clave2').value;
+                this.turnoSeleccionado.valor2 = this.form.get('valor2').value;
+            }
+            if (this.form.get('clave3').value === '') {
+                this.turnoSeleccionado.clave3 = "";
+                this.turnoSeleccionado.valor3 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave3 = this.form.get('clave3').value;
+                this.rangoValor = localStorage.getItem('Rango');
+                this.turnoSeleccionado.valor3 = this.rangoValor;
+            }
+            if (this.form.get('clave4').value === '') {
+                this.turnoSeleccionado.clave4 = "";
+                this.turnoSeleccionado.valor4 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave4 = this.form.get('clave4').value;
+                this.turnoSeleccionado.valor4 = this.form.get('valor4').value;
+            }
+            if (this.form.get('clave5').value === '') {
+                this.turnoSeleccionado.clave5 = "";
+                this.turnoSeleccionado.valor5 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave5 = this.form.get('clave5').value;
+                this.turnoSeleccionado.valor5 = this.form.get('valor5').value;
+            }
+            this.turnosService.actualizarInfo(this.turnoSeleccionado)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.router.navigate(['/bienvenida']);
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al actualizar el turno";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    TurnoObservacionDetalleComponent.ctorParameters = function () { return [
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
+    ]; };
+    TurnoObservacionDetalleComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-turno-observacion-detalle',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turno-observacion-detalle.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turno-observacion-detalle.component.scss */ "./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], TurnoObservacionDetalleComponent);
+    return TurnoObservacionDetalleComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.scss":
+/*!**************************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.scss ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3R1cm5vcy1ob21lL3R1cm5vLW9ic2VydmFjaW9uL3R1cm5vLW9ic2VydmFjaW9uLmNvbXBvbmVudC5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: TurnoObservacionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TurnoObservacionComponent", function() { return TurnoObservacionComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/turnos.service */ "./src/app/services/turnos.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! nouislider */ "./node_modules/nouislider/distribute/nouislider.js");
+/* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
+
+
+
+
+
+var TurnoObservacionComponent = /** @class */ (function () {
+    function TurnoObservacionComponent(turnosService, router, fb) {
+        this.turnosService = turnosService;
+        this.router = router;
+        this.fb = fb;
+        this.submitted = false;
+        this.obtenerUsuarioActual();
+        // this.cargarLista();
+    }
+    Object.defineProperty(TurnoObservacionComponent.prototype, "f", {
+        get: function () { return this.form.controls; },
+        enumerable: true,
+        configurable: true
+    });
+    TurnoObservacionComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            clave1: ['',],
+            valor1: ['',],
+            clave2: ['',],
+            valor2: ['',],
+            clave3: ['',],
+            valor3: ['',],
+            clave4: ['',],
+            valor4: ['',],
+            clave5: ['',],
+            valor5: ['',],
+            edad: ['',],
+            presion: ['',],
+            temperatura: ['',],
+            observacion: ['',]
+        });
+        var body = document.getElementsByTagName("body")[0];
+        body.classList.add("index-page");
+        var slider = document.getElementById("sliderRegular");
+        var value;
+        nouislider__WEBPACK_IMPORTED_MODULE_4___default.a.create(slider, {
+            start: 20,
+            connect: true,
+            range: {
+                min: 0,
+                max: 100
+            }
+        });
+        //this.rango="20";
+        var rango = document.getElementById('slider-span');
+        slider.noUiSlider.on('update', function (values, handle) {
+            value = values[handle];
+            rango.innerHTML = value;
+            localStorage.setItem('Rango', JSON.stringify(value));
+        });
+    };
+    TurnoObservacionComponent.prototype.obtenerUsuarioActual = function () {
+        var data = localStorage.getItem('Login');
+        var dataUsuario = localStorage.getItem('LoginUsuario');
+        var dataTurno = localStorage.getItem('TurnoSeleccionado');
+        this.user = JSON.parse(data);
+        this.isLogueado = true;
+        this.turnoSeleccionado = JSON.parse(dataTurno);
+        this.fecha = this.turnoSeleccionado.fecha;
+        this.hora = this.turnoSeleccionado.hora;
+        this.paciente = this.turnoSeleccionado.paciente;
+        this.especialidad = this.turnoSeleccionado.especialidad;
+        this.motivo = this.turnoSeleccionado.motivo;
+        this.profesionalStorage = JSON.parse(dataUsuario);
+    };
+    TurnoObservacionComponent.prototype.cargarLista = function () {
+        var _this = this;
+        this.turnosService.ListarTurnosProfesional(this.profesionalStorage[0].idProfesional)
+            .subscribe(function (data) {
+            _this.listaTurnosPaciente = data;
+            _this.data = data;
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    TurnoObservacionComponent.prototype.cancelar = function () {
+        this.form.reset();
+        this.router.navigate(['/bienvenida']);
+    };
+    TurnoObservacionComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.errorMessage = '';
+        this.error = false;
+        this.success = false;
+        this.submitted = true;
+        if (this.form.valid) {
+            this.turnoSeleccionado.observaciones = this.form.get('observacion').value;
+            this.turnoSeleccionado.estado = "cerrado";
+            this.turnoSeleccionado.edad = this.form.get('edad').value;
+            this.turnoSeleccionado.presion = this.form.get('presion').value;
+            this.turnoSeleccionado.temperatura = this.form.get('temperatura').value;
+            this.turnoSeleccionado.observaciones = this.form.get('observacion').value;
+            if (this.form.get('clave1').value === '') {
+                this.turnoSeleccionado.clave1 = "";
+                this.turnoSeleccionado.valor1 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave1 = this.form.get('clave1').value;
+                this.turnoSeleccionado.valor1 = this.form.get('valor1').value;
+            }
+            if (this.form.get('clave2').value === '') {
+                this.turnoSeleccionado.clave2 = "";
+                this.turnoSeleccionado.valor2 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave2 = this.form.get('clave2').value;
+                this.turnoSeleccionado.valor2 = this.form.get('valor2').value;
+            }
+            if (this.form.get('clave3').value === '') {
+                this.turnoSeleccionado.clave3 = "";
+                this.turnoSeleccionado.valor3 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave3 = this.form.get('clave3').value;
+                this.rangoValor = localStorage.getItem('Rango');
+                this.turnoSeleccionado.valor3 = this.rangoValor;
+            }
+            if (this.form.get('clave4').value === '') {
+                this.turnoSeleccionado.clave4 = "";
+                this.turnoSeleccionado.valor4 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave4 = this.form.get('clave4').value;
+                this.turnoSeleccionado.valor4 = this.form.get('valor4').value;
+            }
+            if (this.form.get('clave5').value === '') {
+                this.turnoSeleccionado.clave5 = "";
+                this.turnoSeleccionado.valor5 = "";
+            }
+            else {
+                this.turnoSeleccionado.clave5 = this.form.get('clave5').value;
+                this.turnoSeleccionado.valor5 = this.form.get('valor5').value;
+            }
+            this.turnosService.actualizarInfo(this.turnoSeleccionado)
+                .then(function (response) {
+                console.log(response);
+                if (response) {
+                    _this.success = true;
+                    _this.form.reset();
+                    _this.router.navigate(['/bienvenida']);
+                }
+                else {
+                    _this.error = true;
+                    _this.errorMessage = "error al actualizar el turno";
+                }
+            })
+                .catch(function (error) {
+                _this.error = true;
+                _this.errorMessage = "error al actualizar el turno";
+                console.log(error);
+            });
+        }
+        else {
+            this.errorMessage = 'Debe completar los campos correctamente.';
+            this.error = true;
+        }
+    };
+    TurnoObservacionComponent.ctorParameters = function () { return [
+        { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
+    ]; };
+    TurnoObservacionComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-turno-observacion',
+            template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turno-observacion.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.html")).default,
+            styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turno-observacion.component.scss */ "./src/app/pages/turnos-home/turno-observacion/turno-observacion.component.scss")).default]
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_2__["TurnosService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+    ], TurnoObservacionComponent);
+    return TurnoObservacionComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/turnos-home/turnos-home.component.scss":
 /*!**************************************************************!*\
   !*** ./src/app/pages/turnos-home/turnos-home.component.scss ***!
@@ -4521,6 +5578,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! html2canvas */ "./node_modules/html2canvas/dist/npm/index.js");
 /* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+
 
 
 
@@ -4529,8 +5588,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var TurnosHomeComponent = /** @class */ (function () {
-    function TurnosHomeComponent(turnosService, fb) {
+    function TurnosHomeComponent(turnosService, router, fb) {
         this.turnosService = turnosService;
+        this.router = router;
         this.fb = fb;
         this.submitted = false;
         this.options = {
@@ -4580,7 +5640,8 @@ var TurnosHomeComponent = /** @class */ (function () {
         });
     };
     TurnosHomeComponent.prototype.verObservacion = function (turnoTab) {
-        this.modalResena.show();
+        //si existe lo borro
+        localStorage.removeItem('TurnoSeleccionado');
         this.turnoSeleccionado = new src_app_model_turno__WEBPACK_IMPORTED_MODULE_2__["turno"]();
         this.turnoSeleccionado = turnoTab;
         this.fecha = turnoTab.fecha;
@@ -4588,6 +5649,8 @@ var TurnosHomeComponent = /** @class */ (function () {
         this.paciente = turnoTab.paciente;
         this.especialidad = turnoTab.especialidad;
         this.motivo = turnoTab.motivo;
+        localStorage.setItem('TurnoSeleccionado', JSON.stringify(this.turnoSeleccionado));
+        this.router.navigate(['/turnoObservacion']);
     };
     TurnosHomeComponent.prototype.verComentarios = function (turno) {
         if (turno.resenia) {
@@ -4648,15 +5711,25 @@ var TurnosHomeComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    TurnosHomeComponent.prototype.guardarObservacion = function () {
+    TurnosHomeComponent.prototype.onSubmit = function () {
         var _this = this;
         this.errorMessage = '';
         this.error = false;
         this.success = false;
         this.submitted = true;
+        var atendido = this.form.get('atendido').value;
         if (this.form.valid) {
-            this.turnoSeleccionado.resenia = this.form.get('comentario').value;
-            this.turnosService.actualizar(this.turnoSeleccionado)
+            this.turnoSeleccionado.observaciones = this.form.get('observacion').value;
+            if (atendido) {
+                this.turnoSeleccionado.estado = "cerrado";
+            }
+            this.turnoSeleccionado.clave1 = this.form.get('clave1').value;
+            this.turnoSeleccionado.clave2 = this.form.get('clave2').value;
+            this.turnoSeleccionado.clave3 = this.form.get('clave3').value;
+            this.turnoSeleccionado.valor1 = this.form.get('valor1').value;
+            this.turnoSeleccionado.valor2 = this.form.get('valor2').value;
+            this.turnoSeleccionado.valor3 = this.form.get('valor3').value;
+            this.turnosService.actualizarInfo(this.turnoSeleccionado)
                 .then(function (response) {
                 console.log(response);
                 if (response) {
@@ -4703,21 +5776,15 @@ var TurnosHomeComponent = /** @class */ (function () {
     TurnosHomeComponent.prototype.scrollToDownload = function (element) {
         element.scrollIntoView({ behavior: "smooth" });
     };
-    Object.defineProperty(TurnosHomeComponent.prototype, "getInfo", {
-        get: function () {
-            return this.form.get('infos');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    TurnosHomeComponent.prototype.agregarInfo = function (index) {
-        var control = this.form.controls['infos'];
-        control.push(this.fb.group({ info: [] }));
-    };
     TurnosHomeComponent.prototype.ngOnInit = function () {
         this.form = this.fb.group({
-            comentario: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            infos: this.fb.array([this.fb.group({ info: [''] })]),
+            clave1: ['',],
+            valor1: ['',],
+            clave2: ['',],
+            valor2: ['',],
+            clave3: ['',],
+            valor3: ['',],
+            observacion: ['',],
             atendido: ['',]
         });
         var body = document.getElementsByTagName("body")[0];
@@ -4729,6 +5796,7 @@ var TurnosHomeComponent = /** @class */ (function () {
     };
     TurnosHomeComponent.ctorParameters = function () { return [
         { type: src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
     ]; };
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
@@ -4745,7 +5813,9 @@ var TurnosHomeComponent = /** @class */ (function () {
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./turnos-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/turnos-home/turnos-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./turnos-home.component.scss */ "./src/app/pages/turnos-home/turnos-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_turnos_service__WEBPACK_IMPORTED_MODULE_3__["TurnosService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
     ], TurnosHomeComponent);
     return TurnosHomeComponent;
 }());
@@ -4873,6 +5943,62 @@ var UsuarioHomeComponent = /** @class */ (function () {
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
     ], UsuarioHomeComponent);
     return UsuarioHomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pipes/filter.pipe.ts":
+/*!**************************************!*\
+  !*** ./src/app/pipes/filter.pipe.ts ***!
+  \**************************************/
+/*! exports provided: FilterPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterPipe", function() { return FilterPipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+
+
+var FilterPipe = /** @class */ (function () {
+    function FilterPipe() {
+    }
+    FilterPipe.prototype.transform = function (value, args) {
+        if (args === '' || args.length < 3)
+            return value;
+        var resultFilter = [];
+        for (var _i = 0, value_1 = value; _i < value_1.length; _i++) {
+            var filter = value_1[_i];
+            if (filter.profesional.toLowerCase().indexOf(args.toLowerCase()) > -1) {
+                resultFilter.push(filter);
+            }
+        }
+        for (var _a = 0, value_2 = value; _a < value_2.length; _a++) {
+            var filter = value_2[_a];
+            if (filter.paciente.toLowerCase().indexOf(args.toLowerCase()) > -1) {
+                resultFilter.push(filter);
+            }
+        }
+        for (var _b = 0, value_3 = value; _b < value_3.length; _b++) {
+            var filter = value_3[_b];
+            if (filter.especialidad.toLowerCase().indexOf(args.toLowerCase()) > -1) {
+                resultFilter.push(filter);
+            }
+        }
+        return resultFilter.filter(this.onlyUnique);
+    };
+    FilterPipe.prototype.onlyUnique = function (value, index, self) {
+        return self.indexOf(value) === index;
+    };
+    FilterPipe = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+            name: 'filter'
+        })
+    ], FilterPipe);
+    return FilterPipe;
 }());
 
 
@@ -5142,8 +6268,6 @@ var PacienteService = /** @class */ (function () {
     function PacienteService(AFauth, afs) {
         this.AFauth = AFauth;
         this.afs = afs;
-        this.pacienteColeccion = afs.collection('pacientes');
-        this.pacientes = this.pacienteColeccion.valueChanges();
     }
     PacienteService.prototype.Listar = function () {
         this.pacienteColeccion = this.afs.collection('pacientes');
@@ -5167,6 +6291,28 @@ var PacienteService = /** @class */ (function () {
             });
         }));
     };
+    PacienteService.prototype.RegistrarPaciente = function (paciente) {
+        //creo el usuario
+        var id = this.afs.createId();
+        this.afs.collection('usuarios').doc(id).set({
+            id: id,
+            contraseña: paciente.password,
+            mail: paciente.usuario,
+            nombre: paciente.nombre,
+            tipo: "Paciente"
+        }).then().catch();
+        this.afs.collection('pacientes').doc(id).set({
+            id: id,
+            nombre: paciente.nombre,
+            apellido: paciente.apellido,
+            dni: paciente.dni,
+            sexo: paciente.sexo,
+            edad: paciente.edad,
+            nacionalidad: paciente.nacionalidad,
+            planMedico: paciente.planMedico,
+            urlImagen: paciente.urlImage
+        }).then().catch();
+    };
     PacienteService.prototype.Registrar = function (paciente) {
         var _this = this;
         //creo login 
@@ -5175,32 +6321,9 @@ var PacienteService = /** @class */ (function () {
         this.dataLogin.tipo = "paciente";
         this.dataLogin.nombre = paciente.nombre;
         this.dataLogin.usuario = paciente.usuario;
-        return new Promise(function (resolve, reject) {
-            _this.AFauth.createUserWithEmailAndPassword(_this.dataLogin.usuario, _this.dataLogin.password).then(function (userData) {
-                _this.dataLogin.id = userData.user.uid;
-                //creo el usuario
-                _this.afs.collection('usuarios').doc(_this.dataLogin.id).set({
-                    id: _this.dataLogin.id,
-                    contraseña: _this.dataLogin.password,
-                    mail: _this.dataLogin.usuario,
-                    nombre: _this.dataLogin.nombre,
-                    tipo: _this.dataLogin.tipo
-                }).then().catch();
-                _this.afs.collection('pacientes').doc(_this.dataLogin.id).set({
-                    id: _this.dataLogin.id,
-                    nombre: paciente.nombre,
-                    apellido: paciente.apellido,
-                    dni: paciente.dni,
-                    sexo: paciente.sexo,
-                    edad: paciente.edad,
-                    nacionalidad: paciente.nacionalidad,
-                    planMedico: paciente.planMedico,
-                    urlImagen: paciente.urlImage
-                }).then().catch();
-                resolve(true);
-            }).catch(function (err) {
-                reject(false);
-            });
+        return this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario, this.dataLogin.password).then(function (userData) {
+            _this.dataLogin.id = userData.user.uid;
+        }).catch(function (err) {
         });
     };
     PacienteService.prototype.Eliminar = function (paciente) {
@@ -5292,6 +6415,38 @@ var ProfesionalService = /** @class */ (function () {
             usuarioAprobacion: especialidad.usuarioAprobacion
         });
     };
+    ProfesionalService.prototype.RegistrarProfesional = function (profe) {
+        //creo el usuario
+        var id = this.afs.createId();
+        this.afs.collection('usuarios').doc(id).set({
+            id: id,
+            contraseña: profe.password,
+            mail: profe.usuario,
+            nombre: profe.nombre,
+            tipo: "profesional"
+        }).then().catch();
+        this.afs.collection('profesionales').doc(id).set({
+            id: id,
+            idProfesional: profe.idProfesional,
+            nombre: profe.nombre,
+            apellido: profe.apellido,
+            dni: profe.dni,
+            sexo: profe.sexo,
+            horario: profe.horario,
+            edad: profe.edad,
+            nacionalidad: profe.nacionalidad,
+            imagen: profe.urlImage,
+            habilitado: false,
+            diasHorarios: {
+                lunes: profe.diasHorarios.lunes,
+                martes: profe.diasHorarios.martes,
+                miercoles: profe.diasHorarios.miercoles,
+                jueves: profe.diasHorarios.jueves,
+                viernes: profe.diasHorarios.viernes,
+                sabado: profe.diasHorarios.sabado
+            }
+        }).then().catch();
+    };
     ProfesionalService.prototype.Registrar = function (profe) {
         var _this = this;
         //creo login 
@@ -5300,40 +6455,8 @@ var ProfesionalService = /** @class */ (function () {
         this.dataLogin.tipo = "profesional";
         this.dataLogin.nombre = profe.nombre;
         this.dataLogin.usuario = profe.usuario;
-        return new Promise(function (resolve, reject) {
-            _this.AFauth.createUserWithEmailAndPassword(_this.dataLogin.usuario, _this.dataLogin.password).then(function (userData) {
-                _this.dataLogin.id = userData.user.uid;
-                //creo el usuario
-                _this.afs.collection('usuarios').doc(_this.dataLogin.id).set({
-                    id: _this.dataLogin.id,
-                    contraseña: _this.dataLogin.password,
-                    mail: _this.dataLogin.usuario,
-                    nombre: _this.dataLogin.nombre,
-                    tipo: _this.dataLogin.tipo
-                }).then().catch();
-                _this.afs.collection('profesionales').doc(_this.dataLogin.id).set({
-                    id: _this.dataLogin.id,
-                    idProfesional: profe.idProfesional,
-                    nombre: profe.nombre,
-                    apellido: profe.apellido,
-                    dni: profe.dni,
-                    sexo: profe.sexo,
-                    horario: profe.horario,
-                    edad: profe.edad,
-                    nacionalidad: profe.nacionalidad,
-                    diasHorarios: {
-                        lunes: profe.diasHorarios.lunes,
-                        martes: profe.diasHorarios.martes,
-                        miercoles: profe.diasHorarios.miercoles,
-                        jueves: profe.diasHorarios.jueves,
-                        viernes: profe.diasHorarios.viernes,
-                        sabado: profe.diasHorarios.sabado
-                    }
-                }).then().catch();
-                resolve(true);
-            }).catch(function (err) {
-                reject(false);
-            });
+        return this.AFauth.createUserWithEmailAndPassword(this.dataLogin.usuario, this.dataLogin.password).then(function (userData) {
+            _this.dataLogin.id = userData.user.uid;
         });
     };
     ProfesionalService.prototype.Eliminar = function (profesional) {
@@ -5388,6 +6511,17 @@ var TurnosService = /** @class */ (function () {
         this.turnoColeccion = afs.collection('turnos');
         this.turnos = this.turnoColeccion.valueChanges();
     }
+    TurnosService.prototype.ListarTurnosPacientesTodos = function () {
+        this.turnoColeccion = this.afs.collection('turnos');
+        return this.turnos = this.turnoColeccion.snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (changes) {
+            return changes.map(function (action) {
+                var data = action.payload.doc.data();
+                data.idTurno = action.payload.doc.id;
+                return data;
+            });
+        }));
+    };
     TurnosService.prototype.ListarTurnosProfesional = function (idProfesional) {
         this.turnoColeccion = this.afs.collection('turnos', function (x) { return x.where("idProfesional", "==", idProfesional); });
         return this.turnos = this.turnoColeccion.snapshotChanges()
@@ -5432,7 +6566,7 @@ var TurnosService = /** @class */ (function () {
             });
         }));
     };
-    TurnosService.prototype.actualizar = function (turno) {
+    TurnosService.prototype.actualizarConEncuesta = function (turno) {
         var _this = this;
         this.turnoColeccion = this.afs.collection('turnos');
         return new Promise(function (resolve, reject) {
@@ -5448,7 +6582,89 @@ var TurnosService = /** @class */ (function () {
                 estado: turno.estado,
                 motivo: turno.motivo,
                 reseña: turno.resenia,
-                observaciones: turno.observaciones
+                observaciones: turno.observaciones,
+                edad: turno.edad,
+                presion: turno.presion,
+                temperatura: turno.temperatura,
+                puntosProfesional: turno.puntosProfesional,
+                completoEncuesta: turno.completoEncuesta,
+                puntosLugar: turno.puntosLugar,
+                recibeInfo: turno.recibeInfo,
+                recomienda: turno.recomienda,
+                noRecomienda: turno.noRecomienda,
+                clave1: turno.clave1,
+                clave2: turno.clave2,
+                clave3: turno.clave3,
+                clave4: turno.clave4,
+                clave5: turno.clave5,
+                valor1: turno.valor1,
+                valor2: turno.valor2,
+                valor3: turno.valor3,
+                valor4: turno.valor4,
+                valor5: turno.valor5
+            }).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    TurnosService.prototype.actualizar = function (turno) {
+        var _this = this;
+        this.turnoColeccion = this.afs.collection('turnos');
+        return new Promise(function (resolve, reject) {
+            _this.turnoColeccion.doc(turno.idTurno).set({
+                fecha: turno.fecha,
+                hora: turno.hora,
+                especialidad: turno.especialidad,
+                idEspecialidad: turno.idEspecialidad,
+                paciente: turno.paciente,
+                idPaciente: turno.idPaciente,
+                profesional: turno.profesional,
+                idProfesional: turno.idProfesional,
+                estado: turno.estado,
+                motivo: turno.motivo,
+                resenia: turno.resenia,
+                observaciones: turno.observaciones,
+                puntosProfesional: turno.puntosProfesional
+            }).then(function (result) {
+                resolve(true);
+            }).catch(function (err) {
+                reject(false);
+            });
+        });
+    };
+    TurnosService.prototype.actualizarInfo = function (turno) {
+        var _this = this;
+        this.turnoColeccion = this.afs.collection('turnos');
+        return new Promise(function (resolve, reject) {
+            _this.turnoColeccion.doc(turno.idTurno).set({
+                fecha: turno.fecha,
+                hora: turno.hora,
+                especialidad: turno.especialidad,
+                idEspecialidad: turno.idEspecialidad,
+                paciente: turno.paciente,
+                idPaciente: turno.idPaciente,
+                profesional: turno.profesional,
+                idProfesional: turno.idProfesional,
+                estado: turno.estado,
+                motivo: turno.motivo,
+                reseña: "",
+                observaciones: turno.observaciones,
+                edad: turno.edad,
+                presion: turno.presion,
+                temperatura: turno.temperatura,
+                puntosProfesional: 4,
+                clave1: turno.clave1,
+                clave2: turno.clave2,
+                clave3: turno.clave3,
+                clave4: turno.clave4,
+                clave5: turno.clave5,
+                valor1: turno.valor1,
+                valor2: turno.valor2,
+                valor3: turno.valor3,
+                valor4: turno.valor4,
+                valor5: turno.valor5,
             }).then(function (result) {
                 resolve(true);
             }).catch(function (err) {

@@ -7,7 +7,7 @@ import { paciente } from 'src/app/model/paciente';
 import {FormArray, FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import * as PDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { Angular2CsvComponent} from 'angular2-csv';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-turnos-home',
@@ -48,7 +48,12 @@ export class TurnosHomeComponent implements OnInit {
   paciente:string;
   especialidad:string;
   motivo:string;
-  constructor(private turnosService:TurnosService,private fb: FormBuilder) {   
+  addObservacion1:boolean;
+  addObservacion2:boolean;
+  addObservacion3:boolean;
+  constructor(private turnosService:TurnosService,
+              private router:Router,
+              private fb: FormBuilder) {   
     this.obtenerUsuarioActual();
     this.cargarLista();
    }
@@ -88,7 +93,9 @@ export class TurnosHomeComponent implements OnInit {
   }
 
   public verObservacion(turnoTab:turno){
-    this.modalResena.show();
+
+    //si existe lo borro
+    localStorage.removeItem('TurnoSeleccionado');
     this.turnoSeleccionado=new turno();
     this.turnoSeleccionado=turnoTab;
     this.fecha=turnoTab.fecha;
@@ -96,8 +103,11 @@ export class TurnosHomeComponent implements OnInit {
     this.paciente=turnoTab.paciente;
     this.especialidad=turnoTab.especialidad;
     this.motivo=turnoTab.motivo;
+    localStorage.setItem('TurnoSeleccionado', JSON.stringify(this.turnoSeleccionado));
+    this.router.navigate(['/turnoObservacion']);
   
   }
+
   public verComentarios(turno:turno){
     if(turno.resenia){
       this.Observacion=turno.resenia;
@@ -172,18 +182,31 @@ export class TurnosHomeComponent implements OnInit {
       );
   
   }
- public guardarObservacion()
+ public onSubmit()
  {
   this.errorMessage = '';
   this.error = false;
   this.success = false;
   this.submitted=true;
 
+  var atendido=this.form.get('atendido').value
+
   if (this.form.valid ) {
     
-    this.turnoSeleccionado.resenia= this.form.get('comentario').value;
+    this.turnoSeleccionado.observaciones = this.form.get('observacion').value;
+    if(atendido){
+      this.turnoSeleccionado.estado = "cerrado";
+    }
 
-    this.turnosService.actualizar(this.turnoSeleccionado)
+    
+    this.turnoSeleccionado.clave1=this.form.get('clave1').value;
+    this.turnoSeleccionado.clave2=this.form.get('clave2').value;
+    this.turnoSeleccionado.clave3=this.form.get('clave3').value;
+    this.turnoSeleccionado.valor1=this.form.get('valor1').value;
+    this.turnoSeleccionado.valor2=this.form.get('valor2').value;
+    this.turnoSeleccionado.valor3=this.form.get('valor3').value;
+     
+    this.turnosService.actualizarInfo(this.turnoSeleccionado)
       .then(
         response => {
           console.log(response);
@@ -237,17 +260,16 @@ export class TurnosHomeComponent implements OnInit {
   scrollToDownload(element: any) {
     element.scrollIntoView({ behavior: "smooth" });
   }
-  get getInfo() { 
-    return this.form.get('infos')as FormArray;
-   }
-  agregarInfo(index:string) {
-    const control=<FormArray>this.form.controls['infos'];
-    control.push(this.fb.group({info:[]}));
-  }
+
   ngOnInit() {
     this.form = this.fb.group({
-      comentario: ['', Validators.required],
-      infos:this.fb.array([this.fb.group({info:['']})]),
+      clave1: ['', ],
+      valor1: ['', ],
+      clave2: ['', ],
+      valor2: ['', ],
+      clave3: ['', ],
+      valor3: ['', ],
+      observacion:['', ],
       atendido: ['', ]
     });
     var body = document.getElementsByTagName("body")[0];

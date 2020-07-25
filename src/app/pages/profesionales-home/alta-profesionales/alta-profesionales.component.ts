@@ -6,6 +6,11 @@ import { EspecialidadService } from 'src/app/services/especialidad.service';
 import { especialidad } from 'src/app/model/especialidad';
 import {diasHorarios}from 'src/app/model/diashorarios';
 import { especialidadProfesional } from 'src/app/model/especialidadProfesional';
+import { Observable } from 'rxjs';
+import {AngularFireStorage}from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-alta-profesionales',
@@ -32,14 +37,22 @@ export class AltaProfesionalesComponent implements OnInit {
   listaAuxAdd: especialidad[];
   listaAuxFinal: especialidadProfesional[];
   listaAux=new Array<especialidad>();
-  constructor(private fb: FormBuilder,private especialidaService:EspecialidadService, private profesionalService:ProfesionalService) {
+  imagenUser:any;
+  urlImage:string;
+  uploadPercent: Observable<number>;
+  constructor(private fb: FormBuilder,
+    private router:Router,
+    private auth:AuthService,
+    private fireStore:AngularFireStorage,
+    private especialidaService:EspecialidadService,
+    private profesionalService:ProfesionalService) {
     this.listaAux=new Array<especialidad>();
     this.closeModal = new EventEmitter<void>();
     this.registradoCorrectamente = new EventEmitter<any>();
     this.cargarLista();     
     this.diasHorarios=new diasHorarios();
     this.listaAuxAdd=new Array<especialidad>();
-    
+    this.showModalAlta=true;
   }
 
   ngOnInit() {
@@ -56,6 +69,8 @@ export class AltaProfesionalesComponent implements OnInit {
       edad: ['', Validators.required],
       especialidad: ['', Validators.required],
       nacionalidad: ['', Validators.required],
+      imagen:[''],
+      imagenUser: [''],
       horario: ['', Validators.required],
       lunes:[''],
       martes:[''],
@@ -145,27 +160,30 @@ export class AltaProfesionalesComponent implements OnInit {
       this.diasHorarios.viernes=this.form.get('viernes').value;
       this.diasHorarios.sabado=this.form.get('sabado').value;
       this.profesional.diasHorarios=this.diasHorarios;
-      this.cargoEspecialidades(this.profesional);
+      this.profesional.urlImage=this.urlImage;
 
+      this.cargoEspecialidades(this.profesional);
+    //registro las especialidades
+      this.listaAuxFinal.forEach(item=>{
+        this.profesionalService.RegistrarEspecialidadesProfesionales(item);
+      }); 
+
+      //registro el profesional
+      this.profesionalService.RegistrarProfesional(this.profesional);
+
+      //registro el usuario 
       this.profesionalService.Registrar(this.profesional)
-        .then(
-          response => {
-            console.log(response);
-            if (response) {
-              this.listaAuxFinal.forEach(item=>{
-                this.profesionalService.RegistrarEspecialidadesProfesionales(item);
-              }); 
-               
+        .then(response => {
+              
               this.success = true;
               this.form.reset();
+              this.cerrar();
+              this.auth.logout();
+              this.router.navigate(['/login']);
 
               this.registradoCorrectamente.emit();
               this.cerrar();
-            } else {
-              this.error = true;
-              this.errorMessage = "error al registrar el profesional";
             }
-          }
         )
         .catch(
           error => {
@@ -181,7 +199,21 @@ export class AltaProfesionalesComponent implements OnInit {
     }
   }
 
-
+  onUpload(e)
+  {
+    //creamos un id aleatorio para poder asociarlo a la imagen
+    const id = Math.random().toString(36).substring(2);
+    const file=e.target.files[0];
+    const filePath = 'profesionales/profile_'+id;
+    const ref=this.fireStore.ref(filePath);
+    const task=this.fireStore.upload(filePath,file)
+    this.uploadPercent=task.percentageChanges();//recuperamos el porcentaje de carga del archivo
+    task.snapshotChanges().pipe(finalize(()=>
+     ref.getDownloadURL().subscribe(url=>{
+      this.urlImage = url})      
+    )
+    ).subscribe();
+  }
   cargarForm(){
     this.form = this.fb.group({
       idProfesional: ['', Validators.required],
