@@ -37,16 +37,6 @@ import { AuthService } from "src/app/services/auth.service";
 import { Angular2CsvModule } from 'angular2-csv';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-// import { MatNativeDateModule } from '@angular/material/core';
-// import { MatTableModule } from '@angular/material/table';
-
-// import { MatInputModule } from '@angular/material/input';
-// import { MatButtonModule } from '@angular/material/button';
-// import { MatSelectModule } from '@angular/material/select';
-// import { MatIconModule } from '@angular/material/icon';
-
-
-
 @NgModule({
   declarations: [
     AppComponent
@@ -72,7 +62,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [
     AngularFireAuth,//
-    AngularFirestore//
+    AngularFirestore
   ],
   bootstrap: [AppComponent]
 })

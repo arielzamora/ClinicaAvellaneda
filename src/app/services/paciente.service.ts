@@ -69,6 +69,9 @@ export class PacienteService {
       urlImagen:paciente.urlImage
     }).then().catch();
   }
+
+
+  
   public Registrar(paciente:paciente) {
 
     //creo login 

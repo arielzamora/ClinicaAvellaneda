@@ -448,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>informes-home works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<br>\n<br>\n<div class=\"row\">\n<div class=\"col-6\">\n\n    <div appPanel>\n        <chart [options]=\"chartOptions1\"></chart>\n    </div>\n</div>\n<div class=\"col-6\">\n    \n<div appPanel>\n    <chart [options]=\"chartOptions2\"></chart>\n</div>\n</div>\n</div>\n<br>\n<div class=\"row\">\n    <div class=\"col-6\">\n    \n        <div appPanel>\n            <chart [options]=\"chartOptions3\"></chart>\n        </div>\n    </div>\n    <div class=\"col-6\">\n        \n    <div appPanel>\n        <chart [options]=\"chartOptions4\"></chart>\n    </div>\n    </div>\n    </div>\n");
 
 /***/ }),
 
@@ -1313,12 +1313,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { MatNativeDateModule } from '@angular/material/core';
-// import { MatTableModule } from '@angular/material/table';
-// import { MatInputModule } from '@angular/material/input';
-// import { MatButtonModule } from '@angular/material/button';
-// import { MatSelectModule } from '@angular/material/select';
-// import { MatIconModule } from '@angular/material/icon';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1348,7 +1342,7 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 _angular_fire_auth__WEBPACK_IMPORTED_MODULE_8__["AngularFireAuth"],
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__["AngularFirestore"] //
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_7__["AngularFirestore"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
@@ -2563,7 +2557,7 @@ var IndexComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2luZm9ybWVzLWhvbWUvaW5mb3JtZXMtaG9tZS5jb21wb25lbnQuc2NzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("highcharts-chart {\n  display: block;\n  margin: 0 auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvaW5mb3JtZXMtaG9tZS9DOlxcQW5uZ3VsYXJcXGJsay1kZXNpZ24tc3lzdGVtLWFuZ3VsYXItbWFzdGVyL3NyY1xcYXBwXFxwYWdlc1xcaW5mb3JtZXMtaG9tZVxcaW5mb3JtZXMtaG9tZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvaW5mb3JtZXMtaG9tZS9pbmZvcm1lcy1ob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBQTtFQUFnQixjQUFBO0FDRXBCIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvaW5mb3JtZXMtaG9tZS9pbmZvcm1lcy1ob21lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaGlnaGNoYXJ0cy1jaGFydHtcclxuICAgIGRpc3BsYXk6IGJsb2NrOyBtYXJnaW46IDAgYXV0bztcclxufSAiLCJoaWdoY2hhcnRzLWNoYXJ0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbjogMCBhdXRvO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -2579,20 +2573,290 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformesHomeComponent", function() { return InformesHomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var src_app_services_audit_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/audit.service */ "./src/app/services/audit.service.ts");
+
 
 
 var InformesHomeComponent = /** @class */ (function () {
-    function InformesHomeComponent() {
+    function InformesHomeComponent(audit) {
+        this.audit = audit;
+        //variables para datos de la bd
+        this.turXEspe = [];
+        this.espes = [];
+        this.tur = [];
+        this.cargarDiasXProfe();
+        this.turnosPorEspecialidad();
+        this.CargarChart2();
+        this.CargarChart2();
     }
     InformesHomeComponent.prototype.ngOnInit = function () {
     };
+    InformesHomeComponent.prototype.parsearDia = function (diaN) {
+        var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        diaN = dias[(parseInt(diaN) - 1)];
+        return diaN;
+    };
+    InformesHomeComponent.prototype.cargarDiasXProfe = function () {
+        var _this = this;
+        var datos = new Array();
+        this.turXEspe = [];
+        this.tur = [];
+        this.espes = [];
+        this.audit.getTurnosXEspe().subscribe(function (resul) {
+            resul.forEach(function (data) {
+                _this.turXEspe.push({
+                    especialidad: data.payload.doc.data().especialidad,
+                    cantTurnos: data.payload.doc.data().cantTurnos,
+                });
+                _this.espes.push(data.payload.doc.data().especialidad);
+                _this.tur.push(data.payload.doc.data().cantTurnos);
+            });
+        });
+        //this.barChartLabels = this.espes;
+        //this.barChartData = [{data: this.tur, label:"Cantidad de Turnos"}];
+        datos.push({
+            name: "Clinica",
+            y: 21
+        });
+        datos.push({
+            name: "Dermatologia",
+            y: 4
+        });
+        datos.push({
+            name: "Odontologia",
+            y: 7
+        });
+        datos.push({
+            name: "Cardiologia",
+            y: 12
+        });
+        datos.push({
+            name: "Otras Especialidades",
+            y: 5
+        });
+        this.chartOptions4 = {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                style: {
+                    textAlign: 'center'
+                }
+            },
+            title: {
+                text: 'Dias X Profesionales'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                    name: 'Dias X Profesionales',
+                    data: datos
+                }]
+        };
+    };
+    InformesHomeComponent.prototype.turnosPorEspecialidad = function () {
+        var _this = this;
+        var datos = new Array();
+        //this.name = "TurnosXEspe";
+        this.turXEspe = [];
+        this.tur = [];
+        this.espes = [];
+        this.audit.getTurnosXEspe().subscribe(function (resul) {
+            resul.forEach(function (data) {
+                _this.turXEspe.push({
+                    especialidad: data.payload.doc.data().especialidad,
+                    cantTurnos: data.payload.doc.data().cantTurnos,
+                });
+                _this.espes.push(data.payload.doc.data().especialidad);
+                _this.tur.push(data.payload.doc.data().cantTurnos);
+            });
+        });
+        datos.push({
+            name: "Clinica",
+            y: 21
+        });
+        datos.push({
+            name: "Dermatologia",
+            y: 4
+        });
+        datos.push({
+            name: "Odontologia",
+            y: 7
+        });
+        datos.push({
+            name: "Cardiologia",
+            y: 12
+        });
+        datos.push({
+            name: "Otras Especialidades",
+            y: 5
+        });
+        this.chartOptions1 = {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'bar',
+                style: {
+                    textAlign: 'center'
+                }
+            },
+            title: {
+                text: 'Porcentaje de Operaciones por Especialidad'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                    name: 'Operaciones por Especialidad',
+                    data: datos
+                }]
+        };
+    };
+    InformesHomeComponent.prototype.CargarChart2 = function () {
+        var datos = new Array();
+        datos.push({
+            name: "Clinica",
+            y: 21
+        });
+        datos.push({
+            name: "Dermatologia",
+            y: 4
+        });
+        datos.push({
+            name: "Odontologia",
+            y: 7
+        });
+        datos.push({
+            name: "Cardiologia",
+            y: 12
+        });
+        datos.push({
+            name: "Otras Especialidades",
+            y: 5
+        });
+        this.chartOptions2 = {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'bar',
+                style: {
+                    textAlign: 'center'
+                }
+            },
+            title: {
+                text: 'Porcentaje de Operaciones por Especialidad'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                    name: 'Operaciones por Especialidad',
+                    data: datos
+                }]
+        };
+    };
+    InformesHomeComponent.prototype.CargarChart3 = function () {
+        var datos = new Array();
+        datos.push({
+            name: "Clinica",
+            y: 21
+        });
+        datos.push({
+            name: "Dermatologia",
+            y: 4
+        });
+        datos.push({
+            name: "Odontologia",
+            y: 7
+        });
+        datos.push({
+            name: "Cardiologia",
+            y: 12
+        });
+        datos.push({
+            name: "Otras Especialidades",
+            y: 5
+        });
+        this.chartOptions3 = {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'bar',
+                style: {
+                    textAlign: 'center'
+                }
+            },
+            title: {
+                text: 'Porcentaje de Operaciones por Especialidad'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                    name: 'Operaciones por Especialidad',
+                    data: datos
+                }]
+        };
+    };
+    InformesHomeComponent.ctorParameters = function () { return [
+        { type: src_app_services_audit_service__WEBPACK_IMPORTED_MODULE_2__["AuditService"] }
+    ]; };
     InformesHomeComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-informes-home',
             template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./informes-home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/informes-home/informes-home.component.html")).default,
             styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./informes-home.component.scss */ "./src/app/pages/informes-home/informes-home.component.scss")).default]
         }),
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [src_app_services_audit_service__WEBPACK_IMPORTED_MODULE_2__["AuditService"]])
     ], InformesHomeComponent);
     return InformesHomeComponent;
 }());
@@ -3119,6 +3383,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _turnos_home_turno_observacion_detalle_turno_observacion_detalle_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./turnos-home/turno-observacion-detalle/turno-observacion-detalle.component */ "./src/app/pages/turnos-home/turno-observacion-detalle/turno-observacion-detalle.component.ts");
 /* harmony import */ var _turnos_home_turno_encuesta_turno_encuesta_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./turnos-home/turno-encuesta/turno-encuesta.component */ "./src/app/pages/turnos-home/turno-encuesta/turno-encuesta.component.ts");
 /* harmony import */ var _informes_home_informes_home_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./informes-home/informes-home.component */ "./src/app/pages/informes-home/informes-home.component.ts");
+/* harmony import */ var angular2_highcharts__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! angular2-highcharts */ "./node_modules/angular2-highcharts/__ivy_ngcc__/index.js");
+/* harmony import */ var angular2_highcharts__WEBPACK_IMPORTED_MODULE_52___default = /*#__PURE__*/__webpack_require__.n(angular2_highcharts__WEBPACK_IMPORTED_MODULE_52__);
+
 
 
 
@@ -3194,6 +3461,7 @@ var PagesModule = /** @class */ (function () {
                 ngx_bootstrap_datepicker__WEBPACK_IMPORTED_MODULE_13__["BsDatepickerModule"].forRoot(),
                 ngx_bootstrap_carousel__WEBPACK_IMPORTED_MODULE_14__["CarouselModule"].forRoot(),
                 ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_15__["ModalModule"].forRoot(),
+                angular2_highcharts__WEBPACK_IMPORTED_MODULE_52__["ChartModule"].forRoot(__webpack_require__(/*! highcharts */ "./node_modules/highcharts/highcharts.js"), __webpack_require__(/*! highcharts/modules/exporting */ "./node_modules/highcharts/modules/exporting.js")),
                 ngx_captcha__WEBPACK_IMPORTED_MODULE_37__["NgxCaptchaModule"]
             ],
             declarations: [
@@ -5999,6 +6267,98 @@ var FilterPipe = /** @class */ (function () {
         })
     ], FilterPipe);
     return FilterPipe;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/audit.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/audit.service.ts ***!
+  \*******************************************/
+/*! exports provided: AuditService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuditService", function() { return AuditService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/__ivy_ngcc__/fesm5/angular-fire-firestore.js");
+
+
+
+var AuditService = /** @class */ (function () {
+    function AuditService(db) {
+        this.db = db;
+    }
+    /***************************LOGUEO DE PROFESIONALES*********************/
+    AuditService.prototype.getLogProf = function () {
+        return this.db.collection('logProf').snapshotChanges();
+    };
+    //Alta
+    AuditService.prototype.createLogProf = function (data) {
+        return this.db.collection('logProf').add(data);
+    };
+    /***************************TURNOS X ESPECIALIDADES*********************/
+    AuditService.prototype.getTurnosXEspe = function () {
+        return this.db.collection('turnosXEspe').snapshotChanges();
+    };
+    //Alta
+    AuditService.prototype.createTurnosXEspe = function (data) {
+        return this.db.collection('turnosXEspe').add(data);
+    };
+    //Actualiza
+    AuditService.prototype.addTurnosXEspe = function (id, data) {
+        return this.db.collection('turnosXEspe').doc(id).set(data);
+    };
+    /***************************TURNOS X DIAS*********************/
+    AuditService.prototype.getTurnosXDia = function () {
+        return this.db.collection('turnosXDia').snapshotChanges();
+    };
+    //Alta
+    AuditService.prototype.createTurnosXDia = function (data) {
+        return this.db.collection('turnosXDia').add(data);
+    };
+    //Actualiza
+    AuditService.prototype.addTurnosXDia = function (id, data) {
+        return this.db.collection('turnosXDia').doc(id).set(data);
+    };
+    /***************************TURNOS X Profe*********************/
+    AuditService.prototype.getTurnosXProfe = function () {
+        return this.db.collection('turnosXProfe').snapshotChanges();
+    };
+    //Alta
+    AuditService.prototype.createTurnosXProfe = function (data) {
+        return this.db.collection('turnosXProfe').add(data);
+    };
+    //Actualiza
+    AuditService.prototype.addTurnosXProfe = function (id, data) {
+        return this.db.collection('turnosXProfe').doc(id).set(data);
+    };
+    /***************************dias X Profe*********************/
+    AuditService.prototype.getDiasXProfe = function () {
+        return this.db.collection('diasXProfe').snapshotChanges();
+    };
+    //Alta
+    AuditService.prototype.createDiasXProfe = function (data) {
+        return this.db.collection('diasXProfe').add(data);
+    };
+    //Actualiza
+    AuditService.prototype.addDiasXProfe = function (id, data) {
+        return this.db.collection('diasXProfe').doc(id).set(data);
+    };
+    AuditService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"] }
+    ]; };
+    AuditService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    ], AuditService);
+    return AuditService;
 }());
 
 

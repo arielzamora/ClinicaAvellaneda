@@ -55,6 +55,8 @@ import { filter } from 'rxjs/operators';
 import { TurnoObservacionDetalleComponent } from './turnos-home/turno-observacion-detalle/turno-observacion-detalle.component';
 import { TurnoEncuestaComponent } from './turnos-home/turno-encuesta/turno-encuesta.component';
 import { InformesHomeComponent } from './informes-home/informes-home.component';
+import { ChartModule } from 'angular2-highcharts';
+
 
 @NgModule({
   imports: [
@@ -75,6 +77,7 @@ import { InformesHomeComponent } from './informes-home/informes-home.component';
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
+    ChartModule.forRoot(require('highcharts'),require('highcharts/modules/exporting')),
     NgxCaptchaModule
   ],
   declarations: [

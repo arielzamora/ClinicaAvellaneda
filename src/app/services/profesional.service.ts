@@ -41,11 +41,6 @@ export class ProfesionalService {
      }));
   }
 
-
-
-   
-
-
   public Obtenerprofesional(id:string):Observable<profesional[]>{
     this.profesionalColeccion=this.afs.collection<profesional>('profesionales',x=>x.where("id","==",id));
     return this.profesionals=this.profesionalColeccion.snapshotChanges()
